@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "HOME_PAGE.TITLE" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img src="../../../assets/images/portada.jpg"></ion-img>
+    <ion-card-content>
+      <ion-text><p>{{ "HOME_PAGE.DESCRIPTION" | translate }}</p></ion-text>
+        <section>
+          <ion-button expand="block" (click)="handlerClickMore()">{{ "HOME_PAGE.MORE" | translate }}</ion-button>
+        </section>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
