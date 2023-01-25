@@ -1,0 +1,59 @@
+@use '../../constants/color.const.scss' as colors;
+@use '../../constants/style.const.scss' as style;
+
+.pairRow {
+  background-color: colors.$row-pair-color;
+}
+
+.oddRow {
+  background-color: colors.$row-odd-color;
+}
+
+.no-data-text {
+  width: 100%;
+
+  h6 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.table {
+  border-radius: style.$border-radius;
+  overflow: scroll;
+  white-space: nowrap;
+
+  .column {
+    padding: 0;
+
+    .tableHeader {
+      background-color: colors.$header-color;
+      justify-content: center;
+
+      ion-text {
+        .tableHeader-text {
+          color: colors.$headerText;
+          font-size: 0.85em;
+          font-weight: 550;
+          justify-content: center;
+          margin: 0.5em;
+        }
+      }
+    }
+
+    .cell {
+      justify-content: center;
+
+      .table-text {
+        color: colors.$cellText;
+        font-size: 0.77em;
+
+        p {
+          margin: 0.4em;
+        }
+      }
+    }
+  }
+}

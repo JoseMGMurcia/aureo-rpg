@@ -1,0 +1,28 @@
+  <div ngClass="wrapper">
+    <ion-toolbar>
+      <h3>
+        {{ "EDIT.EDITION" | translate }} ( {{ character.getName() }} )
+      </h3>
+    </ion-toolbar>
+    <container-element [ngSwitch]="section">
+      <app-edit-main-info
+        *ngSwitchCase="id.MAIN_INFO"
+        [character]="character"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-main-info>
+      <app-edit-atributes
+        *ngSwitchCase="id.ATRIBUTES"
+        title= "{{ 'DETAIL_PAGE.GENERAL_SEC.ATRIBUTES' | translate }}"
+        [character]="character"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-atributes>
+      <app-edit-powers
+      *ngSwitchCase="id.POWERS"
+      [character]="character"
+      (exitModal)="cancel()"
+      (saveCharacter)="confirm()">
+      </app-edit-powers>
+   </container-element>
+  </div>

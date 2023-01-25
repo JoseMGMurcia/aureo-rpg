@@ -1,0 +1,8 @@
+@use '../../constants/color.const.scss' as colors;
+@use '../../constants/style.const.scss' as style;
+
+h3 {
+  color: colors.$header-color;
+  padding-left: 1em;
+  width: 100%;
+}

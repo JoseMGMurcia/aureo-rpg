@@ -1,0 +1,69 @@
+@use '../../../constants/color.constants.scss' as colors;
+@use '../../../constants/style.constants.scss' as style;
+
+h5 {
+  color: colors.$custom-secondary;
+  padding-left: 1em;
+  width: 100%;
+}
+
+.detail-row {
+  font-size: 0.8em;
+  margin-top: 0.3em;
+  padding: 0.25em;
+
+  .detail-label {
+    color: colors.$cellText;
+    font-weight: 600;
+    margin-bottom: auto;
+    margin-right: 0.5em;
+    margin-top: auto;
+    max-width: 40%;
+    text-align: end;
+    width: 40%;
+  }
+
+  .detail-value {
+    border: colors.$row-odd-color 1.25px solid;
+    border-radius: style.$border-radius;
+    color: colors.$cellText;
+    max-height: 1.75em;
+    max-width: 40%;
+  }
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-height: 1.75em;
+
+  .miniButton {
+    color: colors.$custom-secondary;
+    height: 16px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    width: 16px;
+  }
+
+  .numeric-value {
+    margin: 0;
+  }
+}
+
+.butonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 3em;
+
+  .saveButton {
+    margin-left: 0.5em;
+  }
+}
+
+.editionWrapper {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,96 @@
+<div class="editionWrapper">
+  <ion-card>
+    <h5>{{ "DETAIL_PAGE.MAIN_INFO" | translate }}</h5>
+    <form [formGroup]="form">
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.NAME" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.NAME' | translate }}"
+          [formControlName]="id.NAME">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.PLAYER" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.PLAYER' | translate }}"
+          [formControlName]="id.PLAYER">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.CULT" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.CULT' | translate }}"
+          [formControlName]="id.CULT">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.POLIS" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.POLIS' | translate }}"
+          [formControlName]="id.POLIS">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.SEX' | translate }}"
+          [formControlName]="id.SEX">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.ARQUETYPE" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.ARQUETYPE' | translate }}"
+          [formControlName]="id.ARQUETYPE">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.SOCIAL_GROUP" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.SOCIAL_GROUP' | translate }}"
+          [formControlName]="id.SOCIAL_GROUP">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.AGE" | translate }} </p>
+        <ion-input
+          class="detail-value"
+          placeholder="{{ 'EDIT.MAIN_INFO.AGE' | translate }}"
+          [formControlName]="id.AGE">
+        </ion-input>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.AUREO" | translate }} </p>
+        <div class="inline">
+          <ion-icon class="miniButton" name="remove-outline" (click)="removeAureo()"></ion-icon>
+          <p class="numeric-value">{{ character.getAureo() }}</p>
+          <ion-icon class="miniButton" name="add-outline" (click)="addAureo()"></ion-icon>
+        </div>
+      </ion-row>
+      <ion-row class="detail-row">
+        <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.HIBRIS" | translate }} </p>
+        <div class="inline">
+          <ion-icon class="miniButton" name="remove-outline" (click)="removeHibris()"></ion-icon>
+          <p class="numeric-value">{{ character.getHibris() }}</p>
+          <ion-icon class="miniButton" name="add-outline" (click)="addHibris()"></ion-icon>
+        </div>
+      </ion-row>
+    </form>
+    <div class="butonRow">
+      <ion-button size="small" (click)="handleExit()" class="lightButton">
+        <ion-icon name="exit-outline"></ion-icon> {{ "EDIT.EXIT" | translate }}
+      </ion-button>
+      <ion-button size="small" (click)="handleSave()" class="saveButton">
+        <ion-icon name="server-outline"></ion-icon> {{ "EDIT.SAVE" | translate }}
+      </ion-button>
+    </div>
+  </ion-card>
+
+</div>
