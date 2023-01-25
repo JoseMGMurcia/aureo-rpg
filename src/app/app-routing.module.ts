@@ -23,10 +23,10 @@ const routes: Routes = [
     path: 'wiki',
     loadChildren: () => import('./pages/wiki/wiki.module').then( m => m.WikiPageModule)
   },
-  // {
-  //   path: 'dices',
-  //   loadChildren: () => import('./pages/dices/dices.module').then( m => m.DicesPageModule)
-  // },
+  {
+    path: 'dices',
+    loadChildren: () => import('./pages/dices/dices.module').then( m => m.DicesPageModule)
+  },
   // {
   //   path: 'detail',
   //   loadChildren: () => import('./pages/detail/detail.module').then( m => m.DetailPageModule)

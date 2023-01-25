@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ "DICES_PAGE.TITLE" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-item>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="7" offset="1">
+            <h4 class="labelForNumber">{{ "DICES_PAGE.ATRIBUTE" | translate }} </h4>
+          </ion-col>
+          <ion-col size="3">
+            <h4 class="inputNumber"><ion-input id="attribute" [(ngModel)]="data.attribute"  type="number" min="1" max="6" ></ion-input></h4>
+          </ion-col>
+         </ion-row>
+      </ion-item>
+
+      <ion-item>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="7" offset="1">
+            <h4 class="labelForNumber">{{ "DICES_PAGE.SKILL" | translate }} </h4>
+          </ion-col>
+          <ion-col size="3">
+            <h4 class="inputNumber"><ion-input id="skill" [(ngModel)]="data.skill"  type="number" min="0" max="6" ></ion-input></h4>
+          </ion-col>
+         </ion-row>
+      </ion-item>
+
+      <ion-item>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="7" offset="1">
+            <h4 class="labelForNumber">{{ "DICES_PAGE.MOD" | translate }} </h4>
+          </ion-col>
+          <ion-col size="3">
+            <h4 class="inputNumber"><ion-input id="modif" [(ngModel)]="data.modif"  type="number" min="-9" max="9" ></ion-input></h4>
+          </ion-col>
+         </ion-row>
+      </ion-item>
+
+    </ion-grid>
+
+    <ion-button class="ion-margin ion-float-right" (click)="rollDice(data)">
+      {{ "DICES_PAGE.ROLL" | translate }}
+      <ion-icon slot="start" name="dice-outline"></ion-icon>
+    </ion-button>
+
+  </ion-card>
+</ion-content>
