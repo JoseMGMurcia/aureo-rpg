@@ -1,0 +1,326 @@
+
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ character.getName() }} {{ getPolisText() }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- General section -->
+  <ng-container *ngIf="section === '1'">
+    <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.MAIN_INFO" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.MAIN_INFO)"></ion-icon>
+      </ion-card-header>
+      <ion-row class="detail-row">
+        <ion-col size="6" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.NAME" | translate }} </p><p class="detail-value">{{ character.getName() }}</p></ion-col>
+        <ion-col size="6" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.PLAYER" | translate }} </p><p class="detail-value">{{ character.getPlayer() }}</p></ion-col>
+      </ion-row>
+      <ion-row class="detail-row">
+        <ion-col size="4" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.CULT" | translate }} </p><p class="detail-value">{{ character.getCult() }}</p></ion-col>
+        <ion-col size="5" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.POLIS" | translate }} </p><p class="detail-value">{{ character.getPolis() }}</p></ion-col>
+        <ion-col size="3" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p><p class="detail-value">{{ character.getSex() }}</p></ion-col>
+
+      </ion-row>
+      <ion-row class="detail-row">
+        <ion-col size="6" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.ARQUETYPE" | translate }} </p><p class="detail-value">{{ character.getArquetype() }}</p></ion-col>
+        <ion-col size="6" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.SOCIAL_GROUP" | translate }} </p><p class="detail-value">{{ character.getSocialGroup() }}</p></ion-col>
+      </ion-row>
+      <ion-row class="detail-row">
+        <ion-col size="4" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.AGE" | translate }} </p><p class="detail-value">{{ character.getAge() }}</p></ion-col>
+        <ion-col size="5" class="detail-col">
+          <p>{{ "DETAIL_PAGE.GENERAL_SEC.AUREO" | translate }} </p>
+          <ion-icon class="miniButton" name="remove-outline" (click)="removeTemporalAureo()"></ion-icon>
+          <p class="detail-value">{{ character.getAureoRemaining() }} / {{ character.getAureo() }}</p>
+          <ion-icon class="miniButton" name="add-outline" (click)="addTemporalAureo()"></ion-icon>
+        </ion-col>
+        <ion-col size="3" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.HIBRIS" | translate }} </p><p class="detail-value">{{ character.getHibris() }}</p></ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.ATRIBUTES" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.ATRIBUTES)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="atributesDataConfiguration"
+          [data]="atributesData">
+        </app-table>
+     </ion-card>
+
+     <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.TITLES" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.TITLES)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="listDataConfiguration"
+          [data]="titlesData">
+        </app-table>
+    </ion-card>
+
+    <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.GLORY" | translate }} : {{ character.getGlory() }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.GLORY)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="listDataConfiguration"
+          [data]="gloryData">
+        </app-table>
+    </ion-card>
+
+    <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.INFAMY" | translate }} : {{ character.getInfamy() }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.INFAMY)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="listDataConfiguration"
+          [data]="infamyData">
+        </app-table>
+    </ion-card>
+
+    <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.AFINITIES" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.AFINITIES)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="afinitiesDataConfiguration"
+          [data]="afinitiesData">
+        </app-table>
+    </ion-card>
+
+    <ion-card >
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.XP" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.XP)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="xpDataConfiguration"
+          [data]="xpData">
+        </app-table>
+    </ion-card>
+
+  </ng-container>
+
+  <!-- Combat section -->
+  <ng-container *ngIf="section === '2'">
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.COMBAT_SEC.ATTACK" | translate }}</ion-card-title>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="attackDataConfiguration"
+          [data]="attackData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.COMBAT_SEC.DEFENSE" | translate }}</ion-card-title>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="defenceDataConfiguration"
+          [data]="defenceData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.COMBAT_SEC.RANKS" | translate }}</ion-card-title>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="calculatedSkillDataConfiguration"
+          [data]="combatRanksData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.COMBAT_SEC.COMBAT_EQUIPMENT" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.COMBAT_EQUIPMENT)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="combatEquipDataConfiguration"
+          [data]="combatEquipData">
+        </app-table>
+    </ion-card>
+
+  </ng-container>
+
+  <!-- powers section -->
+  <ng-container *ngIf="section === '3'">
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.POWERS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.POWERS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="powersDataConfiguration"
+          [data]="powersData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.COMMON_GIFTS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.COMMON_GIFTS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="giftsDataConfiguration"
+          [data]="commonGiftsData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.DIVINE_GIFTS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.DIVINE_GIFTS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="giftsDataConfiguration"
+          [data]="divineGiftsData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.CURSES" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.CURSES)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="giftsDataConfiguration"
+          [data]="cursesData">
+        </app-table>
+    </ion-card>
+
+  </ng-container>
+
+   <!-- skills section -->
+   <ng-container *ngIf="section === '4'">
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.SKILLS_SEC.CALCULATED_SKILLS" | translate }}</ion-card-title>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="calculatedSkillDataConfiguration"
+          [data]="calculatedSkillData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.SKILLS_SEC.PRIMARY_SKILLS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.PRIMARY_SKILLS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="skillsDataConfiguration"
+          [data]="primarySkillsData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.SKILLS_SEC.SECONDARY_SKILLS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.SECONDARY_SKILLS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="skillsDataConfiguration"
+          [data]="secondarySkillsData">
+        </app-table>
+    </ion-card>
+
+  </ng-container>
+
+   <!-- background section -->
+   <ng-container *ngIf="section === '5'">
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.SOCIAL_FEATS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.SOCIAL_FEATS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="skillsDataConfiguration"
+          [data]="socialFeaturesData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.OTHER_EQIUP" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.OTHER_EQIUP)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="listDataConfiguration"
+          [data]="otherEquipData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.FOLLOWERS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.FOLLOWERS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="followersDataConfiguration"
+          [data]="followersData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.COMPANIONS" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.COMPANIONS)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="companionsDataConfiguration"
+          [data]="companionsData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.OTHERS_NOTES" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.OTHERS_NOTES)"></ion-icon>
+      </ion-card-header>
+        <app-table
+          [dataConfiguration]="listDataConfiguration"
+          [data]="otherNotesData">
+        </app-table>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="generalInfoHeader">
+        <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.HISTORY" | translate }}</ion-card-title>
+        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.HISTORY)"></ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-text><p>{{ character.getHistory() }}</p></ion-text>
+        </ion-card-content>
+    </ion-card>
+
+  </ng-container>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="section" value="1" (ionChange)="sectionChanged($event)" scrollable >
+      <ion-segment-button value="1" class="segmentButton"> <ion-icon name="newspaper-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button value="2" class="segmentButton"> <ion-icon name="skull-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button value="3" class="segmentButton"> <ion-icon name="sparkles-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button value="4" class="segmentButton"> <ion-icon name="barbell-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button value="5" class="segmentButton"> <ion-icon name="earth-outline"></ion-icon> </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

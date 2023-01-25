@@ -1,5 +1,5 @@
-// @use '../app/constants/color.const.scss' as colors;
-// @use '../app/constants/style.const.scss' as styles;
+@use '../app/constants/color.constants.scss' as colors;
+@use '../app/constants/style.constants.scss' as styles;
 
 ion-menu ion-content {
   --background: var(--ion-color-custom-menu-back, var(--ion-color-custom-menu-back, #fff));
@@ -48,7 +48,7 @@ ion-menu.md ion-list#inbox-list ion-list-header {
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {
-  // color: colors.$title-text;
+  color: colors.$title-text;
   font-size: 1.25em;
   font-weight: 500;
   margin-bottom: 18px;
@@ -115,5 +115,5 @@ ion-menu.ios ion-list#labels-list ion-list-header {
 }
 
 .listLabel {
-  // color: colors.$cellText;
+  color: colors.$cellText;
 }

@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
     if( AVALIABLE_LANGUAJES.includes(devideLanguaje) ){
       this.translate.setDefaultLang( devideLanguaje );
     }else{
-      this.translate.setDefaultLang('en');
+      this.translate.setDefaultLang('es');
     }
     const protoCharacters = JSON.parse( await this.storageService.get(DATABASE_NAME) );
     this.characters = CharacterController.converToCharacters(protoCharacters);
@@ -51,9 +51,9 @@ export class AppComponent implements OnInit{
 
   public navigateToDetail(character: Character){
     this.characterService.setCharacter(character);
-  //   if(this.router.url.substring(0,7) !== '/detail') {
-  //     const params = { character };
-  //     this.router.navigate(['/detail'] , { state: params});
-  //   }
+    if(this.router.url.substring(0,7) !== '/detail') {
+      const params = { character };
+      this.router.navigate(['/detail'] , { state: params});
+    }
   }
 }

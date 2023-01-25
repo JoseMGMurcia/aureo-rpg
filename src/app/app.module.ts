@@ -20,10 +20,7 @@ export const createTranslateLoader = (http: HttpClient) =>
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EditAtributesComponent,
-    EditMainInfoComponent,
-    EditPowersComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
-@use '../../constants/color.const.scss' as colors;
-@use '../../constants/style.const.scss' as style;
+@use '../../constants/color.constants.scss' as colors;
+@use '../../constants/style.constants.scss' as style;
 
 h3 {
   color: colors.$header-color;

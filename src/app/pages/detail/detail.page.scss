@@ -1,0 +1,76 @@
+@use '../../constants/color.constants.scss' as colors;
+
+.toolbar {
+  ion-title {
+    color: colors.$title-text;
+  }
+}
+
+.segmentButton {
+  color: colors.$title-text;
+  width: 18%;
+}
+
+.segment-button-checked {
+  color: colors.$custom-secondary !important; // it works properly
+  // --background-checked: #cadcf7 !important;
+}
+
+.generalInfo {
+  font-size: 0.77em;
+  padding: 0;
+}
+
+.generalInfoHeader {
+  display: flex;
+  font-size: 1em;
+  justify-content: space-between;
+  margin: 0;
+  padding: 6px 6px 0;
+}
+
+.editIcon {
+  margin-top: 0.2em;
+  padding: 0.5em;
+}
+
+ion-card {
+  background-color: colors.$card-bakground;
+
+  ion-card-header {
+    ion-card-title {
+      color: colors.$custom-secondary;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+  }
+}
+
+.detail-row {
+  padding-left: 0.25em;
+
+  .detail-col {
+    display: flex;
+    justify-content: flex-start;
+
+    p {
+      color: colors.$cellText;
+      font-size: 0.77em;
+      font-weight: 700;
+      margin: 0.3em;
+      padding: 0;
+    }
+
+    .detail-value {
+      font-weight: 300;
+    }
+  }
+}
+
+.miniButton {
+  color: colors.$custom-secondary;
+  height: 16px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 16px;
+}

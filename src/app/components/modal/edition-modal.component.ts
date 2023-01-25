@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil} from 'rxjs';
 import { ModalController, NavParams } from '@ionic/angular';
-import { CARD_ID, DATABASE_NAME, SECTION } from 'src/app/constants/const';
 import { Character } from 'src/app/model/character';
 import { CharactersService } from 'src/app/services/characters.service';
 import { StorageService } from 'src/app/services/storage.service';
 import { Atributes } from 'src/app/model/atributes';
+import { CARD_ID, DATABASE_NAME, SECTION } from 'src/app/constants/constants';
 
 @Component({
   selector: 'app-custom-modal',
@@ -16,7 +16,7 @@ export class EditionModalComponent implements OnInit, OnDestroy{
 
   public section = '';
   public character: Character = new Character('pepe');
-  public characters: Character[];
+  public characters: Character[] = [];
   public id = CARD_ID;
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 

@@ -15,10 +15,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
-  // {
-  //   path: 'characters',
-  //   loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharactersPageModule)
-  // },
+  {
+    path: 'characters',
+    loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharactersPageModule)
+  },
   {
     path: 'wiki',
     loadChildren: () => import('./pages/wiki/wiki.module').then( m => m.WikiPageModule)
@@ -27,10 +27,10 @@ const routes: Routes = [
     path: 'dices',
     loadChildren: () => import('./pages/dices/dices.module').then( m => m.DicesPageModule)
   },
-  // {
-  //   path: 'detail',
-  //   loadChildren: () => import('./pages/detail/detail.module').then( m => m.DetailPageModule)
-  // }
+  {
+    path: 'detail',
+    loadChildren: () => import('./pages/detail/detail.module').then( m => m.DetailPageModule)
+  }
 ];
 
 @NgModule({

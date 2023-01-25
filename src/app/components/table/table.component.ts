@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent{
-  @Input() data = [];
-  @Input() dataConfiguration: TableDataConfiguration;
+  @Input() data: any[] = [];
+  @Input() dataConfiguration: TableDataConfiguration = {columns: []};
 
-  public getClass(row): string {
+  public getClass(row: any): string {
     const index = this.data.indexOf(row);
       return index % 2 === 0 ? 'pairRow' : 'oddRow';
   }
@@ -20,12 +20,12 @@ export class TableComponent{
 }
 
 export class TableDataConfiguration {
-  public columns: TableColumn[];
+  public columns: TableColumn[] = [];
   public swHideHeader?: boolean = true;
 }
 
 export class TableColumn {
-  public name: string;
-  public id: string;
+  public name: string = '';
+  public id: string = '';
 }
 
