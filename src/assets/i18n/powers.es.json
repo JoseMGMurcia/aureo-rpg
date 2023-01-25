@@ -1,0 +1,32 @@
+{
+  "AFRODITA":{
+      "POWERS": {
+        "AFRO_1":{
+          "ID": "AFRO_1",
+          "NAME": "follisquear como una mula",
+          "DESCRIPTION": "pos eso... +100  follar",
+          "RULES": "",
+          "AF": "",
+          "AM": "com + seducir",
+          "AM_DESC":"e",
+          "AE": "",
+          "COST": "",
+          "XP_COST": "",
+          "DUR": ""
+          },
+        "AFRO_2":{
+          "ID": "AFRO_2",
+        "NAME": "follisquear como una mula",
+        "DESCRIPTION": "pos eso... +100  follar",
+        "AF": "",
+        "AM": "",
+        "AE": "",
+        "COST": "",
+        "DUR": ""
+          }
+      }
+  },
+  "DIOSH": {
+
+  }
+}
