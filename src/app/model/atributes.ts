@@ -102,11 +102,10 @@ export class Atributes {
 
 export class Atribute {
     private value: number;
-    private mods: Modificator[];
+    private mods: Modificator[] = [];
 
     constructor(value: number){
         this.value = value;
-        this.mods = [];
     }
 
      //Getters & Setters

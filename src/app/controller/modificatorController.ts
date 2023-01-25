@@ -1,4 +1,4 @@
-import { MAGIC_NUMBERS } from '../constants/number.const';
+import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Modificator } from '../model/modificator';
 
    export class ModificatorController {

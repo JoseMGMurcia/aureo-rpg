@@ -3,12 +3,11 @@ import { Modificator } from './modificator';
 export class Skill {
     private name: string;
     private level: number;
-    private mods: Modificator[];
+    private mods: Modificator[] = [];
 
     constructor(name: string, level: number){
         this.level = level;
         this.name = name;
-        this.mods = [];
     }
 
     //Getter & Setter

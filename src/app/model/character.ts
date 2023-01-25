@@ -6,7 +6,7 @@ import { GodAffinity } from './godAffinity';
 import { Power } from './power';
 import { Skill } from './skill';
 import { CharacterController } from 'src/app/controller/characterController';
-import { MAGIC_NUMBERS } from '../constants/number.const';
+import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Gift } from './gift';
 
 export class Character {

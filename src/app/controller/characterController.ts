@@ -1,5 +1,5 @@
 import { Character } from 'src/app/model/character';
-import { MAGIC_NUMBERS } from '../constants/number.const';
+import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Atributes } from '../model/atributes';
 import { CombatEquip } from '../model/combatEquip';
 import { Companion } from '../model/companion';

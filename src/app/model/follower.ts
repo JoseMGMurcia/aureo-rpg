@@ -1,11 +1,11 @@
 export class Follower{
     private name: string;
-    private arquetype: string;
-    private combat: number;
-    private physical: number;
-    private espiritual: number;
-    private mental: number;
-    private social: number;
+    private arquetype: string  = '';
+    private combat: number = 0;
+    private physical: number = 0;
+    private espiritual: number = 0;
+    private mental: number = 0;
+    private social: number = 0;
 
     constructor(name: string){
         this.name= name;
