@@ -1,0 +1,7 @@
+{
+  "name": "Aureo RPG",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
