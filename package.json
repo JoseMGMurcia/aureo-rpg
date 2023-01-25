@@ -1,15 +1,16 @@
 {
   "name": "aureo-rpg",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
+  "version": "0.1.2",
+  "author": "José Martínez",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ionic serve --host 0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint && npm run lint:css",
+    "lint:css": "stylelint \"src/**/*.scss\" --config .stylelintrc"
   },
   "private": true,
   "dependencies": {
