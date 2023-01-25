@@ -1,10 +1,10 @@
 # AureoRPG
 #### Aureo roleplaying game support app
 
-This aplication is built in **Ionic 6, capacitor-Angular-12** using internal *ionic Storage*, and have been testing in Android  & iOS platforms.
+This aplication is built in **Ionic 6, capacitor-Angular-15** using internal *ionic Storage*, and have been testing in Android  & iOS platforms.
 The goal is to be used by Aureo game players as an alternative to a paper and dices.
 
-Current versión 0.1.1 
+Current versión 1.0.0
 
 ### The first goal, main funcionality (In progress):
 - Users can create a complete set of characters, storage and manage it.
@@ -49,10 +49,7 @@ Current versión 0.1.1
         - [ ] Edit Combat equip component.
         - [ ] Edit Followers component.
         - [ ] Edit History component.
-
-      - [ ] Coding.
-      - [ ] Funcionality.
-  - [ ] Segment buttons to Icons.
+  - [x] Segment buttons to Icons.
 
  
 - Fisrt Design, users can't see empty or undesigned pages.
@@ -69,9 +66,10 @@ Current versión 0.1.1
   - [ ] Doc Page first design.
   - [ ] Doc Page first texts.
 
-### The second goal exporting:
-- [ ] Angular 14 Migration.
+- [x] Angular 15 Migration.
+- [x] Ionic 6 Migration.
 
+### The second goal exporting:
 - Characters import / export between devices and export to PDF.
 	- [ ] As a encrypted file.
 

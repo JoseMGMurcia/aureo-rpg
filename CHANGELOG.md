@@ -1,4 +1,8 @@
 # Aureo_App
+## V1.0.0
+- Angular 15 migration
+- Ionic 6 migration
+
 ## V0.1.2
 - App Name
 - Modificator partial
