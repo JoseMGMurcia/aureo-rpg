@@ -14,6 +14,26 @@ h4 {
   width: 100%;
 }
 
+.atribute-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1em;
+
+  p {
+    color: colors.$cellText;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 2em;
+  }
+
+  .value {
+    padding-left: 0.2em;
+  }
+}
+
+
+
 .butonRow {
   display: flex;
   justify-content: flex-end;
@@ -24,6 +44,14 @@ h4 {
   .saveButton {
     margin-left: 0.5em;
   }
+}
+
+.butonRow-edit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.25em;
 }
 
 .detail-value {
@@ -37,4 +65,9 @@ h4 {
 
 ion-label {
   font-size: 0.77em;
+}
+
+.mod-input {
+  color: colors.$cellText;
+  font-size: 0.8em;
 }

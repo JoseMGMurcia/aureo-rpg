@@ -4,7 +4,6 @@ import { ModalController, NavParams } from '@ionic/angular';
 import { Character } from 'src/app/model/character';
 import { CharactersService } from 'src/app/services/characters.service';
 import { StorageService } from 'src/app/services/storage.service';
-import { Atributes } from 'src/app/model/atributes';
 import { CARD_ID, DATABASE_NAME, SECTION } from 'src/app/constants/constants';
 
 @Component({
@@ -56,6 +55,7 @@ export class EditionModalComponent implements OnInit, OnDestroy{
       this.characters[index] = this.character;
     }
     this.storage.set(DATABASE_NAME, JSON.stringify(this.characters));
+    this.characterService.setCharacter(this.character);
     this.modalCtrl.dismiss();
   }
 }

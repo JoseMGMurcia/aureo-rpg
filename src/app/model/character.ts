@@ -18,7 +18,7 @@ export class Character {
   private polis = '';
   private arquetype = '';
   private socialGroup = '';
-  private sex = '';
+  private sex: 'M' | 'F' | '' = '';
   private age = MAGIC_NUMBERS.N_0;
   private player = '';
   private aureo: number = MAGIC_NUMBERS.N_3;
@@ -66,18 +66,18 @@ export class Character {
       this.atributes = new  Atributes();
 
       this.godAfinities = [
-          new GodAffinity('Afrodita', 0, 0, 0),
-          new GodAffinity('Apolo',    0, 0, 0),
-          new GodAffinity('Ares',     0, 0, 0),
-          new GodAffinity('Artemisa', 0, 0, 0),
-          new GodAffinity('Atenea',   0, 0, 0),
-          new GodAffinity('Dioniso',  0, 0, 0),
-          new GodAffinity('Hades',    0, 0, 0),
-          new GodAffinity('Hefesto',  0, 0, 0),
-          new GodAffinity('Hermes',   0, 0, 0),
-          new GodAffinity('Hera',     0, 0, 0),
-          new GodAffinity('Poseidon', 0, 0, 0),
-          new GodAffinity('Zeus',     0, 0, 0)
+          new GodAffinity('Afrodita'),
+          new GodAffinity('Apolo'),
+          new GodAffinity('Ares'),
+          new GodAffinity('Artemisa'),
+          new GodAffinity('Atenea'),
+          new GodAffinity('Dioniso'),
+          new GodAffinity('Hades'),
+          new GodAffinity('Hefesto'),
+          new GodAffinity('Hermes'),
+          new GodAffinity('Hera'),
+          new GodAffinity('Poseidon'),
+          new GodAffinity('Zeus')
       ];
   }
     //Getters & Setters
@@ -135,7 +135,8 @@ export class Character {
   }
 
   public setSex(sex: string): void {
-      this.sex = sex;
+    const upperSex = sex.toUpperCase();
+    this.sex = upperSex === 'F' ? 'F' :  upperSex === 'M' ? 'M' : '';
   }
 
   public getAge(): number {

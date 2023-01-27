@@ -1,4 +1,13 @@
 # Aureo_App
+## V1.0.1
+- Fixed Aureo, and Hibris not to save ever.
+- Fixed texts non translated.
+- Fixed navigation to detail fron characters page.
+- GodAffinity short constructor option added.
+- Sex icon and validator added.
+- Dices page complete redesign.
+- Edit atrubutes (no modificator validation by the moment).
+
 ## V1.0.0
 - Angular 15 migration
 - Ionic 6 migration

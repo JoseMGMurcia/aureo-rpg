@@ -1,5 +1,5 @@
 import { TranslateService } from '@ngx-translate/core';
-import { getAttAndModsValue } from 'src/app/controller/atribute.controller';
+import { getAtributePlusModsValue } from 'src/app/controller/atribute.controller';
 import { ModificatorController } from 'src/app/controller/modificatorController';
 import { getSkillAndModsValue } from 'src/app/controller/skillController';
 import { Character } from 'src/app/model/character';
@@ -7,7 +7,7 @@ import { Character } from 'src/app/model/character';
 export const getDefenceData = (character: Character, translate: TranslateService): any[] => {
   const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
   const evade = getSkillAndModsValue(character, 'Evitar');
-  const refexes = getAttAndModsValue(character.getAtributes().getReflexes());
+  const refexes = getAtributePlusModsValue(character.getAtributes().getReflexes());
   return [{
     type: transLations.ACTIVE,
     pjs: refexes + evade,
@@ -26,9 +26,9 @@ export const getAtacksData = (character: Character, translate: TranslateService)
   const bodyCombat = getSkillAndModsValue(character, 'Armas CC');
   const rankedCombat = getSkillAndModsValue(character, 'Armas D');
   const brawl = getSkillAndModsValue(character, 'Pelea');
-  const strength = getAttAndModsValue(character.getAtributes().getStrength());
-  const agility = getAttAndModsValue(character.getAtributes().getAgility());
-  const sense = getAttAndModsValue(character.getAtributes().getSense());
+  const strength = getAtributePlusModsValue(character.getAtributes().getStrength());
+  const agility = getAtributePlusModsValue(character.getAtributes().getAgility());
+  const sense = getAtributePlusModsValue(character.getAtributes().getSense());
 
   return [{
     type: transLations.BODY_COMBAT,
@@ -53,16 +53,16 @@ export const getCombatRankslData = (character: Character, translate: TranslateSe
   const atletism = getSkillAndModsValue(character, 'Atletismo');
    return [{
     trait: transLations.MOVEMENT,
-    value: getAttAndModsValue(character.getAtributes().getAgility()) + atletism
+    value: getAtributePlusModsValue(character.getAtributes().getAgility()) + atletism
   },
   {
     trait: transLations.INICIATIVE,
-    value: getAttAndModsValue(character.getAtributes().getReflexes())*2 +
-    getAttAndModsValue(character.getAtributes().getMind())
+    value: getAtributePlusModsValue(character.getAtributes().getReflexes())*2 +
+    getAtributePlusModsValue(character.getAtributes().getMind())
   },
   {
     trait: transLations.TOUGHNESS,
-    value: `${getAttAndModsValue(character.getAtributes().getResistance())*2} + ${transLations.ARMOR}`
+    value: `${getAtributePlusModsValue(character.getAtributes().getResistance())*2} + ${transLations.ARMOR}`
   },
   {
     trait: transLations.LIFE_POINTS,
@@ -77,10 +77,10 @@ export const getCalculatedSkillData = (character: Character, translate: Translat
   const leadership = getSkillAndModsValue(character, 'Liderar');
   const status = getSkillAndModsValue(character, 'Estatus');
 
-  const charisma = getAttAndModsValue(character.getAtributes().getComunication()) + leadership + status;
+  const charisma = getAtributePlusModsValue(character.getAtributes().getComunication()) + leadership + status;
   return [{
     trait: transLations.LUCK,
-    value: getAttAndModsValue(character.getAtributes().getSoul())*2
+    value: getAtributePlusModsValue(character.getAtributes().getSoul())*2
   },
   {
     trait: transLations.CHARISMA,
@@ -118,7 +118,7 @@ export const getFollowersData =  (character: Character, translate: TranslateServ
     };
 });
 
-const getSymbol = (value: number): string => value >= 0 ? '+' : '-';
+export const getSymbol = (value: number): string => value >= 0 ? '+' : '';
 
 export const getCombatEquipData =  (character: Character): any[] => character.getCombatEquipment().map(
   equip =>({

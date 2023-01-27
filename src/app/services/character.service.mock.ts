@@ -30,7 +30,7 @@ export const getMockCharacter = (): Character=>   {
   pj.getAtributes().setResistance(new Atribute(2));
   pj.getAtributes().setAppearance(new Atribute(5));
   pj.getAtributes().setMind(new Atribute(3));
-  pj.getAtributes().setSense(new Atribute(2));
+  pj.getAtributes().setSense(new Atribute(3));
   pj.getAtributes().getSense().setMods([new Modificator(1,'Joven')]);
 
   pj.getCurses().push(new Gift('Codicioso', 2));
@@ -98,17 +98,17 @@ export const getMockCharacter = (): Character=>   {
 
   pj.setGodAfinities([
     new GodAffinity('Afrodita', 2, 0, 0),
-    new GodAffinity('Apolo',    3, 0, 0),
-    new GodAffinity('Ares',     3, 0, 0),
-    new GodAffinity('Artemisa', 3, 0, 0),
-    new GodAffinity('Atenea',   3, 0, 0),
-    new GodAffinity('Dioniso',  3, 0, 0),
-    new GodAffinity('Hades',    3, 0, 0),
-    new GodAffinity('Hefesto',  3, 0, 0),
-    new GodAffinity('Hermes',   4, 0, 0),
-    new GodAffinity('Hera',     3, 0, 0),
-    new GodAffinity('Poseidon', 3, 0, 0),
-    new GodAffinity('Zeus',     3, 0, 0)
+    new GodAffinity('Apolo'),
+    new GodAffinity('Ares'),
+    new GodAffinity('Artemisa'),
+    new GodAffinity('Atenea'),
+    new GodAffinity('Dioniso'),
+    new GodAffinity('Hades'),
+    new GodAffinity('Hefesto'),
+    new GodAffinity('Hermes', 4, 0, 0),
+    new GodAffinity('Hera'),
+    new GodAffinity('Poseidon'),
+    new GodAffinity('Zeus')
 ]);
 
   pj.setGloryLines(['Megalópolis +1']);

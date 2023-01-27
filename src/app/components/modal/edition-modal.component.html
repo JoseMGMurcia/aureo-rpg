@@ -14,13 +14,11 @@
       <app-edit-atributes
         *ngSwitchCase="id.ATRIBUTES"
         title= "{{ 'DETAIL_PAGE.GENERAL_SEC.ATRIBUTES' | translate }}"
-        [character]="character"
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-atributes>
       <app-edit-powers
       *ngSwitchCase="id.POWERS"
-      [character]="character"
       (exitModal)="cancel()"
       (saveCharacter)="confirm()">
       </app-edit-powers>

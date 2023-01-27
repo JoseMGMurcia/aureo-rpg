@@ -113,6 +113,8 @@ export class DetailPage implements OnInit, OnDestroy{
         if(character.getId() !== this.character.getId()){
           this.switchCaracter(character);
           this.fetch();
+        }else {
+          this.fetch();
         }
       });
 

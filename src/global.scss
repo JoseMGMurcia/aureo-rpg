@@ -48,12 +48,29 @@ ion-alert {
 
     .alert-message {
       font-size: 0.9em;
+
+      .dice-result {
+        color: $custom-secondary;
+        font-size: 2.5em !important;
+        margin: 0;
+      }
+
+      .center {
+        text-align: center;
+        width: 100%;
+      }
+
+      .bold {
+        color: $custom-black;
+        font-weight: 700;
+      }
     }
 
     .alert-button-group {
       .alert-secondaryButton {
         color: $custom-secondary;
         font-size: 0.8em;
+        padding: 0.15;
       }
 
       .alert-primaryButton {
@@ -61,7 +78,7 @@ ion-alert {
         border-radius: 4px;
         color: $custom-light;
         font-size: 0.8em;
-        padding: 0 1.25em;
+        padding: 0.15 1.25em;
       }
     }
   }
@@ -96,6 +113,19 @@ ion-button {
   --color: #d23411;
 }
 
+.mediumButton {
+  --background: $row-pair-color;
+  --color: #0d50ad;
+}
+
+.miniButton {
+  color: $custom-secondary;
+  height: 16px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 16px;
+}
+
 :root {
   .popover-content {
     left: 0 !important;
@@ -113,4 +143,14 @@ ion-button {
       }
     }
   }
+}
+
+.line {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mod-input {
+  color: $custom-black;
+  font-size: 0.8em;
 }

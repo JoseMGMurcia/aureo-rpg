@@ -10,11 +10,15 @@
   "FROM": "de",
   "OK": "Aceptar",
   "CANCEL": "Cancelar",
-  "WARNING": "Atención"
+  "WARNING": "Atención",
+  "DESC": "Descripción",
+  "VALUE":"Valor",
+  "PARCIAL": "Parcial",
+  "DELETE": "Eliminar"
 },
   "HEROS_AGE": "La edad de los heroes",
   "INFO_PAGE": {
-      "VERSION": "Versión: 1.0.0 Enero 2023",
+      "VERSION": "Versión: ",
       "TITLE": "Información",
       "BUY": "Compra un café para Pepe",
       "MAIN_TEXT": "Esta aplicación ha sido desarrollada de forma totalmente altruista y nuestra única forma de financiación es mediante pequeñas donaciones totalmente voluntarias: ",
@@ -41,24 +45,25 @@
           "NAME": "Nombre del nuevo personaje",
           "AGREE": "Aceptar",
           "CANCEL": "Cancelar",
-          "NO_VALID_NAME": "Mombre no válido"
+          "NO_VALID_NAME": "Mombre no válido",
+          "RANDOM": "Aleatorio"
       }
   },
   "WIKI_PAGE": {
       "TITLE": "Documentación"
   },
   "DICES_PAGE": {
-      "TITLE": "Lanzar Dados",
-      "ATRIBUTE": "Caracteristica",
-      "SKILL": "Habilidad",
-      "MOD": "Modificador",
-      "ROLL": "Lanzar Dado",
-      "ALERT": {
-          "HEADER": "Lanzamiento de dado",
-          "TEXT": "1D10 + {{attribute}} (carac.), {{skill}} (hab.) y {{modif}} (mod.)",
-          "RESULT": " El resultado total obtenido es: ",
-          "AGREE": "De acuerdo"
-      }
+    "TITLE": "Lanzar Dados",
+    "ATRIBUTE": "Caracteristica",
+    "SKILL": "Habilidad",
+    "MOD": "Modificador",
+    "ROLL": "Lanzar Dado",
+    "ALERT": {
+        "HEADER": "Lanzamiento de dado",
+        "TEXT": "1D10 {{attribute}} {{skill}} {{modif}} ",
+        "RESULT": " El resultado total obtenido es: ",
+        "AGREE": "De acuerdo"
+    }
   },
   "DETAIL_PAGE": {
       "TITLE": "Personaje",
@@ -178,6 +183,11 @@
   "EXIT": "Salir",
   "SAVE": "Guardar",
   "LEVEL": "Nivel",
+  "ADD": "Añadir",
+  "REMOVE": "Eliminar",
+  "SELECT_MOD": "Seleccione modificador a eliminar",
+  "NEW_MOD": "Nuevo modificador",
+  "ADD_MOD_TEXT": "Introduce los nuevos valores y selecciona el check si se trata de un modificador parcial.",
   "MAIN_INFO": {
     "NAME": "Nombre",
     "PLAYER": "Jugador",
@@ -204,4 +214,5 @@
     "STRENGTH": "Fuerza"
   }
 }
+
 }

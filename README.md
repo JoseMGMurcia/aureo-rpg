@@ -4,7 +4,7 @@
 This aplication is built in **Ionic 6, capacitor-Angular-15** using internal *ionic Storage*, and have been testing in Android  & iOS platforms.
 The goal is to be used by Aureo game players as an alternative to a paper and dices.
 
-Current versión 1.0.0
+Current versión 1.0.1
 
 ### The first goal, main funcionality (In progress):
 - Users can create a complete set of characters, storage and manage it.
@@ -39,7 +39,9 @@ Current versión 1.0.0
       - [x] Base Editing Modal.
         - [x] Edit Main info component.
           - [x] Temporal Aureo edit from detail.
-        - [ ] Edit Atributes/Skills component.
+          - [ ] Random Polis.
+        - [x] Edit Atributes/Skills component.
+          - [ ] Modificator validation.
         - [ ] Edit Afinities component.
         - [ ] Edit Powers component.
         - [ ] Edit Gifts component.
@@ -62,7 +64,7 @@ Current versión 1.0.0
   - [ ] App Icon.
   - [ ] Same icon on side Menu header.
   - [x] Colour palette.
-  - [ ] Dices page redesign.
+  - [x] Dices page redesign.
   - [ ] Doc Page first design.
   - [ ] Doc Page first texts.
 
