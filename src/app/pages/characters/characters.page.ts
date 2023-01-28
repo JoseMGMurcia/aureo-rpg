@@ -9,6 +9,7 @@ import { StorageService } from 'src/app/services/storage.service';
 import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { DATABASE_NAME } from 'src/app/constants/constants';
+import { NAMES, POLIS } from 'src/app/controller/character.constants';
 
 @Component({
   selector: 'app-characters',
@@ -76,7 +77,9 @@ export class CharactersPage implements OnDestroy{
       {
         text: texts.RANDOM,
         handler: () => {
-          this.characs.push(new Character(CharacterController.getRandomName()));
+          const character = new Character(CharacterController.getRandomName(NAMES));
+          character.setPolis(CharacterController.getRandomName(POLIS));
+          this.characs.push(character);
           this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
         }
       },

@@ -22,5 +22,19 @@
       (exitModal)="cancel()"
       (saveCharacter)="confirm()">
       </app-edit-powers>
+      <app-edit-skills
+        *ngSwitchCase="id.PRIMARY_SKILLS"
+        title= "{{ 'DETAIL_PAGE.SKILLS_SEC.PRIMARY_SKILLS' | translate }}"
+        [type]="skillTypes.PRIMARY"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-skills>
+      <app-edit-skills
+        *ngSwitchCase="id.SECONDARY_SKILLS"
+        title= "{{ 'DETAIL_PAGE.SKILLS_SEC.PRIMARY_SKILLS' | translate }}"
+        [type]="skillTypes.SECONDARY"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-skills>
    </container-element>
   </div>

@@ -1,4 +1,5 @@
 import { Character } from '../model/character';
+import { Modificator } from '../model/modificator';
 import { Skill } from '../model/skill';
 
 
@@ -21,3 +22,11 @@ export const getSkillAndModsValue = (character: Character, name: string): number
 
   return skillValue;
 };
+
+export const cloneSkills = (skills: Skill[]): Skill[] => skills.map(skill => {
+  const clonedSkill = new Skill(skill.getName(), skill.getLevel());
+  clonedSkill.setMods(skill.getMods().map(mod =>
+    new Modificator(mod.getValue(), mod.getName(), mod.isPartial())
+  ));
+  return clonedSkill;
+});

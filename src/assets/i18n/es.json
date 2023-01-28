@@ -62,7 +62,9 @@
         "HEADER": "Lanzamiento de dado",
         "TEXT": "1D10 {{attribute}} {{skill}} {{modif}} ",
         "RESULT": " El resultado total obtenido es: ",
-        "AGREE": "De acuerdo"
+        "AGREE": "De acuerdo",
+        "CRITICAL": "¡Éxito crítico!",
+        "FUMBLE": "¡Fallo y pifia!"
     }
   },
   "DETAIL_PAGE": {
@@ -184,6 +186,8 @@
   "SAVE": "Guardar",
   "LEVEL": "Nivel",
   "ADD": "Añadir",
+  "ADD_SKILL": "Añadir nueva",
+  "ADD_SKILL_TITLE": "Añadir nueva Habilidad",
   "REMOVE": "Eliminar",
   "SELECT_MOD": "Seleccione modificador a eliminar",
   "NEW_MOD": "Nuevo modificador",

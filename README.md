@@ -39,7 +39,7 @@ Current versión 1.0.1
       - [x] Base Editing Modal.
         - [x] Edit Main info component.
           - [x] Temporal Aureo edit from detail.
-          - [ ] Random Polis.
+          - [x] Random Polis.
         - [x] Edit Atributes/Skills component.
           - [ ] Modificator validation.
         - [ ] Edit Afinities component.

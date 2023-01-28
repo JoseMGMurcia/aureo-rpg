@@ -1,4 +1,10 @@
 # Aureo_App
+## V1.0.2
+- Criticals and Fumbles management in dices page.
+- Randon Polis name generator.
+- Prymary skills Edition.
+- Secondary skills edition and adding mechanism.
+
 ## V1.0.1
 - Fixed Aureo, and Hibris not to save ever.
 - Fixed texts non translated.

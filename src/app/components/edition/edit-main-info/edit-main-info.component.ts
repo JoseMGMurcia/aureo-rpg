@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { MAIN_INFO_FIELDS } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { nameValidator } from 'src/app/controller/character-validator';
+import { NAMES, POLIS } from 'src/app/controller/character.constants';
 import { CharacterController } from 'src/app/controller/characterController';
 import { AureoValidators } from 'src/app/controller/custom.validator';
 import { Character } from 'src/app/model/character';
@@ -109,8 +110,13 @@ export class EditMainInfoComponent implements OnInit{
   }
 
   public getName() {
-    this.character.setName(CharacterController.getRandomName());
+    this.character.setName(CharacterController.getRandomName(NAMES));
     this.form.controls[this.id.NAME].setValue(this.character.getName());
+  }
+
+  public getPolis(){
+    this.character.setPolis(CharacterController.getRandomName(POLIS));
+    this.form.controls[this.id.POLIS].setValue(this.character.getPolis());
   }
 }
 

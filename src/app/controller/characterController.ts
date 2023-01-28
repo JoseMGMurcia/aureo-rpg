@@ -111,9 +111,9 @@ export class CharacterController{
       return newCharacter;
   }
 
-  public static getRandomName(): string {
-    const randomIndex = Math.floor(Math.random() * NAMES.length);
-    return NAMES[randomIndex];
+  public static getRandomName(names: string[]): string {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
   }
 
   private static copyCombatEquip(combatEq: any[]): CombatEquip[]{

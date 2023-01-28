@@ -12,11 +12,13 @@ import { EditionModalComponent } from 'src/app/components/modal/edition-modal.co
 import { EditMainInfoComponent } from 'src/app/components/edition/edit-main-info/edit-main-info.component';
 import { EditAtributesComponent } from 'src/app/components/edition/edit-atributes/edit-atributes.component';
 import { EditPowersComponent } from 'src/app/components/edition/edit-powers/edit-powers.component';
+import { EditSkillsComponent } from 'src/app/components/edition/edit-skills/edit-skills.component';
 
 export const createTranslateLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 const editComnponents = [
+  EditSkillsComponent,
   EditMainInfoComponent,
   EditAtributesComponent,
   EditPowersComponent
