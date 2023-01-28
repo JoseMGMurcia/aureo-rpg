@@ -15,7 +15,6 @@ export class StorageService {
   }
 
   async init() {
-    // If using, define drivers here: await this.storage.defineDriver(/*...*/);
     const storage = await this.storage.create();
     this.uStorage = storage;
     const characters =  await this.storage.get(DATABASE_NAME);

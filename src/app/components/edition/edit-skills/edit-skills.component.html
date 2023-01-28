@@ -1,43 +1,51 @@
 <div class="editionWrapper">
   <ion-card>
     <h5>{{ title }}</h5>
-      <ion-select
-        class="detail-value"
-        interface="popover"
-        placeholder="{{ 'DETAIL_PAGE.SKILLS' | translate }}"
-        (ionChange)="handleChange($event)">
-          <ion-select-option
-            *ngFor="let skill of skills"
-            [value]="skill.getName()">
-              {{ skill.getName() }}
-            </ion-select-option>
-        </ion-select>
-
-      <div *ngIf="selectedSkill.getName().length">
-        <div class="skill-row">
-          <p>{{ "EDIT.LEVEL" | translate }}: </p>
-          <ion-icon class="miniButton" name="remove-outline" (click)="removeSkill()"></ion-icon>
-          <p class="value">{{ selectedSkill.getLevel() }} </p>
-          <ion-icon class="miniButton" name="add-outline" (click)="addSkill()"></ion-icon>
-        </div>
-
-        <h5>{{ "DETAIL_PAGE.BACKGROUND_SEC.MODIF" | translate }}</h5>
-        <app-table
-          [data]="modData"
-          [dataConfiguration]="monDataConf">
-        </app-table>
-        <div class="butonRow-edit">
-          <ion-button size="small" (click)="removeMod()" class="mediumButton">
-            <ion-icon name="remove-outline"></ion-icon> {{ "EDIT.REMOVE" | translate }}
-          </ion-button>
-          <ion-button size="small" (click)="addMod()"  class="mediumButton">
-            <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD" | translate }}
-          </ion-button>
-        </div>
-      </div>
-      <ion-button *ngIf="type === skillTypes.SECONDARY " size="small" (click)="addNewSkill()" class="mediumButton">
+    <div *ngIf="type === skillTypes.SECONDARY" class="skill-editor">
+      <ion-button size="small" (click)="removeAnSkill()" class="mediumButton">
+        <ion-icon name="trash-outline"></ion-icon> {{ "EDIT.REMOVE_SKILL_TITLE" | translate }}
+      </ion-button>
+      <ion-button size="small" (click)="addNewSkill()" class="mediumButton">
         <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD_SKILL_TITLE" | translate }}
       </ion-button>
+    </div>
+
+    <ion-select
+    class="detail-value"
+    interface="popover"
+    placeholder="{{ 'DETAIL_PAGE.SKILLS' | translate }}"
+    (ionChange)="handleChange($event)">
+      <ion-select-option
+        *ngFor="let skill of skills"
+        [value]="skill.getName()">
+          {{ skill.getName() }}
+        </ion-select-option>
+    </ion-select>
+    <ion-card>
+    <div *ngIf="selectedSkill.getName().length">
+      <div class="skill-row">
+        <p class="skill-name">{{ selectedSkill.getName() }}</p><p>{{ "EDIT.LEVEL" | translate }}: </p>
+        <ion-icon class="miniButton" name="remove-outline" (click)="removeSkill()"></ion-icon>
+        <p class="value">{{ selectedSkill.getLevel() }} </p>
+        <ion-icon class="miniButton" name="add-outline" (click)="addSkill()"></ion-icon>
+      </div>
+
+      <h5>{{ "DETAIL_PAGE.BACKGROUND_SEC.MODIF" | translate }}</h5>
+      <app-table
+        [data]="modData"
+        [dataConfiguration]="monDataConf">
+      </app-table>
+      <div class="butonRow-edit">
+        <ion-button size="small" (click)="removeMod()" class="mediumButton">
+          <ion-icon name="remove-outline"></ion-icon> {{ "EDIT.REMOVE" | translate }}
+        </ion-button>
+        <ion-button size="small" (click)="addMod()"  class="mediumButton">
+          <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD" | translate }}
+        </ion-button>
+      </div>
+    </div>
+    </ion-card>
+
     <div class="butonRow">
       <ion-button size="small" (click)="handleExit()" class="lightButton">
         <ion-icon name="exit-outline"></ion-icon> {{ "EDIT.EXIT" | translate }}

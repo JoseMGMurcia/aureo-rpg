@@ -4,7 +4,7 @@ export class GodAffinity{
     private aretes: number;
     private hamartias: number;
 
-    constructor(god: string, affinity: number = 3, aretes: number = 0, hamartias: number = 0){
+    constructor(god: string, affinity = 3, aretes = 0, hamartias = 0){
         this.god = god;
         this.affinity =affinity;
         this.aretes = aretes;

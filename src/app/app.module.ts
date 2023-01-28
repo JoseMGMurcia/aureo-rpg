@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditAtributesComponent } from './components/edition/edit-atributes/edit-atributes.component';
 import { EditMainInfoComponent } from './components/edition/edit-main-info/edit-main-info.component';
 import { EditPowersComponent } from './components/edition/edit-powers/edit-powers.component';
+import { CharacterFactory } from './controller/character.factory';
 
 export const createTranslateLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +38,9 @@ export const createTranslateLoader = (http: HttpClient) =>
       }
   })
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: CharacterFactory, useClass: CharacterFactory}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

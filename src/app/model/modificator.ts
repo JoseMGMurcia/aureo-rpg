@@ -3,7 +3,7 @@ export class Modificator {
     private name: string;
     private partial: boolean;
 
-  constructor(value: number, name: string, partial: boolean = false){
+  constructor(value: number, name: string, partial = false){
       this.value = value;
       this.name = name;
       this.partial = partial;

@@ -188,6 +188,7 @@
   "ADD": "Añadir",
   "ADD_SKILL": "Añadir nueva",
   "ADD_SKILL_TITLE": "Añadir nueva Habilidad",
+  "REMOVE_SKILL_TITLE": "Eliminar Habilidad",
   "REMOVE": "Eliminar",
   "SELECT_MOD": "Seleccione modificador a eliminar",
   "NEW_MOD": "Nuevo modificador",
@@ -217,6 +218,22 @@
     "SOUL": "Alma",
     "STRENGTH": "Fuerza"
   }
+},
+"SKILLS": {
+  "PRYMARY_SKILLS":{
+    "CLOSE_COMBAT": "Armas CC",
+    "RANGED_COMBAT": "Armas D",
+    "ATLETHISM": "Atletismo",
+    "VALOR": "Coraje",
+    "TOUGHNESS": "Dureza",
+    "EMPATHY": "Empatía",
+    "DODGE": "Evitar",
+    "INTIMIDATE": "Intimidar",
+    "PERCEPTION": "Percibir",
+    "POLITICS": "Política",
+    "STEALTH": "Sigilo",
+    "SURVIVAL": "Supervivenia",
+    "TEMPERANCE": "Templanza"
+  }
 }
-
 }

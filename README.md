@@ -31,16 +31,14 @@ Current versión 1.0.2
   - [x] Character mapping from JSON.
   - [ ] Editing character in tab.
     - [ ] Character validation first method.
-      - [ ] By types.
-      - [ ] Numbers in ranks.
-      - [ ] Strings or Arrays not null.
-      - [ ] No special characters in strings.
+      - [x] No special characters in strings.
     - [ ] Character Edit rework.
       - [x] Base Editing Modal.
         - [x] Edit Main info component.
           - [x] Temporal Aureo edit from detail.
           - [x] Random Polis.
         - [x] Edit Atributes/Skills component.
+          - [x] Delete an existing skill.
           - [ ] Modificator validation.
         - [ ] Edit Afinities component.
         - [ ] Edit Powers component.
@@ -60,9 +58,8 @@ Current versión 1.0.2
     - [x] Image
     - [x] Redirecting button
   - [x] Detail Page / general, Info redesign.
-  - [ ] Change app name for Android users.
+  - [x] Change app name for Android users.
   - [ ] App Icon.
-  - [ ] Same icon on side Menu header.
   - [x] Colour palette.
   - [x] Dices page redesign.
   - [ ] Doc Page first design.

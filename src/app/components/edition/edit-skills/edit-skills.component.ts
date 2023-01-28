@@ -173,6 +173,30 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
     openAlert(alertParams);
   }
 
+  public removeAnSkill(){
+    const alertParams: AlertOptions = {
+      header: this.translate.instant('EDIT.REMOVE_SKILL_TITLE'),
+      inputs : this.skills.map((skill): AlertInput=> ({
+        type: 'radio',
+        label: skill.getName(),
+        value: skill.getName()
+      })),
+      buttons: [
+        { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
+        {
+          text:  this.translate.instant('SHARED.DELETE'),
+          cssClass: 'alert-primaryButton',
+          handler:  (data: any) => {
+            const index = this.skills.findIndex(skill => skill.getName() === data);
+            this.skills.splice(index, MAGIC_NUMBERS.N_1);
+            if(this.selectedSkill.getName() === data ){
+              this.selectedSkill = new Skill('',0);
+            }
+            this.setChatacterSkills();
+    }}]};
+    openAlert(alertParams);
+  }
+
   private fetch(){
     if(this.type === SKILL_TYPES.PRIMARY){
       this.skills = this.character.getPrymarySkills();

@@ -1,4 +1,3 @@
-import { FormControl } from '@angular/forms';
 import { Character } from 'src/app/model/character';
 import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Atributes } from '../model/atributes';
@@ -10,7 +9,6 @@ import { GodAffinity } from '../model/godAffinity';
 import { Modificator } from '../model/modificator';
 import { Power } from '../model/power';
 import { Skill } from '../model/skill';
-import { NAMES } from './character.constants';
 
 export class CharacterController{
 

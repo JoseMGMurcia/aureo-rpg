@@ -9,3 +9,13 @@ export class AureoValidators {
     return null;
   }
 }
+
+export function noSpecialCharactersValidator(control: FormControl) {
+  if (control.value) {
+    const pattern = /^[a-zA-Z0-9ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ ]*$/;
+    if (!pattern.test(control.value)) {
+      return { specialCharacters: true };
+    }
+  }
+  return null;
+}

@@ -25,7 +25,8 @@ export class TableDataConfiguration {
 }
 
 export class TableColumn {
-  public name: string = '';
-  public id: string = '';
+  public name = '';
+  public id = '';
+  public templatedId? : boolean = false;
 }
 

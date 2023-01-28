@@ -6,7 +6,7 @@ import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { nameValidator } from 'src/app/controller/character-validator';
 import { NAMES, POLIS } from 'src/app/controller/character.constants';
 import { CharacterController } from 'src/app/controller/characterController';
-import { AureoValidators } from 'src/app/controller/custom.validator';
+import { AureoValidators, noSpecialCharactersValidator } from 'src/app/controller/custom.validator';
 import { Character } from 'src/app/model/character';
 import { easyConfirmAlert } from 'src/app/utils/alert.utils';
 
@@ -33,13 +33,13 @@ export class EditMainInfoComponent implements OnInit{
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      [this.id.NAME]: [this.character.getName(), [Validators.minLength(3), Validators.maxLength(19), Validators.required, nameValidator]],
-      [this.id.PLAYER]: [this.character.getPlayer(), [Validators.minLength(3), Validators.maxLength(19), nameValidator]],
-      [this.id.CULT]: [this.character.getCult(), [Validators.minLength(3), Validators.maxLength(19), nameValidator]],
+      [this.id.NAME]: [this.character.getName(), [Validators.minLength(3), Validators.maxLength(19), Validators.required, noSpecialCharactersValidator]],
+      [this.id.PLAYER]: [this.character.getPlayer(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
+      [this.id.CULT]: [this.character.getCult(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.ARQUETYPE]: [this.character.getArquetype(), [Validators.minLength(3), Validators.maxLength(19)]],
-      [this.id.POLIS]: [this.character.getPolis(), [Validators.minLength(3), Validators.maxLength(19), nameValidator]],
+      [this.id.POLIS]: [this.character.getPolis(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.SEX]: [this.character.getSex(), [AureoValidators.genderValidator]],
-      [this.id.SOCIAL_GROUP]: [this.character.getSocialGroup(), [Validators.minLength(3), Validators.maxLength(19), nameValidator]],
+      [this.id.SOCIAL_GROUP]: [this.character.getSocialGroup(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.AGE]: [this.character.getAge(), Validators.pattern('^[0-9]*$')]
     });
     this.enterAureo = this.character.getAureo();

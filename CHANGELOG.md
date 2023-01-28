@@ -3,9 +3,9 @@
 - Criticals and Fumbles management in dices page.
 - Randon Polis name generator.
 - Prymary skills Edition.
-- Secondary skills edition and adding mechanism.
+- Secondary skills editting, adding  and removing mechanism.
 - Navigation to detail page performance improvement.
-
+- Stylelint fixed.
 
 ## V1.0.1
 - Fixed Aureo, and Hibris not to save ever.

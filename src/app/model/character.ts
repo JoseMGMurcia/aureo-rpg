@@ -29,7 +29,7 @@ export class Character {
   private actualLifeP = MAGIC_NUMBERS.N_0;// Not yet in detail.
   private titles: string[] = [];
 
-  private atributes: Atributes;
+  private atributes: Atributes = new Atributes();
 
   private primarySkills: Skill[] = [];
   private secondarySkills: Skill[] = [];
@@ -39,7 +39,7 @@ export class Character {
   private curses: Gift[] = [];
   private powers: Power[] = [];
 
-  private godAfinities: GodAffinity[];
+  private godAfinities: GodAffinity[] = [];
   private combatEquipment: CombatEquip[] = [];
 
   private glory = MAGIC_NUMBERS.N_0;
@@ -62,23 +62,6 @@ export class Character {
   constructor(name: string) {
       this.name = name;
       this.id = CharacterController.generateId(name);
-
-      this.atributes = new  Atributes();
-
-      this.godAfinities = [
-          new GodAffinity('Afrodita'),
-          new GodAffinity('Apolo'),
-          new GodAffinity('Ares'),
-          new GodAffinity('Artemisa'),
-          new GodAffinity('Atenea'),
-          new GodAffinity('Dioniso'),
-          new GodAffinity('Hades'),
-          new GodAffinity('Hefesto'),
-          new GodAffinity('Hermes'),
-          new GodAffinity('Hera'),
-          new GodAffinity('Poseidon'),
-          new GodAffinity('Zeus')
-      ];
   }
     //Getters & Setters
 

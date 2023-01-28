@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { DATABASE_NAME } from 'src/app/constants/constants';
 import { NAMES, POLIS } from 'src/app/controller/character.constants';
+import { openAlert } from 'src/app/utils/alert.utils';
+import { CharacterFactory } from 'src/app/controller/character.factory';
 
 @Component({
   selector: 'app-characters',
@@ -24,7 +26,8 @@ export class CharactersPage implements OnDestroy{
     private router: Router,
     private ts: TranslateService,
     private charactersService: CharactersService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private characterFactory: CharacterFactory
   ) {}
 
   ngOnDestroy(): void {
@@ -60,7 +63,7 @@ export class CharactersPage implements OnDestroy{
         cssClass: 'secondary',
         handler: (data: any) => {
           if( CharacterController.isNameValid(data.name1) ){
-            this.characs.push(new Character(data.name1));
+            this.characs.push(this.characterFactory.getCharacter(data.name1));
             this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
           }else{
             // Not a valid name
@@ -77,7 +80,7 @@ export class CharactersPage implements OnDestroy{
       {
         text: texts.RANDOM,
         handler: () => {
-          const character = new Character(CharacterController.getRandomName(NAMES));
+          const character = this.characterFactory.getCharacter(CharacterController.getRandomName(NAMES));
           character.setPolis(CharacterController.getRandomName(POLIS));
           this.characs.push(character);
           this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
@@ -92,11 +95,12 @@ export class CharactersPage implements OnDestroy{
   }
 
   deleteCharacter(character: Character){
+    const texts = this.ts.instant('CHAR_PAGE.DELETE_ALERT');
     const alerParams: AlertOptions = {
-      header: this.ts.instant('CHAR_PAGE.DELETE_ALERT.HEADER'),
+      header: texts.HEADER,
       message: this.ts.instant('CHAR_PAGE.DELETE_ALERT.TEXT', { character: character.getName() }),
       buttons: [{
-        text: this.ts.instant('CHAR_PAGE.DELETE_ALERT.AGREE'),
+        text: texts.AGREE,
         cssClass: 'secondary',
         handler: () => {
           const index = this.characs.indexOf(character);
@@ -105,10 +109,9 @@ export class CharactersPage implements OnDestroy{
             this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
           }
         }
-      }, this.ts.instant('CHAR_PAGE.DELETE_ALERT.CANCEL')]
+      }, texts.CANCEL
+    ]
     };
-    alertController.create(alerParams).then(alert => {
-      alert.present();
-    });
+    openAlert(alerParams);
   }
 }

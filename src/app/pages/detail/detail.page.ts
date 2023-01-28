@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil} from 'rxjs';
 import { TableDataConfiguration } from 'src/app/components/table/table.component';
@@ -127,7 +126,7 @@ export class DetailPage implements OnInit, OnDestroy{
     this.section = event.detail.value;
   }
 
-  public edit(card: string = ''){
+  public edit(card = ''){
     if(card){
       edit(card, this.character, this.modalCtrl);
     }
@@ -183,7 +182,7 @@ export class DetailPage implements OnInit, OnDestroy{
 
   private saveCharacter(){
     const index = this.characters.findIndex( pj => pj.getId() === this.character.getId());
-    if (index > -1){
+    if (index > -MAGIC_NUMBERS.N_1){
       this.characters[index] = this.character;
     }
     this.storage.set(DATABASE_NAME, JSON.stringify(this.characters));

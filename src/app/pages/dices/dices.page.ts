@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { alertController, AlertOptions } from '@ionic/core';
+import { AlertOptions } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { openAlert } from 'src/app/utils/alert.utils';
@@ -13,8 +13,8 @@ import { getSymbol } from '../detail/detail.page.data.helper';
 export class DicesPage {
 
   public data: {attribute: number, skill: number, modif: number} = {
-    attribute: 5,
-    skill: 3,
+    attribute: MAGIC_NUMBERS.N_3,
+    skill: MAGIC_NUMBERS.N_2,
     modif: 0
   };
 
