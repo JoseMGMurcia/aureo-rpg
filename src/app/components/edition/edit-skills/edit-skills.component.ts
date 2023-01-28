@@ -33,7 +33,7 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
   public modData: any[] = [];
   public monDataConf: TableDataConfiguration = this.getModDataConfiguration();
   public inSkills:  Skill[] = [];
-  public character: Character = new Character('pepe');
+  public character: Character = new Character('Pepe');
   public skillTypes = SKILL_TYPES;
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 

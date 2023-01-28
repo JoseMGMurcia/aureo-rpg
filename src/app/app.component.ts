@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AVALIABLE_LANGUAJES, DATABASE_NAME } from './constants/constants';
+import { MAGIC_NUMBERS } from './constants/number.constants';
 import { CharacterController } from './controller/characterController';
 import { Character } from './model/character';
 import { getMockCharacter } from './services/character.service.mock';
@@ -38,7 +39,7 @@ export class AppComponent implements OnInit{
     const protoCharacters = JSON.parse( await this.storageService.get(DATABASE_NAME) );
     this.characters = CharacterController.converToCharacters(protoCharacters);
     this.characterService.setCharacters(this.characters);
-    if(this.characters.length === 0){
+    if(this.characters.length === MAGIC_NUMBERS.N_0){
       this.characters.push(getMockCharacter());
     }
   }
@@ -52,8 +53,7 @@ export class AppComponent implements OnInit{
   public navigateToDetail(character: Character){
     this.characterService.setCharacter(character);
     if(this.router.url.substring(0,7) !== '/detail') {
-      const params = { character };
-      this.router.navigate(['/detail'] , { state: params});
+      this.router.navigate(['/detail']);
     }
   }
 }

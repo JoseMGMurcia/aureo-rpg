@@ -14,7 +14,7 @@ import { CARD_ID, DATABASE_NAME, SECTION, SKILL_TYPES } from 'src/app/constants/
 export class EditionModalComponent implements OnInit, OnDestroy{
 
   public section = '';
-  public character: Character = new Character('pepe');
+  public character: Character = new Character('Pepe');
   public characters: Character[] = [];
   public id = CARD_ID;
   public skillTypes = SKILL_TYPES;

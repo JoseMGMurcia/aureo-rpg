@@ -17,7 +17,7 @@ import { easyConfirmAlert } from 'src/app/utils/alert.utils';
 })
 export class EditMainInfoComponent implements OnInit{
 
-  @Input() character: Character = new Character('pepe');
+  @Input() character: Character = new Character('Pepe');
   @Output() saveCharacter: EventEmitter<any> = new EventEmitter<any>();
   @Output() exitModal: EventEmitter<any> = new EventEmitter<any>();
 
@@ -25,7 +25,6 @@ export class EditMainInfoComponent implements OnInit{
   public id = MAIN_INFO_FIELDS;
   public enterAureo = 0;
   public enterHibris = 0;
-  public enterName = '';
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -45,7 +44,6 @@ export class EditMainInfoComponent implements OnInit{
     });
     this.enterAureo = this.character.getAureo();
     this.enterHibris = this.character.getHibris();
-    this.enterName = this.character.getName();
   }
 
   public handleSave(){
@@ -83,7 +81,6 @@ export class EditMainInfoComponent implements OnInit{
       () => {
         this.character.setAureo(this.enterAureo);
         this.character.setHibris(this.enterHibris);
-        this.character.setName(this.enterName);
         this.exitModal.emit();
       },
       this.translate);
@@ -110,13 +107,11 @@ export class EditMainInfoComponent implements OnInit{
   }
 
   public getName() {
-    this.character.setName(CharacterController.getRandomName(NAMES));
-    this.form.controls[this.id.NAME].setValue(this.character.getName());
+    this.form.controls[this.id.NAME].setValue(CharacterController.getRandomName(NAMES));
   }
 
   public getPolis(){
-    this.character.setPolis(CharacterController.getRandomName(POLIS));
-    this.form.controls[this.id.POLIS].setValue(this.character.getPolis());
+    this.form.controls[this.id.POLIS].setValue(CharacterController.getRandomName(POLIS));
   }
 }
 

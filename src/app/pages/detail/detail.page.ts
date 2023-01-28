@@ -51,7 +51,7 @@ import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 })
 export class DetailPage implements OnInit, OnDestroy{
   public section = '1';
-  public character: Character = new Character('pepe');
+  public character: Character = new Character('Pepe');
   public characters: Character[] = [];
   public id = CARD_ID;
 
@@ -95,18 +95,11 @@ export class DetailPage implements OnInit, OnDestroy{
   constructor(
     private translate: TranslateService,
     private characterService: CharactersService,
-    private router: Router,
     private modalCtrl: ModalController,
     private storage: StorageService
   ) {}
 
   ngOnInit(): void {
-    const state = this.router.getCurrentNavigation()?.extras.state;
-    if (state) {
-        this.character = state['character'];
-        this.fetch();
-    }
-
     this.characterService.character
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((character)=> {

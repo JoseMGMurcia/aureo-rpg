@@ -35,7 +35,7 @@ export class EditAtributesComponent implements OnInit, OnDestroy{
   public modData: any[] = [];
   public monDataConf: TableDataConfiguration = this.getModDataConfiguration();
   public inAtributes: Atributes = new Atributes();
-  public character: Character = new Character('pepe');
+  public character: Character = new Character('Pepe');
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
