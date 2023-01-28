@@ -4,8 +4,7 @@ import { ModalController, NavParams } from '@ionic/angular';
 import { Character } from 'src/app/model/character';
 import { CharactersService } from 'src/app/services/characters.service';
 import { StorageService } from 'src/app/services/storage.service';
-import { Atributes } from 'src/app/model/atributes';
-import { CARD_ID, DATABASE_NAME, SECTION } from 'src/app/constants/constants';
+import { CARD_ID, DATABASE_NAME, SECTION, SKILL_TYPES } from 'src/app/constants/constants';
 
 @Component({
   selector: 'app-custom-modal',
@@ -15,9 +14,10 @@ import { CARD_ID, DATABASE_NAME, SECTION } from 'src/app/constants/constants';
 export class EditionModalComponent implements OnInit, OnDestroy{
 
   public section = '';
-  public character: Character = new Character('pepe');
+  public character: Character = new Character('Pepe');
   public characters: Character[] = [];
   public id = CARD_ID;
+  public skillTypes = SKILL_TYPES;
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
@@ -56,6 +56,7 @@ export class EditionModalComponent implements OnInit, OnDestroy{
       this.characters[index] = this.character;
     }
     this.storage.set(DATABASE_NAME, JSON.stringify(this.characters));
+    this.characterService.setCharacter(this.character);
     this.modalCtrl.dismiss();
   }
 }

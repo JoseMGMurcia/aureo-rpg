@@ -4,12 +4,13 @@ export class GodAffinity{
     private aretes: number;
     private hamartias: number;
 
-    constructor(god: string, affinity: number, aretes: number, hamartias: number){
+    constructor(god: string, affinity = 3, aretes = 0, hamartias = 0){
         this.god = god;
         this.affinity =affinity;
         this.aretes = aretes;
         this.hamartias = hamartias;
     }
+
 
     //Getters & Setters
 

@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": ["projects/**/*", "src/**/*.spec.ts", "src/**/*.test.ts", "src/**/*.e2e.ts"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -10,31 +10,23 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/component-class-suffix": [
-          "error",
-          {
-            "suffixes": ["Page", "Component"]
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
-          }
-        ],
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ]
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/no-inferrable-types": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "@angular-eslint/component-class-suffix": [ "error", { "suffixes": ["Page", "Component"] }],
+        "@angular-eslint/component-selector": [ "error", { "type": "element", "prefix": "app", "style": "kebab-case" }],
+        "@angular-eslint/directive-selector": [ "error", { "type": "attribute", "prefix": "app", "style": "camelCase" }],
+        "max-lines": ["error", 1000],
+        "no-empty": "error",
+        "no-redeclare": "error",
+        "no-underscore-dangle": 0,
+        "no-console": ["error", { "allow": ["warn", "error"]}],
+        "max-len" : [ "error", { "code": 200 }],
+        "brace-style": ["off", "1tbs"]
       }
     },
     {

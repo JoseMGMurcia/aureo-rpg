@@ -1,13 +1,13 @@
 export class CombatEquip {
     private name: string;
-    private initialDamage: number = 0;
-    private activeDefence: number = 0;
-    private armor: number = 0;
-    private hands: number = 0;
-    private precision: string = '';
-    private price: number = 0;
-    private atletism: number = 0;
-    private sense: number = 0;
+    private initialDamage = 0;
+    private activeDefence = 0;
+    private armor = 0;
+    private hands = 0;
+    private precision = '';
+    private price = 0;
+    private atletism = 0;
+    private sense = 0;
 
     constructor(name: string){
         this.name = name;

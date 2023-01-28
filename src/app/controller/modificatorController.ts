@@ -1,5 +1,6 @@
 import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Modificator } from '../model/modificator';
+import { TranslateService } from '@ngx-translate/core';
 
    export class ModificatorController {
     public static getModsString(mods: Modificator[]): string{
@@ -13,4 +14,12 @@ import { Modificator } from '../model/modificator';
         });
         return modsString ? modsString : '-';
     }
+    public static getModDetails(mod: Modificator, translate: TranslateService): string{
+      const partial = mod.isPartial() ? translate.instant('SHARED.PARCIAL') : '';
+      return `${mod.getName()}, ${mod.getValue()}, ${partial}`
+    }
+
+
    }
+
+

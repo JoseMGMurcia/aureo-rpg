@@ -23,7 +23,11 @@
       <ion-row class="detail-row">
         <ion-col size="4" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.CULT" | translate }} </p><p class="detail-value">{{ character.getCult() }}</p></ion-col>
         <ion-col size="5" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.POLIS" | translate }} </p><p class="detail-value">{{ character.getPolis() }}</p></ion-col>
-        <ion-col size="3" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p><p class="detail-value">{{ character.getSex() }}</p></ion-col>
+        <ion-col size="3" class="detail-col">
+          <p>{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p>
+          <ion-icon *ngIf="character.getSex() === 'M'" class="miniButton" name="male-outline"></ion-icon>
+          <ion-icon *ngIf="character.getSex() === 'F'" class="miniButton" name="female-outline"></ion-icon>
+        </ion-col>
 
       </ion-row>
       <ion-row class="detail-row">

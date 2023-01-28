@@ -3,5 +3,46 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "icon": "src/assets/icon/logo-aureo.jpg",
+  "splash": {
+    "image": "src/assets/icon/logo-aureo.jpg",
+    "backgroundColor": "#ffffff"
+  },
+
+
+
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://localhost:3000/api"
+    }
+  ],
+  "watchOptions": {},
+  "pluginVariables": {
+    "ionic-plugin-keyboard": {
+      "OBFUSCATING_KEY": "your-key-here"
+    }
+  },
+  "gulpStartupTasks": [
+    "clean",
+    "build"
+  ],
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-camera": {},
+      "cordova-plugin-file": {}
+    }
+  },
+  "appId": "com.example.myapp",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "projectId": "my-ionic-app-id",
+  "configPath": "config.xml",
+  "docs": {
+    "guide": "https://ionicframework.com/docs",
+    "ionicCli": "https://github.com/ionic-team/ionic-cli/blob/master/README.md"
+  }
 }

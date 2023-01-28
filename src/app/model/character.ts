@@ -18,7 +18,7 @@ export class Character {
   private polis = '';
   private arquetype = '';
   private socialGroup = '';
-  private sex = '';
+  private sex: 'M' | 'F' | '' = '';
   private age = MAGIC_NUMBERS.N_0;
   private player = '';
   private aureo: number = MAGIC_NUMBERS.N_3;
@@ -29,7 +29,7 @@ export class Character {
   private actualLifeP = MAGIC_NUMBERS.N_0;// Not yet in detail.
   private titles: string[] = [];
 
-  private atributes: Atributes;
+  private atributes: Atributes = new Atributes();
 
   private primarySkills: Skill[] = [];
   private secondarySkills: Skill[] = [];
@@ -39,7 +39,7 @@ export class Character {
   private curses: Gift[] = [];
   private powers: Power[] = [];
 
-  private godAfinities: GodAffinity[];
+  private godAfinities: GodAffinity[] = [];
   private combatEquipment: CombatEquip[] = [];
 
   private glory = MAGIC_NUMBERS.N_0;
@@ -62,23 +62,6 @@ export class Character {
   constructor(name: string) {
       this.name = name;
       this.id = CharacterController.generateId(name);
-
-      this.atributes = new  Atributes();
-
-      this.godAfinities = [
-          new GodAffinity('Afrodita', 0, 0, 0),
-          new GodAffinity('Apolo',    0, 0, 0),
-          new GodAffinity('Ares',     0, 0, 0),
-          new GodAffinity('Artemisa', 0, 0, 0),
-          new GodAffinity('Atenea',   0, 0, 0),
-          new GodAffinity('Dioniso',  0, 0, 0),
-          new GodAffinity('Hades',    0, 0, 0),
-          new GodAffinity('Hefesto',  0, 0, 0),
-          new GodAffinity('Hermes',   0, 0, 0),
-          new GodAffinity('Hera',     0, 0, 0),
-          new GodAffinity('Poseidon', 0, 0, 0),
-          new GodAffinity('Zeus',     0, 0, 0)
-      ];
   }
     //Getters & Setters
 
@@ -135,7 +118,8 @@ export class Character {
   }
 
   public setSex(sex: string): void {
-      this.sex = sex;
+    const upperSex = sex.toUpperCase();
+    this.sex = upperSex === 'F' ? 'F' :  upperSex === 'M' ? 'M' : '';
   }
 
   public getAge(): number {

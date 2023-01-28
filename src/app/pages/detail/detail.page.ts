@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil} from 'rxjs';
 import { TableDataConfiguration } from 'src/app/components/table/table.component';
@@ -51,7 +50,7 @@ import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 })
 export class DetailPage implements OnInit, OnDestroy{
   public section = '1';
-  public character: Character = new Character('pepe');
+  public character: Character = new Character('Pepe');
   public characters: Character[] = [];
   public id = CARD_ID;
 
@@ -95,23 +94,18 @@ export class DetailPage implements OnInit, OnDestroy{
   constructor(
     private translate: TranslateService,
     private characterService: CharactersService,
-    private router: Router,
     private modalCtrl: ModalController,
     private storage: StorageService
   ) {}
 
   ngOnInit(): void {
-    const state = this.router.getCurrentNavigation()?.extras.state;
-    if (state) {
-        this.character = state['character'];
-        this.fetch();
-    }
-
     this.characterService.character
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((character)=> {
         if(character.getId() !== this.character.getId()){
           this.switchCaracter(character);
+          this.fetch();
+        }else {
           this.fetch();
         }
       });
@@ -132,7 +126,7 @@ export class DetailPage implements OnInit, OnDestroy{
     this.section = event.detail.value;
   }
 
-  public edit(card: string = ''){
+  public edit(card = ''){
     if(card){
       edit(card, this.character, this.modalCtrl);
     }
@@ -188,7 +182,7 @@ export class DetailPage implements OnInit, OnDestroy{
 
   private saveCharacter(){
     const index = this.characters.findIndex( pj => pj.getId() === this.character.getId());
-    if (index > -1){
+    if (index > -MAGIC_NUMBERS.N_1){
       this.characters[index] = this.character;
     }
     this.storage.set(DATABASE_NAME, JSON.stringify(this.characters));

@@ -3,6 +3,10 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators, } from '@angular/form
 import { TranslateService } from '@ngx-translate/core';
 import { MAIN_INFO_FIELDS } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
+import { nameValidator } from 'src/app/controller/character-validator';
+import { NAMES, POLIS } from 'src/app/controller/character.constants';
+import { CharacterController } from 'src/app/controller/characterController';
+import { AureoValidators, noSpecialCharactersValidator } from 'src/app/controller/custom.validator';
 import { Character } from 'src/app/model/character';
 import { easyConfirmAlert } from 'src/app/utils/alert.utils';
 
@@ -13,12 +17,14 @@ import { easyConfirmAlert } from 'src/app/utils/alert.utils';
 })
 export class EditMainInfoComponent implements OnInit{
 
-  @Input() character: Character = new Character('pepe');
+  @Input() character: Character = new Character('Pepe');
   @Output() saveCharacter: EventEmitter<any> = new EventEmitter<any>();
   @Output() exitModal: EventEmitter<any> = new EventEmitter<any>();
 
   public form: UntypedFormGroup = this.formBuilder.group({});
   public id = MAIN_INFO_FIELDS;
+  public enterAureo = 0;
+  public enterHibris = 0;
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -27,15 +33,17 @@ export class EditMainInfoComponent implements OnInit{
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      [this.id.NAME]: [this.character.getName(), [Validators.minLength(3), Validators.maxLength(19)]],
-      [this.id.PLAYER]: [this.character.getPlayer(), [Validators.minLength(3), Validators.maxLength(19)]],
-      [this.id.CULT]: [this.character.getCult(), [Validators.minLength(3), Validators.maxLength(19)]],
+      [this.id.NAME]: [this.character.getName(), [Validators.minLength(3), Validators.maxLength(19), Validators.required, noSpecialCharactersValidator]],
+      [this.id.PLAYER]: [this.character.getPlayer(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
+      [this.id.CULT]: [this.character.getCult(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.ARQUETYPE]: [this.character.getArquetype(), [Validators.minLength(3), Validators.maxLength(19)]],
-      [this.id.POLIS]: [this.character.getPolis(), [Validators.minLength(3), Validators.maxLength(19)]],
-      [this.id.SEX]: [this.character.getSex(), [Validators.minLength(1), Validators.maxLength(6)]],
-      [this.id.SOCIAL_GROUP]: [this.character.getSocialGroup(), [Validators.minLength(3), Validators.maxLength(19)]],
+      [this.id.POLIS]: [this.character.getPolis(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
+      [this.id.SEX]: [this.character.getSex(), [AureoValidators.genderValidator]],
+      [this.id.SOCIAL_GROUP]: [this.character.getSocialGroup(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.AGE]: [this.character.getAge(), Validators.pattern('^[0-9]*$')]
     });
+    this.enterAureo = this.character.getAureo();
+    this.enterHibris = this.character.getHibris();
   }
 
   public handleSave(){
@@ -71,6 +79,8 @@ export class EditMainInfoComponent implements OnInit{
     easyConfirmAlert(
       this.translate.instant('EDIT.MAIN_INFO.CHANGES_LOST'),
       () => {
+        this.character.setAureo(this.enterAureo);
+        this.character.setHibris(this.enterHibris);
         this.exitModal.emit();
       },
       this.translate);
@@ -94,6 +104,14 @@ export class EditMainInfoComponent implements OnInit{
   public addHibris() {
     const target: number = this.character.getHibris() + MAGIC_NUMBERS.N_1;
     this.character.setHibris(target);
+  }
+
+  public getName() {
+    this.form.controls[this.id.NAME].setValue(CharacterController.getRandomName(NAMES));
+  }
+
+  public getPolis(){
+    this.form.controls[this.id.POLIS].setValue(CharacterController.getRandomName(POLIS));
   }
 }
 

@@ -9,6 +9,7 @@
           placeholder="{{ 'EDIT.MAIN_INFO.NAME' | translate }}"
           [formControlName]="id.NAME">
         </ion-input>
+        <ion-icon class="miniButton" name="refresh-outline" (click)="getName()"></ion-icon>
       </ion-row>
       <ion-row class="detail-row">
         <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.PLAYER" | translate }} </p>
@@ -33,6 +34,7 @@
           placeholder="{{ 'EDIT.MAIN_INFO.POLIS' | translate }}"
           [formControlName]="id.POLIS">
         </ion-input>
+        <ion-icon class="miniButton" name="refresh-outline" (click)="getPolis()"></ion-icon>
       </ion-row>
       <ion-row class="detail-row">
         <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p>

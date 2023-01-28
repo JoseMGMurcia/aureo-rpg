@@ -109,6 +109,11 @@ export class CharacterController{
       return newCharacter;
   }
 
+  public static getRandomName(names: string[]): string {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
+  }
+
   private static copyCombatEquip(combatEq: any[]): CombatEquip[]{
       return combatEq.map( equip => {
         const combatEqui: CombatEquip = new CombatEquip(equip.name);

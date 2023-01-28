@@ -14,7 +14,7 @@ h4 {
   width: 100%;
 }
 
-.atribute-row {
+.skill-row {
   display: flex;
   justify-content: flex-start;
   margin-top: 1em;
@@ -30,6 +30,10 @@ h4 {
   .value {
     padding-left: 0.2em;
   }
+
+  .skill-name {
+    color: colors.$title-text;
+  }
 }
 
 .butonRow {
@@ -42,6 +46,10 @@ h4 {
   .saveButton {
     margin-left: 0.5em;
   }
+}
+
+.skill-editor {
+  padding-bottom: 0.75em;
 }
 
 .butonRow-edit {

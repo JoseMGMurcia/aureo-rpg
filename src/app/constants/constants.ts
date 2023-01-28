@@ -50,3 +50,8 @@ export const ATRIBUTE_FIELDS = {
   SOUL: 'SOUL',
   STRENGTH: 'STRENGTH'
 };
+
+export const SKILL_TYPES = {
+  PRIMARY: 'PRIMARY',
+  SECONDARY: 'SECONDARY'
+}

@@ -5,8 +5,7 @@
         class="detail-value"
         interface="popover"
         placeholder="{{ 'DETAIL_PAGE.GENERAL_SEC.ATRIBUTES' | translate }}"
-        (ionChange)="handleChange($event)"
-        [interfaceOptions]="{size: 'cover'}">
+        (ionChange)="handleChange($event)">
         <ion-select-option [value]="atributeFields.AGILITY">{{ "EDIT.ATRIBUTES.AGILITY" | translate }}</ion-select-option>
         <ion-select-option [value]="atributeFields.APPEAR">{{ "EDIT.ATRIBUTES.APPEAR" | translate }}</ion-select-option>
         <ion-select-option [value]="atributeFields.COMMUN">{{ "EDIT.ATRIBUTES.COMMUN" | translate }}</ion-select-option>
@@ -18,19 +17,29 @@
         <ion-select-option [value]="atributeFields.STRENGTH">{{ "EDIT.ATRIBUTES.STRENGTH" | translate }}</ion-select-option>
       </ion-select>
       <div *ngIf="selectedAtribute">
-        <container-element [ngSwitch]="selectedAtribute">
-          <div *ngSwitchCase="atributeFields.AGILITY">
-            <p>{{ "EDIT.LEVEL" | translate }}: </p>
-            <p>{{ atributes.getAgility().getValue() }} </p>
+        <div class="atribute-row">
+          <p>{{ "EDIT.LEVEL" | translate }}: </p>
+          <ion-icon class="miniButton" name="remove-outline" (click)="removeAtribute()"></ion-icon>
 
-          </div>
-          <div *ngSwitchCase="atributeFields.APPEAR">
-            <p>{{ "EDIT.LEVEL" | translate }}: </p>
-            <p>{{ atributes.getAppearance().getValue() }} </p>
-          </div>
-       </container-element>
+          <p class="value">{{ getAtribute().getValue() }} </p>
+          <ion-icon class="miniButton" name="add-outline" (click)="addAtribute()"></ion-icon>
+
+        </div>
+
+        <h5>{{ "DETAIL_PAGE.BACKGROUND_SEC.MODIF" | translate }}</h5>
+        <app-table
+          [data]="modData"
+          [dataConfiguration]="monDataConf">
+        </app-table>
+        <div class="butonRow-edit">
+          <ion-button size="small" (click)="removeMod()" class="mediumButton">
+            <ion-icon name="remove-outline"></ion-icon> {{ "EDIT.REMOVE" | translate }}
+          </ion-button>
+          <ion-button size="small" (click)="addMod()"  class="mediumButton">
+            <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD" | translate }}
+          </ion-button>
+        </div>
       </div>
-
     <div class="butonRow">
       <ion-button size="small" (click)="handleExit()" class="lightButton">
         <ion-icon name="exit-outline"></ion-icon> {{ "EDIT.EXIT" | translate }}
