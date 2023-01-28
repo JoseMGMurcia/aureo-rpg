@@ -4,6 +4,8 @@
 - Randon Polis name generator.
 - Prymary skills Edition.
 - Secondary skills edition and adding mechanism.
+- Navigation to detail page performance improvement.
+
 
 ## V1.0.1
 - Fixed Aureo, and Hibris not to save ever.
