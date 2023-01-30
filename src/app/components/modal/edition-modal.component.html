@@ -78,12 +78,5 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-list>
-      <app-edit-list
-        *ngSwitchCase="id.TITLES"
-        title="{{ 'DETAIL_PAGE.GENERAL_SEC.TITLES' | translate }}"
-        [listType]="listTypes.TITLES"
-        (exitModal)="cancel()"
-        (saveCharacter)="confirm()">
-      </app-edit-list>
-   </container-element>
+    </container-element>
   </div>
