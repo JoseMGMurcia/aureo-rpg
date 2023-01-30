@@ -4,7 +4,7 @@
 This aplication is built in **Ionic 6, capacitor-Angular-15** using internal *ionic Storage*, and have been testing in Android  & iOS platforms.
 The goal is to be used by Aureo game players as an alternative to a paper and dices.
 
-Current versión 1.0.2
+Current versión 1.0.3
 
 ### The first goal, main funcionality (In progress):
 - Users can create a complete set of characters, storage and manage it.
