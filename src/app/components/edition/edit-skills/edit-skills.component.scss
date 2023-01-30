@@ -49,6 +49,9 @@ h4 {
 }
 
 .skill-editor {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0.5em;
   padding-bottom: 0.75em;
 }
 

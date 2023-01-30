@@ -31,20 +31,22 @@ Current versión 1.0.2
   - [x] Character mapping from JSON.
   - [ ] Editing character in tab.
     - [ ] Character validation first method.
+      - [x] No repeated skills.
+      - [x] No empty named skills.
       - [x] No special characters in strings.
     - [ ] Character Edit rework.
       - [x] Base Editing Modal.
         - [x] Edit Main info component.
           - [x] Temporal Aureo edit from detail.
           - [x] Random Polis.
-        - [x] Edit Atributes/Skills component.
+        - [x] Edit Atributes/Skills/social ranks component.
           - [x] Delete an existing skill.
           - [ ] Modificator validation.
         - [ ] Edit Afinities component.
         - [ ] Edit Powers component.
         - [ ] Edit Gifts component.
-        - [ ] Edit List component.
-          - [ ] Glory / Infamy variation.
+        - [x] Edit List component.
+          - [x] Glory / Infamy variation.
         - [ ] XP edit from detail.
         - [ ] Edit Combat equip component.
         - [ ] Edit Followers component.

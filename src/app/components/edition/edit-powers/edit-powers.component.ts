@@ -8,7 +8,6 @@ import { Character } from 'src/app/model/character';
 })
 export class EditPowersComponent{
 
-  @Input() character: Character = new Character('Pepe');
   @Output() saveCharacter: EventEmitter<any> = new EventEmitter<any>();
   @Output() exitModal: EventEmitter<any> = new EventEmitter<any>();
 

@@ -1,15 +1,14 @@
 <div class="editionWrapper">
   <ion-card>
     <h5>{{ title }}</h5>
-    <div *ngIf="type === skillTypes.SECONDARY" class="skill-editor">
+    <div *ngIf="type === skillTypes.SECONDARY || type === skillTypes.SOCIAL " class="skill-editor">
       <ion-button size="small" (click)="removeAnSkill()" class="mediumButton">
-        <ion-icon name="trash-outline"></ion-icon> {{ "EDIT.REMOVE_SKILL_TITLE" | translate }}
+        <ion-icon name="trash-outline"></ion-icon> {{ removeItem }}
       </ion-button>
       <ion-button size="small" (click)="addNewSkill()" class="mediumButton">
-        <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD_SKILL_TITLE" | translate }}
+        <ion-icon name="add-outline"></ion-icon> {{ addItem }}
       </ion-button>
     </div>
-
     <ion-select
     class="detail-value"
     interface="popover"

@@ -30,3 +30,10 @@ export class TableColumn {
   public templatedId? : boolean = false;
 }
 
+export const getListConfiguration = (): TableDataConfiguration =>({
+  swHideHeader: true,
+  columns: [{
+    id: 'name',
+    name: ''
+  }]});
+

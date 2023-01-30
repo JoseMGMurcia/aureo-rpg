@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 import { AlertInput, AlertOptions } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
-import { type } from 'os';
 import { Subject, takeUntil } from 'rxjs';
 import { SKILL_TYPES } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
@@ -14,6 +13,8 @@ import { getSymbol } from 'src/app/pages/detail/detail.page.data.helper';
 import { CharactersService } from 'src/app/services/characters.service';
 import { easyConfirmAlert, openAlert } from 'src/app/utils/alert.utils';
 import { TableDataConfiguration } from '../../table/table.component';
+import { noSpecialCharactersValidator } from '../../../controller/custom.validator'
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-skills',
@@ -35,6 +36,8 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
   public inSkills:  Skill[] = [];
   public character: Character = new Character('Pepe');
   public skillTypes = SKILL_TYPES;
+  public removeItem = '';
+  public addItem = '';
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
@@ -49,6 +52,8 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
       this.character = character;
       this.fetch();
     });
+    this.removeItem = this.translate.instant(SKILL_TYPES.SECONDARY ? 'EDIT.REMOVE_SKILL_TITLE' : 'EDIT.REMOVE_RANK_TITLE');
+    this.addItem = this.translate.instant(SKILL_TYPES.SECONDARY ? 'EDIT.ADD_SKILL_TITLE' : 'EDIT.ADD_RANK_TITLE');
   }
 
   ngOnDestroy(): void {
@@ -74,6 +79,8 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
           this.character.setPrymarySkills(this.inSkills);
         }else if(this.type === SKILL_TYPES.SECONDARY){
           this.character.setSecondarySkills(this.inSkills);
+        }else if(this.type === SKILL_TYPES.SOCIAL){
+          this.character.setSocialFeatures(this.inSkills);
         }
         this.fetch();
         this.exitModal.emit();
@@ -164,9 +171,22 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
         {
           text:  this.translate.instant('EDIT.ADD'),
           cssClass: 'alert-primaryButton',
-          handler:  (data: any) => {
-            if(this.type === SKILL_TYPES.SECONDARY && data.skillName){
+          handler:  (data: {skillName: string}) => {
+            const control = new FormControl();
+            control.setValue(data.skillName);
+            const invalid = noSpecialCharactersValidator(control)?.specialCharacters;
+            const index = this.skills.findIndex(skill => skill.getName().toUpperCase() === data.skillName.toUpperCase());
+            const repeated = index > -MAGIC_NUMBERS.N_1;
+            if(this.type === SKILL_TYPES.SECONDARY && data.skillName && !invalid && !repeated){
               this.character.getSecondarySkills().push(new Skill(data.skillName, MAGIC_NUMBERS.N_1));
+            }else if(this.type === SKILL_TYPES.SOCIAL && data.skillName && !invalid && !repeated){
+              this.character.getSocialFeatures().push(new Skill(data.skillName, MAGIC_NUMBERS.N_1));
+            }else {
+              const alertParams: AlertOptions = {
+                header: this.translate.instant('EDIT.INVALID_NAME'),
+                buttons: [this.translate.instant('SHARED.OK')]
+              }
+              openAlert(alertParams);
             }
             this.setChatacterSkills();
     }}]};
@@ -202,6 +222,8 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
       this.skills = this.character.getPrymarySkills();
     }else  if(this.type === SKILL_TYPES.SECONDARY){
       this.skills = this.character.getSecondarySkills();
+    }else  if(this.type === SKILL_TYPES.SOCIAL){
+      this.skills = this.character.getSocialFeatures();
     }
     this.inSkills = cloneSkills(this.skills);
   }
@@ -219,6 +241,8 @@ export class EditSkillsComponent implements OnInit, OnDestroy{
       this.character.setPrymarySkills(this.skills);
     }else if(this.type === SKILL_TYPES.SECONDARY){
       this.character.setSecondarySkills(this.skills);
+    }else if(this.type === SKILL_TYPES.SECONDARY){
+      this.character.setSocialFeatures(this.skills);
     }
     this.setModDdata();
   }

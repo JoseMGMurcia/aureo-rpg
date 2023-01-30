@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil} from 'rxjs';
-import { TableDataConfiguration } from 'src/app/components/table/table.component';
+import { getListConfiguration, TableDataConfiguration } from 'src/app/components/table/table.component';
 import { edit } from 'src/app/utils/editor.utils';
 import { Character } from 'src/app/model/character';
 import { CharactersService } from 'src/app/services/characters.service';
@@ -14,7 +14,6 @@ import { getAfinitiesDataConfiguration,
   getDefenceDataConfiguration,
   getFollowersDataConfiguration,
   getGiftsDataConfiguration,
-  getListConfiguration,
   getPowersDataConfiguration,
   getSkillsDataConfiguration,
   getXPDataConfiguration
@@ -42,6 +41,7 @@ import { ModalController } from '@ionic/angular';
 import { StorageService } from 'src/app/services/storage.service';
 import { CARD_ID, DATABASE_NAME } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
+import { getSexIcon } from 'src/app/utils/custom.utils';
 
 @Component({
   selector: 'app-detail',
@@ -124,6 +124,10 @@ export class DetailPage implements OnInit, OnDestroy{
 
   sectionChanged(event: any) {
     this.section = event.detail.value;
+  }
+
+  public getSexIcons(){
+    return getSexIcon(this.character.getSex());
   }
 
   public edit(card = ''){

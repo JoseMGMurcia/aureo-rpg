@@ -1,4 +1,14 @@
 # Aureo_App
+
+## V1.0.3
+- Edit Social features.
+- Edit Glory.
+- Edit Infamy.
+- Edit Titles.
+- Edit Other Equip.
+- Edit Notes.
+- Undefined sex allowed.
+
 ## V1.0.2
 - Criticals and Fumbles management in dices page.
 - Randon Polis name generator.

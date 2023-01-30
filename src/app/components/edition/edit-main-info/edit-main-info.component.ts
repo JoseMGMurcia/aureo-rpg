@@ -3,12 +3,12 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators, } from '@angular/form
 import { TranslateService } from '@ngx-translate/core';
 import { MAIN_INFO_FIELDS } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
-import { nameValidator } from 'src/app/controller/character-validator';
 import { NAMES, POLIS } from 'src/app/controller/character.constants';
 import { CharacterController } from 'src/app/controller/characterController';
-import { AureoValidators, noSpecialCharactersValidator } from 'src/app/controller/custom.validator';
+import { noSpecialCharactersValidator } from 'src/app/controller/custom.validator';
 import { Character } from 'src/app/model/character';
 import { easyConfirmAlert } from 'src/app/utils/alert.utils';
+import { getSexIcon } from 'src/app/utils/custom.utils';
 
 @Component({
   selector: 'app-edit-main-info',
@@ -25,6 +25,7 @@ export class EditMainInfoComponent implements OnInit{
   public id = MAIN_INFO_FIELDS;
   public enterAureo = 0;
   public enterHibris = 0;
+  public enterSex = '';
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -38,12 +39,16 @@ export class EditMainInfoComponent implements OnInit{
       [this.id.CULT]: [this.character.getCult(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.ARQUETYPE]: [this.character.getArquetype(), [Validators.minLength(3), Validators.maxLength(19)]],
       [this.id.POLIS]: [this.character.getPolis(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
-      [this.id.SEX]: [this.character.getSex(), [AureoValidators.genderValidator]],
       [this.id.SOCIAL_GROUP]: [this.character.getSocialGroup(), [Validators.minLength(3), Validators.maxLength(19), noSpecialCharactersValidator]],
       [this.id.AGE]: [this.character.getAge(), Validators.pattern('^[0-9]*$')]
     });
     this.enterAureo = this.character.getAureo();
     this.enterHibris = this.character.getHibris();
+    this.enterSex = this.character.getSex();
+  }
+
+  public getSexIcons(){
+    return getSexIcon(this.character.getSex());
   }
 
   public handleSave(){
@@ -67,7 +72,6 @@ export class EditMainInfoComponent implements OnInit{
       this.character.setPlayer(this.form.controls[this.id.PLAYER].value);
       this.character.setPolis(this.form.controls[this.id.POLIS].value);
       this.character.setCult(this.form.controls[this.id.CULT].value);
-      this.character.setSex(this.form.controls[this.id.SEX].value);
       this.character.setArquetype(this.form.controls[this.id.ARQUETYPE].value);
       this.character.setSocialGroup(this.form.controls[this.id.SOCIAL_GROUP].value);
       this.character.setAge(this.form.controls[this.id.AGE].value);
@@ -81,6 +85,7 @@ export class EditMainInfoComponent implements OnInit{
       () => {
         this.character.setAureo(this.enterAureo);
         this.character.setHibris(this.enterHibris);
+        this.character.setSex(this.enterSex);
         this.exitModal.emit();
       },
       this.translate);

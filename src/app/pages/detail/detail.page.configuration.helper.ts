@@ -69,18 +69,6 @@ export const getPowersDataConfiguration = (translate: TranslateService): TableDa
         id: 'name',
         name: transLations.NAME
       },
-      // {
-      //   id: 'af',
-      //   name: transLations.AF
-      // },
-      // {
-      //   id: 'am',
-      //   name: transLations.AM
-      // },
-      // {
-      //   id: 'ae',
-      //   name: transLations.AE
-      // },
       {
         id: 'effect',
         name: transLations.EFFECT
@@ -117,36 +105,29 @@ export const getSkillsDataConfiguration = (translate: TranslateService): TableDa
   };
 };
 
-export const getListConfiguration = (): TableDataConfiguration =>({
-  swHideHeader: true,
-  columns: [{
-    id: 'name',
-    name: ''
-  }]});
-
-  export const getCombatEquipDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
-    const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
-    return {
-      columns: [
-        {
-          id: 'name',
-          name: transLations.NAME
-        },
-        {
-          id: 'initialDamage',
-          name: transLations.INITIAL_DMG
-        },
-        {
-          id: 'activeDefence',
-          name: transLations.ACTIVE_DEFENCE
-        },
-        {
-          id: 'armor',
-          name: transLations.ARMOR
-        }
-      ]
-    };
+export const getCombatEquipDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
+  const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
+  return {
+    columns: [
+      {
+        id: 'name',
+        name: transLations.NAME
+      },
+      {
+        id: 'initialDamage',
+        name: transLations.INITIAL_DMG
+      },
+      {
+        id: 'activeDefence',
+        name: transLations.ACTIVE_DEFENCE
+      },
+      {
+        id: 'armor',
+        name: transLations.ARMOR
+      }
+    ]
   };
+};
 
   export const getFollowersDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
     const transLations = translate.instant('DETAIL_PAGE.BACKGROUND_SEC');
