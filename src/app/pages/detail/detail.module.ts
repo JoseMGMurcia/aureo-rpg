@@ -14,6 +14,7 @@ import { EditAtributesComponent } from 'src/app/components/edition/edit-atribute
 import { EditPowersComponent } from 'src/app/components/edition/edit-powers/edit-powers.component';
 import { EditSkillsComponent } from 'src/app/components/edition/edit-skills/edit-skills.component';
 import { EditListComponent } from 'src/app/components/edition/edit-list/edit-list.component';
+import { EditAfinitiesComponent } from 'src/app/components/edition/edit-afinities/edit-afinities.component';
 
 export const createTranslateLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +24,8 @@ const editComnponents = [
   EditSkillsComponent,
   EditMainInfoComponent,
   EditAtributesComponent,
-  EditPowersComponent
+  EditPowersComponent,
+  EditAfinitiesComponent
 ];
 
 @NgModule({

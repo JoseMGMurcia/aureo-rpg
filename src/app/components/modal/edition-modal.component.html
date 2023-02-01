@@ -78,5 +78,10 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-list>
+      <app-edit-afinities
+        *ngSwitchCase="id.AFINITIES"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-afinities>
     </container-element>
   </div>

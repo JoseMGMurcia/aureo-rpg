@@ -186,6 +186,8 @@
   "SAVE": "Guardar",
   "LEVEL": "Nivel",
   "ADD": "Añadir",
+  "ADD_AFINITY": "Nueva afinidad",
+  "REMOVE_AFINITY": "Eliminar afinidad",
   "ADD_SKILL": "Añadir nueva",
   "ADD_SKILL_TITLE": "Nueva Habilidad",
   "ADD_RANK_TITLE": "Nuevo rasgo",

@@ -1,4 +1,6 @@
 # Aureo_App
+## V1.0.4
+- Edit Afinities.
 
 ## V1.0.3
 - Edit Social features.

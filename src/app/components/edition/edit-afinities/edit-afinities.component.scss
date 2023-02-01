@@ -1,0 +1,96 @@
+@use '../../../constants/color.constants.scss' as colors;
+@use '../../../constants/style.constants.scss' as style;
+
+h5 {
+  color: colors.$custom-secondary;
+  padding-left: 1em;
+  width: 100%;
+}
+
+h4 {
+  color: colors.$title-text;
+  font-size: 0.8em;
+  padding-left: 1em;
+  width: 100%;
+}
+
+.afinity-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1em;
+
+  p {
+    color: colors.$cellText;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 2em;
+  }
+
+  .value {
+    padding-left: 0.2em;
+  }
+
+  .label {
+    padding-right: 0.5em;
+    text-align: right;
+    width: 50%;
+  }
+}
+
+.butonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 3em;
+
+  .saveButton {
+    margin-left: 0.5em;
+  }
+}
+
+.butonRow-edit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.25em;
+}
+
+.detail-value {
+  border: colors.$row-odd-color 1.25px solid;
+  border-radius: style.$border-radius;
+  color: colors.$cellText;
+  margin-left: 0.5em;
+  max-height: 1.75em;
+  max-width: 40%;
+}
+
+ion-label {
+  font-size: 0.77em;
+}
+
+.mod-input {
+  color: colors.$cellText;
+  font-size: 0.8em;
+}
+
+.afinity-name {
+  color: colors.$header-color;
+  font-size: 1.2em;
+  font-weight: 525;
+  text-align: center;
+  width: 100%;
+}
+
+.afinity-detail {
+  padding-bottom: 1em;
+}
+
+.afinity-editor {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0.5em;
+  padding-bottom: 0.75em;
+}
