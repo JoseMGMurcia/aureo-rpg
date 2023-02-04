@@ -16,7 +16,6 @@ import { getAfinitiesDataConfiguration,
   getGiftsDataConfiguration,
   getPowersDataConfiguration,
   getSkillsDataConfiguration,
-  getXPDataConfiguration
 } from './detail.page.configuration.helper';
 import { getAfinitiesData,
   getAtacksData,
@@ -24,24 +23,22 @@ import { getAfinitiesData,
   getCalculatedSkillData,
   getCombatEquipData,
   getCombatRankslData,
-  getCommonGiftsData,
   getCompanionsData,
-  getCursesData,
   getDefenceData,
-  getDivineGiftsData,
   getFollowersData,
+  getGiftData,
   getListData,
   getPowersData,
   getPrymarySkillsData,
   getSecondarySkillsData,
   getSocialFeaturesData,
-  getXPData
 } from './detail.page.data.helper';
-import { ModalController } from '@ionic/angular';
+import { LoadingController, ModalController } from '@ionic/angular';
 import { StorageService } from 'src/app/services/storage.service';
 import { CARD_ID, DATABASE_NAME } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { getSexIcon } from 'src/app/utils/custom.utils';
+import { GiftData } from 'src/app/model/giftData';
 
 @Component({
   selector: 'app-detail',
@@ -52,7 +49,9 @@ export class DetailPage implements OnInit, OnDestroy{
   public section = '1';
   public character: Character = new Character('Pepe');
   public characters: Character[] = [];
+  public giftData: GiftData = new GiftData();
   public id = CARD_ID;
+  public loading = MAGIC_NUMBERS.N_3;
 
   public afinitiesDataConfiguration: TableDataConfiguration = getAfinitiesDataConfiguration(this.translate);
   public afinitiesData: any[] =[];
@@ -83,8 +82,6 @@ export class DetailPage implements OnInit, OnDestroy{
   public followersData: any[] =[];
   public companionsDataConfiguration: TableDataConfiguration = getCompanionsDataConfiguration(this.translate);
   public companionsData: any[] =[];
-  public xpDataConfiguration: TableDataConfiguration = getXPDataConfiguration(this.translate);
-  public xpData: any[] =[];
   public attackDataConfiguration: TableDataConfiguration = getAtackDataConfiguration(this.translate);
   public attackData: any[] =[];
   public defenceDataConfiguration: TableDataConfiguration = getDefenceDataConfiguration(this.translate);
@@ -94,26 +91,38 @@ export class DetailPage implements OnInit, OnDestroy{
   constructor(
     private translate: TranslateService,
     private characterService: CharactersService,
+    private loadingController: LoadingController,
     private modalCtrl: ModalController,
     private storage: StorageService
   ) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    const loading: HTMLIonLoadingElement = await this.loadingController.create({
+      message: this.translate.instant('SHARED.LOADING')
+    });
+    await loading.present();
+
     this.characterService.character
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((character)=> {
         if(character.getId() !== this.character.getId()){
           this.switchCaracter(character);
-          this.fetch();
-        }else {
-          this.fetch();
         }
+        this.finishLoading(loading);
       });
 
       this.characterService.characters
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((characters)=> {
         this.characters = characters;
+        this.finishLoading(loading);
+      });
+
+      this.characterService.giftData
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((data)=> {
+        this.giftData = data;
+        this.finishLoading(loading);
       });
   }
 
@@ -147,19 +156,53 @@ export class DetailPage implements OnInit, OnDestroy{
     const target = this.character.getAureoRemaining() - MAGIC_NUMBERS.N_1;
     this.character.setAureoRemaining(target < MAGIC_NUMBERS.N_0 ? MAGIC_NUMBERS.N_0 : target);
     this.saveCharacter();
-
-  }
+ }
 
   public getPolisText(): string {
     return this.character.getPolis() ? this.translate.instant('SHARED.FROM').concat(' ', this.character.getPolis()) : '';
   }
 
+  public addSavedXp(){
+    this.character.setSavedXP(this.character.getSavedXP() + MAGIC_NUMBERS.N_1);
+    this.saveCharacter();
+  }
+
+  public removeSavedXp(){
+    const target = this.character.getSavedXP() - MAGIC_NUMBERS.N_1;
+    this.character.setSavedXP(target < MAGIC_NUMBERS.N_0 ? MAGIC_NUMBERS.N_0 : target);
+    this.saveCharacter();
+  }
+
+  public addAccumulatedXp(){
+    this.character.setAccumulatedXP(this.character.getAccumulatedXP() + MAGIC_NUMBERS.N_1);
+    this.saveCharacter();
+  }
+
+  public removeAccumulatedXp(){
+    const target = this.character.getAccumulatedXP() - MAGIC_NUMBERS.N_1;
+    this.character.setAccumulatedXP(target < MAGIC_NUMBERS.N_0 ? MAGIC_NUMBERS.N_0 : target);
+    this.saveCharacter();
+  }
+
+  public addAureoXp(){
+    this.character.setAureoXP(this.character.getAureoXP() + MAGIC_NUMBERS.N_1);
+    this.saveCharacter();
+  }
+
+  public removeAureoXp(){
+    const target = this.character.getAureoXP() - MAGIC_NUMBERS.N_1;
+    this.character.setAureoXP(target < MAGIC_NUMBERS.N_0 ? MAGIC_NUMBERS.N_0 : target);
+    this.saveCharacter();
+  }
+
   private fetch() {
     this.afinitiesData = getAfinitiesData(this.character);
     this.atributesData = getAtributesData(this.character, this.translate);
-    this.commonGiftsData = getCommonGiftsData(this.character);
-    this.divineGiftsData = getDivineGiftsData(this.character);
-    this.cursesData = getCursesData(this.character);
+    this.commonGiftsData = getGiftData( this.character.getCommonGifts(),
+      [...this.giftData.COMMON_GIFTS.SOCIAL, ...this.giftData.COMMON_GIFTS.PHYSICAL, ...this.giftData.COMMON_GIFTS.MENTAL, ...this.giftData.COMMON_GIFTS.SUPERNATURALS]);
+    this.divineGiftsData = getGiftData( this.character.getDivineGifts(), this.giftData.DIVINE_GIFTS);
+    this.cursesData = getGiftData( this.character.getCurses(),
+      [...this.giftData.CURSES.SOCIAL, ...this.giftData.CURSES.PHYSICAL, ...this.giftData.CURSES.MENTAL, ...this.giftData.CURSES.SUPERNATURALS]);
     this.powersData = getPowersData(this.character);
     this.primarySkillsData = getPrymarySkillsData(this.character);
     this.secondarySkillsData = getSecondarySkillsData(this.character);
@@ -172,11 +215,17 @@ export class DetailPage implements OnInit, OnDestroy{
     this.combatEquipData = getCombatEquipData(this.character);
     this.followersData = getFollowersData(this.character, this.translate);
     this.companionsData = getCompanionsData(this.character);
-    this.xpData = getXPData(this.character);
     this.calculatedSkillData = getCalculatedSkillData(this.character, this.translate);
     this.combatRanksData = getCombatRankslData(this.character, this.translate);
     this.attackData = getAtacksData(this.character, this.translate);
     this.defenceData = getDefenceData(this.character, this.translate);
+  }
+
+  private finishLoading(loading: HTMLIonLoadingElement) {
+    if(--this.loading === MAGIC_NUMBERS.N_0){
+      this.fetch();
+      loading.dismiss();
+    }
   }
 
   private switchCaracter(character: Character){

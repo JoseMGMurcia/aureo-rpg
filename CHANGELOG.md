@@ -1,6 +1,12 @@
 # Aureo_App
 ## V1.0.4
 - Edit Afinities.
+- Edit Experience directly from detail page.
+- Random gender for random characters.
+- Json file resuming all gifts.
+- Json service added.
+- Gifts presented in wiki page.
+- Character gifts mapped from Json.
 
 ## V1.0.3
 - Edit Social features.

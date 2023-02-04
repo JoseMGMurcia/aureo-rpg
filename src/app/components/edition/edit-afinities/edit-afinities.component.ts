@@ -66,7 +66,7 @@ export class EditAfinitiesComponent implements OnInit{
 
   public addAretes(){
     const target: number = this.selectedAfinity.getAretes() + MAGIC_NUMBERS.N_1;
-    this.selectedAfinity.setAretes(target > MAGIC_NUMBERS.N_5 ?  this.selectedAfinity.getAretes() : target)
+    this.selectedAfinity.setAretes(target > MAGIC_NUMBERS.N_10 ?  this.selectedAfinity.getAretes() : target)
   }
 
   public removeHamartias(){
@@ -76,7 +76,7 @@ export class EditAfinitiesComponent implements OnInit{
 
   public addHamartias(){
     const target: number = this.selectedAfinity.getHamartias() + MAGIC_NUMBERS.N_1;
-    this.selectedAfinity.setHamartias(target > MAGIC_NUMBERS.N_5 ?  this.selectedAfinity.getHamartias() : target)
+    this.selectedAfinity.setHamartias(target > MAGIC_NUMBERS.N_10 ?  this.selectedAfinity.getHamartias() : target)
   }
 
   public handleChange(event: any){

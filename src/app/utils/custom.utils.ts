@@ -10,3 +10,20 @@ export const getSexIcon = (sex: String): string => {
   }
   return 'male-female-outline';
 }
+
+export const findMinMax = (numbers: number[]): { min: number, max: number } =>{
+  let min = Number.POSITIVE_INFINITY;
+  let max = Number.NEGATIVE_INFINITY;
+
+  numbers.forEach(num => {
+    if (num < min) {
+      min = num;
+    }
+
+    if (num > max) {
+      max = num;
+    }
+  });
+
+  return { min, max };
+}

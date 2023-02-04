@@ -47,7 +47,7 @@ Current versión 1.0.4
         - [ ] Edit Gifts component.
         - [x] Edit List component.
           - [x] Glory / Infamy variation.
-        - [ ] XP edit from detail.
+        - [x] XP edit from detail.
         - [ ] Edit Combat equip component.
         - [ ] Edit Followers component.
         - [ ] Edit History component.
@@ -64,8 +64,8 @@ Current versión 1.0.4
   - [ ] App Icon.
   - [x] Colour palette.
   - [x] Dices page redesign.
-  - [ ] Doc Page first design.
-  - [ ] Doc Page first texts.
+  - [x] Doc Page first design.
+  - [x] Doc Page first texts.
 
 - [x] Angular 15 Migration.
 - [x] Ionic 6 Migration.

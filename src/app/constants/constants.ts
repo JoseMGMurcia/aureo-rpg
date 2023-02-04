@@ -63,3 +63,7 @@ export const LIST_TYPES = {
   EQUIP: 'EQUIP',
   OTHERS_NOTES: 'OTHERS_NOTES'
 }
+
+export const FILES = {
+  GIFTS: '../assets/i18n/gifts.es.json'
+}

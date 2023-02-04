@@ -6,6 +6,7 @@
   "DICE_SET": "Tirar dados",
   "INFO": "Sobre esta app",
 "SHARED": {
+  "LOADING": "Cargando...",
   "NO_DATA": "No hay datos",
   "FROM": "de",
   "OK": "Aceptar",
@@ -14,7 +15,8 @@
   "DESC": "Descripción",
   "VALUE":"Valor",
   "PARCIAL": "Parcial",
-  "DELETE": "Eliminar"
+  "DELETE": "Eliminar",
+  "XP": "PX"
 },
   "HEROS_AGE": "La edad de los heroes",
   "INFO_PAGE": {
@@ -50,7 +52,20 @@
       }
   },
   "WIKI_PAGE": {
-      "TITLE": "Documentación"
+      "TITLE": "Documentación",
+      "COMMON_GIFTS": "Dones comunes",
+      "DIVINE_GIFTS": "Dones divinos",
+      "CURSES": "Maldiciones",
+      "GIFTS_TYPES": {
+        "PHYSICAL": "Físicos",
+        "MENTAL": "Mentales",
+        "SUPERNATURAL": "Sobrenaturales",
+        "SOCIAL": "Sociales"
+      },
+      "COST": "Coste: ",
+      "DESC": "Descripción: ",
+      "RULES": "Reglas: ",
+      "CONDITIONS": "Condiciones: "
   },
   "DICES_PAGE": {
     "TITLE": "Lanzar Dados",

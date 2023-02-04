@@ -165,27 +165,6 @@ export const getCombatEquipDataConfiguration = (translate: TranslateService): Ta
     };
   };
 
-
-  export const getXPDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
-    const transLations = translate.instant('DETAIL_PAGE.GENERAL_SEC');
-    return {
-      columns: [
-        {
-          id: 'savedXP',
-          name: transLations.SAVED_XP
-        },
-        {
-          id: 'accumulatedXP',
-          name: transLations.ACUMULATED_XP
-        },
-        {
-          id: 'aureoXP',
-          name: transLations.AUREO_XP
-        }
-      ]
-    };
-  };
-
 export const getCalculatedSkillDataConfiguration = (): TableDataConfiguration => ({
   swHideHeader: true,
   columns: [

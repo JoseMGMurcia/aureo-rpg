@@ -66,3 +66,35 @@ ion-card {
     }
   }
 }
+
+.pxLabel {
+  text-align: center;
+  margin: 0.1em;
+  width: 100%;
+}
+
+.xp-table {
+  background-color: colors.$row-odd-color;
+  padding: 0;
+
+  .xp-header {
+    background-color: colors.$header-color;
+    color: colors.$headerText;
+    margin: 0;
+  }
+
+  .xp-data {
+    margin: 0.1em;
+
+    .xp-table-cell {
+      display: flex;
+      justify-content: center;
+
+      .xp-table-cell-value {
+        color: colors.$cellText;
+        margin: 0.1em;
+      }
+    }
+  }
+}
+
