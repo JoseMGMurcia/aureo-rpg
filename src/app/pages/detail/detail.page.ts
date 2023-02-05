@@ -39,6 +39,7 @@ import { CARD_ID, DATABASE_NAME } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { getSexIcon } from 'src/app/utils/custom.utils';
 import { GiftData } from 'src/app/model/giftData';
+import { openGiftDetail } from 'src/app/controller/gift.controller';
 
 @Component({
   selector: 'app-detail',
@@ -57,7 +58,7 @@ export class DetailPage implements OnInit, OnDestroy{
   public afinitiesData: any[] =[];
   public atributesDataConfiguration: TableDataConfiguration = getAtributesDataConfiguration(this.translate);
   public atributesData: any[] =[];
-  public giftsDataConfiguration: TableDataConfiguration = getGiftsDataConfiguration(this.translate);
+  public giftsDataConfiguration: TableDataConfiguration = getGiftsDataConfiguration(this.translate, this.showGiftDetail);
   public commonGiftsData: any[] =[];
   public divineGiftsData: any[] =[];
   public cursesData: any[] =[];
@@ -141,7 +142,7 @@ export class DetailPage implements OnInit, OnDestroy{
 
   public edit(card = ''){
     if(card){
-      edit(card, this.character, this.modalCtrl);
+    edit(card, this.character, this.modalCtrl);
     }
   }
 
@@ -199,10 +200,10 @@ export class DetailPage implements OnInit, OnDestroy{
     this.afinitiesData = getAfinitiesData(this.character);
     this.atributesData = getAtributesData(this.character, this.translate);
     this.commonGiftsData = getGiftData( this.character.getCommonGifts(),
-      [...this.giftData.COMMON_GIFTS.SOCIAL, ...this.giftData.COMMON_GIFTS.PHYSICAL, ...this.giftData.COMMON_GIFTS.MENTAL, ...this.giftData.COMMON_GIFTS.SUPERNATURALS]);
-    this.divineGiftsData = getGiftData( this.character.getDivineGifts(), this.giftData.DIVINE_GIFTS);
+      [...this.giftData.COMMON_GIFTS.SOCIAL, ...this.giftData.COMMON_GIFTS.PHYSICAL, ...this.giftData.COMMON_GIFTS.MENTAL, ...this.giftData.COMMON_GIFTS.SUPERNATURALS], this.translate);
+    this.divineGiftsData = getGiftData( this.character.getDivineGifts(), this.giftData.DIVINE_GIFTS, this.translate);
     this.cursesData = getGiftData( this.character.getCurses(),
-      [...this.giftData.CURSES.SOCIAL, ...this.giftData.CURSES.PHYSICAL, ...this.giftData.CURSES.MENTAL, ...this.giftData.CURSES.SUPERNATURALS]);
+      [...this.giftData.CURSES.SOCIAL, ...this.giftData.CURSES.PHYSICAL, ...this.giftData.CURSES.MENTAL, ...this.giftData.CURSES.SUPERNATURALS], this.translate);
     this.powersData = getPowersData(this.character);
     this.primarySkillsData = getPrymarySkillsData(this.character);
     this.secondarySkillsData = getSecondarySkillsData(this.character);
@@ -222,8 +223,8 @@ export class DetailPage implements OnInit, OnDestroy{
   }
 
   private finishLoading(loading: HTMLIonLoadingElement) {
-    if(--this.loading === MAGIC_NUMBERS.N_0){
-      this.fetch();
+    this.fetch();
+    if(--this.loading === MAGIC_NUMBERS.N_0 ){
       loading.dismiss();
     }
   }
@@ -239,6 +240,9 @@ export class DetailPage implements OnInit, OnDestroy{
       this.characters[index] = this.character;
     }
     this.storage.set(DATABASE_NAME, JSON.stringify(this.characters));
-    this.modalCtrl.dismiss();
+  }
+
+  private showGiftDetail(row: any){
+    openGiftDetail(row);
   }
 }

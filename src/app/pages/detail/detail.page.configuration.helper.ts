@@ -1,5 +1,6 @@
 import { TranslateService } from '@ngx-translate/core';
 import { TableDataConfiguration } from 'src/app/components/table/table.component';
+import { GiftData } from 'src/app/model/giftData';
 
 export const getAfinitiesDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.GENERAL_SEC');
@@ -45,9 +46,10 @@ export const getAtributesDataConfiguration = (translate: TranslateService): Tabl
   };
 };
 
-export const getGiftsDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
+export const getGiftsDataConfiguration = (translate: TranslateService, handleClickRow:(row: any)=> void): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.POWERS_SEC');
   return {
+    onClickRow: (row: any)=> handleClickRow(row) ,
     columns: [
       {
         id: 'name',

@@ -44,7 +44,7 @@ Current versión 1.0.4
           - [ ] Modificator validation.
         - [x] Edit Afinities component.
         - [ ] Edit Powers component.
-        - [ ] Edit Gifts component.
+        - [x] Edit Gifts component.
         - [x] Edit List component.
           - [x] Glory / Infamy variation.
         - [x] XP edit from detail.

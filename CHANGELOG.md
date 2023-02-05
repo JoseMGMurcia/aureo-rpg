@@ -7,6 +7,10 @@
 - Json service added.
 - Gifts presented in wiki page.
 - Character gifts mapped from Json.
+- Fixxed modal dimiss error.
+- Gifts (Commons, Curses an Divines) edition.
+- Loading spinner added.
+- Gift Detail alert added.
 
 ## V1.0.3
 - Edit Social features.

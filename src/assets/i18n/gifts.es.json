@@ -3,7 +3,7 @@
     "PHYSICAL": [
       {
         "ID": "CGPH01",
-        "NAME": "ACOSTUMBRADO A ANDAR",
+        "NAME": "Acostumbrado a andar",
         "COST": [-1],
         "DESCRIPTION": "Te has pasado la vida en los caminos y andar no te supone una gran molestia bajo el amparo de Hermes.",
         "RULES": "La actividad de andar te hace perder 1 Punto de Agotamiento cada 2 horas. Los personajes sin este don pierden 1 Punto de Agotamiento por cada hora. Escalar una montaña te hace perder 1 Punto de Agotamiento cada hora. Los personajes sin este don pierden 1 Punto de Agotamiento por cada media hora.",
@@ -11,7 +11,7 @@
       },
       {
         "ID": "CGPH02",
-        "NAME": "ACOSTUMBRADO A CORRER",
+        "NAME": "Acostumbrado a correr",
         "COST": [-1],
         "DESCRIPTION": "Llevas entrenándote bajo los auspicios de Apolo desde que tienes uso de razón. Podrías correr desde Maratón a Atenas sin desfallecer hasta llegar a la meta.",
         "RULES": "La actividad de correr te hace perder 1 Punto de Agotamiento cada 2 Acciones de Movimiento (los personajes sin este don pierden 1 Punto de Agotamiento por cada Acción de Movimiento). La actividad de marchar te hace perder 1 Punto de Agotamiento cada media hora (los personajes sin este don pierden 1 Punto de Agotamiento cada cuarto de hora). Pierdes 1 Punto de Agotamiento por cada 2 Acciones de Movimiento que realices durante un combate (los personajes sin este don pierden 1 Punto de Agotamiento por cada Acción de Movimiento durante el combate).",
@@ -19,7 +19,7 @@
       },
       {
         "ID": "CGPH03",
-        "NAME": "ACOSTUMBRADO A BEBER ALCOHOL",
+        "NAME": "Acostumbrado a beber alcohol",
         "COST": [-1],
         "DESCRIPTION": "Cuentas con la bendición de Baco, y tu metabolismo absorbe el alcohol mejor que el de los demás.",
         "RULES": "+3 a Dureza cuando hagas una tirada para ignorar los efectos tóxicos del alcohol.",
@@ -27,7 +27,7 @@
       },
       {
         "ID": "CGPH04",
-        "NAME": "ACOSTUMBRADO A NO BEBER AGUA",
+        "NAME": "Acostumbrado a no beber agua",
         "COST": [-1],
         "DESCRIPTION": "puede que sea porque te has criado en un desierto, pero necesitas la mitad de agua que una persona normal.",
         "RULES": "sufres un -1 malus general cada vez que te pasas 16 horas sin beber agua (los personajes sin este don sufren un -1 malus general cada vez que pasan 8 horas sin beber agua)",
@@ -35,7 +35,7 @@
       },
       {
         "ID": "CGPH05",
-        "NAME": "ACOSTUMBRADO A NO COMER",
+        "NAME": "Acostumbrado a no comer",
         "COST": [-1],
         "DESCRIPTION": "Has pasado muchas penurias en tu vida y tu metabolismo se ha acostumbrado a no comer tanto como el resto de los mortales.",
         "RULES": "Sufres un -1 malus general cada vez que te saltas 4 comidas (los personajes sin este don sufren un -1 malus general cada vez que se saltan 2 comidas). Condiciones: no tener la maldición física Glotón.",
@@ -43,7 +43,7 @@
       },
       {
         "ID": "CGPH06",
-        "NAME": "ACOSTUMBRADO A LUCHAR",
+        "NAME": "Acostumbrado a luchar",
         "COST": [-1],
         "DESCRIPTION": "Te has pasado la vida luchando contra varios enemigos, primero uno y luego otro... como en el Águeda espartana. Tu límite físico en las trifulcas está muy por encima de lo normal.",
         "RULES": "La actividad de luchar te hace perder 1 Punto de Agotamiento cada 2 Acciones Ofensivas (los personajes sin este don pierden 1 Punto de Agotamiento por cada Acción Ofensiva).",
@@ -51,7 +51,7 @@
       },
       {
         "ID": "CGPH07",
-        "NAME": "ACOSTUMBRADO AL TRABAJO",
+        "NAME": "Acostumbrado al trabajo",
         "COST": [-1],
         "DESCRIPTION": "Llevas trabajando desde que eras un niño, y tu límite a la hora de trabajar es muy superior al del resto de los mortales.",
         "RULES": "El trabajo intelectual te hace perder 1 Punto de Agotamiento cada 2 horas (los personajes sin este don pierden 1 Punto de Agotamiento por cada hora). El trabajo físico te hace perder 1 Punto de Agotamiento cada hora (los personajes sin este don pierden 1 Punto de Agotamiento por cada media hora).",
@@ -59,7 +59,7 @@
       },
       {
         "ID": "CGPH08",
-        "NAME": "CICATRIZ FACIAL",
+        "NAME": "Cicatriz facial",
         "COST": [-1],
         "DESCRIPTION": "Tienes un corte que surca parte de tu rostro, lo que no te afea, pero te otorga un aspecto más aterrador.",
         "RULES": "+2 a Intimidar. -2 a Arte [Teatro]. Otros personajes tendrán +2 a Memoria (MENx2) cuando traten de reconocerte, para bien o para mal. Si recibes otra cicatriz en el rostro, este don se convierte en la maldición física Rostro marcado.",
@@ -67,7 +67,7 @@
       },
       {
         "ID": "CGPH09",
-        "NAME": "COMO PEZ EN EL AGUA",
+        "NAME": "Como pez en el agua",
         "COST": [-1],
         "DESCRIPTION": "llevas nadando y buceando a pulmón desde que tienes uso de razón: probablemente tu padre fuera pescador o cazador de ostras, y tú has seguido sus pasos desde niño.",
         "RULES": "El máximo de Turnos que puedes pasar sin respirar, antes de tener malus generales por ahogamiento es tu Acción Pasiva RES +Dureza x2 (los personajes sin este don pueden estar su Acción Pasiva RES +Dureza). La actividad de nadar te hace perder 1 Punto de Agotamiento cada 1/2 hora (los personajes sin este don pierden 1 Punto de Agotamiento por cada 1/4 hora).",
@@ -75,7 +75,7 @@
       },
       {
         "ID": "CGPH10",
-        "NAME": "DORMIR CON UN OJO ABIERTO",
+        "NAME": "Dormir con un ojo abierto",
         "COST": [-1],
         "DESCRIPTION": "Mientras duermes pareces estar parcialmente consciente.",
         "RULES": "Ignoras el -2 a la Acción Pasiva SEN +Percepción cuando se está durmiendo.",
@@ -83,7 +83,7 @@
       },
       {
         "ID": "CGPH11",
-        "NAME": "ZURDO",
+        "NAME": "Zurdo",
         "COST": [-1],
         "DESCRIPTION": "Aunque en algunos lugares se tiene la estúpida creencia de que los zurdos son inferiores, como en Esparta, los zurdos atacan por flancos que los diestros no acostumbran a proteger.",
         "RULES": "+1 a Armas CC y Pelea durante el primer Turno del primer combate que el personaje tenga contra un adversario que no tenga este mismo don. -2 a Arte [Literatura] (porque los zurdos suelen ser un poco disléxicos). -2 a COM cuando hables con alguien de Esparta.",
@@ -91,7 +91,7 @@
       },
       {
         "ID": "CGPH12",
-        "NAME": "ABDOMINALES ESCULPIDOS",
+        "NAME": "Abdominales esculpidos",
         "COST": [-2],
         "DESCRIPTION": "Tu duro entrenamiento ha hecho que los músculos de tu pecho se hayan endurecido hasta tener la consistencia del cuero.",
         "RULES": "+1 a Armadura siempre y cuando no se lleve puesta ninguna otra armadura (si la llevas puesta, ignora este don). +1 a Seducir cuando tu pecho esté a la vista.",
@@ -99,7 +99,7 @@
       },
       {
         "ID": "CGPH13",
-        "NAME": "ACOSTUMBRADO A NO DORMIR",
+        "NAME": "Acostumbrado a no dormir",
         "COST": [-2],
         "DESCRIPTION": "Desde que naciste, necesitas pasar por el reino de Morfeo menos que el del resto de los mortales.",
         "RULES": "Solo necesitas dormir 4 horas al día, la mitad que un personaje normal. Si pasas una noche sin dormir, tendrás un -1 malus general (los personajes sin este don tendrían un -2 malus general). Durmiendo 4 horas al día y descansando otras 4, recuperarás Puntos de Vida como si hubieras dormido normalmente.",
@@ -107,7 +107,7 @@
       },
       {
         "ID": "CGPH14",
-        "NAME": "ALTO",
+        "NAME": "Alto",
         "COST": [-3],
         "DESCRIPTION": "Tu altura es de unos 20 centímetros superior a lo normal.",
         "RULES": "Los varones con este don miden, al menos, 1,80, y las mujeres 1,75. +1 a Intimidar cuando tu adversario sea de altura inferior a ti. +1 a Seducir cuando tu objetivo sea de altura inferior a ti. Aumenta 1 PV.",
@@ -115,7 +115,7 @@
       },
       {
         "ID": "CGPH15",
-        "NAME": "DEDOS GRÁCILES",
+        "NAME": "Dedos gráciles",
         "COST": [-3],
         "DESCRIPTION": "Tus dedos son especialmente habilidosos en muchos contextos.",
         "RULES": "+1 a Arte [Música] para tocar un instrumento. +1 a Arte [Artesanado] para elaborar joyas y bordados. +1 a Medicina [Tratamiento] cuando utilices tus manos para sanar, tal como encajar un hueso dislocado, coser una herida abierta o hacer un masaje para aliviar el dolor de una herida.",
@@ -123,7 +123,7 @@
       },
       {
         "ID": "CGPH16",
-        "NAME": "PIERNAS MUY LARGAS",
+        "NAME": "Piernas muy largas",
         "COST": [-3],
         "DESCRIPTION": "Tus extremidades inferiores son muy largas, por lo que te desplazas a más velocidad de lo que lo harías normalmente.",
         "RULES": "+2 a Atletismo para correr, andar, saltar o escalar.",
@@ -131,39 +131,15 @@
       },
       {
         "ID": "CGPH17",
-        "NAME": "ACOSTUMBRADO A NO DORMIR",
+        "NAME": "Acostumbrado a no dormir",
         "COST": [-2],
         "DESCRIPTION": "Desde que naciste, necesitas pasar por el reino de Morfeo menos que el del resto de los mortales.",
         "RULES": "Solo necesitas dormir 4 horas al día, la mitad que un personaje normal. Si pasas una noche sin dormir, tendrás un -1 malus general (los personajes sin este don tendrían un -2 malus general). Durmiendo 4 horas al día y descansando otras 4, recuperarás Puntos de Vida como si hubieras dormido normalmente.",
         "CONDITIONS": "No tener el don divino Desterrado del reino de Morfeo."
       },
       {
-        "ID": "CGPH18",
-        "NAME": "ALTO",
-        "COST": [-3],
-        "DESCRIPTION": "Tu altura es de unos 20 centímetros superior a lo normal.",
-        "RULES": "Los varones con este don miden, al menos, 1,80, y las mujeres 1,75. +1 a Intimidar cuando tu adversario sea de altura inferior a ti. +1 a Seducir cuando tu objetivo sea de altura inferior a ti. Aumenta 1 PV.",
-        "CONDITIONS": "No tener la maldición física Canijo."
-      },
-      {
-        "ID": "CGPH19",
-        "NAME": "DEDOS GRÁCILES",
-        "COST": [-3],
-        "DESCRIPTION": "Tus dedos son especialmente habilidosos en muchos contextos.",
-        "RULES": "+1 a Arte [Música] para tocar un instrumento. +1 a Arte [Artesanado] para elaborar joyas y bordados. +1 a Medicina [Tratamiento] cuando utilices tus manos para sanar, tal como encajar un hueso dislocado, coser una herida abierta o hacer un masaje para aliviar el dolor de una herida.",
-        "CONDITIONS": ""
-      },
-      {
-        "ID": "CGPH20",
-        "NAME": "PIERNAS MUY LARGAS",
-        "COST": [-3],
-        "DESCRIPTION": "Tus extremidades inferiores son muy largas, por lo que te desplazas a más velocidad de lo que lo harías normalmente.",
-        "RULES": "+2 a Atletismo para correr, andar, saltar o escalar.",
-        "CONDITIONS": "No tener la maldición física Canijo."
-      },
-      {
         "ID": "CGPH21",
-        "NAME": "PUÑOS DE BRONCE",
+        "NAME": "Puños de bronce",
         "COST": [-3],
         "DESCRIPTION": "Tus manos han sido forjadas en el arte del boxeo, probablemente a través de un duro e intenso entrenamiento consistente en reducir a arena rocas con la percusión de tus nudillos.",
         "RULES": "+2 al Daño Base con FUE +Pelea.",
@@ -171,7 +147,7 @@
       },
       {
         "ID": "CGPH22",
-        "NAME": "REFLEJOS DE COMBATE",
+        "NAME": "Reflejos de combate",
         "COST": [-3],
         "DESCRIPTION": "De forma instintiva, tus reflejos aumentan cuando una pelea anda cerca.",
         "RULES": "+5 a la Iniciativa cuando se esté en un combate.",
@@ -179,7 +155,7 @@
       },
       {
         "ID": "CGPH23",
-        "NAME": "ACOSTUMBRADO AL DOLOR",
+        "NAME": "Acostumbrado al dolor",
         "COST": [-4],
         "DESCRIPTION": "Has sido entrenado para resistir a la tortura, o puede que tus terminaciones nerviosas no funcionen correctamente. En cualquier caso, resistes el dolor mejor que el resto de los mortales.",
         "RULES": "Ignoras el primer -1 malus general producido por la pérdida de Puntos de Vida o por un crítico.",
@@ -187,7 +163,7 @@
       },
       {
         "ID": "CGPH24",
-        "NAME": "AMBIDIESTRO",
+        "NAME": "Ambidiestro",
         "COST": [-5],
         "DESCRIPTION": "Puedes utilizar tus dos manos con igual destreza.",
         "RULES": "+2 a Armas CC si utilizas un arma cuerpo a cuerpo en cada mano (obviamente esto te impedirá portar escudos de ningún tipo). Ignoras el -2 a la Acción Ofensiva por golpear en combate cuerpo a cuerpo con la mano menos diestra (normalmente, la izquierda). Este don implica las ventajas del don físico Zurdo, pero no sus inconvenientes: +1 a Armas CC y Pelea durante el primer Turno del primer combate que el personaje tenga contra un adversario que no tenga los dones de zurdo o ambidiestro.",
@@ -195,7 +171,7 @@
       },
       {
         "ID": "CGPH25",
-        "NAME": "EXCESO DE TESTOSTERONA",
+        "NAME": "Exceso de testosterona",
         "COST": [-5],
         "DESCRIPTION": "La testosterona corre por tus venas en unos niveles muy superiores a los del resto de las personas, lo que te hace ser más fuerte y resistente, pero también aviva tu temperamento.",
         "RULES": "+1 a FUE. -2 a Templanza.",
@@ -203,7 +179,7 @@
       },
       {
         "ID": "CGPH26",
-        "NAME": "TIPO DURO",
+        "NAME": "Tipo duro",
         "COST": [-7],
         "DESCRIPTION": "Has pasado muchas penurias a lo largo de tu vida y eso ha curtido tu carácter, haciendo que resistas mejor el dolor y otros inconvenientes.",
         "RULES": "Ignoras un único -1 malus general entre todos los que tengas por cualquier causa: heridas, enfermedades, agotamiento, inanición, deshidratación, falta de sueño, asfixia, intoxicación por alcohol u opiáceos, orígenes sobrenaturales... +1 a Coraje.",
@@ -213,7 +189,7 @@
     "MENTAL":[
       {
         "ID": "CGME01",
-        "NAME": "EXPERTO EN UN RITUAL",
+        "NAME": "Experto en un ritual",
         "COST": [-1],
         "DESCRIPTION": "Has realizado tantas veces un ritual que podrías hacerlo con los ojos cerrados.",
         "RULES": "+3 a Teología [Rituales] para realizar un único ritual. Puedes comprar este don varias veces para ser experto en distintos rituales.",
@@ -221,7 +197,7 @@
       },
       {
         "ID": "CGME02",
-        "NAME": "CABEZOTA",
+        "NAME": "Cabezota",
         "COST": [-2],
         "DESCRIPTION": "Para bien o para mal, tienes muy claras tus convicciones y no vas a permitir que venga nadie a cambiártelas",
         "RULES": "+2 a las Acciones Mentales y Especiales destinadas a contrarrestar rezos, dones o similares cuyo objetivo sea manipular la mente del personaje (a criterio del Demiurgo). +2 a Templanza para no dejarte convencer de algo, ya sea verdadero o falso, descioso para el personaje o no.",
@@ -229,7 +205,7 @@
       },
       {
         "ID": "CGME03",
-        "NAME": "CALMADO",
+        "NAME": "Calmado",
         "COST": [-2],
         "DESCRIPTION": "Bien sea porque tienes parsimonia o porque has conseguido controlar a la bestia que todos llevamos dentro, no resulta fácil sacarte de tus casillas.",
         "RULES": "+3 a Templanza [Autocontrol] para resistir estados de furia.",
@@ -237,7 +213,7 @@
       },
       {
         "ID": "CGME04",
-        "NAME": "CURADO DE ESPANTO",
+        "NAME": "Curado de espanto",
         "COST": [-2],
         "DESCRIPTION": "A lo largo de tu vida has visto demasiadas cosas como para dejar que el pánico te domine a estas alturas.",
         "RULES": "+3 a Coraje para resistir al estado de pánico.",
@@ -245,7 +221,7 @@
       },
       {
         "ID": "CGME05",
-        "NAME": "ESPERAR LO INESPERADO",
+        "NAME": "Esperar lo inesperado",
         "COST": [-2],
         "DESCRIPTION": "No es fácil sorprenderte, ya que en tu mente estás en un estado perpetuo de alerta, barajando todas las posibilidades posibles por impredecibles que parezcan.",
         "RULES": "+3 a SEN +Percibir para evitar que te sorprendan.",
@@ -253,7 +229,7 @@
       },
       {
         "ID": "CGME06",
-        "NAME": "INSTINTO DE SUPERVIVENCIA",
+        "NAME": "Instinto de supervivencia",
         "COST": [-2],
         "DESCRIPTION": "Al igual que los animales, tu ingenio se agudiza ante la necesidad.",
         "RULES": "Cuando tengas malus generales por heridas, desnutrición, deshidratación o falta de sueño, no apliques esos malus a las Acciones Pasivas relacionadas con MEN, y suma esos malus generales como bonus específicos a las tiradas relacionadas con MEN, hasta un máximo de +2.",
@@ -261,7 +237,7 @@
       },
       {
         "ID": "CGME07",
-        "NAME": "PRECAVIDO",
+        "NAME": "Precavido",
         "COST": [-2],
         "DESCRIPTION": "Eres consciente de que muchas personas tienden a aprovecharse de los incautos, por lo que has desarrollado una habilidad especial para no ser uno de ellos.",
         "RULES": "+3 a Robar y Percibir cuando otro personaje trate de robarte o hacerte trampas en juegos de azar en tiradas enfrentadas con Acción Ofensiva AGI +Robar.",
@@ -269,7 +245,7 @@
       },
       {
         "ID": "CGME08",
-        "NAME": "ALTA CAPACIDAD DE CONCENTRACIÓN",
+        "NAME": "Alta capacidad de concentración",
         "COST": [-3],
         "DESCRIPTION": "Eres capaz de rezarle a los dioses incluso cuando estás tan aturdido que no sabes dónde estás, y podrías componer una rapsodia en medio de una estrepitosa batalla.",
         "RULES": "Ignoras el primer malus específico o general -1 que afecte a MEN. Cuando el personaje se queda perplejo, puede seguir realizando la Acción Mental, por lo que podrá realizar rezos (a menos que estas acciones requieran una Acción Completa).",
@@ -277,7 +253,7 @@
       },
       {
         "ID": "CGME09",
-        "NAME": "MEMORIA EIDÉTICA",
+        "NAME": "Memoria eidética",
         "COST": [-3],
         "DESCRIPTION": "Tienes una memoria prodigiosa que convierte tu mente en una biblioteca perfectamente ordenada donde tus conocimientos se muestran ante ti de forma accesible.",
         "RULES": "+1 a MEN cuando la utilices para calcular una tirada cuya finalidad sea recordar un conocimiento que se ha adquirido con el estudio. Superas automáticamente cualquier tirada de Memoria (Acción Pasiva MEN x2) para recordar algo que haya pasado en la partida, como las palabras exactas que dijo alguien, un texto que se ha leído fugazmente.",
@@ -287,7 +263,7 @@
     "SUPERNATURALS": [
       {
         "ID": "CGSU01",
-        "NAME": "IGNORADO POR LOS DIOSES OLÍMPICOS",
+        "NAME": "Ignorado por los dioses olímpicos",
         "COST": [-1,-2,-3,-4,-5],
         "DESCRIPTION": "Por alguna razón, los dioses no pueden percibirte cuando contemplan el mundo desde el Olimpo.",
         "RULES": "Por cada punto en este don ignoras la primera pérdida y la primera ganancia de Armonía que tengas cada día con los dioses olímpicos. Este don no funciona en terreno sagrado.",
@@ -295,7 +271,7 @@
       },
       {
         "ID": "CGSU02",
-        "NAME": "BAUTISMO DE SANGRE",
+        "NAME": "Bautismo de sangre",
         "COST": [-2],
         "DESCRIPTION": "Siendo un adolescente te iniciaste en el arte de la guerra, realizando este ritual en el que aquellos que van a ser enviados por primera vez a luchar son ungidos con la sangre de los sacrificios a Ares.",
         "RULES": "La primera vez que el personaje vaya a perder Puntos de Vida en cada Escena de combate, perderá 1 menos.",
@@ -303,7 +279,7 @@
       },
       {
         "ID": "CGSU03",
-        "NAME": "SENTIR TERRENO SAGRADO",
+        "NAME": "Sentir terreno sagrado",
         "COST": [-2],
         "DESCRIPTION": "Como saben los devotos, en los lugares que estos consideran sagrados el áureo fluye con mayor intensidad. Es fácil distinguir un templo, pero no así un bosque sagrado, la proximidad de una Hermá o una montaña habitada por un dios.",
         "RULES": "Cada vez que un personaje con este don entre en un lugar consagrado a un dios, podrá saberlo instintivamente si supera una Acción Pasiva de SEN +Intuir [Dioses], a la que habrá que aplicar un +2 si el lugar está consagrado al dios de su culto principal.",
@@ -311,7 +287,7 @@
       },
       {
         "ID": "CGSU04",
-        "NAME": "AMOR VERDADERO",
+        "NAME": "Amor verdadero",
         "COST": [-5],
         "DESCRIPTION": "El dios que se encarga de que los humanos se enamoren, Eros, te ha atravesado con una de sus flechas. Puede que el amor sea no correspondido, que lo hayas perdido o que estéis felizmente juntos. Esa fuerza te acompaña y te inspira en algunos momentos de tu vida.",
         "RULES": "El personaje está siempre en el estado de Amor estorgé que, entre otros modificadores, le proporciona +5 a Arte y +5 a Coraje cuando su amor esté implicado. Además, eres inmune a los efectos del rezo a Afrodita El toque de Eros.",
@@ -319,7 +295,7 @@
       },
       {
         "ID": "CGSU05",
-        "NAME": "TALENTO NATURAL",
+        "NAME": "Talento natural",
         "COST": [-4],
         "DESCRIPTION": "Los dioses te han bendecido con un talento natural en una característica.",
         "RULES": "Lanza un dado de diez caras y obtén un bonus de +1 en esa Característica: (10) Elige la característica que quieras; (9) Agilidad (AGI); (8) Fuerza (FUE); (7) Mente (MEN); (6) Reflejos (REF); (5) Comunicación (COM); (4) Alma (ALM); (3) Resistencia (RES); (2) Sentir (SEN); (1) Apariencia (APA). Por supuesto, una vez que has tirado el dado... ya no puedes elegir no quedarte el don.",
@@ -327,7 +303,7 @@
       },
       {
         "ID": "CGSU06",
-        "NAME": "AFINIDAD CON LAS CRIATURAS",
+        "NAME": "Afinidad con las criaturas",
         "COST": [-4],
         "DESCRIPTION": "Los animales y las criaturas divinas sienten un extraño respeto y/o curiosidad por ti.",
         "RULES": "+2 a Zoología. +2 a Oratoria y +2 a Liderar con animales y criaturas (tanto si tienen áureo como si no). Independientemente del áureo permanente del personaje, las criaturas preferirán atacar primero al resto de personajes que conformen el grupo antes que al personaje que posea este don. Si la criatura solo puede atacar a un personaje con este don, y tiene intención de hacerlo, tratará de espantarlo primero, dejándole una oportunidad para huir durante un Turno. En el momento en el que el personaje ataque a la criatura o a alguno de los miembros de su manada, las ventajas de este don desaparecerán.",
@@ -335,7 +311,7 @@
       },
       {
         "ID": "CGSU07",
-        "NAME": "BENDECIDO POR EL COSMOS",
+        "NAME": "Bendecido por el cosmos",
         "COST": [-5],
         "DESCRIPTION": "En el momento en el que naciste, los astros estaban alineados en la casa más benigna del signo Aries: tu conexión con el universo es especial, y parte de su energía se vierte sobre ti cuando más lo necesitas.",
         "RULES": "Tu signo zodiacal es: Aries (21/03-19/04). La primera vez que gastas áureo durante cada partida, recuperas el punto inmediatamente.",
@@ -343,7 +319,7 @@
       },
       {
         "ID": "CGSU08",
-        "NAME": "MULTICULTO",
+        "NAME": "Multiculto",
         "COST": [-5],
         "DESCRIPTION": "La mayoría de los mortales de la Helade han decidido consagrar su vida a Zeus, por ser el rey de todos los dioses y hombres, y, posteriormente, a una de las deidades olímpicas. Tú has encontrado compatible dedicar tu vida a dos deidades (aparte de a Zeus, por supuesto).",
         "RULES": "Elige un segundo culto del que puedes aprender los rezos a coste de PX normal (y no al doble de coste).",
@@ -351,7 +327,7 @@
       },
       {
         "ID": "CGSU09",
-        "NAME": "BUENA SUERTE",
+        "NAME": "Buena suerte",
         "COST": [-7],
         "DESCRIPTION": "La diosa Tiqué (Fortuna) ha decidido bendecir tu existencia con sus cuidados.",
         "RULES": "+2 a Suerte. Una vez por partida, puedes repetir una única tirada a elegir entre una Acción Especial, Pasiva, Ofensiva, Defensiva, de Movimiento o Mental que hayas fallado, evitando los efectos de esta tirada. El efecto que prevalecerá será el de la segunda tirada, aunque sea peor que el de la primera.",
@@ -361,7 +337,7 @@
     "SOCIAL": [
       {
         "ID": "CGSO01",
-        "NAME": "BUENO CON LOS NOMBRES Y LAS CARAS",
+        "NAME": "Bueno con los nombres y las caras",
         "COST": [-1],
         "DESCRIPTION": "Eres capaz de recordar el nombre de cualquier persona que hayas conocido o de la que hayas oído hablar y el rostro de todos aquellos con los que hayas cruzado tu camino.",
         "RULES": "Pasas automáticamente la Acción Pasiva MEN x2 para recordar el nombre o la cara de cualquier persona que hayas conocido. +1 a la Acción Pasiva MEN +Gloria/Infamia para averiguar el Renombre de un personaje. +2 a Empatía cuando trates de reconocer a alguien que va disfrazado.",
@@ -369,7 +345,7 @@
       },
       {
         "ID": "CGSO02",
-        "NAME": "DISCÍPULOS AVENTAJADOS",
+        "NAME": "Discípulos aventajados",
         "COST": [-1],
         "DESCRIPTION": "A lo largo de los años has moldeado y ayudado a obtener su máximo potencial a algunos jóvenes que han acabado convirtiéndose en prestigiosos profesionales y gente importante. Estas personas están dispuestas a escucharte, hacerte caso, dejarse guiar y hacerte favores.",
         "RULES": "Algunas personas influyentes te tienen como mentor. Tienes un +2 a Comunicación (COM) y +2 a Apariencia (APA) con aquellas personas que han sido tus discípulos. +2 a Contactos cuando estos sean tus discípulos. El número de PX invertido en este don es igual al número de discípulos y a su nivel en los rasgos sociales de Estatus e Influencia.",
@@ -377,7 +353,7 @@
       },
       {
         "ID": "CGSO03",
-        "NAME": "DOBLE PATERNIDAD",
+        "NAME": "Doble paternidad",
         "COST": [-1],
         "DESCRIPTION": "Tienes dos progenitores; uno está en el Olimpo y el otro es un mortal. Esta extraña situación familiar es aceptada comúnmente por tus iguales, y el honor de tu familia no es puesto en entredicho (al menos públicamente).",
         "RULES": "Puedes elegir dos orígenes de héroe, siendo uno de ellos que tu progenitor es mortal (como los elegidos o los héroes de segunda generación), y otro en el que eres hijo de un dios.",
@@ -385,7 +361,7 @@
       },
       {
         "ID": "CGSO04",
-        "NAME": "FAMILIA",
+        "NAME": "Familia",
         "COST": [-1,-2,-3,-4,-5],
         "DESCRIPTION": "Todos los héroes tienen dos familias. Una está en el Olimpo, la otra, se encuentra entre los mortales. Tener una buena relación con la segunda puede ser tan importante como con la primera.",
         "RULES": "Tienes una buena relación con un grupo de tus familiares. Tienes un +3 a Comunicación (COM) con ellos, y aparte, siempre que superes las correspondientes tiradas, puedes pedirles favores (COM +Oratoria) o darles órdenes (COM +Liderar) para que hagan cosas por ti. El número de PX invertido en este don es igual al número de familiares importantes con los que puedes contar y a su nivel en los rasgos sociales de Estatus e Influencia.",
@@ -393,7 +369,7 @@
       },
       {
         "ID": "CGSO05",
-        "NAME": "FRÍO COMO EL MÁRMOL",
+        "NAME": "Frío como el mármol",
         "COST": [-1],
         "DESCRIPTION": "has conseguido dominar o reprimir tus sentimientos hasta el punto de que son casi imperceptibles para los que te rodean.",
         "RULES": "Los otros personajes solo pueden utilizar la Acción Pasiva SEN +Empatía para detectar si mientes o dices la verdad: no para percibir tus emociones o estados de ánimo. Los otros personajes tienen -2 a la Acción Pasiva SEN +Empatía para tratar de saber si mientes (vs. COM +Oratoria).",
@@ -401,7 +377,7 @@
       },
       {
         "ID": "CGSO06",
-        "NAME": "HONOR",
+        "NAME": "Honor",
         "COST": [-1],
         "DESCRIPTION": "eres una persona honorable, lo que te será útil en momentos de necesidad, pero también te traerá mala conciencia si incumples el código.",
         "RULES": "Una o varias veces por partida, siempre a discreción del Demiurgo, puedes sumar el nivel de este don a una tirada para realizar algo que sea claramente honorable, como decir la verdad absoluta en un juicio, pelear en un combate en el que se defiende una verdad objetiva, intentar salvar a un inocente... Por el contrario, cada vez que realices un acto mínimamente deshonroso (mentir, robar, atacar a alguien desarmado o por la espalda...) tendrás un -1 mg durante 1 hora por cada nivel que tengas en este don. Además, la gente honorable se reconoce entre sí, lo que puede ser ventajoso, como aparece explicado en las reglas de Renombre.",
@@ -409,7 +385,7 @@
       },
       {
         "ID": "CGSO07",
-        "NAME": "LA ERÓTICA DEL PODER",
+        "NAME": "La erótica del poder",
         "COST": [-1],
         "DESCRIPTION": "perteneces a un grupo social elevado y sabes cómo sacarle provecho para satisfacer tu líbido.",
         "RULES": "+2 a Seducir cuando el otro personaje tenga al menos un nivel menos que tú en el rasgo social Estatus.",
@@ -417,7 +393,7 @@
       },
       {
         "ID": "CGSO08",
-        "NAME": "LA EXCEPCIÓN QUE CONFIRMA LA REGLA",
+        "NAME": "La excepción que confirma la regla",
         "COST": [-1,-2,-3],
         "DESCRIPTION": "Eres uno entre un millón: una rara excepción que ha conseguido ser aceptado en un lugar que normalmente te estaría vetado.",
         "RULES": "Puedes no cumplir los requisitos habituales para desarrollar un rol social o pertenecer a un culto o facción religiosa. Cada nivel en este don representa lo raro que es.",
@@ -425,7 +401,7 @@
       },
       {
         "ID": "CGSO10",
-        "NAME": "LÍDER MÁS ALLÁ DEL GRUPO SOCIAL",
+        "NAME": "Líder más allá del grupo social",
         "COST": [-1],
         "DESCRIPTION": "Eres un esclavo y no puedes poseer a otras personas. No obstante, otros esclavos han decidido seguirte y confiarte su vida y su destino.",
         "RULES": "A pesar de ser esclavo, puedes tener niveles en el rasgo social Seguidores.",
@@ -433,7 +409,7 @@
       },
       {
         "ID": "CGSO11",
-        "NAME": "SELECTIVO EN EL APAREAMIENTO",
+        "NAME": "Selectivo en el apareamiento",
         "COST": [-1],
         "DESCRIPTION": "sabes que el sexo puede ser muy placentero, pero que también puede meterte en problemas y causar arrepentimientos, por lo que has aprendido a ser exigente con tus conquistas",
         "RULES": "+3 a Templanza para resistirte a los intentos de seducción (vs. APA +Seducir)",
@@ -441,7 +417,7 @@
       },
       {
         "ID": "CGSO12",
-        "NAME": "EL FAVORITO DEL AMO",
+        "NAME": "El favorito del amo",
         "COST": [-2],
         "DESCRIPTION": "eres un esclavo al que su señor le ha proporcionado grandes regalos y privilegios debido a tus servicios",
         "RULES": "a diferencia del resto de los esclavos, puedes comprar los niveles que quieras en los rasgos sociales Monedas y Equipo.",
@@ -449,7 +425,7 @@
       },
       {
         "ID": "CGSO13",
-        "NAME": "GRACIOSO",
+        "NAME": "Gracioso",
         "COST": [-2],
         "DESCRIPTION": "tienes chispa a la hora de hablar",
         "RULES": "+1 a Comunicación (COM) en las conversaciones en las que no se estén tratando temas serios",
@@ -457,7 +433,7 @@
       },
       {
         "ID": "CGSO14",
-        "NAME": "HÉROE LOCAL",
+        "NAME": "Héroe local",
         "COST": [-2],
         "DESCRIPTION": "has hecho algo muy heroico y famoso por proteger un territorio y a las gentes que viven en él",
         "RULES": "+5 a Gloria en una polis y en su correspondiente provincia (si no tienes ningún nivel en Gloria, aumenta en 1 tu nivel de Gloria)",
@@ -465,7 +441,7 @@
       },
       {
         "ID": "CGSO15",
-        "NAME": "LINGÜISTA NATO",
+        "NAME": "Lingüista nato",
         "COST": [-2],
         "DESCRIPTION": "tienes una habilidad innata para las lenguas y tu comprensión sobre ellas es asombrosa",
         "RULES": "+2 a Idiomas. Cuando eres especialista en un Idioma, lo hablas tan perfectamente que nadie podría decir que no es tu lengua natal",
@@ -473,7 +449,7 @@
       },
       {
         "ID": "CGSO16",
-        "NAME": "OBRA MAESTRA",
+        "NAME": "Obra maestra",
         "COST": [-2],
         "DESCRIPTION": "tienes un extraño objeto en tu poder: una obra maestra realizada por un seguidor de Hefesto",
         "RULES": "tienes un objeto que tiene una mejora sobrenatural de 1 PX",
@@ -481,7 +457,7 @@
       },
       {
         "ID": "CGSO17",
-        "NAME": "RASGO DISTINTIVO DE BELLEZA",
+        "NAME": "Rasgo distintivo de belleza",
         "COST": [-2,-4],
         "DESCRIPTION": "Hay algo en tu físico que te hace distinto a los demás y que algunas personas encuentran irresistible y exótico; puede ser un color de piel muy claro u oscuro, un cuerpo escultural, una sonrisa carismática, mirada penetrante, ojos o pelo de una tonalidad poco común...",
         "RULES": "+1 a Seducir por cada 2 PX que tengas en este don.",
@@ -489,7 +465,7 @@
       },
       {
         "ID": "CGSO18",
-        "NAME": "INFLUENCIA INTERNACIONAL",
+        "NAME": "Influencia internacional",
         "COST": [-3],
         "DESCRIPTION": "Eres un embajador, un heraldo, un alto sacerdote o un rey, y aunque mucho menos que en tu polis natal, eres capaz de influir en la política local de allí dónde te encuentres.",
         "RULES": "Tienes el rasgo social Influencia al nivel 2 en cualquier lugar de la Hélade.",
@@ -497,7 +473,7 @@
       },
       {
         "ID": "CGSO19",
-        "NAME": "INFLUENCIA PATERNA",
+        "NAME": "influencia paterna",
         "COST": [-3],
         "DESCRIPTION": "En la Hélade la crianza de los hijos suele ser tarea de las matriarcas, pero algunos padres también ponen empeño en educar a sus vástagos. Tu padre ha dejado una impronta en ti y es (o era) un gran hombre: está bien considerado entre sus iguales y tiene una buena reputación profesional.",
         "RULES": "+1 en una habilidad a tu elección, que representa el trabajo de tu padre y los esfuerzos que ha hecho por inculcarte su legado. +2 a Gloria en la polis natal de tu padre (que, casi con toda seguridad, será la misma que la tuya), cuando te presentes como «hijo de».",
@@ -505,7 +481,7 @@
       },
       {
         "ID": "CGSO20",
-        "NAME": "PROTECTOR",
+        "NAME": "Protector",
         "COST": [-4],
         "DESCRIPTION": "Un famoso héroe te tiene entre tus protegidos, por lo que la gente se lo pensará antes de causarte algún gran mal, como matarte o secuestrarte, por miedo a su venganza.",
         "RULES": "Un personaje de áureo y Epíteto nivel 4, con el don físico Acostumbrado a luchar (toma como ejemplo algún personaje hecho de los capítulos de Apolo, Ares o Atenea) te tiene apadrinado, bien porque eres un viejo amigo de la infancia, un familiar o un amor. Este personaje no te acompaña en las aventuras, pero si alguien comete un gran agravio contra ti o contra los tuyos que tú mismo no puedas vengar, él lo hará en tu nombre. Este personaje y tú estáis conectados por un vínculo especial, y tu protector intuirá que algo malo te pasa si te secuestran, te encarcelan o te matan, y tan rápido como le sea posible (una media de siete días) llegará a las inmediaciones del lugar donde te ocurrió el agravio.",
@@ -513,7 +489,7 @@
       },
       {
         "ID": "CGSO21",
-        "NAME": "AMIGOS HASTA EN EL TÁRTARO",
+        "NAME": "Amigos hasta en el tártaro",
         "COST": [-5],
         "DESCRIPTION": "Tienes muchos conocidos repartidos por la Hélade. Igualmente, tus amigos y familiares también tienen amigos, con lo que es fácil que te encuentres una cara amistosa en casi todos los lugares allá donde vayas.",
         "RULES": "Cada vez que vayas a una población de más de 100 habitantes dentro de la Hélade (lo que incluye los distintos reinos del Inframundo), debes tirar dos dados de diez caras: el primero determinará la Influencia que tiene tu conocido. El segundo dado determinará el grado de amistad. Si en alguno de los dos dados se saca un 1, el contacto no colaborará. Estos aliados podrán realizar pequeños favores, como acogerte en su casa, darte comida o información, utilizar su Influencia para conseguirte cosas, o curar tus heridas; pero nunca harán nada que pueda resultar peligroso para ellos o su familia (a menos que obtengas un 10 en el dado de grado de amistad). Tampoco su economía o su vida social (a menos que obtengas un 10 en el dado de Influencia).\nDado de Influencia:\n(10) Tu amigo es un líder de esa sociedad: un general, un senescal, un arconte o un alto sacerdote con Influencia 4.\n(8-9) Tu amigo es alguien influyente: un magistrado, un capitán, un sacerdote, un burócrata con Influencia 3.\n(5-7) Tu amigo es un ciudadano noble con Influencia 2.\n(2-4) Tu amigo es un meteco: un ritualista, un comerciante, un mercenario con Influencia 1.\n(1) Tu amigo es un don nadie, un borracho, un vagabundo, un pobre con Influencia 0, y te pedirá favores a ti.\nDado de amistad:\n(10) Amigo de la infancia, te quiere como a un hermano: tienes con él un +4 a COM y APA.\n(8-9) Viejo amigo que te debe unos cuantos favores: tienes con él un +3 a COM y APA.\n(5-7) Un conocido con el que coincidiste un breve periodo de tiempo y trabasteis buenas relaciones: tienes con él un +2 a COM y APA.\n(2-4) Un amigo de un amigo o familiar: ambos habéis oído hablar bien de la otra persona: tienes con él +1 a COM y APA.\n(1) Tu antiguo amigo te la tiene jurada por algo que pasó en el pasado, y ahora te desprecia. No tienes bonus con él (incluso puede que algún malus).",
@@ -521,7 +497,7 @@
       },
       {
         "ID": "CGSO22",
-        "NAME": "BARCO",
+        "NAME": "Barco",
         "COST": [-5,-10,-15,-20],
         "DESCRIPTION": "tienes a tu disposición un navío y una tripulación con los que te ganas la vida, ya sea transportando productos, personas, dedicándote a la piratería o sirviendo como mercenario.",
         "RULES": "Dependiendo de los PX invertidos en este don, dispones de un modelo de barco y su correspondiente tripulación. Que tengas este don no significa que el barco sea de tu propiedad y puedas disponer de él como te plazca, ni que sus tripulantes sean tus esclavos. Si tienes rasgos sociales muy altos como Posesiones, Monedas, Equipo y Seguidores, el barco será tuyo y la gente que hay dentro te pertenecerá. Si no, es de un socio, tu jefe o tu dueño (si eres esclavo), y tú (y el resto de la tripulación) trabajáis para él. En cuanto a los miembros de la tripulación solo podrán ser usados para cosas relacionadas con el barco, su manejo y su  manutención, pero no serán tus guardaespaldas fuera  del barco, ni tu ejército personal para embarcarse en misiones suicidas, ni nada por el estilo: cuando no es tés en la mar, se quedarán cerca del barco, o se irán a  una taberna o a un burdel. (-5 PX) Kyrenia: barco de comercio con gran bodega y 5 tripulantes. (-10 PX) Pentecóntero: barco de comercio/pirata con 60 tripulantes. (-15 PX) Birreme: barco de guerra con 120 tripulantes. (-20 PX) Trirreme: barco de guerra con 200 tripulantes",
@@ -533,7 +509,7 @@
     "PHYSICAL":[
       {
         "ID": "CUPH01",
-        "NAME": "DEFECTO VISUAL",
+        "NAME": "Defecto visual",
         "COST": [1,2,3],
         "DESCRIPTION": "Eres tuerto, miope o simplemente tu vista ya no es la que era después de alguna experiencia o por el paso del tiempo.",
         "RULES": "+1 PX: -1 a Percibir cuando tenga que ver con la vista. -1 a Zoología [Equitación]. +2 PX: -2 a Percibir cuando tenga que ver con la vista. -1 a Zoología [Equitación]. +3 PX: -2 a Percibir cuando tenga que ver con la vista. -2 a Zoología [Equitación]. -2 a Armas D.",
@@ -541,7 +517,7 @@
       },
       {
         "ID": "CUPH02",
-        "NAME": "GLOTÓN",
+        "NAME": "Glotón",
         "COST": [1],
         "DESCRIPTION": "Eres un auténtico tragaldabas.",
         "RULES": "Necesitas comer el doble de lo normal. Los malus generales que produce el hambre o la inanición te afectan el doble de lo normal (-1 mg por cada comida que te saltes, en vez de -1 mg por cada dos comidas, como el resto de la gente).",
@@ -549,7 +525,7 @@
       },
       {
         "ID": "CUPH03",
-        "NAME": "SUEÑO PROFUNDO",
+        "NAME": "Sueño profundo",
         "COST": [1],
         "DESCRIPTION": "Cuando duermes entras en un profundo trance del que resulta difícil despertarte.",
         "RULES": "-4 a Percibir cuando estás durmiendo (los personajes normales tienen -2 a Percibir cuando están durmiendo).",
@@ -557,7 +533,7 @@
       },
       {
         "ID": "CUPH04",
-        "NAME": "UN MUNDO SIN COLOR",
+        "NAME": "Un mundo sin color",
         "COST": [1],
         "DESCRIPTION": "Ves la vida en blanco y negro. Esto te afecta especialmente a la hora de reconocer símbolos de casas nobles y de cultos a los dioses.",
         "RULES": "-1 a Política cuando trates de distinguir escudos heráldicos y en etiqueta. -1 a Teología cuando trates de distinguir las túnicas y símbolos de los sacerdotes. -3 a Arte [Pintura]. Además, no podrás distinguir colores, lo que puede ocasionarte algunos problemas en tu vida cotidiana.",
@@ -565,7 +541,7 @@
       },
       {
         "ID": "CUPH05",
-        "NAME": "ADICTO AL ALCOHOL",
+        "NAME": "Adicto al alcohol",
         "COST": [2],
         "DESCRIPTION": "aunque los seguidores del dios Dioniso puedan pensar que beber vino diariamente pueda ser signo de devoción al Olimpo, muchas otras personas desprecian a los alcohólicos, pues su adicción suele originar problemas a los demás.",
         "RULES": "necesitas beber alcohol todos los días. Si pasas un día sin beber alcohol, tendrás un -1 malus general. Estos malus se irán acumulando conforme pases días sin beber, hasta un máximo de -3 malus general. Estos malus desaparecerán en el momento en el que vuelves a beber alcohol. Si alguien te ofrece una copa de vino, la aceptarás sin reparos, sin pararte a pensar si puede estar envenenado o si la copa está llena de ambrosía. Si tienes suficiente alcohol a tu alcance, lo habitual es que bebas hasta caer inconsciente, lo que te hará tener un -1 malus general durante las próximas 24 horas.",
@@ -573,7 +549,7 @@
       },
       {
         "ID": "CUPH06",
-        "NAME": "CARNÍVORO",
+        "NAME": "Carnívoro",
         "COST": [2],
         "DESCRIPTION": "los seres humanos son omnívoros (comen verduras, legumbres, pescado, huevos, carne...), pero a ti solo te gusta la carne roja y desprecias el resto de las comidas. Esto puede ser un problema cuando te embarcas a la mar o a la hora de tomar plantas medicinales, ya que no te hacen efecto.",
         "RULES": "solo comes carne. Esta dieta tan estricta puede llevarte a tener malus por hambre/desnutrición si no consigues la suficiente carne como para hacer las 3 comidas mínimas diarias. La carne es el tipo de alimento más difícil de conseguir: no siempre es fácil cazar un animal, y en las polis es el alimento más caro de comprar (mucho más que el pan, el queso, el pescado y las verduras). Las personas con esta dieta tan estricta no llegan a la senectud y suelen morir antes de los 50 años.",
@@ -581,7 +557,7 @@
       },
       {
         "ID": "CUPH07",
-        "NAME": "DURO DE OÍDO",
+        "NAME": "Duro de oído",
         "COST": [2],
         "DESCRIPTION": "Tu oído ha visto (u oído...) mejores tiempos. Ya sea por un accidente o de nacimiento, estás bastante sordo.",
         "RULES": "-3 a Percibir cuando tenga que ver con la audición. -3 a Arte [Música].",
@@ -589,7 +565,7 @@
       },
       {
         "ID": "CUPH08",
-        "NAME": "POCA TOLERANCIA A LOS TÓXICOS",
+        "NAME": "Poca tolerancia a los tóxicos",
         "COST": [2],
         "DESCRIPTION": "Tu metabolismo no está diseñado para procesar tóxicos y te suelen sentar mal cuando los consumes, ya sea voluntariamente o por accidente.",
         "RULES": "-3 a Dureza para tratar de resistir el efecto de cualquier tóxico: venenos, plantas venenosas, vino, opio...",
@@ -597,7 +573,7 @@
       },
       {
         "ID": "CUPH09",
-        "NAME": "ROSTRO MARCADO",
+        "NAME": "Rostro marcado",
         "COST": [2],
         "DESCRIPTION": "Dos cicatrices cruzan tu rostro, lo que te afea y te otorga un aspecto aterrador",
         "RULES": "-1 a Seducir. -2 a Política [Etiqueta]. -2 a Arte [Teatro]. +1 a Intimidar. Otros personajes tendrán +1 a Memoria (MEN x2) para recordarte.",
@@ -605,7 +581,7 @@
       },
       {
         "ID": "CUPH10",
-        "NAME": "VEGANO",
+        "NAME": "Vegano",
         "COST": [2],
         "DESCRIPTION": "Has decidido no comer animales ni nada que proceda de ellos. Puede que lo hayas hecho por convicciones o por una promesa a un dios.",
         "RULES": "Solo comes vegetales. Esta dieta tan estricta puede llevarte a tener malus por hambre/desnutrición si no consigues los suficientes vegetales como para hacer 3 comidas diarias. Si alguna vez comes carne o haces daño voluntariamente a un animal, tendrás un -1 mg durante 24 horas. Esta maldición no te permite alimentarte de plantas que no podrías comer normalmente, como cardos borriqueros u hojas de olivo.",
@@ -613,7 +589,7 @@
       },
       {
         "ID": "CUPH11",
-        "NAME": "CANIJO",
+        "NAME": "Canijo",
         "COST": [4],
         "DESCRIPTION": "Eres tan bajo como un niño. Esto te puede hacer ser motivo de burla y también limitará tus capacidades motrices, especialmente cuando las enfrentes a personas que tengan miembros de tamaño normal.",
         "RULES": "-2 PV. El personaje tiene tamaño 3 (los personajes normales tienen tamaño 4). -1 a Atletismo. -1 a Intimidar contra alguien que no tenga esta maldición. -1 a Seducir. +1 a Sigilo. Los personajes que tienen niveles de tamaño por debajo de la media tienen -1 a Pelea [Lucha] cuando se enfrentan a otros personajes de tamaño superior (consultar reglas de Lucha). Otros personajes de tamaño normal (4) tendrán +1 a Pelea [Lucha] cuando se enfrenten a alguien con esta maldición.",
@@ -621,7 +597,7 @@
       },
       {
         "ID": "CUPH12",
-        "NAME": "COJERA",
+        "NAME": "Cojera",
         "COST": [4,5],
         "DESCRIPTION": "Has suffered an accident in one of your legs and you will never be the same again. Your leg may have been replaced with a piece of wood or it may still be there, but you would swear that before the accident you could move twice as fast.",
         "RULES": "-3 to Athletics. Cannot perform combat maneuvers involving kicks. Otorga 1PX más a fieles de Hefesto.",
@@ -629,7 +605,7 @@
       },
       {
         "ID": "CUPH13",
-        "NAME": "DESFIGURADO",
+        "NAME": "desfigurado",
         "COST": [4,5],
         "DESCRIPTION": "Your face is deformed, which generates ridicule from others and very possibly your social ostracism. In addition, it makes you easily recognizable.",
         "RULES": "-3 to Seducing. -3 to Political [Etiquette]. -3 to Art [Theater]. +2 to Intimidate. Other characters will have +3 to Memory (MEN x2) to recognize you. The Demiurgo can provide other social maluses, such as COM, if he believes that some characters would not take you seriously due to your appearance. Otorga 1PX más a fieles de Hefesto.",
@@ -637,7 +613,7 @@
       },
       {
         "ID": "CUPH14",
-        "NAME": "REUMA",
+        "NAME": "Reuma",
         "COST": [4,5],
         "DESCRIPTION": "As the climate changes, you feel a horrible pain that runs through all the bones in your body and every time you do something, it reminds you of better times.",
         "RULES": "At the start of each game, the player makes a roll. If they get a result of 4 or lower on the die, the character will have a -1 general malus throughout the game. This malus can be ignored if the character receives medical attention and consumes the necessary medicinal plants. Otorga 1PX más a personajes en la senectud",
@@ -645,7 +621,7 @@
       },
       {
         "ID": "CUPH15",
-        "NAME": "SECUELAS GRAVES",
+        "NAME": "Secuelas graves",
         "COST": [4],
         "DESCRIPTION": "Sufriste un grave accidente o una terrible herida de guerra que te dejó al borde de la muerte, y al despertar, no conseguiste volver a ser el mismo.",
         "RULES": "tira un dado de 10 caras; en función del resultado, aplica un -1 a la característica seleccionada 10) Elige la característica que prefieras. Aplícale un -1. (9) -1 a Apariencia (APA). (8) -1 a Comunicación (COM). (7) -1 a Alma (ALM). (6) -1 Sentir (SEN). (5) -1 Mente (MEN). (4) -1 Reflejos (REF). (3) -1 a Resistencia (RES). (2) -1 a Fuerza (FUE). (1) -1 a Agilidad (AGI). Una vez tirado el dado, no puedes elegir no coger esta maldición.",
@@ -653,7 +629,7 @@
       },
       {
         "ID": "CUPH16",
-        "NAME": "BAJA CAPACIDAD DE CURACIÓN",
+        "NAME": "Baja capacidad de curación",
         "COST": [5],
         "DESCRIPTION": "Tu nivel de cicatrización es realmente malo y te hace frecuentar los templos de sanación de Apolo durante más tiempo del normal cuando recibes algún daño.",
         "RULES": "Necesitas dormir dos noches para recuperar +1 Punto de Vida (normalmente se recupera +1 PV cada noche). Cuando recuperas Puntos de Vida por medio de algún rezo de curación, siempre recuperas -1 PV de lo que deberías. Si recibes alguna lesión que te haga desangrarte, perderás -1 PV extra por Turno.",
@@ -661,7 +637,7 @@
       },
       {
         "ID": "CUPH17",
-        "NAME": "MANCO",
+        "NAME": "Manco",
         "COST": [5],
         "DESCRIPTION": "Solo tienes una mano, la otra la perdiste en un accidente, una batalla... o quizás naciste sin ella. Has aprendido a usar la mano que te queda.",
         "RULES": "No puedes usar armas a dos manos, ni hacer cualquier otra cosa que requiera utilizar dos manos (como portar un escudo si se lleva un arma en el otro brazo). -2 a Atletismo [Trepar] y [Nadar]. -1 a Zoología [Equitación].",
@@ -669,7 +645,7 @@
       },
       {
         "ID": "CUPH18",
-        "NAME": "OBESIDAD MÓRBIDA",
+        "NAME": "Obesidad mórbida",
         "COST": [7],
         "DESCRIPTION": "Tus ansias por comer y una falta absoluta de ejercicio físico han llevado a que tu cuerpo se convierta en una masa poco práctica y atractiva. Esta maldición es muy común entre los nobles varones de mediana edad que no visitan los gimnasios con regularidad.",
         "RULES": "-1 a AGI. -1 a Seducir. +1 al Daño Base cuando combatas con Pelea. Tienes problemas para encontrar ropas y armaduras de tu talla, y su Precio aumenta en 1 nivel",
@@ -677,7 +653,7 @@
       },
       {
         "ID": "CUPH19",
-        "NAME": "POCA TOLERANCIA AL DOLOR",
+        "NAME": "Poca tolerancia al dolor",
         "COST": [7],
         "DESCRIPTION": "No has sufrido mucho en tu vida, y el dolor físico te repele y asusta.",
         "RULES": "Aunque resistes el daño exactamente igual que el resto de los personajes, doblas los efectos de los malus producidos por perdidas de PV, críticos y cualquier otra cosa relacionada con el dolor. -3 a Dureza [Inmunidad] para resistirse a la tortura.",
@@ -685,7 +661,7 @@
       },
       {
         "ID": "CUPH20",
-        "NAME": "CIEGO",
+        "NAME": "Ciego",
         "COST": [10],
         "DESCRIPTION": "Estás totalmente ciego y no puedes ver nada, aunque tus otros sentidos, especialmente el sexto (la intuición), se han acentuado.",
         "RULES": "Fallas automáticamente cualquier tirada de SEN que tenga que ver con la vista. -5 a la Acción Ofensiva para luchar u otras acciones que requieran la vista (como correr o intentar desplazarse a gran velocidad, ya sea por uno mismo o en un medio de transporte). -5 a Evitar. +1 a SEN para las tiradas que no tienen que ver con la vista. +2 a Intuir.",
@@ -693,7 +669,7 @@
       },
       {
         "ID": "CUPH21",
-        "NAME": "DEFORMIDAD",
+        "NAME": "Deformidad",
         "COST": [10],
         "DESCRIPTION": "Sufres algún tipo de malformación que incomoda a la vista a la gente que te rodea y también te dificulta la movilidad. Puede ser una joroba, una cadera dislocada o algo similar.",
         "RULES": "-3 a Seducir. -3 a Política [Etiqueta]. +1 a Intimidar. -2 a AGI, excepto cuando la sumes una única habilidad a elegir en el momento de adquirir la maldición (Armas CC, Armas D, Pelea, Atletismo...).",
@@ -701,7 +677,7 @@
       },
       {
         "ID": "CUPH22",
-        "NAME": "MUDO",
+        "NAME": "Mudo",
         "COST": [10],
         "DESCRIPTION": "No puedes expresarte verbalmente.",
         "RULES": "Fallas automáticamente cualquier tirada de COM en la que tengas que utilizar tu voz (aunque puedes comunicarte por gestos, escribiendo en una tablilla de cera y con lenguaje corporal).",
@@ -709,7 +685,7 @@
       },
       {
         "ID": "CUPH23",
-        "NAME": "SORDO",
+        "NAME": "Sordo",
         "COST": [10],
         "DESCRIPTION": "No puedes oír, pero puedes expresarte verbalmente.",
         "RULES": "Fallas automáticamente cualquier tirada de SEN que tenga que ver con el oído. Solo puedes entender qué te dicen otros personajes si superas una tirada de SEN +Empatía mientras los miras a los labios.",
@@ -720,7 +696,7 @@
     "MENTAL":[
       {
         "ID": "CUME01",
-        "NAME": "IRASCIBLE",
+        "NAME": "Irascible",
         "COST": [2],
         "DESCRIPTION": "No te gusta que te toquen las narices y sueles reaccionar de forma violenta ante los insultos... ¡no digamos ya como puedes reaccionar ante la pérdida de un ser querido!",
         "RULES": "Tienes que tirar ALM +Templanza cada vez que alguien te insulte, te humille, te lleve la contraria o realice alguna ofensa contra ti o los tuyos. -3 a Templanza para resistir el estado de furia.",
@@ -728,7 +704,7 @@
       },
       {
         "ID": "CUME02",
-        "NAME": "SUMIDO EN LA PERPLEJIDAD",
+        "NAME": "Sumido en la perplejidad",
         "COST": [2],
         "DESCRIPTION": "Cuando te quedas perplejo todos los músculos de tu cuerpo se quedan paralizados, ya que tu mente no puede hacer otra cosa que preguntarse una y otra vez ¿qué está pasando aquí?",
         "RULES": "Cuando te quedas en el estado de perplejo, te quedas paralizado (no puedes hacer nada: ni siquiera utilizar tu Acción Defensiva) y tus rivales tienen +3 a las Acciones Ofensivas contra ti (por estar paralizado).",
@@ -736,7 +712,7 @@
       },
       {
         "ID": "CUME03",
-        "NAME": "COBARDE",
+        "NAME": "Cobarde",
         "COST": [3],
         "DESCRIPTION": "Hay muchas cosas que te causan pavor, y no estás dispuesto a enfrentarte a ellas.",
         "RULES": "-3 a Coraje. Cuando sientas que tu vida corre un peligro real (porque te estás enfrentando a un enemigo que sabes que es más poderoso que tú, cuando te asignan una misión suicida, o cuando el enemigo te supera con creces en número, por ejemplo) tienes que superar una tirada de ALM +Coraje con -3 o saldrás huyendo.",
@@ -744,7 +720,7 @@
       },
       {
         "ID": "CUME04",
-        "NAME": "CURIOSIDAD EXTREMA",
+        "NAME": "Curiosidad extrema",
         "COST": [3],
         "DESCRIPTION": "Eres tan curioso como un gato: todo aquello que se salga de lo común te llama la atención, te cuesta dejar los misterios sin resolver y no puedes evitar sentirte atraído por cualquier cosa enigmática.",
         "RULES": "Cada vez que percibas algo que se salga un poco de lo común (ya sea un lugar, una persona, una criatura, una situación, un objeto o cualquier cosa que el Demiurgo decida que despierta tu curiosidad) tienes dos opciones: 1) tendrás que aproximarte hasta estar a 2 pasos (1 metro) o menos para realizar una tirada SEN +Per-cibir para analizar la persona, el objeto o la situación que te produce la curiosidad, 2) puedes ignorar lo que te produzca curiosidad y sufrir un -1 mg durante 24 horas, ya que te corroe la duda. La única forma de evitar el -1 mg es volver e investigar el hecho.",
@@ -752,7 +728,7 @@
       },
       {
         "ID": "CUME05",
-        "NAME": "LUNÁTICO",
+        "NAME": "Lunático",
         "COST": [3],
         "DESCRIPTION": "El poder que irradia la luna en su estado de plenitud afecta a todas las criaturas, pero a algunas les afecta más que a otras, pudiendo conducirles incluso a la locura.",
         "RULES": "Al empezar cada partida, el jugador hace una tirada. Si se obtiene un resultado de 4 o inferior en el dado, tendrás durante toda la partida: -3 a Templanza, -3 a Oratoria.",
@@ -760,7 +736,7 @@
       },
       {
         "ID": "CUME06",
-        "NAME": "OLVIDADIZO",
+        "NAME": "Olvidadizo",
         "COST": [3],
         "DESCRIPTION": "Tienes una memoria horrible que te causa innumerables problemas, tanto de tipo social (pues tiendes a olvidar el nombre y las caras de las personas a las que conoces) como en tu vida diaria (¿dónde estaba la salida de este laberinto?).",
         "RULES": "-5 a Memoria (MEN x2) para recordar nombres de personas o ciudades, caras... Cada vez que una información sea crucial (como dónde está la llave que abre una puerta; por dónde está la salida de un laberinto, en qué ciudad se encuentra un templo concreto...) tendrás que superar una tirada de Memoria (MEN x2) con -5 para recordarlo. -1 a MEN cuando se haga una tirada para recordar un dato que el personaje ya conocía. Aunque se supere la tirada, el Demiurgo debe omitir un dato y decírselo al jugador cuando haya pasado un rato.",
@@ -768,7 +744,7 @@
       },
       {
         "ID": "CUME07",
-        "NAME": "ABSORTO",
+        "NAME": "Absorto",
         "COST": [4],
         "DESCRIPTION": "Cuando realizas tareas mentales te quedas sumido en tu propio mundo, incapaz de hacer nada más y teniendo dificultades para reconocer qué ocurre a tu alrededor.",
         "RULES": "Los turnos en los que realices una tarea mental (realizar un ritual, leer, escribir, componer una obra de arte) o uses tu Acción Mental (para rezar) no podrás usar la Acción Ofensiva ni la Defensiva ni la de Movimiento (pero sí puedes hacer rezos que requieran Turno completo).",
@@ -776,7 +752,7 @@
       },
       {
         "ID": "CUME08",
-        "NAME": "DEPRESIVO",
+        "NAME": "Depresivo",
         "COST": [4],
         "DESCRIPTION": "Has sufrido una serie de traumas a lo largo de tu vida que te han dejado graves cicatrices emocionales. Puede que sea por la muerte de un ser querido, una lesión, el ostracismo social, la consecuencia de una adicción a un tóxico prolongada en el tiempo o una falta absoluta de autorrealización al no encontrar tu lugar en el mundo.",
         "RULES": "Al empezar cada partida, el jugador hace una tirada. Si obtiene un resultado de 4 o inferior en el dado, el personaje tendrá un -1 malus general durante toda la partida. Este malus puede ignorarse si el personaje recibe atención médica y consume las plantas medicinales necesarias.",
@@ -784,7 +760,7 @@
       },
       {
         "ID": "CUME09",
-        "NAME": "FALSO MEDIUM",
+        "NAME": "Falso medium",
         "COST": [4],
         "DESCRIPTION": "Tú crees que los espíritus contactan contigo y lo predicas a los cuatro vientos, pero lo que en realidad sucede es que eres esquizofrénico. Tus delirios son tan reales para ti que a veces te autolesionas bajo la justificación de que te han herido fuerzas del más allá.",
         "RULES": "Al empezar cada partida, el jugador hace una tirada. Si obtiene un resultado de 3 o inferior en el dado, perderá 3 PV por heridas autoinfligidas.",
@@ -792,7 +768,7 @@
       },
       {
         "ID": "CUME10",
-        "NAME": "MIEDO AL MAR",
+        "NAME": "Miedo al mar",
         "COST": [4],
         "DESCRIPTION": "El dios Poseidón no te inspira mucha confianza. Quizá sea porque acostumbra a hundir las embarcaciones de aquellos que le ofenden lo más mínimo.",
         "RULES": "Siempre que estés en el mar (aunque sea sobre un barco), tendrás un -1 malus general.",
@@ -800,7 +776,7 @@
       },
       {
         "ID": "CUME11",
-        "NAME": "MIEDO A LA OSCURIDAD",
+        "NAME": "Miedo a la oscuridad",
         "COST": [9],
         "DESCRIPTION": "Las noches cerradas, las habitaciones sin ventanas y las cavernas te dan pavor, al igual que no saber qué criaturas pueden albergar las sombras.",
         "RULES": "Siempre que te encuentres en nivel de oscuridad 2 o superior tendrás un -1 malus general.",
@@ -808,7 +784,7 @@
       },
       {
         "ID": "CUME12",
-        "NAME": "PERTURBADO",
+        "NAME": "Perturbado",
         "COST": [4],
         "DESCRIPTION": "Estás desequilibrado mentalmente, lo que resulta obvio para los más perspicaces de tus compañeros. Además, sufres brotes psicóticos que te pueden meter en algunos problemas.",
         "RULES": "Al empezar cada partida, el jugador hace una tirada. Si obtiene un resultado de 3 o inferior en el dado sufrirá efectos secundarios como alucinaciones, imposibilidad de diferenciar la realidad de los sueños, paranoia... (el jugador debe interpretar al personaje como si estuviera loco) y -1 a COM y +1 a Intimidar. Cualquiera que supere una tirada de SEN +Empatía sabrá que en tu estado eres una persona peligrosa (para sí misma y para otros) y/o en la que no se puede confiar.",
@@ -816,7 +792,7 @@
       },
       {
         "ID": "CUME13",
-        "NAME": "FANÁTICO",
+        "NAME": "Fanático",
         "COST": [5],
         "DESCRIPTION": "Estás dispuesto a hacer cualquier cosa por tu dios y obedeces ciegamente sus deseos, sin importar si eso implica sacrificar tu felicidad, tu vida, o la de tus seres queridos.",
         "RULES": "Si pierdes Armonía con el dios de tu culto principal tendrás un -1 malus general durante 24 horas. Los sacerdotes e hijos de tu culto principal tienen un +1 a COM cuando hablen contigo.",
@@ -826,7 +802,7 @@
     "SUPERNATURALS":[
       {
         "ID": "CUSU01",
-        "NAME": "RENEGADO",
+        "NAME": "Renegado",
         "COST": [2],
         "DESCRIPTION": "Eres hijo de un dios o uno de sus campeones, pero has decidido abandonarlo para abrazar otra fe. Tu padre tratará de hacerte reconsiderar tu postura frustrando tus planes para que vivas tu vida de acuerdo con su filosofía personal.",
         "RULES": "Elige un dios distinto al de tu culto principal. Independientemente de tu Afinidad con él, una vez por partida se comportará como si tu personaje tuviera Afinidad 1 con él para tratar de presionarle para que vuelva a escogerlo como culto principal (si ya tienes Afinidad 1 con él, se comportará como si tuvieras Afinidad 0).",
@@ -834,7 +810,7 @@
       },
       {
         "ID": "CUSU02",
-        "NAME": "JURAMENTO: FIDELIDAD AL DIOS",
+        "NAME": "Juramento: fidelidad al dios",
         "COST": [3],
         "DESCRIPTION": "Los sacerdotes, hieródulos y algunas personas muy devotas se comprometen a ser los guardianes del código ético de su dios. Como tales, tienen una especial responsabilidad a la hora de cumplirlo.",
         "RULES": "Si debido a tus actos pierdes 1 punto de Armonía con el dios de tu culto principal, pierdes también 1 punto de Afinidad (una vez por partida). Si otros personajes cometen pecados contra tu culto, deberás tratar de impedirlo, censurarlo, reprobarlo, denunciarlo públicamente o aplicar un justo castigo, o tú también perderás 1 punto de Armonía con tu dios principal. A cambio, te conviertes en un ser sagrado para el dios, y cualquier persona que trate de atacarte o hacerte daño sin un buen motivo, como la defensa propia, perderá 1 punto de Armonía con el dios al que representes.",
@@ -842,7 +818,7 @@
       },
       {
         "ID": "CUSU03",
-        "NAME": "AGORERO",
+        "NAME": "Agorero",
         "COST": [4],
         "DESCRIPTION": "Un dios con poderes de adivinación que te envía visiones horribles del futuro, causando que tengas la necesidad de contarlo a todos pero resultando en culpa para ti cuando se cumplen.",
         "RULES": "Al empezar cada partida, el jugador hace una tirada. Si obtiene un resultado de 3 o inferior en el dado, se le dará una profecía que debe decidir si ignorar o contar. Si la profecía se cumple, todos le echarán la culpa y puede haber consecuencias negativas, pero en algunos casos excepcionales puede evitar que se cumpla y ganará un Punto de Experiencia de áureo (PXA).",
@@ -850,7 +826,7 @@
       },
       {
         "ID": "CUSU04",
-        "NAME": "NÉMESIS",
+        "NAME": "Némesis",
         "COST": [4],
         "DESCRIPTION": "Los dioses han puesto una persona en la tierra cuyo destino está unido al tuyo y uno de los dos debe morir a manos del otro.",
         "RULES": "Un personaje, del mismo nivel de poder que el tuyo, tiene como objetivo acabar contigo y tras varias sesiones de arruinarte la vida, acabarás enfrentándote a él en un combate mortal.",
@@ -858,7 +834,7 @@
       },
       {
         "ID": "CUSU05",
-        "NAME": "AGNÓSTICO",
+        "NAME": "Agnóstico",
         "COST": [5],
         "DESCRIPTION": "No crees la versión oficial sobre los dioses y podrían ser criaturas muy poderosas, pero no crees en la existencia de un único y verdadero Dios todopoderoso.",
         "RULES": "-1 a la Acción Mental para activar rezos y a la Acción Especial para resistir rezos de cualquier dios. En caso de rezos automáticos, tira un dado de 10 caras. Si sale un 1, el rezo resulta fallido.",
@@ -866,7 +842,7 @@
       },
       {
         "ID": "CUSU06",
-        "NAME": "ENEMISTADO CON UN DIOS MENOR",
+        "NAME": "Enemistado con un dios menor",
         "COST": [5],
         "DESCRIPTION": "Un dios menor te la tiene jurada y hará todo lo posible para interponerse en tus planes, aunque probablemente se conforme con arruinarte la vida y no deseará tu muerte.",
         "RULES": "Empiezas con Afinidad 0 con un dios menor a tu elección, y será prácticamente imposible que puedas redimirte ante sus ojos. Una vez por partida recibes una de las consecuencias de la ira del dios olímpico al que sirva el dios menor.",
@@ -874,7 +850,7 @@
       },
       {
         "ID": "CUSU07",
-        "NAME": "ESTIRPE MALDITA",
+        "NAME": "Estirpe maldita",
         "COST": [5],
         "DESCRIPTION": "Procedes de una familia cuyo linaje ha sido maldito por los dioses.",
         "RULES": "-1 a Suerte. Al empezar cada partida, el jugador hace una tirada. Si obtiene un resultado de 3 o inferior en el dado, el Demiurgo castigará al personaje con algún hecho propio de la maldición familiar.",
@@ -882,7 +858,7 @@
       },
       {
         "ID": "CUSU08",
-        "NAME": "ODIADO POR UN DIOS ARCANO",
+        "NAME": "Odiado por un dios arcano",
         "COST": [6],
         "DESCRIPTION": "Uno de los dioses arcanos te la tiene jurada.",
         "RULES": "Empiezas con Afinidad 0 con uno de los dioses arcanos, y te resultará prácticamente imposible redimirte ante él. Una vez por partida, cuando más pueda molestarte, tendrás un malus -5 a una tirada.",
@@ -890,7 +866,7 @@
       },
       {
         "ID": "CUSU09",
-        "NAME": "DESPRECIADO POR UN DIOS OLÍMPICO",
+        "NAME": "Despreciado por un dios olímpico",
         "COST": [7],
         "DESCRIPTION": "Le caes mal a una deidad olímpica y siempre te va a mirar con un poco de ojeriza.",
         "RULES": "Elige a un dios olímpico. Empiezas con Afinidad 1 con ese dios. El máximo de Afinidad que puedes conseguir con ese dios es 1 y es fácil que llegues a 0.",
@@ -898,7 +874,7 @@
       },
       {
         "ID": "CUSU10",
-        "NAME": "MALA SUERTE",
+        "NAME": "Mala suerte",
         "COST": [7],
         "DESCRIPTION": "La diosa Tique (Fortuna) te ha situado en la parte inferior de la rueda del destino.",
         "RULES": "-2 a Suerte. Tu máxima puntuación en la característica vinculada Suerte es 5. Una vez por partida, el Demiurgo puede exigirte que hagas una tirada de Suerte. Si la fallas, la acción que estés tratando de llevar a cabo resultará fallida automáticamente (como un combate, un ritual o una intervención decisiva en el ágora o ante el rey). Esta tirada debe ser en algún momento importante y/o decisivo.",
@@ -908,7 +884,7 @@
     "SOCIAL":[
       {
         "ID": "CUSO01",
-        "NAME": "DESPRECIO POR LOS JÓVENES",
+        "NAME": "Desprecio por los jóvenes",
         "COST": [1,2,3],
         "DESCRIPTION": "Consideras que aquellos que son menores que tú son estúpidos y/o demasiado inexpertos. Esto quedará patente en el retintín de tu voz cada vez que les dirijas la palabra.",
         "RULES": "-3 a Oratoria cuando te dirijas a alguien que pertenezca a un grupo de edad inferior al tuyo. Otorga 1PX a personajes adolescentes, 2PX a adultos y de mediana edad y 3PX a personajes en la senectud.",
@@ -916,7 +892,7 @@
       },
       {
         "ID": "CUSO02",
-        "NAME": "DESPRECIO POR LOS MAYORES",
+        "NAME": "Desprecio por los mayores",
         "COST": [1,2,3],
         "DESCRIPTION": "Consideras que los mayores se creen demasiado listos por el mero hecho de llevar unos cuantos años más que tú en el mundo, cuando lo que deberían hacer es dejar paso a las nuevas generaciones.",
         "RULES": "-3 a Oratoria cuando te dirijas a alguien que pertenezca a un grupo de edad superior al tuyo. Otorga 1PX a personajes de mediana edad, 2PX a adultos y adolescentes y 3PX a niños.",
@@ -924,7 +900,7 @@
       },
       {
         "ID": "CUSO03",
-        "NAME": "CLASISTA",
+        "NAME": "Clasista",
         "COST": [1,2,3,4,5],
         "DESCRIPTION": "Piensas que aquellos que son de un grupo social más bajo que tú son seres inferiores por naturaleza: para ti, los dioses ordenan a los mortales por orden social según su valía.",
         "RULES": "-3 a Oratoria cuando te dirijas a alguien que tenga menor nivel de Estatus.",
@@ -932,7 +908,7 @@
       },
       {
         "ID": "CUSO04",
-        "NAME": "ENEMIGOS",
+        "NAME": "Enemigos",
         "COST": [1,2,3,4,5],
         "DESCRIPTION": "A lo largo de tu vida (o puede que sea cosa de familia) te has ganado la enemistad de algunas personas con cierto poder, los cuales tratarán de vengar las afrentas cometidas con toda su influencia.",
         "RULES": "Un grupo de personas intentarán por todos los medios arruinarte la vida allá donde vayas, y dentro de sus posibilidades no tendrán reparos en acusarte injustamente de delitos, contratar cazarrecompensas y asesinos, sobornar a autoridades para volverlos en tu contra, secuestrar amigos y familiares y, en general, arruinarte la vida de la forma que más les plazca. Por cada PX que te proporcione esta maldición, tus enemigos tendrán 1 nivel en todos los rasgos sociales necesarios para vengarse de ti: Monedas, Estatus, Epíteto, Contactos, Influencia...",
@@ -940,7 +916,7 @@
       },
       {
         "ID": "CUSO05",
-        "NAME": "INFAME",
+        "NAME": "Infame",
         "COST": [1,2,3,4,5],
         "DESCRIPTION": "Tu reputación te precede: lo que, en este caso, no es lo más aconsejable. Aquellos que hayan oído hablar de ti conocerán alguno de tus puntos flacos y desconfiarán de tus palabras.",
         "RULES": "Añades tantos niveles en tu Renombre de Infamia igual a los PX obtenidos en esta maldición.",
@@ -948,7 +924,7 @@
       },
       {
         "ID": "CUSO06",
-        "NAME": "MALA FAMA INMERECIDA",
+        "NAME": "Mala fama inmerecida",
         "COST": [1,2,3],
         "DESCRIPTION": "Muchos han oído hablar de ti, y por ello creen que te conocen. Pero en realidad se equivocan: alguien te tendió una trampa, otra persona que se parece a ti se dedica a cometer los más horribles actos, o puede que algún poderoso enemigo se haya tomado muchas molestias en difamarte. Sea como fuere, la gente desconfía de ti y conoce mejor tu lado oscuro que tu verdadero tú.",
         "RULES": "(+1 PX): +2 niveles en Infamia. La gente cree que eres un borracho, un abusón, un ladrón, pendenciero, un mentiroso, un mujeriego... aunque no es cierto.\n• (+2 PX): +4 niveles en Infamia. La gente cree que eres un tipo peligroso, un violador, que mataste a una persona de forma injustificada, que has robado a muchas personas, que has traicionado a los tuyos y no eres digno de ninguna confianza... aunque no  sea cierto. (+3 PX): +5 niveles en Infamia. La gente cree que eres un asesino de masas, un impío ante los dioses,  el responsable de la desgracia de varias naciones, el portador de plagas y enfermedades, que estás maldito por los dioses y traes la desgracia a todos los que te rodean... aunque no sea cierto. Esta reputación, aunque inmerecida, es totalmente real para el resto de los personajes. Por mucho que te empeñes en desmentirlo, solo te creerán tus familiares, tus mejores amigos, los que superen una tirada de SEN +Empatía -1 por cada nivel de Infamia que tengas, o aquellos que utilicen la intercesión de los dioses. Para el resto, eres totalmente culpable.",
@@ -956,7 +932,7 @@
       },
       {
         "ID": "CUSO07",
-        "NAME": "MENTIROSO COMPULSIVO",
+        "NAME": "Mentiroso compulsivo",
         "COST": [1],
         "DESCRIPTION": "Te cuesta diferenciar la realidad de la ficción que tú mismo has creado sobre tu vida. Resulta fácil colársela a los incautos, pero los que logran descubrirlo desconfían de ti.",
         "RULES": "+2 a Oratoria [Retórica] cuando mientas. Si algún personaje descubre tus engaños y gana en una tirada con SEN + Empatía [Mentiras], pierdes los beneficubridores los beneficubridores los benefi-cios de este don y, por el contrario, los cambias por un -2 Oratoria [Todas].",
@@ -964,7 +940,7 @@
       },
       {
         "ID": "CUSO08",
-        "NAME": "RASGO DISTINTIVO DE FEALDAD",
+        "NAME": "Rasgo distintivo de fealdad",
         "COST": [1],
         "DESCRIPTION": "Hay algo en ti que algunas personas consideran repulsivo en tu aspecto, lo que te hace ser muy poco atractivo.",
         "RULES": "-1 a Seducir por cada punto que tengas en esta maldición.",
@@ -972,7 +948,7 @@
       },
       {
         "ID": "CUSO09",
-        "NAME": "SIN DERECHOS CIVILES",
+        "NAME": "Sin derechos civiles",
         "COST": [1],
         "DESCRIPTION": "A pesar de tu condición de noble careces de algunos o todos los derechos civiles propios de tu grupo social.",
         "RULES": "Dependiendo del nivel al que tengas esta maldición, te afectará de una forma u otra: (1 PX): no puedes acusar a otro noble de un delito, no puedes defenderte a ti mismo en un juicio si te acusa de un delito otro noble. El máximo puesto social que puedes alcanzar es ciudadano. (2 PX): no puedes hablar en el ágora ni votar asuntos de Estado, tampoco puedes poseer tierras. El máximo puesto social que puedes alcanzar es noble. (3 PX): has sido desterrado y has perdido todos tus derechos civiles asociados a la nobleza.",
@@ -980,7 +956,7 @@
       },
       {
         "ID": "CUSO10",
-        "NAME": "ACOSTUMBRADO A LA BUENA VIDA",
+        "NAME": "Acostumbrado a la buena vida",
         "COST": [2],
         "DESCRIPTION": "Te has acostumbrado tanto a los lujos de los altos grupos sociales y a estar rodeado de criados que se desviven por atender todas tus peticiones, que si dejas las comodidades propias de los palacios te sentirás muy incómodo.",
         "RULES": "Si no duermes en una buena cama, comes comida cocinada por un buen cocinero (con una puntuación de 6 o más en ALM +Hogar), tomas un baño a diario, o estás atendido por criados (al menos dos con las habilidades Hogar o Política), tienes un -1 mg hasta que pases 24 horas con todas las comodidades.",
@@ -988,7 +964,7 @@
       },
       {
         "ID": "CUSO11",
-        "NAME": "CÁNDIDO",
+        "NAME": "Cándido",
         "COST": [2],
         "DESCRIPTION": "Confías en todo el mundo, lo que puede llevarte a ser presa fácil de mentirosos, ladrones, estafadores y tramposos.",
         "RULES": "-1 a Empatía cuando hagas una tirada enfrentada contra COM +Oratoria. -1 a Percibir y Robar cuando hagas una tirada enfrentada contra AGI +Robar. -1 a Percibir cuando hagas una tirada enfrentada contra AGI +Sigilo [Emboscar].",
@@ -996,7 +972,7 @@
       },
       {
         "ID": "CUSO12",
-        "NAME": "CLEPTÓMANO",
+        "NAME": "Cleptómano",
         "COST": [5],
         "DESCRIPTION": "Sientes la compulsión de robar, sin importar las consecuencias. Nada te impide arrepentirte posteriormente y devolver el objeto robado, pero las consecuencias pueden ser igual de nefastas que ser pillado in fraganti.",
         "RULES": "Tienes que robar un objeto durante cada sesión de juego, o durante toda la próxima sesión tendrás un malus de -1 mg. El objeto que se tiene que robar debe ser algo que tenga cierto simbolismo: debe ser un objeto de gran valor, que te haya llamado la atención por algún motivo, o que pertenezca a alguien que te haya causado algún agravio y le robes a modo de venganza. Recuerda que robar es un delito y puede acarrear problemas con la justicia y con la diosa Atenea.",
@@ -1004,7 +980,7 @@
       },
       {
         "ID": "CUSO13",
-        "NAME": "CODICIOSO",
+        "NAME": "Codicioso",
         "COST": [2],
         "DESCRIPTION": "te gusta demasiado el dinero, y no puedes evitar acudir a su llamada.",
         "RULES": "cuando alguien te ofrezca una cantidad de dinero equivalente a lo que tienes en el rasgo social Monedas por hacer algo, tendrá que aceptarlo o tendrá un -1 mg durante el resto de la sesión de juego.",
@@ -1012,7 +988,7 @@
       },
       {
         "ID": "CUSO14",
-        "NAME": "CRIADO EN UNA SOCIEDAD ATÍPICA",
+        "NAME": "Criado en una sociedad atípica",
         "COST": [2],
         "DESCRIPTION": "la mayor parte de tu vida la has pasado en una de las pocas sociedades atípicas que quedan en la Hélade, en donde las reglas sociales convencionales varían drásticamente.",
         "RULES": "siempre que no estés en tu Estado natal, tienes los siguientes malus: -3 a Política (el resto de los personajes tendrían -1).",
@@ -1020,23 +996,15 @@
       },
       {
         "ID": "CUSO15",
-        "NAME": "DESPRECIO POR LOS POBRES",
+        "NAME": "Desprecio por los pobres",
         "COST": [2],
         "DESCRIPTION": "piensas que aquellos que no poseen dinero no son dignos de confianza: seguramente serán ladrones, o en el mejor de los casos, gorrones, por lo que los desprecias y rehúsas su presencia.",
         "RULES": "-3 a Oratoria cuando te dirijas a alguien que no posea dinero (aquellos que tengan su Rasgo Social de Monedas al 0 y/o lleven ropajes de mala calidad). -1 mg si alguna vez el personaje llega a tener Monedas 0 y/o viste ropajes de mala calidad (porque te desprecias a ti mismo), ya sea porque te lo gastas todo o porque le robaron, hasta que tengas al menos Monedas 1 y/o ropajes de calidad normal o buena calidad.",
         "CONDITIONS": ""
       },
       {
-        "ID": "CUSO16",
-        "NAME": "DESPRECIO POR LOS POBRES",
-        "COST": [2],
-        "DESCRIPTION": "piensas que aquellos que no poseen dinero no son dignos de confianza",
-        "RULES": "-3 a Oratoria cuando te dirijas a alguien que no posea dinero, -1 mg si alguna vez el personaje llega a tener Monedas 0",
-        "CONDITIONS": ""
-      },
-      {
         "ID": "CUSO17",
-        "NAME": "LIMITADO POR EL DIALECTO",
+        "NAME": "Limitado por el dialecto",
         "COST": [2],
         "DESCRIPTION": "tu acento y peculiaridades regionales te hacen difícilmente entendible",
         "RULES": "-1 a COM con todas las personas que no hayan nacido en la misma región que tú",
@@ -1044,7 +1012,7 @@
       },
       {
         "ID": "CUSO18",
-        "NAME": "MANIPULABLE",
+        "NAME": "Manipulable",
         "COST": [2],
         "DESCRIPTION": "no tienes un criterio muy firme sobre la vida",
         "RULES": "otros personajes que traten de convencerte de algo tendrán un +2 a Oratoria",
@@ -1052,7 +1020,7 @@
       },
       {
         "ID": "CUSO19",
-        "NAME": "RACISTA",
+        "NAME": "Racista",
         "COST": [2,4],
         "DESCRIPTION": "consideras que aquellos que son extranjeros son estúpidos y nunca deberían haber venido a tu tierra",
         "RULES": "-3 a Oratoria cuando te dirijas a alguien de otra raza o de otra polis (2 NO HELENOS / +4PX LOS QUE NO SON DE TU POLIS)",
@@ -1060,7 +1028,7 @@
       },
       {
         "ID": "CUSO20",
-        "NAME": "FALTA DE HIGIENE",
+        "NAME": "Falta de higiene",
         "COST": [4,5],
         "DESCRIPTION": "eres un guarro y no te importa los baños (4 NOBLES / +5PX METECOS Y ESCLAVOS)",
         "RULES": "a menos que alguien te obligue a tomar un baño, tendrás un -2 a Seducir, -2 a Política [Etiqueta], a -1 Dureza [Inmunidad]",
@@ -1068,7 +1036,7 @@
       },
       {
         "ID": "CUSO21",
-        "NAME": "SOBREPROTECTOR CON LOS NIÑOS",
+        "NAME": "Sobreprotector con los niños",
         "COST": [4,5],
         "DESCRIPTION": "No puedes consentir que hagan daño a un niño y harás cualquier cosa para evitarlo, aunque ello requiera arriesgar la vida, renunciar a la defensa propia o enfrentarse a alguien poderoso socialmente. ( +4PX / +5PX SI INCLUYES ESCLAVOS )",
         "RULES": "Cuando veas que alguien está causando cualquier daño a un niño (o parezca que vaya a hacerlo), tendrás que: Intervenir y defender al niño hasta que caigas abatido o derrotes a todos los agresores. Ignorar tus instintos de proteger a los niños y tener un -1 mg durante una semana. Si tus acciones hieren a un niño (ya sea por accidente o en defensa propia), tendrás un -2 mg durante una semana, ya que te desprecias a ti mismo.",
@@ -1076,7 +1044,7 @@
       },
       {
         "ID": "CUSO22",
-        "NAME": "TÍMIDO",
+        "NAME": "Tímido",
         "COST": [4],
         "DESCRIPTION": "Te pones muy nervioso cuando tratas con desconocidos en situaciones sociales y siempre intentas escabullirte antes que conocer gente nueva.",
         "RULES": "-1 a COM. -1 a APA. De forma narrativa, tratas de no llamar la atención en eventos sociales y evitarás a toda costa hablar con desconocidos. Esta maldición no se aplicará cuando el personaje establezca una relación de amistad con otro personaje o cuando se acostumbre a tratar con él socialmente (lo que sucederá a discreción del Demiurgo).",
@@ -1084,7 +1052,7 @@
       },
       {
         "ID": "CUSO23",
-        "NAME": "EXTRANJERO",
+        "NAME": "Extranjero",
         "COST": [5],
         "DESCRIPTION": "Naciste fuera de la Hélade, lo que te ocasiona ciertos problemas de comunicación y cierta marginación social.",
         "RULES": "Tienes que comprar la habilidad Idiomas que limitará cualquier tirada de Oratoria, Liderar, Arte [Teatro]... Tienes algún rasgo étnico que te hace ser obviamente de más allá de la Hélade. Los personajes con la maldición social Racista pueden ocasionarte problemas.",
@@ -1092,7 +1060,7 @@
       },
       {
         "ID": "CUSO24",
-        "NAME": "MACHISTA / HEMBRISTA",
+        "NAME": "Machista / hembrista",
         "COST": [5],
         "DESCRIPTION": "Muchas de las sociedades de la Hélade tienen la absurda creencia de que las personas del sexo no dominante son inferiores a aquellas que dominan los estamentos políticos. Esto ocurre mayoritariamente a las mujeres, ya que la inmensa mayoría de los Estados son dominados por hombres (al menos, oficialmente), aunque también ocurre al contrario en las sociedades amazónicas, donde las mujeres dominan la política y copan todos los puestos del ejército y la guardia, mientras que los hombres son tratados como poco más que ganado.",
         "RULES": "-3 a Oratoria cuando hables con personas del sexo opuesto.",
@@ -1104,7 +1072,7 @@
     [
       {
         "ID": "DG01",
-        "NAME": "OBJETO DIVINO",
+        "NAME": "Objeto divino",
         "COST": [-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12,-13,-14,-15,-16,-17,-18,-19,-20,-21,-22,-23,-24,-25,-26,-27,-28,-29,-30],
         "DESCRIPTION": "un dios ha recompensado al personaje con el cuidado de un objeto divino con áureo y mejoras sobrenaturales.",
         "RULES": "el personaje puede diseñar este objeto según las reglas del apartado Objetos divinos del Capítulo X: Equipo.",
@@ -1112,7 +1080,7 @@
       },
       {
         "ID": "DG02",
-        "NAME": "BELLEZA IMPERTURBABLE",
+        "NAME": "Belleza imperturbable",
         "COST": [-5],
         "DESCRIPTION": "el personaje tiene belleza impecable que no se ve alterada por ningún contratiempo.",
         "RULES": "ningún malus afecta a las Acciones relacionadas con APA o Seducir. Otros personajes tendrán un +1 a MEN x2 para reconocerte.",
@@ -1120,7 +1088,7 @@
       },
       {
         "ID": "DG03",
-        "NAME": "CRECIMIENTO ACELERADO",
+        "NAME": "Crecimiento acelerado",
         "COST": [-5,-10],
         "DESCRIPTION": "el personaje puede aparentar muchos más años debido a su sangre divina y su rápido desarrollo.",
         "RULES": "el personaje puede tener la edad real de un niño o adolescente y aparentar la de un hombre adulto. Si el personaje es noble, tendrá los derechos de un ciudadano. Además, tendrá la hibris y los bonus de su edad real pero ninguno de los malus. Otorga 5Px a adolescentes y 10Px a niños",
@@ -1128,7 +1096,7 @@
       },
       {
         "ID": "DG04",
-        "NAME": "DAIMON PROTECTOR",
+        "NAME": "Daimon protector",
         "COST": [-5],
         "DESCRIPTION": "un poderoso espíritu benigno acompaña y protege al personaje en todo momento.",
         "RULES": "+1 a las Defensas Pasiva y Activa. +1 a Percibir cuando se intente tendere una trampa, emboscada, acechar o pillarte por sorpresa. +1 a las Acciones Especiales para evitar acciones negativas de un rezo o don. +1 a Suerte para evitar un mal.",
@@ -1136,7 +1104,7 @@
       },
       {
         "ID": "DG06",
-        "NAME": "DESTERRADO DEL REINO DE MORFEO",
+        "NAME": "Desterrado del reino de Morfeo",
         "COST": [-5],
         "DESCRIPTION": "Morfeo te ha prohibido volver a soñar, circunstancia a la que has conseguido sacarle partido.",
         "RULES": "No necesitas dormir, ni tienes malus generales al día siguiente por no haber dormido. Esto no significa que no te canses, ni que puedas estar toda la noche trabajando o corriendo. Tendrás que descansar 8 horas al día como una persona normal, pero puedes hacerlo con los ojos abiertos  y con plena consciencia, pudiendo hacer labores que  no agoten (como vigilar, charlar, leer algo no muy denso... o cualquier otra cosa que puedas hacer inmóvil y no gaste Puntos de Agotamiento). Recuperas Puntos de Vida y Puntos de Agotamiento cuando descansas, igual que los demás lo hacen durmiendo.",
@@ -1144,7 +1112,7 @@
       },
       {
         "ID": "DG07",
-        "NAME": "ETERNAMENTE JOVEN",
+        "NAME": "Eternamente joven",
         "COST": [-5],
         "DESCRIPTION": "En un momento de tu vida, la sangre inmortal que corre por tus venas se hizo más fuerte que el paso del tiempo, por lo que no envejecerás un día más.",
         "RULES": "No envejeces y, en consecuencia, no puedes morir por vejez. Además, puedes elegir tener los modificadores y la hibris de una edad superior a la que aparente el personaje",
@@ -1152,7 +1120,7 @@
       },
       {
         "ID": "DG08",
-        "NAME": "GOLPES CON INERCIA",
+        "NAME": "Golpes con inercia",
         "COST": [-5],
         "DESCRIPTION": "Golpear a los enemigos provoca que salgan volando por los aires.",
         "RULES": "Por cada Punto de Vida que el personaje cause a un oponente, ese oponente se desplazará hacia atrás 2 pasos (1 metro), y si no supera una Acción de Movimiento de AGI +Atletismo [Acrobacias], el personaje caerá al suelo derribado y recibirá un Daño Base igual a la mitad de los pasos que se haya desplazado por el aire (el daño de la caída se calcula de forma independiente al daño del golpe).",
@@ -1160,7 +1128,7 @@
       },
       {
         "ID": "DG09",
-        "NAME": "ALTA CAPACIDAD DE CURACIÓN",
+        "NAME": "Alta capacidad de curación",
         "COST": [-10],
         "DESCRIPTION": "Tu metabolismo es muy superior al del resto de los mortales y te curas mucho más rápido que los demás.",
         "RULES": "Cuando duermes por las noches recuperas +1 PV extra aparte del +1 PV que normalmente recuperan todos los personajes mientras duermen. Cuando practican sobre ti un rezo de curación que te haga recuperar PV, recuperas un +1 PV adicional. Cuando sufras una herida que necesite tiempo para sanarse (como un brazo o una pierna rota) tus heridas sanarán en la mitad del tiempo en el que sanaría una persona normal. Las pérdidas permanentes de órganos o extremidades no se recuperan con este don (como los miembros amputados y otras heridas de guerra). Cuando sufres algún tipo de envenenamiento, los efectos negativos duran la mitad de tiempo. Cuando enfermas, el efecto de la enfermedad dura la mitad de tiempo. No se pueden recuperar PV por encima del máximo que tiene normalmente el personaje.",
@@ -1168,7 +1136,7 @@
       },
       {
         "ID": "DG10",
-        "NAME": "ARMADURA DE PIEL",
+        "NAME": "Armadura de piel",
         "COST": [-10],
         "DESCRIPTION": "Tu piel es extremadamente dura y tiene un color extraño: puede que sea pálida como el mármol, gris como la piedra o verde como las escamas de los reptiles.",
         "RULES": "+3 a Armadura. -1 a Atletismo cuando portes una armadura que tenga penalizadores a Atletismo (aparte de los malus que dé la armadura), ya que la falta de flexibilidad en tu piel hace que te resulte especialmente incómodo llevar armaduras.",
@@ -1176,7 +1144,7 @@
       },
       {
         "ID": "DG11",
-        "NAME": "BENDECIDO POR ARES",
+        "NAME": "Bendecido por Ares",
         "COST": [-10],
         "DESCRIPTION": "Ares ha visto en ti su fiel reflejo, ya que tienes la capacidad de liderar ejércitos, arrasar ciudades y provocar sufrimiento y el caos.",
         "RULES": "comienzas con Afinidad a nivel 4 con Ares. Puedes comprar los rezos de Ares al precio de PX como si fueras del Culto a Ares. Cuando realices la maniobra Ataque Total, tienes una Acción Mental adicional para realizar rezos que sean de Ares.",
@@ -1184,7 +1152,7 @@
       },
       {
         "ID": "DG12",
-        "NAME": "BENDECIDO POR DEMÉTER",
+        "NAME": "Bendecido por Deméter",
         "COST": [-10],
         "DESCRIPTION": "Deméter, una poderosa diosa que renunció a su puesto en el Olimpo para vivir entre los mortales, te ha concedido el don de no sufrir nunca del vientre, lo que hace que nada que ingieras pueda causarte el menor daño.",
         "RULES": "+3 a Hogar para cocinar. Eres inmune a todos los tóxicos (como los efectos negativos del vino o el veneno de las plantas y los animales) que lleguen a tu cuerpo a través de tu boca, ya sea mezclados con bebida o con comida. A voluntad, puedes regurgitar las cosas que comas.",
@@ -1192,7 +1160,7 @@
       },
       {
         "ID": "DG13",
-        "NAME": "BENDECIDO POR DIONISO",
+        "NAME": "Bendecido por Dioniso",
         "COST": [-10],
         "DESCRIPTION": "Dioniso ha visto en ti un gran potencial y por eso ha decidido otorgarte la simpatía de aquellas criaturas que le deben favores o con las que siempre ha tenido buena relación.",
         "RULES": "Comenzas con Afinidad a nivel 4 con Dioniso. Puedes comprar los rezos de Dioniso al precio de PX como si fueras del Culto a Dioniso. Los sátiros, centauros, serpientes, tigres y delfines (criaturas que aparecen en los mitos de Dioniso) te muestran simpatía y no te atacarán a menos que los provoques previamente, bien sea insultándolos, o atacándolos a ellos o a algunos miembros de su manada. Las criaturas humanoides de esta lista (sátiros y centauros) estarán dispuestas a tratarte con hospitalidad (lo que no suelen hacer con el resto de los humanos) y a hacerte pequeños favores a cambio de vino. Las criaturas salvajes de esta lista (tigres, serpientes y delfines) se comportarán como animales domésticos y obedecerán pequeñas órdenes como «ven aquí» o «quieto» si superas una tirada de COM +Zoología, pero en ningún caso atacarán a nadie por ti.",
@@ -1200,7 +1168,7 @@
       },
       {
         "ID": "DG14",
-        "NAME": "BENDECIDO POR HEFESTO",
+        "NAME": "Bendecido por Hefesto",
         "COST": [-10],
         "DESCRIPTION": "Hefesto, dios del fuego, ha decidido darte los mejores objetos mágicos que puede crear en su forja para que te ayuden en tus misiones.",
         "RULES": "Comienzas con Afinidad a nivel 4 con Hefesto. Puedes comprar los rezos de Hefesto al precio de PX como si fueras del Culto a Hefesto. Todos los objetos divinos que te proporcionen los dioses como recompensa a tus misiones, o que te pongas durante la creación del personaje, tienen +1 PX por cada 5 PX en mejoras sobrenaturales que tenga el objeto.",
@@ -1208,7 +1176,7 @@
       },
       {
         "ID": "DG15",
-        "NAME": "BENDECIDO POR MORFEO",
+        "NAME": "Bendecido por Morfeo",
         "COST": [-10],
         "DESCRIPTION": "Eres capaz de tomar la apariencia de cualquier persona que hayas visto al menos una vez en la vida. Puede que seas tan horrible como el dios Morfo y este se haya apiadado de ti, o un gran actor a quien las musas han decidido concederle este don.",
         "RULES": "Por cada punto de efecto positivo que saques en una tirada de APA +Arte [Teatro] puedes obtener un +1 a APA o eliminar un -1 a APA. Además, si sacas un efecto de 3 o más podrás parecerte al personaje que quieras, aunque sea más grande, pequeño, o de sexo diferente al tuyo (la ilusión también afectará a la voz). Para darse cuenta del engaño, hay que superar una tirada enfrentada SEN +Empatía [Mentiras]. Cada vez que utilices este poder durante un periodo de 10 minutos acumularás un -1 mg. Estos malus generales se eliminan estando sin usar este poder durante 1 hora (vale durmiendo).",
@@ -1216,7 +1184,7 @@
       },
       {
         "ID": "DG16",
-        "NAME": "CONCIENCIA DE VIDAS PASADAS",
+        "NAME": "Conciencia de vidas pasadas",
         "COST": [-10],
         "DESCRIPTION": "Tuviste una vida antes que esta, y cuando llegó a su fin y descendiste al Inframundo, conseguiste no beber de la laguna del olvido y se te permitió reencarnarte en otra persona. En esta nueva vida tienes recuerdos de la anterior, conservas algunos de sus talentos, y tu vida pasada se comunica contigo a través de visiones, sueños, como una voz en tu cabeza, o como una aparición fantasmal.",
         "RULES": "+1 a Tanatología. +1 a dos habilidades de tu elección que sean conocimientos. +1 a tres habilidades a tu elección (siempre que no se repita ninguna de las dos seleccionadas en la categoría anterior). En ocasiones el Demiurgo puede sugerirte que gastes 1 punto de áureo para entrar en contacto con un recuerdo de una vida pasada. Si lo haces, recibirás información útil relacionada con algo que ocurrió en la antigüedad que conecta con tu vida actual (una batalla, la fundación de una ciudad, la muerte de un héroe...)",
@@ -1224,7 +1192,7 @@
       },
       {
         "ID": "DG17",
-        "NAME": "CURANDERA",
+        "NAME": "Curandera",
         "COST": [-10],
         "DESCRIPTION": "Existe un grupo de mujeres cuyos poderes y sabiduría se heredan de madres a hijas, con un profundo conocimiento de la medicina: las curanderas. Bendecidas por la diosa Artemisa, normalmente viven en los bosques y es allí donde ejercen sus artes, ya que es de donde reciben su poder.",
         "RULES": "+2 a Medicina cuando se esté dentro de un bosque. +1 a Herbolaria cuando se esté dentro de un bosque. -2 a Medicina cuando se esté fuera de un bosque. Indistintamente de tu culto principal, puedes comprar al coste normal de PX los rezos de curación de Artemisa, Apolo, Hera y Afrodita",
@@ -1232,7 +1200,7 @@
       },
       {
         "ID": "DG18",
-        "NAME": "GENIO TECNOLÓGICO",
+        "NAME": "Genio tecnológico",
         "COST": [-10],
         "DESCRIPTION": "Tienes la capacidad de imaginar, crear y comprender tecnología que está más allá del entendimiento humano.",
         "RULES": "+2 a Metalurgia y Arte para imaginar, crear y comprender tecnología. Si gastas un punto de áureo, tienes una hora y tienes herramientas a mano, superando una Acción de FUE + Metalurgia / ALM +Arte podrás improvisar un objeto experimental de tecnología avanzada que tendrá una vida útil de una Escena, antes de romperse y quedar inservible para siempre. Como se explica en el capítulo sobre tecnología, estos inventos son de corte futurista, tales como un motor a vapor, luz artificial o un cañón de aire comprimido (nada te impide que, posteriormente, y superando las tiradas pertinentes con -10 a Metalurgia/Arte, puedas desarrollar una versión estable de esa tecnología).",
@@ -1240,7 +1208,7 @@
       },
       {
         "ID": "DG19",
-        "NAME": "LA LENGUA DE LAS CRIATURAS",
+        "NAME": "La lengua de las criaturas",
         "COST": [-10],
         "DESCRIPTION": "Los dioses te han bendecido con la habilidad de comunicarte verbalmente con los animales. Esto hace que las criaturas sientan curiosidad y simpatía hacia ti.",
         "RULES": "Puedes entender y ser entendido por cualquier criatura no humana. Las posibilidades de comunicación están limitadas por los puntos en COM y MEN. +3 a Zoología, +2 a Liderar cuando hablas con animales y criaturas, +1 a la Acción Mental y Especial en rezos relacionados con animales o criaturas.",
@@ -1248,7 +1216,7 @@
       },
       {
         "ID": "DG20",
-        "NAME": "MEDIUM",
+        "NAME": "Medium",
         "COST": [-10],
         "DESCRIPTION": "Has sido llamado por Hades para hacer llegar las almas de las personas no correctamente enterradas al Inframundo.",
         "RULES": "+1 Tanatología, +1 Intuir, +2 Teología [Rituales] cuando tengan que ver con espíritus. Puedes ver y escuchar a los fantasmas que vagan por la Tierra y son de ayuda dando pistas relevantes y dónde se encuentran sus restos para ser enterrados.",
@@ -1256,7 +1224,7 @@
       },
       {
         "ID": "DG21",
-        "NAME": "MEGAHABILIDAD",
+        "NAME": "Megahabilidad",
         "COST": [-10],
         "DESCRIPTION": "Los dioses te han recompensado con una maestría superior en una disciplina.",
         "RULES": "Elige una habilidad en nivel 5 y aumentala a nivel 6. Si sacas un 9 o 10 en el dado, vuelves a lanzar para obtener consecuencias narrativas positivas adicionales y puedes conseguir un crítico en el segundo dado.",
@@ -1264,7 +1232,7 @@
       },
       {
         "ID": "DG22",
-        "NAME": "NIÑO PRODIGIO",
+        "NAME": "Niño prodigio",
         "COST": [-10],
         "DESCRIPTION": "Eres un niño con habilidades y conocimientos sobrehumanos.",
         "RULES": "Elige una habilidad en nivel 2 y aumentala a nivel 4. +2 a todas las habilidades relacionadas con la habilidad elegida.",
@@ -1272,7 +1240,7 @@
       },
       {
         "ID": "DG23",
-        "NAME": "PRECOGNICIÓN",
+        "NAME": "Precognición",
         "COST": [-10],
         "DESCRIPTION": "Este don, poseído por todos los verdaderos oráculos, te permite utilizar tu sexto sentido como si fueran los otros cinco para evitar situaciones de peligro, percibiendo el peligro inminente de una forma sobrenatural.",
         "RULES": "Cuando te enfrentes a un peligro que por su naturaleza sea indetectable, o falles una tirada de SEN +Percibir para evitar un peligro inminente (darte cuenta de que un asesino te está siguiendo, beber de una copa envenenada, o entrar en un callejón donde te esperan unos ladrones con malas intenciones), puedes hacer inmediatamente después una Acción Pasiva de SEN +Intuir. Si superas la tirada (independientemente del efecto obtenido por tu atacante; esto no es una tirada enfrentada) te darás cuenta de que vas a ser la víctima inminente de un ataque y podrás actuar en consecuencia, tirando la copa envenenada o dando la vuelta a tiempo de entrar en un lugar peligroso.",
@@ -1280,7 +1248,7 @@
       },
       {
         "ID": "DG24",
-        "NAME": "PROTEGIDO POR ATENEA",
+        "NAME": "Protegido por Atenea",
         "COST": [-10, -5],
         "DESCRIPTION": "Atenea es la protectora de los héroes. Ha visto en ti que tienes potencial y que eres un hombre devoto con los dioses y justo con los hombres, por lo que ha decidido protegerte.",
         "RULES": "Comienzas con Afinidad a nivel 4 con Atenea. Puedes comprar los rezos de Atenea al precio de PX como si fueras del Culto a Atenea. +1 a Política. Una vez por partida, puedes pedir que la diosa de la sabiduría te ilumine otorgándote +5 a MEN en una tirada para resolver una duda y adquirir un conocimiento. Si pierdes Armonía con Atenea perderás este don hasta que hayas enmendado tu acción o hagas un ritual de sacrifico a Atenea.",
@@ -1288,7 +1256,7 @@
       },
       {
         "ID": "DG25",
-        "NAME": "PROTEGIDO POR POSEIDÓN",
+        "NAME": "Protegido por Poseidón",
         "COST": [-10, -5],
         "DESCRIPTION": "Eres uno de los pocos mortales que goza de la simpatía de Poseidón: quizá seas uno de sus hijos, o naciste en un barco, o todavía practicas sacrificios humanos para honrar al dios del mar.",
         "RULES": "Comienzas con Afinidad a nivel 4 con Poseidón. Puedes comprar los rezos de Poseidón al precio de PX como si fueras del Culto a Poseidón. No puedes morir ahogado ni por la fuerza de una tormenta en alta mar. Si pierdes todos tus Puntos de Vida por alguno de estos motivos, aparecerás con 5 Puntos de Vida varado en la playa más cercana sin que por ello aumente tu hibris.",
@@ -1296,7 +1264,7 @@
       },
       {
         "ID": "DG26",
-        "NAME": "SANGRE DE GIGANTE",
+        "NAME": "Sangre de gigante",
         "COST": [-10],
         "DESCRIPTION": "Eres mucho más alto que un humano normal: tu estatura es de 4 codos (unos 2 metros). Esto hace que sea más difícil vencerte en la batalla, y tu tamaño intimida a tus adversarios.",
         "RULES": "Aumenta 5 Puntos de Vida (como el resto de los personajes, no tendrás malus por heridas hasta que no bajes de 15 Puntos de Vida). +1 al Daño Base cuando pelees cuerpo a cuerpo. El personaje tiene Tamaño 5 (los personajes normales tienen Tamaño 4). Esto influye en algunos aspectos de tu vida, como se explica en las reglas de diferencia de tamaño: -2 a Sigilo cuando trates de esconderte o para emboscar. +1 a Pelea [Lucha] cuando te enfrentes a alguien de menor tamaño que tú. Otros personajes de menor tamaño que tú tendrán -1 a Pelea [Lucha] cuando se enfrenten a ti. +1 a Intimidar cuando trates de intimidar a cualquier personaje que sea de menor tamaño que tú. Tienes problemas para encontrar ropas y armaduras de tu talla; solo las encontrarás en las grandes polis. En otros lugares te las tendrán que hacer a medida y tardarán un tiempo. En cualquier caso, tendrás que pagar un precio especial: aumenta en 1 el nivel de Precio.",
@@ -1304,7 +1272,7 @@
       },
       {
         "ID": "DG27",
-        "NAME": "TUTELADO POR HERMES",
+        "NAME": "Tutelado por hermes",
         "COST": [-10, -5],
         "DESCRIPTION": "cuando naciste, tu padre divino encomendó al dios Hermes la tarea de protegerte hasta que pudieras cuidar de ti mismo. Él siempre estuvo allí cuando tuviste algún problema y te enseñó algunos de sus secretos.",
         "RULES": "Comenzas con Afinidad a nivel 4 con Hermes. Puedes comprar los rezos de Hermes al precio de PX como si fueras del Culto a Hermes. Una vez por partida, si una información puede salvarte la vida, el dios Hermes te la susurrará al oído, o hará que encuentres claras pistas en tu camino.",
@@ -1312,7 +1280,7 @@
       },
       {
         "ID": "DG28",
-        "NAME": "VOZ DE QUINIENTOS HOMBRES",
+        "NAME": "Voz de quinientos hombres",
         "COST": [-10],
         "DESCRIPTION": "tienes la capacidad de lanzar una gran bocanada de aire que, unida a un grito, pueden aturdir a todos los que se encuentren a tu alrededor.",
         "RULES": "el personaje puede lanzar un ataque sónico durante su Acción Ofensiva. Para ello debe pasar un Turno completo concentrándose. Al final de ese Turno, durante la Iniciativa 1, después de que hayan actuado el resto de los personajes, podrá hacer un ataque sónico. Este ataque es en área y afecta a todo el mundo en todas direcciones, tanto a aquellos que estén cuerpo a cuerpo como a distancia, sean aliados o enemigos. El tamaño del área es igual al diámetro del personaje x5 calculado en pasos (cada dos pasos es un metro). Para lanzar este ataque hay que realizar una Acción Ofensiva de COM +Dureza. Este ataque no se comparará con la Defensa de la víctima como la mayoría de los ataques, sino que cada víctima de este ataque deberá realizar una Acción Pasiva de RES+Dureza y comparar el resultado con el efecto obtenido por el atacante. Si el efecto de la víctima es superior al del atacante, no sufrirá daño. Si el efecto del atacante es mayor, sumará la diferencia +1 para calcular el Daño Base. Este ataque ignora cualquier tipo de armadura y para calcular el Aguante el personaje solo podrá utilizar su característica de RES. Este ataque no afecta a aquellos que tengan la maldición física Sordo. Cada vez que utilices este ataque acumularás un -1 mg. Estos malus generales se eliminan estando sin hablar durante 15 minutos (vale durmiendo).",
@@ -1320,7 +1288,7 @@
       },
       {
         "ID": "DG29",
-        "NAME": "ALAS",
+        "NAME": "Alas",
         "COST": [-15],
         "DESCRIPTION": "Has sido bendecido con el extraño don de tener alas como los pájaros y otras criaturas del aire. Aunque muy prácticas, pueden acarrearte problemas, ya que los sacerdotes de Apolo consideran una blasfemia que los mortales puedan volar.",
         "RULES": "Tienes alas que te permiten desplazarte por los cielos como si fueras una criatura voladora, lo que supone, entre otras cosas, tu velocidad normal x5 (ver reglas de desplazamiento). Para poder volar tendrás que superar una tirada de AGI +Atletismo (limitando Atletismo con Cosmología). Cada día que decidas desplegar tus alas y volar, perderás automáticamente 1 punto de Armonía con Apolo. Después de eso, podrás volar sin perder Armonía hasta el próximo amanecer. Cada vez que utilices este poder durante 1 hora acumularás un -1 mg. Estos malus generales se eliminan estando 1 hora sin volar (vale durmiendo).",
@@ -1328,7 +1296,7 @@
       },
       {
         "ID": "DG30",
-        "NAME": "BENDECIDO POR PIRO",
+        "NAME": "Bendecido por Piro",
         "COST": [-15],
         "DESCRIPTION": "muchos dioses han estado relacionados con el fuego, desde su creación hasta que fue robado del Olimpo por Prometeo para ser entregado a los humanos. Pero, sin duda, el que ha alcanzado mayor maestría manejándolo es Piro.",
         "RULES": "+4 a Aguante cuando tengas que resistir daño por fuego. +5 a Supervivencia cuando se esté tratando de encender una fogata. +5 a Hogar cuando se esté tratando de encender un fuego de un hogar. El personaje puede lanzar un ataque en forma de bola de fuego durante su Acción Ofensiva. El ataque empezará a efectuarse durante la iniciativa normal del personaje, pero no se llevará a cabo hasta el momento de la Iniciativa 1, después de que haya actuado el resto de los personajes. Este ataque es a distancia (por lo que no se podrá realizar contra objetivos que estén cuerpo a cuerpo). Para lanzarlo hay que realizar una Acción Ofensiva de AGI +Armas D. El Daño Base de este ataque es SEN +5 +el efecto positivo. Una vez el ataque impacta, tiene un efecto en área igual al áureo permanente del atacante en pasos, por lo que, si hay personajes cerca, sean enemigos o aliados, este ataque también les afectará (u otras cosas inflamables, como una casa, un bosque...). Como el resto del daño por fuego, este ataque ignora las armaduras de aquellos a los que afecta, y estos solo podrán calcular su Aguante para evitar este ataque utilizando su RES. Si el material contra el que impacta es inflamable o ha sido rociado con algún acelerante, como el aceite o brea, es muy posible que prenda. Cada vez que utilices este ataque acumularás un -1 mg. Estos malus generales se eliminan estando a menos de dos pasos de una fogata durante 1 hora (vale durmiendo).",
@@ -1336,7 +1304,7 @@
       },
       {
         "ID": "DG31",
-        "NAME": "MANOS SANADORAS",
+        "NAME": "Manos sanadoras",
         "COST": [-15],
         "DESCRIPTION": "Tus manos han sido bendecidas con increíbles poderes de curación; muchos cirujanos darían una de sus manos por tener en la otra los mismos poderes que tú.",
         "RULES": "+2 a Medicina cuando intentes curar a una persona y la toques con tus manos. Cuando una persona esté desangrándose, puedes parar la hemorragia tocándola con tus manos. Después de 5 minutos tocando la herida dejará de sangrar. Mientras estés tocando a una persona con tus manos, puedes gastar un punto de áureo para curar 5 Puntos de Vida automáticamente. Tras dar un masaje de media hora a un personaje, este ignorará un -1 mg durante 24 horas y mientras dure la cura recuperará Puntos de Agotamiento al doble de la velocidad que lo haría si estuviera durmiendo. Además, este masaje puede suplir el efecto de muchas plantas medicinales, como las que se utilizan como complementarias a terapias médicas (para paliar fiebres, reuma, dolor derivado por unas heridas de guerra...). Cada vez que utilices este poder sobre una persona acumularás un -1 mg. Estos malus generales se eliminan estando sin tocar a nadie durante 30 minutos (vale durmiendo).",
@@ -1344,7 +1312,7 @@
       },
       {
         "ID": "DG32",
-        "NAME": "PIES ALADOS",
+        "NAME": "Pies alados",
         "COST": [-15],
         "DESCRIPTION": "Al igual que el héroe Aquiles, hijo de la diosa menor Tetis, estás bendecido con este don. Puedes correr a la velocidad de un caballo, y esto, en combate, una competición deportiva o en viajes, es una maravillosa ventaja.",
         "RULES": "+2 al Daño Base cuando realices cualquier maniobra de combate que requiera movimiento (como cargar). +1 a Iniciativa. El personaje tiene una segunda Acción de Movimiento durante cada Turno. El personaje puede elegir tener solo una Acción de Movimiento, con un bonus de +3 y en la que puede ignorar los malus que producen a Movimiento e Iniciativa las maniobras de combate (solo tendrá un Turno de Movimiento, pero realizará las maniobras instantáneamente, sin tener que calcular una nueva Iniciativa).",
@@ -1352,7 +1320,7 @@
       },
       {
         "ID": "DG33",
-        "NAME": "HUESOS DE BRONCE",
+        "NAME": "Huesos de bronce",
         "COST": [-20],
         "DESCRIPTION": "Tus huesos están compuestos en parte por bronce, lo que te hace ser más resistente, aunque bastante más pesado. La alta concentración de este metal en tu cuerpo hace que tu piel, tus ojos y tu cabello tengan reflejos de color ocre, y también tengan parte de esta sustancia. La leyenda dice que los que están bendecidos por este don tienen la misión de mantener a raya a los seguidores de Cronos, por lo que los sacerdotes de los dioses olímpicos te tratan con cierto respeto.",
         "RULES": "+4 a Armadura. +1 al Daño Base cuando realices un ataque de FUE +Pelea. -1 a Iniciativa. -2 a Atletismo. +1 a APA y COM cuando te relaciones con sacerdotes de dioses olímpicos. No puedes sufrir heridas que impliquen la rotura, fractura o desmembración de huesos. Todos los seguidores de Cronos son más o menos alérgicos al bronce y tu piel les hará reaccionar según su grado de corrupción. Pesas 50 minas (kg) más de lo que lo harías normalmente. Las superficies poco resistentes (como un puente de madera podrida, un embarcación pequeña...) pueden romperse si no tienes cuidado y no superas una tirada de Suerte.",
@@ -1360,7 +1328,7 @@
       },
       {
         "ID": "DG34",
-        "NAME": "REGENERACIÓN",
+        "NAME": "Regeneración",
         "COST": [-20],
         "DESCRIPTION": "Tu sangre inmortal es muy poderosa y te hace recuperarte de las heridas de forma completa y mucho más rápido que el resto de los mortales, casi como si fueras un dios.",
         "RULES": "Si te concentras y no haces absolutamente ninguna otra cosa (no puedes moverte, ni tan siquiera hablar) puedes regenerar tu cuerpo de cualquier herida. Durante este estado de trance, puedes hacer una de estas cosas: recuperar +1 PV cada 5 Turnos, recuperas heridas graves en cuestión de minutos, como brazos rotos, derrames oculares..., o recuperar en un hora una herida permanente grave, como un desmembramiento, una lengua cortada... Este estado de trance requiere un esfuerzo mental consciente, por lo que no puedes hacerlo mientras duermes o mientras estás inconsciente. Además, recuperas todos los Puntos de Vida perdidos y todas las lesiones (desde un corte profundo hasta la desmembración de la mano) cuando cumples uno de estos ciclos (debes de elegir solo un ciclo de curación): dormir 8 horas, comer cinco veces más de lo normal (mínimo tardas 2 horas en engullir tu banquete y necesitas, obviamente, 5 raciones de comida), o ciclo solar o lunar completo (cada vez que amanece o cada vez que anochece te curas).",
@@ -1368,7 +1336,7 @@
       },
       {
         "ID": "DG35",
-        "NAME": "SANGRE DE TITÁN",
+        "NAME": "Sangre de titán",
         "COST": [-20],
         "DESCRIPTION": "Tu estatura es sobrenatural y mides 6 codos (3 metros). Esto hace que sea difícil vencerte en la batalla y tu gran tamaño intimidade a tus adversarios.",
         "RULES": "+10 Puntos de Vida, +2 al Daño Base cuando pelees cuerpo a cuerpo, Tamaño 6, -4 a Sigilo, +2 a Pelea [Lucha], +2 a Intimidar, ropas y armaduras a medida 2 niveles de Precio más caras",
@@ -1376,7 +1344,7 @@
       },
       {
         "ID": "DG36",
-        "NAME": "TELEQUINESIS",
+        "NAME": "Telequinesis",
         "COST": [-20],
         "DESCRIPTION": "Tienes el poder de mover objetos con tu mente.",
         "RULES": "Manos invisibles con AGI igual a ALM y FUE igual a MEN, efecto sorpresa durante el primer Turno, -1 mg por cada Turno utilizado, eliminación de malus tras 1 hora sin usar el poder",
@@ -1384,7 +1352,7 @@
       },
       {
         "ID": "DG37",
-        "NAME": "ARMA DE LOS DIOSES",
+        "NAME": "Arma de los dioses",
         "COST": [-25],
         "DESCRIPTION": "Eres una de las armas que los dioses han puesto en el mundo. Tu propia naturaleza atrae a la muerte y la tragedia afecta a aquellos a los que quieres y te importan.",
         "RULES": "+5 al Daño Base, no caerás inconsciente hasta PV negativos, no puedes quedar perplejo, las personas a las que amas acabarán muriendo trágicamente",
@@ -1392,7 +1360,7 @@
       },
       {
         "ID": "DG38",
-        "NAME": "BAÑADO EN LA LAGUNA ESTIGIA",
+        "NAME": "Bañado en la laguna estigia",
         "COST": [-25],
         "DESCRIPTION": "Un dios te sometió a un ritual y en consecuencia has sido bendecido con el don de la inmortalidad en la mayoría de tu cuerpo. Esto hace que los golpes que se dirijan hacia ti no te harán mella, excepto en un único punto débil, el cual es especialmente vulnerable.",
         "RULES": "+5 a la Defensa Pasiva y Activa a menos que tu enemigo conozca tu punto débil (una articulación, un ojo, el cuello, el corazón o el talón del pie).",
@@ -1400,7 +1368,7 @@
       },
       {
         "ID": "DG39",
-        "NAME": "GUERRERO NATO",
+        "NAME": "Guerrero nato",
         "COST": [-25],
         "DESCRIPTION": "Has nacido para combatir. Los dioses te han diseñado como un guerrero perfecto que difícilmente puede ser derrotado en una pelea, haciéndote experto en todas las formas de combate.",
         "RULES": "El personaje tiene el nivel de maestro en todas las subcategorías de todas las habilidades de combate (Armas CC, Armas D, Pelea y Evitar), por lo que, en consecuencia, tiene +3 a todas las tiradas relacionadas con el combate, ignora las consecuencias narrativas negativas cuando saca un 1 (excepto si saca una pifia con un doble 1) y gana en caso de empate cuando enfrente una de estas habilidades a otra en la que su rival no tenga el nivel de maestro.",
@@ -1408,7 +1376,7 @@
       },
       {
         "ID": "DG40",
-        "NAME": "MEGAALMA (ALM 6)",
+        "NAME": "Megaalma",
         "COST": [-25],
         "DESCRIPTION": "Has aprendido a ser dueño de tu destino y de los que están cerca de ti: puedes controlar la suerte de los que te rodean. Tus compañeros intuyen que les das suerte y toda empresa que finalice exitosamente será atribuida en gran parte a ti y a tu conexión con los dioses.",
         "RULES": "Aumenta ALM de nivel 5 a nivel 6. Puedes dar +2 a Suerte a quien tú quieras que se encuentre en tu radio de vista o cerca de ti a una distancia de unos 50 pasos (25 metros), menos a ti mismo. Una vez por partida, podrás exigir que un personaje mortal de la historia que tengas a la vista (ya sea humano, héroe o criatura, pero no dioses) haga una Acción Especial con -2 a Suerte. Si no supera la tirada, la acción que se lleva entre manos resultará fallida, como un ataque, un rezo, un discurso, un conjuro, un ritual, una partida de dados...",
@@ -1416,7 +1384,7 @@
       },
       {
         "ID": "DG41",
-        "NAME": "MEGAAPARIENCIA (APA 6)",
+        "NAME": "Megaapariencia",
         "COST": [-25],
         "DESCRIPTION": "Tu apariencia es imponente. La gente se queda mirándote, impresionados y a menudo no saben cómo reaccionar. Incluso aquellos que desean atacarte, se quedan petrificados preguntándose '¿Cómo podría destruir algo tan bello?' o totalmente intimidados por tu mirada.",
         "RULES": "Aumenta APA de nivel 5 a nivel 6. Cuando el personaje quiera, puede activar el poder de Presencia divina. Este poder te da un aspecto demasiado bello y/o intimidante que deja paralizados a tus enemigos. Toda aquella persona o criatura que intente atacar, atrapar o interponerse en el camino del personaje quedará perplejo durante un Turno y no volverá a intentarlo mientras esté activo el poder. Aunque estén en este trance, pueden intentar atacar a otros personajes que no estén utilizando la Presencia divina. Si el personaje que utiliza este poder intenta atacar o agredir físicamente a cualquier personaje o criatura, esta será inmune a la Presencia divina durante toda la Escena. Cada vez que utilices este poder durante 10 minutos acumularás un -1 mg. Estos malus generales se eliminan logrando que nadie vea tu rostro durante 1 hora (puedes calarte una capucha, ponerte una máscara, estar solo, a oscuras o taparte las cara con las manos...).",
@@ -1424,7 +1392,7 @@
       },
       {
         "ID": "DG42",
-        "NAME": "MEGASENTIDOS (SEN 6)",
+        "NAME": "Megasentidos",
         "COST": [-25],
         "DESCRIPTION": "Los dioses te han concedido la capacidad de ver con sus ojos. Contemplas el mundo de forma distinta al resto de los mortales, viendo el áureo que se encuentra en objetos, personas y dioses brillar como el sol cuando está en lo alto, así como otras energías místicas. Lo que Platón describiría como «haber salido de la Caverna».",
         "RULES": "Aumenta SEN de nivel 5 a nivel 6. Cuando el personaje quiera, puede activar el poder de Sentidos divinos. Cuando este poder esté activado, se tiene una percepción divina de la realidad viendo todo aquello que tenga áureo con un resplandor dorado (dependiendo de la cantidad de áureo brillará más o menos), distinguiendo héroes, dioses, objetos mágicos y terrenos sagrados que pasan desapercibidos a los ojos de los mortales. También puedes ver si alguien invisible te acecha, y verás con facilidad si algo es una ilusión y qué hay detrás. Cada vez que utilices este poder durante 1 minuto acumularás un -1 mg. Estos malus generales se eliminan estando 1 minuto con los ojos cerrados.",
@@ -1432,7 +1400,7 @@
       },
       {
         "ID": "DG43",
-        "NAME": "TELÉPATA",
+        "NAME": "Telépata",
         "COST": [-25],
         "DESCRIPTION": "Los dioses te han bendecido con la extraña capacidad de poder leer las mentes de aquellos que te rodean, siempre que seas capaz de mantener la concentración y de vencer las barreras mentales de tus adversarios.",
         "RULES": "Puedes establecer una conexión telepática, que dure una Escena, con un único personaje que esté en un área de 20 pasos. Para establecer una conexión mental debes pasar todo un Turno concentrándote. Luego tendrás que hacer una tirada enfrentada en la que el telépata hará una Acción Mental SEN +Empatía [Deseos] + áureo (+2 si el telépata coloca la palma de su mano sobre la frente de su víctima) y su víctima se intentará resistir con una Acción Especial MEN +Templanza [Introspección] + áureo. Cuando estableces esta conexión: puedes leer la mente del personaje (por lo general, pensará en el amor, el sexo, el dinero, si tiene que hacer algo importante, si algo le estresa o le agobia... quedará a descripción del Demiurgo y será en función de sus dones y maldiciones). Si entablas una conversación con el PJ, sabrás qué opina de ti (si confía en ti, sospecha, te teme...). Si le preguntas algo directamente, pensará en la respuesta y podrás saber lo que él sabe sobre ese tema. Tienes un +2 a cualquier Acción Ofensiva o Defensiva que hagas en una tirada enfrentada contra esa persona. Nada de lo que haga ese PJ puede pillarte por sorpresa. Si gastas 1 punto de áureo podrás hablar con el mentalmente durante una Escena sin necesidad de abrir la boca y con total discreción (si dos PJ son telépatas, podrán hablar entre ellos mentalmente sin gastar áureo).",
@@ -1440,7 +1408,7 @@
       },
       {
         "ID": "DG44",
-        "NAME": "MEGAAGILIDAD",
+        "NAME": "Megaagilidad",
         "COST": [-30],
         "DESCRIPTION": "Tus movimientos son rápidos y gráciles como los de los vientos de Eolo. En la batalla tus enemigos te parecen lentos y torpes.",
         "RULES": "Aumenta AGI de nivel 5 a nivel 6. En cada turno tienes una Acción Ofensiva extra que no es divisible y en la que no puedes hacer la maniobra Ataque Total. Esta Acción extra transcurre en el tiempo exactamente después de la primera Acción Ofensiva del personaje. Cada vez que utilices este ataque adicional acumularás un -1 mg. Estos malus generales se eliminan estando un Turno descansando, sin hacer nada.",
@@ -1448,7 +1416,7 @@
       },
       {
         "ID": "DG45",
-        "NAME": "MEGACOMUNICACIÓN",
+        "NAME": "Megacomunicación",
         "COST": [-30],
         "DESCRIPTION": "Tu lengua es afilada como una espada, y cuando abras la boca, hasta los dioses callarán para ver qué tienes que decirles.",
         "RULES": "Aumenta COM de nivel 5 a nivel 6. Cuando el personaje quiera, puede utilizar La voz de los dioses. Este poder permite al personaje modular su voz de forma que suene sobrenaturalmente convincente. A través de este poder, el personaje podrá convencer de forma instantánea a una persona que haga algo, siempre y cuando la orden no vaya contra la naturaleza y la conducta normal del personaje. El personaje víctima de este poder estará persuadido durante una Escena. Este poder solo funciona con personas individuales, no con multitudes. Este poder no funciona con animales o criaturas, a menos que se combine con otros dones o rezos que sirvan para comunicarse o dar órdenes a esas criaturas de forma concreta (como el don divino La lengua de las criaturas, o los rezos Portar el caduceo u Ordenar a criatura marina). Cada vez que utilices este poder con un personaje (lo consigas o no) acumularás un -1 mg. Estos malus generales se eliminan recitando un poema o el pasaje de una obra de teatro (mínimo 5 minutos).",
@@ -1456,7 +1424,7 @@
       },
       {
         "ID": "DG46",
-        "NAME": "MEGAFUERZA",
+        "NAME": "Megafuerza",
         "COST": [-30],
         "DESCRIPTION": "Tienes una fuerza sobrenatural que te permitirá realizar proezas que sorprenderán incluso a los dioses. No existe nada hecho por los hombres que no puedas doblar con tus manos, y si no controlas un poco tu fuerza, cualquier cosa que cojas puede ser destruida.",
         "RULES": "Aumenta FUE de nivel 5 a nivel 6. +3 al Daño Base para combates cuerpo a cuerpo. Siempre que tus golpes causen Daño Mínimo, lo hacen de forma automática. Puedes manejar armas pesadas con una sola mano. Puedes utilizar armas tú solo que normalmente necesitarían ser usadas por un grupo de hombres, como un ariete.",
@@ -1464,7 +1432,7 @@
       },
       {
         "ID": "DG46",
-        "NAME": "MEGAMENTE",
+        "NAME": "Megamente",
         "COST": [-30],
         "DESCRIPTION": "Zeus es el dios más astuto y gusta de proteger a los suyos. Ser extremadamente inteligente no te asegura la protección del rey de los dioses, pero sí hará que todos los inmortales estén más predispuestos a ayudarte.",
         "RULES": "Aumenta MEN de nivel 5 a nivel 6. Tienes una segunda Acción Mental por Turno, que puedes utilizar para hacer otro rezo a un dios. No se puede hacer dos veces el mismo rezo durante el mismo Turno, aunque sí se puede intentar volver a activar uno que se haya fallado en la anterior Acción Mental. El segundo rezo no podrá ser de los que ocupan Turno completo.",
@@ -1472,7 +1440,7 @@
       },
       {
         "ID": "DG47",
-        "NAME": "MEGARREFLEJOS",
+        "NAME": "Megarreflejos",
         "COST": [-30],
         "DESCRIPTION": "Sueles ser el primero a la hora de actuar en combate y es prácticamente imposible golpearte durante una pelea.",
         "RULES": "Aumenta REF de nivel 5 a nivel 6. En cada Turno puedes elegir entre tener una Acción Defensiva extra (en la que no puedes hacer la maniobra Defensa Total) o, cuando un enemigo declare un ataque sobre ti, en vez de calcular la Defensa Activa sumando +5 a la Defensa Pasiva, puedes lanzar dos dados y sumarle el resultado de los dos dados a la Defensa Pasiva (en caso de que estés realizando Defensa Total, lanza tres dados). Cada vez que utilices esta esquiva adicional acumularás un -1 mg. Estos malus generales se eliminan estando un Turno descansando, sin hacer nada.",
@@ -1480,7 +1448,7 @@
       },
       {
         "ID": "DG48",
-        "NAME": "MEGARRESISTENCIA",
+        "NAME": "Megarresistencia",
         "COST": [-30],
         "DESCRIPTION": "El tacto de tu piel es más parecido a la piedra que a la carne de los mortales. No sufres más que rasguños en accidentes que hubieran matado a otros hombres. Algunas armas se rompen al golpearte y es prácticamente imposible cansarte realizando actividades físicas.",
         "RULES": "Aumenta RES de nivel 5 a nivel 6. +2 a Aguante. Si recibes un ataque que causa Daño Sagrado, tienes un +1 a Armadura que protege de Daño Sagrado. Si recibes un ataque de fuego, tienes un +1 a Aguante. Ignoras el Daño Mínimo.",

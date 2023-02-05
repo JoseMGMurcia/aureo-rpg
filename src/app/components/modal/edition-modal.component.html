@@ -83,5 +83,26 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-afinities>
+      <app-edit-gifts
+        *ngSwitchCase="id.COMMON_GIFTS"
+        title="{{ 'DETAIL_PAGE.POWERS_SEC.COMMON_GIFTS' | translate }}"
+        [giftType]="giftsTypes.COMMON_GIFTS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-gifts>
+      <app-edit-gifts
+        *ngSwitchCase="id.CURSES"
+        title="{{ 'DETAIL_PAGE.POWERS_SEC.CURSES' | translate }}"
+        [giftType]="giftsTypes.CURSES"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-gifts>
+      <app-edit-gifts
+        *ngSwitchCase="id.DIVINE_GIFTS"
+        title="{{ 'DETAIL_PAGE.POWERS_SEC.DIVINE_GIFTS' | translate }}"
+        [giftType]="giftsTypes.DIVINE_GIFTS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-gifts>
     </container-element>
   </div>

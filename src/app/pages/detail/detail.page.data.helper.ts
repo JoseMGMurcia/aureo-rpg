@@ -149,12 +149,17 @@ export const getSecondarySkillsData =  (character: Character): any[] => characte
     mods: ModificatorController.getModsString(skill.getMods())
   }));
 
-export const getGiftData = (gitfs: Gift[], giftData: TextGift[]) => gitfs.map(
+export const getGiftData = (gitfs: Gift[], giftData: TextGift[], translate: TranslateService) => gitfs.map(
   gift => {
+    const texts = translate.instant('WIKI_PAGE');
+    const acept = translate.instant('SHARED.OK');
     const index = giftData.findIndex( giftDat => giftDat.ID === gift.getName());
     return {
       name: index > -MAGIC_NUMBERS.N_1 ? giftData[index].NAME : '',
-      cost: gift.getCost()}
+      cost: gift.getCost(),
+      detail: index > -MAGIC_NUMBERS.N_1 ? giftData[index] : {},
+      texts: { cost: texts.COST, desc: texts.DESC, rules: texts.RULES, cond: texts.CONDITIONS, acept}
+    }
   }
 )
 

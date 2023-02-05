@@ -2,6 +2,26 @@
     <ion-row
       *ngIf="data.length"
       class="table">
+
+      <ion-col class="column icon-column"
+      *ngIf="dataConfiguration.onClickRow">
+      <ion-row class="tableHeader" *ngIf="!dataConfiguration.swHideHeader">
+        <ion-text>
+          <h6 class="tableHeader-text">-</h6>
+
+        </ion-text>
+      </ion-row>
+      <ion-row
+        class="cell"
+        *ngFor="let row of data"
+        [ngClass]="getClass(row)"
+        (click)="dataConfiguration.onClickRow(row)">
+        <ion-icon name="eye-outline"></ion-icon>
+      </ion-row>
+    </ion-col>
+
+
+
       <ion-col class="column"
         *ngFor="let column of dataConfiguration.columns">
           <ion-row class="tableHeader" *ngIf="!dataConfiguration.swHideHeader">

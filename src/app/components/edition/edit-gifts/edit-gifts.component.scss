@@ -1,0 +1,28 @@
+@use '../../../constants/color.constants.scss' as colors;
+@use '../../../constants/style.constants.scss' as style;
+
+h5 {
+  color: colors.$custom-secondary;
+  padding-left: 1em;
+  width: 100%;
+}
+
+.butonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 3em;
+
+  .saveButton {
+    margin-left: 0.5em;
+  }
+}
+
+.butonRow-edit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.25em;
+}

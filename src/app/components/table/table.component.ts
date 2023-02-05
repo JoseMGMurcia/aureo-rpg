@@ -22,6 +22,7 @@ export class TableComponent{
 export class TableDataConfiguration {
   public columns: TableColumn[] = [];
   public swHideHeader?: boolean = true;
+  public onClickRow?: (row: any) => void;
 }
 
 export class TableColumn {
