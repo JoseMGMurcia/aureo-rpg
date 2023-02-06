@@ -330,13 +330,20 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.HISTORY" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.HISTORY)"></ion-icon>
+        <ion-icon class="editIcon" [name]="historyIcon" color="primary" (click)="editHistory()"></ion-icon>
       </ion-card-header>
       <ion-card-content>
-        <ion-text><p>{{ character.getHistory() }}</p></ion-text>
+         <ion-textarea
+          [readonly]="swNotEditingHistory"
+          [value]="character.getHistory()"
+          rows="10"
+          cols="50"
+          [ngClass]="getHistoryClass()"
+          [(ngModel)]="history"
+          [autoGrow]="true">
+        </ion-textarea>
         </ion-card-content>
     </ion-card>
-
   </ng-container>
 
 </ion-content>

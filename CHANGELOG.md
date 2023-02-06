@@ -1,4 +1,7 @@
 # Aureo_App
+## V1.0.5
+- Edit History directly in detail.
+
 ## V1.0.4
 - Edit Afinities.
 - Edit Experience directly from detail page.

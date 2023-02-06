@@ -40,6 +40,7 @@ import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { getSexIcon } from 'src/app/utils/custom.utils';
 import { GiftData } from 'src/app/model/giftData';
 import { openGiftDetail } from 'src/app/controller/gift.controller';
+import { IconTypes } from 'src/app/constants/icon.constants';
 
 @Component({
   selector: 'app-detail',
@@ -87,6 +88,9 @@ export class DetailPage implements OnInit, OnDestroy{
   public attackData: any[] =[];
   public defenceDataConfiguration: TableDataConfiguration = getDefenceDataConfiguration(this.translate);
   public defenceData: any[] =[];
+  public swNotEditingHistory = true;
+  public historyIcon = IconTypes.EDIT;
+  public history = '';
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
@@ -196,6 +200,19 @@ export class DetailPage implements OnInit, OnDestroy{
     this.saveCharacter();
   }
 
+  public editHistory(){
+    if(!this.swNotEditingHistory){
+      this.character.setHistory(this.history);
+      this.saveCharacter();
+    }
+    this.swNotEditingHistory = !this.swNotEditingHistory;
+    this.historyIcon = this.swNotEditingHistory ? IconTypes.EDIT : IconTypes.SAVE;
+  }
+
+  public getHistoryClass(){
+    return this.swNotEditingHistory ? 'history' : 'history-editing';
+  }
+
   private fetch() {
     this.afinitiesData = getAfinitiesData(this.character);
     this.atributesData = getAtributesData(this.character, this.translate);
@@ -220,6 +237,7 @@ export class DetailPage implements OnInit, OnDestroy{
     this.combatRanksData = getCombatRankslData(this.character, this.translate);
     this.attackData = getAtacksData(this.character, this.translate);
     this.defenceData = getDefenceData(this.character, this.translate);
+    this.history = this.character.getHistory();
   }
 
   private finishLoading(loading: HTMLIonLoadingElement) {
@@ -245,4 +263,5 @@ export class DetailPage implements OnInit, OnDestroy{
   private showGiftDetail(row: any){
     openGiftDetail(row);
   }
+
 }

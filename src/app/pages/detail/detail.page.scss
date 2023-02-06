@@ -1,4 +1,6 @@
 @use '../../constants/color.constants.scss' as colors;
+@use '../../constants/style.constants.scss' as styles;
+
 
 .toolbar {
   ion-title {
@@ -98,3 +100,16 @@ ion-card {
   }
 }
 
+.history-editing {
+  background-color: colors.$row-odd-color;
+  border-radius: styles.$border-radius;
+  color: colors.$cellText;
+  font-weight: 450;
+}
+
+.history {
+  background-color: colors.$row-odd-color;
+  border-radius: styles.$border-radius;
+  color: colors.$custom-editing;
+  font-weight: 300;
+}
