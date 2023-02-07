@@ -1,7 +1,7 @@
 import { Character } from 'src/app/model/character';
 import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Atributes } from '../model/atributes';
-import { CombatEquip } from '../model/combatEquip';
+import { CombatEquip, CombatEquipEnum } from '../model/combatEquip';
 import { Companion } from '../model/companion';
 import { Follower } from '../model/follower';
 import { Gift } from '../model/gift';
@@ -116,7 +116,8 @@ export class CharacterController{
 
   private static copyCombatEquip(combatEq: any[]): CombatEquip[]{
       return combatEq.map( equip => {
-        const combatEqui: CombatEquip = new CombatEquip(equip.name);
+        const combatEqui: CombatEquip = new CombatEquip(CombatEquipEnum.WEAPON_CC_SHORT, equip.name);
+        combatEqui.setEquipType(equip.equipType);
         combatEqui.setInitialDamage(equip.initialDamage);
         combatEqui.setActiveDefence(equip.activeDefence);
         combatEqui.setArmor(equip.armor);

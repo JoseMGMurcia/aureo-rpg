@@ -12,166 +12,216 @@
   <div *ngIf="swShowgifts" >
     <ion-card>
       <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.PHYSICAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCommonPhysical)" (click)="swCommonPhysical = !swCommonPhysical"></ion-icon>
+        <ion-card-title class="type-label">{{ "WIKI_PAGE.GIFTS" | translate }}</ion-card-title>
+        <ion-icon class="miniButton" [name]="getIcon(swGifts)" (click)="swGifts = !swGifts"></ion-icon>
       </ion-card-header>
-      <div *ngIf="swCommonPhysical">
-        <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.PHYSICAL">
+      <div *ngIf="swGifts">
+        <ion-card>
           <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.PHYSICAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCommonPhysical)" (click)="swCommonPhysical = !swCommonPhysical"></ion-icon>
           </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+          <div *ngIf="swCommonPhysical">
+            <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.PHYSICAL">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.MENTAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCommonMental)" (click)="swCommonMental = !swCommonMental"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCommonMental">
+            <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.MENTAL">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SUPERNATURAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCommonSupernaturals)" (click)="swCommonSupernaturals = !swCommonSupernaturals"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCommonSupernaturals">
+            <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.SUPERNATURALS">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SOCIAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCommonSocial)" (click)="swCommonSocial = !swCommonSocial"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCommonSocial">
+            <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.SOCIAL">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.DIVINE_GIFTS" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swDivine)" (click)="swDivine = !swDivine"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swDivine">
+            <ion-card  *ngFor="let gift of giftData.DIVINE_GIFTS">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+      </div>
+
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }}</ion-card-title>
+        <ion-icon class="miniButton" [name]="getIcon(swCurses)" (click)="swCurses = !swCurses"></ion-icon>
+      </ion-card-header>
+      <div *ngIf="swCurses">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.PHYSICAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCursePhysical)" (click)="swCursePhysical = !swCursePhysical"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCursePhysical">
+            <ion-card  *ngFor="let gift of giftData.CURSES.PHYSICAL">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.MENTAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCurseMental)" (click)="swCurseMental = !swCurseMental"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCurseMental">
+            <ion-card  *ngFor="let gift of giftData.CURSES.MENTAL">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SUPERNATURAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCurseSupernaturals)" (click)="swCurseSupernaturals = !swCurseSupernaturals"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCurseSupernaturals">
+            <ion-card  *ngFor="let gift of giftData.CURSES.SUPERNATURALS">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SOCIAL" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCurseSocial)" (click)="swCurseSocial = !swCurseSocial"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="swCurseSocial">
+            <ion-card  *ngFor="let gift of giftData.CURSES.SOCIAL">
+              <ion-card-header>
+                <ion-card-title>{{ gift.NAME }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
+              <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
+              <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
+              <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+            </ion-card>
+          </div>
         </ion-card>
       </div>
     </ion-card>
 
     <ion-card>
       <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.MENTAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCommonMental)" (click)="swCommonMental = !swCommonMental"></ion-icon>
+        <ion-card-title class="type-label">{{ "WIKI_PAGE.COMBAT" | translate }}</ion-card-title>
+        <ion-icon class="miniButton" [name]="getIcon(swCombat)" (click)="swCombat = !swCombat"></ion-icon>
       </ion-card-header>
-      <div *ngIf="swCommonMental">
-        <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.MENTAL">
+      <div *ngIf="swCombat">
+        <ion-card>
           <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
+            <ion-card-title class="type-label">{{ "WIKI_PAGE.COMBAT_EQUIPMENT" | translate }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(swCombatEquip)" (click)="swCombatEquip = !swCombatEquip"></ion-icon>
           </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SUPERNATURAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCommonSupernaturals)" (click)="swCommonSupernaturals = !swCommonSupernaturals"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swCommonSupernaturals">
-        <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.SUPERNATURALS">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.COMMON_GIFTS" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SOCIAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCommonSocial)" (click)="swCommonSocial = !swCommonSocial"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swCommonSocial">
-        <ion-card  *ngFor="let gift of giftData.COMMON_GIFTS.SOCIAL">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
+          <div *ngIf="swCombatEquip">
+            <ion-card  *ngFor="let item of combatEquip">
+              <ion-card-header>
+                <ion-card-title>{{ item.getName() }}</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.DAMAGE" | translate }}</b> {{item.getInitialDamage() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.DEFENCE" | translate }}</b> {{ item.getActiveDefence() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.ARMOR" | translate }}</b> {{ item.getArmor() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.HANDS" | translate }}</b> {{ item.getHands() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.PRECISION" | translate }}</b> {{ item.getPrecision() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.PRICE" | translate }}</b> {{ item.getPrice() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.ATLETHISM" | translate }}</b> {{ item.getAtletism() }}</p>
+              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.SENSE" | translate }}</b> {{ item.getSense() }}</p>
+            </ion-card>
+          </div>
         </ion-card>
       </div>
     </ion-card>
 
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.PHYSICAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCursePhysical)" (click)="swCursePhysical = !swCursePhysical"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swCursePhysical">
-        <ion-card  *ngFor="let gift of giftData.CURSES.PHYSICAL">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.MENTAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCurseMental)" (click)="swCurseMental = !swCurseMental"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swCurseMental">
-        <ion-card  *ngFor="let gift of giftData.CURSES.MENTAL">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SUPERNATURAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCurseSupernaturals)" (click)="swCurseSupernaturals = !swCurseSupernaturals"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swCurseSupernaturals">
-        <ion-card  *ngFor="let gift of giftData.CURSES.SUPERNATURALS">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.CURSES" | translate }} - {{ "WIKI_PAGE.GIFTS_TYPES.SOCIAL" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swCurseSocial)" (click)="swCurseSocial = !swCurseSocial"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swCurseSocial">
-        <ion-card  *ngFor="let gift of giftData.CURSES.SOCIAL">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="type-label">{{ "WIKI_PAGE.DIVINE_GIFTS" | translate }}</ion-card-title>
-        <ion-icon class="miniButton" [name]="getIcon(swDivine)" (click)="swDivine = !swDivine"></ion-icon>
-      </ion-card-header>
-      <div *ngIf="swDivine">
-        <ion-card  *ngFor="let gift of giftData.DIVINE_GIFTS">
-          <ion-card-header>
-            <ion-card-title>{{ gift.NAME }}</ion-card-title>
-          </ion-card-header>
-          <p><b>{{ "WIKI_PAGE.COST" | translate }}</b> {{ getCostText(gift.COST) }}</p>
-          <p><b>{{ "WIKI_PAGE.DESC" | translate }}</b> {{ gift.DESCRIPTION }}</p>
-          <p><b>{{ "WIKI_PAGE.RULES" | translate }}</b> {{ gift.RULES }}</p>
-          <p *ngIf="gift.CONDITIONS.length"><b>{{ "WIKI_PAGE.CONDITIONS" | translate }}</b> {{ gift.CONDITIONS }}</p>
-        </ion-card>
-      </div>
-    </ion-card>
   </div>
 
 </ion-content>

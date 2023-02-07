@@ -1,6 +1,10 @@
 # Aureo_App
 ## V1.0.5
 - Edit History directly in detail.
+- Combat equip catalog added.
+- Combat equip types added.
+- Damage calculated from weapon types.
+- Combat equipment added to wiki page.
 
 ## V1.0.4
 - Edit Afinities.

@@ -1,4 +1,5 @@
 export class CombatEquip {
+    private equipType: CombatEquipType;
     private name: string;
     private initialDamage = 0;
     private activeDefence = 0;
@@ -9,11 +10,29 @@ export class CombatEquip {
     private atletism = 0;
     private sense = 0;
 
-    constructor(name: string){
+
+    constructor(equipType: CombatEquipType ,name: string, initialDamage = 0, activeDefence = 0 , armor = 0, hands = 0, precision = '', price = 0, atletism = 0, sense = 0){
+        this.equipType = equipType;
         this.name = name;
+        this.initialDamage = initialDamage;
+        this.activeDefence = activeDefence;
+        this.armor = armor;
+        this.hands = hands;
+        this.precision = precision;
+        this.price = price;
+        this.atletism = atletism;
+        this.sense = sense;
     }
 
     //Getters & Setters
+
+    public getEquipType(): CombatEquipType {
+      return this.equipType;
+    }
+
+    public setEquipType(equipType: CombatEquipType): void {
+        this.equipType = equipType;
+    }
 
     public getName(): string {
         return this.name;
@@ -88,3 +107,32 @@ export class CombatEquip {
     }
 
 }
+
+export enum CombatEquipEnum {
+  WEAPON_CC_SHORT = 'WEAPON_CC_SHORT',
+  WEAPON_CC_MEDIUM = 'WEAPON_CC_MEDIUM',
+  WEAPON_CC_LONG = 'WEAPON_CC_LONG',
+  WEAPON_CC_HEAVY = 'WEAPON_CC_HEAVY',
+  WEAPON_D_SMALL = 'WEAPON_D_SMALL',
+  WEAPON_D_MEDIUM = 'WEAPON_D_MEDIUM',
+  WEAPON_D_LARGE = 'WEAPON_D_LARGE',
+  SHIELD_MEDIUM = 'SHIELD_MEDIUM',
+  SHIELD_HEAVY = 'SHIELD_HEAVY',
+  ARMOR_LIGHT = 'ARMOR_LIGHT',
+  ARMOR_MEDIUM = 'ARMOR_MEDIUM',
+  ARMOR_HEAVY = 'ARMOR_HEAVY',
+}
+
+export type CombatEquipType =
+  CombatEquipEnum.WEAPON_CC_SHORT |
+  CombatEquipEnum.WEAPON_CC_MEDIUM |
+  CombatEquipEnum.WEAPON_CC_LONG |
+  CombatEquipEnum.WEAPON_CC_HEAVY |
+  CombatEquipEnum.WEAPON_D_SMALL |
+  CombatEquipEnum.WEAPON_D_MEDIUM |
+  CombatEquipEnum.WEAPON_D_LARGE |
+  CombatEquipEnum.SHIELD_MEDIUM |
+  CombatEquipEnum.SHIELD_HEAVY |
+  CombatEquipEnum.ARMOR_LIGHT |
+  CombatEquipEnum.ARMOR_MEDIUM |
+  CombatEquipEnum.ARMOR_HEAVY;

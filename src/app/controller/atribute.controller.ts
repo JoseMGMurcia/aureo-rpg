@@ -1,3 +1,4 @@
+import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Atribute, Atributes } from '../model/atributes';
 import { Modificator } from '../model/modificator';
 
@@ -6,7 +7,7 @@ export const getAtributePlusModsValue = (atribute: Atribute): number  => {
   let value = atribute.getValue();
 
   atribute.getMods().forEach(mod => {
-    value = value + mod.getValue();
+    value = value + ( mod.isPartial() ? MAGIC_NUMBERS.N_0 : mod.getValue() );
   });
 
   return value;

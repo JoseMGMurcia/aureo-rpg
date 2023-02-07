@@ -52,6 +52,19 @@
       }
   },
   "WIKI_PAGE": {
+    "COMBAT": "Combate",
+    "COMBAT_EQUIPMENT": "Equipo de combate",
+    "COMBAT_EQUIP_DETAIL": {
+      "DAMAGE": "Daño: ",
+      "DEFENCE": "Defensa: ",
+      "ARMOR": "Armadura: ",
+      "HANDS": "Manos: ",
+      "PRECISION": "Precisión: ",
+      "PRICE": "Precio: ",
+      "ATLETHISM": "Atletismo: ",
+      "SENSE": "Sentir: "
+    },
+    "GIFTS": "Dones",
     "TITLE": "Documentación",
     "COMMON_GIFTS": "Dones comunes",
     "DIVINE_GIFTS": "Dones divinos",

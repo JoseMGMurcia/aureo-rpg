@@ -137,6 +137,11 @@ export class DetailPage implements OnInit, OnDestroy{
   }
 
   sectionChanged(event: any) {
+    if(event.detail.value === '5'){
+      this.swNotEditingHistory = true;
+      this.historyIcon = IconTypes.EDIT;
+      this.history = this.character.getHistory();
+    }
     this.section = event.detail.value;
   }
 

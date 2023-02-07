@@ -52,20 +52,33 @@
       }
   },
   "WIKI_PAGE": {
-      "TITLE": "Documentación",
-      "COMMON_GIFTS": "Dones comunes",
-      "DIVINE_GIFTS": "Dones divinos",
-      "CURSES": "Maldiciones",
-      "GIFTS_TYPES": {
-        "PHYSICAL": "Físicos",
-        "MENTAL": "Mentales",
-        "SUPERNATURAL": "Sobrenaturales",
-        "SOCIAL": "Sociales"
-      },
-      "COST": "Coste: ",
-      "DESC": "Descripción: ",
-      "RULES": "Reglas: ",
-      "CONDITIONS": "Condiciones: "
+    "COMBAT": "Combate",
+    "COMBAT_EQUIPMENT": "Equipo de combate",
+    "COMBAT_EQUIP_DETAIL": {
+      "DAMAGE": "Daño: ",
+      "DEFENCE": "Defensa: ",
+      "ARMOR": "Armadura: ",
+      "HANDS": "Manos: ",
+      "PRECISION": "Precisión: ",
+      "PRICE": "Precio: ",
+      "ATLETHISM": "Atletismo: ",
+      "SENSE": "Sentir: "
+    },
+    "GIFTS": "Dones",
+    "TITLE": "Documentación",
+    "COMMON_GIFTS": "Dones comunes",
+    "DIVINE_GIFTS": "Dones divinos",
+    "CURSES": "Maldiciones",
+    "GIFTS_TYPES": {
+      "PHYSICAL": "Físicos",
+      "MENTAL": "Mentales",
+      "SUPERNATURAL": "Sobrenaturales",
+      "SOCIAL": "Sociales"
+    },
+    "COST": "Coste: ",
+    "DESC": "Descripción: ",
+    "RULES": "Reglas: ",
+    "CONDITIONS": "Condiciones: "
   },
   "DICES_PAGE": {
     "TITLE": "Lanzar Dados",

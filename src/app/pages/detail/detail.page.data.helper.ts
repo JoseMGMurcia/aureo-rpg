@@ -1,6 +1,7 @@
 import { TranslateService } from '@ngx-translate/core';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { getAtributePlusModsValue } from 'src/app/controller/atribute.controller';
+import { getTotalDamage } from 'src/app/controller/combat.equip.controller';
 import { ModificatorController } from 'src/app/controller/modificatorController';
 import { getSkillAndModsValue } from 'src/app/controller/skillController';
 import { Character } from 'src/app/model/character';
@@ -120,7 +121,7 @@ export const getSymbol = (value: number): string => value >= 0 ? '+' : '';
 export const getCombatEquipData =  (character: Character): any[] => character.getCombatEquipment().map(
   equip =>({
     name: equip.getName(),
-    initialDamage: equip.getInitialDamage(),
+    initialDamage: getTotalDamage(equip, character),
     activeDefence: equip.getActiveDefence(),
     armor: equip.getArmor(),
   }));

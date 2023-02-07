@@ -30,7 +30,7 @@ Current version 1.0.5
     - [x] Represent Calculated ranks.
   - [x] Character mapping from JSON.
   - [ ] Editing character in tab.
-    - [ ] Character validation first method.
+    - [x] Character validation first method.
       - [x] No repeated skills.
       - [x] No empty named skills.
       - [x] No special characters in strings.
@@ -50,6 +50,7 @@ Current version 1.0.5
         - [x] XP edit from detail.
         - [ ] Edit Combat equip component.
         - [ ] Edit Followers component.
+        - [ ] Edit companions.
         - [x] Edit History component.
   - [x] Segment buttons to Icons.
 
@@ -74,9 +75,10 @@ Current version 1.0.5
 - Characters import / export between devices and export to PDF.
 	- [ ] As a encrypted file.
 
-### The third goal, bot phase: 
+### The third goal, bot phase:
 - Many game mechanics are automated.
 - Settings page.
 - Second Design.
 - Throw dices sacking the device.
 - Best rolls tab for character.
+- Several imput validations.

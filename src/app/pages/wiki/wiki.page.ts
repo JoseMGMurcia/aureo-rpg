@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
+import { COMBAT_EQUIP_CATALOG } from 'src/app/constants/equip.constants';
 import { IconTypes } from 'src/app/constants/icon.constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
+import { getCombatEquipArray } from 'src/app/controller/combat.equip.controller';
 import { CharactersService } from 'src/app/services/characters.service';
 import { findMinMax } from 'src/app/utils/custom.utils';
 
@@ -24,6 +26,11 @@ export class WikiPage implements OnInit, OnDestroy {
   public swCurseSupernaturals = false;
   public swCurseSocial = false;
   public swDivine = false;
+  public swGifts = false;
+  public swCurses = false;
+  public swCombat = false;
+  public swCombatEquip = false;
+  public combatEquip = getCombatEquipArray();
 
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
