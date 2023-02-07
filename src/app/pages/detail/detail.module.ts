@@ -13,15 +13,21 @@ import { EditMainInfoComponent } from 'src/app/components/edition/edit-main-info
 import { EditAtributesComponent } from 'src/app/components/edition/edit-atributes/edit-atributes.component';
 import { EditPowersComponent } from 'src/app/components/edition/edit-powers/edit-powers.component';
 import { EditSkillsComponent } from 'src/app/components/edition/edit-skills/edit-skills.component';
+import { EditListComponent } from 'src/app/components/edition/edit-list/edit-list.component';
+import { EditAfinitiesComponent } from 'src/app/components/edition/edit-afinities/edit-afinities.component';
+import { EditGiftsComponent } from 'src/app/components/edition/edit-gifts/edit-gifts.component';
 
 export const createTranslateLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 const editComnponents = [
+  EditListComponent,
   EditSkillsComponent,
   EditMainInfoComponent,
   EditAtributesComponent,
-  EditPowersComponent
+  EditPowersComponent,
+  EditAfinitiesComponent,
+  EditGiftsComponent
 ];
 
 @NgModule({

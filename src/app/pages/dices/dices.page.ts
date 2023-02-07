@@ -32,7 +32,8 @@ export class DicesPage {
       message: `<p class="center bold">${this.translate.instant('DICES_PAGE.ALERT.TEXT', {
                   attribute: `${getSymbol(diceData.attribute)}${diceData.attribute}`,
                   skill: `${getSymbol(diceData.skill)}${diceData.skill}`,
-                  modif: `${getSymbol(diceData.modif)}${diceData.modif}`
+                  modif: `${getSymbol(diceData.modif)}${diceData.modif}`,
+                  result: `${result}`
                   })}
                 </p>
                 <p class="center">${texts.RESULT}</p>

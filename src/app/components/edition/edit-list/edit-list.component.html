@@ -1,0 +1,37 @@
+<div>
+  <ion-card>
+    <h5>{{ title }}</h5>
+    <div class="renowm-row" *ngIf="listType === types.GLORY">
+      <ion-icon class="miniButton" name="remove-outline" (click)="removeGlory()"></ion-icon>
+      <p class="value">{{ character.getGlory() }} </p>
+      <ion-icon class="miniButton" name="add-outline" (click)="addGlory()"></ion-icon>
+    </div>
+    <div class="renowm-row" *ngIf="listType === types.INFAMY">
+      <ion-icon class="miniButton" name="remove-outline" (click)="removeInfamy()"></ion-icon>
+      <p class="value">{{ character.getInfamy() }} </p>
+      <ion-icon class="miniButton" name="add-outline" (click)="addInfamy()"></ion-icon>
+    </div>
+    <app-table
+      [data]="tabledata"
+      [dataConfiguration]="tableConfiguration">
+    </app-table>
+    <div class="butonRow-edit">
+      <ion-button size="small" (click)="removeItem()" class="mediumButton">
+        <ion-icon name="remove-outline"></ion-icon> {{ "EDIT.REMOVE" | translate }}
+      </ion-button>
+      <ion-button size="small" (click)="addItem()"  class="mediumButton">
+        <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD" | translate }}
+      </ion-button>
+    </div>
+
+    <div class="butonRow">
+      <ion-button size="small" (click)="handleExit()" class="lightButton">
+        <ion-icon name="exit-outline"></ion-icon> {{ "EDIT.EXIT" | translate }}
+      </ion-button>
+      <ion-button size="small" (click)="handleSave()" class="saveButton">
+        <ion-icon name="server-outline"></ion-icon> {{ "EDIT.SAVE" | translate }}
+      </ion-button>
+    </div>
+  </ion-card>
+
+</div>

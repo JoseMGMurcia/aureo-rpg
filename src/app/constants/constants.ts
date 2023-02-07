@@ -1,3 +1,5 @@
+import { type } from "os";
+
 /* eslint-disable @typescript-eslint/naming-convention */
 export const AVALIABLE_LANGUAJES = ['en', 'es'];
 export const DATABASE_NAME = 'AureoDatabase.db';
@@ -33,7 +35,6 @@ export const MAIN_INFO_FIELDS = {
   PLAYER: 'PLAYER',
   POLIS: 'POLIS',
   CULT: 'CULT',
-  SEX: 'SEX',
   ARQUETYPE: 'ARQUETYPE',
   SOCIAL_GROUP: 'SOCIAL_GROUP',
   AGE: 'AGE'
@@ -53,5 +54,35 @@ export const ATRIBUTE_FIELDS = {
 
 export const SKILL_TYPES = {
   PRIMARY: 'PRIMARY',
-  SECONDARY: 'SECONDARY'
+  SECONDARY: 'SECONDARY',
+  SOCIAL: 'SOCIAL'
 }
+
+export const LIST_TYPES = {
+  TITLES: 'TITLES',
+  GLORY: 'GLORY',
+  INFAMY: 'INFAMY',
+  EQUIP: 'EQUIP',
+  OTHERS_NOTES: 'OTHERS_NOTES'
+}
+
+export const FILES = {
+  GIFTS: '../assets/i18n/gifts.es.json'
+}
+
+export enum GiftTypesEnum  {
+  COMMON_GIFTS =  'COMMON_GIFTS',
+  CURSES =  'CURSES',
+  DIVINE_GIFTS = 'DIVINE_GIFTS'
+}
+
+export type GiftType = GiftTypesEnum.COMMON_GIFTS | GiftTypesEnum.CURSES | GiftTypesEnum.DIVINE_GIFTS;
+
+export enum GiftSubTypesEnum {
+  PHYSICAL =  "PHYSICAL",
+  MENTAL = "MENTAL",
+  SUPERNATURAL = "SUPERNATURAL",
+  SOCIAL = "SOCIAL"
+}
+
+export type GiftSubType = GiftSubTypesEnum.PHYSICAL | GiftSubTypesEnum.MENTAL | GiftSubTypesEnum.SUPERNATURAL | GiftSubTypesEnum.SOCIAL;

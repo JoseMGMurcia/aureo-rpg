@@ -33,18 +33,18 @@ export const getMockCharacter = (): Character=>   {
   pj.getAtributes().setSense(new Atribute(3));
   pj.getAtributes().getSense().setMods([new Modificator(1,'Joven')]);
 
-  pj.getCurses().push(new Gift('Codicioso', 2));
-  pj.getCurses().push(new Gift('Sobreprotector con los niños', 4));
+  pj.getCurses().push(new Gift('CUSO13', 2));
+  pj.getCurses().push(new Gift('CUSO21', 4));
 
-  pj.getCommonGifts().push(new Gift('Barco', 5));
-  pj.getCommonGifts().push(new Gift('Instinto de supervivencia', 2));
-  pj.getCommonGifts().push(new Gift('Bueno con nombres y caras', 1));
-  pj.getCommonGifts().push(new Gift('Discipulos aventajados', 4));
-  pj.getCommonGifts().push(new Gift('Selectivo en apareamiento', 1));
+  pj.getCommonGifts().push(new Gift('CGSO22', -5));
+  pj.getCommonGifts().push(new Gift('CGME06', -2));
+  pj.getCommonGifts().push(new Gift('CGSO01', -1));
+  pj.getCommonGifts().push(new Gift('CGSO02', -4));
+  pj.getCommonGifts().push(new Gift('CGSO11', -1));
 
-  pj.getDivineGifts().push(new Gift('Objeto mágico', 10));
-  pj.getDivineGifts().push(new Gift('Eternamente joven', 5));
-  pj.getDivineGifts().push(new Gift('Tutelado por Hermes', 5));
+  pj.getDivineGifts().push(new Gift('DG01', -10));
+  pj.getDivineGifts().push(new Gift('DG07', -5));
+  pj.getDivineGifts().push(new Gift('DG27', -5));
 
   pj.getPrymarySkills().push(new Skill('Empatia', 1));
   pj.getPrymarySkills().push(new Skill('Percibir', 3));

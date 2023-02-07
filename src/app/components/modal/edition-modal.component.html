@@ -17,10 +17,17 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-atributes>
+      <app-edit-list
+        *ngSwitchCase="id.TITLES"
+        title="{{ 'DETAIL_PAGE.GENERAL_SEC.TITLES' | translate }}"
+        [listType]="listTypes.TITLES"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-list>
       <app-edit-powers
-      *ngSwitchCase="id.POWERS"
-      (exitModal)="cancel()"
-      (saveCharacter)="confirm()">
+        *ngSwitchCase="id.POWERS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
       </app-edit-powers>
       <app-edit-skills
         *ngSwitchCase="id.PRIMARY_SKILLS"
@@ -36,5 +43,66 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-skills>
-   </container-element>
+      <app-edit-skills
+        *ngSwitchCase="id.SOCIAL_FEATS"
+        title= "{{ 'DETAIL_PAGE.BACKGROUND_SEC.SOCIAL_FEATS' | translate }}"
+        [type]="skillTypes.SOCIAL"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-skills>
+      <app-edit-list
+        *ngSwitchCase="id.OTHER_EQIUP"
+        title="{{ 'DETAIL_PAGE.BACKGROUND_SEC.OTHER_EQIUP' | translate }}"
+        [listType]="listTypes.EQUIP"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-list>
+      <app-edit-list
+        *ngSwitchCase="id.GLORY"
+        title="{{ 'DETAIL_PAGE.GENERAL_SEC.GLORY' | translate }}"
+        [listType]="listTypes.GLORY"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-list>
+      <app-edit-list
+        *ngSwitchCase="id.INFAMY"
+        title="{{ 'DETAIL_PAGE.GENERAL_SEC.INFAMY' | translate }}"
+        [listType]="listTypes.INFAMY"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-list>
+      <app-edit-list
+        *ngSwitchCase="id.OTHERS_NOTES"
+        title="{{ 'DETAIL_PAGE.BACKGROUND_SEC.OTHERS_NOTES' | translate }}"
+        [listType]="listTypes.OTHERS_NOTES"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-list>
+      <app-edit-afinities
+        *ngSwitchCase="id.AFINITIES"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-afinities>
+      <app-edit-gifts
+        *ngSwitchCase="id.COMMON_GIFTS"
+        title="{{ 'DETAIL_PAGE.POWERS_SEC.COMMON_GIFTS' | translate }}"
+        [giftType]="giftsTypes.COMMON_GIFTS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-gifts>
+      <app-edit-gifts
+        *ngSwitchCase="id.CURSES"
+        title="{{ 'DETAIL_PAGE.POWERS_SEC.CURSES' | translate }}"
+        [giftType]="giftsTypes.CURSES"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-gifts>
+      <app-edit-gifts
+        *ngSwitchCase="id.DIVINE_GIFTS"
+        title="{{ 'DETAIL_PAGE.POWERS_SEC.DIVINE_GIFTS' | translate }}"
+        [giftType]="giftsTypes.DIVINE_GIFTS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-gifts>
+    </container-element>
   </div>

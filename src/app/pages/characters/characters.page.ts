@@ -12,6 +12,7 @@ import { DATABASE_NAME } from 'src/app/constants/constants';
 import { NAMES, POLIS } from 'src/app/controller/character.constants';
 import { openAlert } from 'src/app/utils/alert.utils';
 import { CharacterFactory } from 'src/app/controller/character.factory';
+import { getRandomGender } from 'src/app/controller/character.randomize.utils';
 
 @Component({
   selector: 'app-characters',
@@ -82,6 +83,7 @@ export class CharactersPage implements OnDestroy{
         handler: () => {
           const character = this.characterFactory.getCharacter(CharacterController.getRandomName(NAMES));
           character.setPolis(CharacterController.getRandomName(POLIS));
+          character.setSex(getRandomGender());
           this.characs.push(character);
           this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
         }

@@ -1,4 +1,6 @@
 @use '../../constants/color.constants.scss' as colors;
+@use '../../constants/style.constants.scss' as styles;
+
 
 .toolbar {
   ion-title {
@@ -65,4 +67,49 @@ ion-card {
       font-weight: 300;
     }
   }
+}
+
+.pxLabel {
+  margin: 0.1em;
+  text-align: center;
+  width: 100%;
+}
+
+.xp-table {
+  background-color: colors.$row-odd-color;
+  padding: 0;
+
+  .xp-header {
+    background-color: colors.$header-color;
+    color: colors.$headerText;
+    margin: 0;
+  }
+
+  .xp-data {
+    margin: 0.1em;
+
+    .xp-table-cell {
+      display: flex;
+      justify-content: center;
+
+      .xp-table-cell-value {
+        color: colors.$cellText;
+        margin: 0.1em;
+      }
+    }
+  }
+}
+
+.history-editing {
+  background-color: colors.$row-odd-color;
+  border-radius: styles.$border-radius;
+  color: colors.$cellText;
+  font-weight: 450;
+}
+
+.history {
+  background-color: colors.$row-odd-color;
+  border-radius: styles.$border-radius;
+  color: colors.$custom-editing;
+  font-weight: 300;
 }

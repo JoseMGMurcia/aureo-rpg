@@ -45,6 +45,7 @@
 
     .cell {
       justify-content: center;
+      min-height: 1.6em;
 
       .table-text {
         color: colors.$cellText;
@@ -54,6 +55,17 @@
           margin: 0.4em;
         }
       }
+
+      ion-icon {
+        color: colors.$header-color;
+        height: 16px;
+        margin-top: 0.25em;
+        width: 16px;
+      }
     }
+  }
+
+  .icon-column {
+    max-width: 2em;
   }
 }

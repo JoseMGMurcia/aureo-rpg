@@ -1,8 +1,11 @@
 import { TranslateService } from '@ngx-translate/core';
+import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { getAtributePlusModsValue } from 'src/app/controller/atribute.controller';
 import { ModificatorController } from 'src/app/controller/modificatorController';
 import { getSkillAndModsValue } from 'src/app/controller/skillController';
 import { Character } from 'src/app/model/character';
+import { Gift } from 'src/app/model/gift';
+import { TextGift } from 'src/app/model/giftData';
 
 export const getDefenceData = (character: Character, translate: TranslateService): any[] => {
   const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
@@ -88,12 +91,6 @@ export const getCalculatedSkillData = (character: Character, translate: Translat
   }];
 };
 
-export const getXPData = (character: Character): any[] => ([{
-  savedXP: character.getSavedXP(),
-  accumulatedXP: character.getAccumulatedXP(),
-  aureoXP: character.getAureoXP()
-}]);
-
 export const getCompanionsData =  (character: Character): any[] => character.getCompanions().map(
   companion =>({
     name: companion.getName(),
@@ -152,35 +149,30 @@ export const getSecondarySkillsData =  (character: Character): any[] => characte
     mods: ModificatorController.getModsString(skill.getMods())
   }));
 
-
-export const getCommonGiftsData =  (character: Character): any[] => character.getCommonGifts().map(
-  gift =>({
-    name: gift.getName(),
-    cost: gift.getCost()
-  }));
-
-export const getDivineGiftsData =  (character: Character): any[] => character.getDivineGifts().map(
-  gift =>({
-    name: gift.getName(),
-    cost: gift.getCost()
-  }));
-
-export const getCursesData =  (character: Character): any[] => character.getCurses().map(
-  gift =>({
-    name: gift.getName(),
-    cost: gift.getCost()
-  }));
-
-  export const getPowersData =  (character: Character): any[] => character.getPowers().map(
-    gift =>({
-      name: gift.getName(),
-      af: gift.getMinimumAfinity(),
-      am: gift.getAction(),
-      ae: gift.getSpecialResistAction(),
-      effect: gift.getEffect(),
+export const getGiftData = (gitfs: Gift[], giftData: TextGift[], translate: TranslateService) => gitfs.map(
+  gift => {
+    const texts = translate.instant('WIKI_PAGE');
+    const acept = translate.instant('SHARED.OK');
+    const index = giftData.findIndex( giftDat => giftDat.ID === gift.getName());
+    return {
+      name: index > -MAGIC_NUMBERS.N_1 ? giftData[index].NAME : '',
       cost: gift.getCost(),
-      duration: gift.getDuration(),
-    }));
+      detail: index > -MAGIC_NUMBERS.N_1 ? giftData[index] : {},
+      texts: { cost: texts.COST, desc: texts.DESC, rules: texts.RULES, cond: texts.CONDITIONS, acept}
+    }
+  }
+)
+
+export const getPowersData =  (character: Character): any[] => character.getPowers().map(
+  gift =>({
+    name: gift.getName(),
+    af: gift.getMinimumAfinity(),
+    am: gift.getAction(),
+    ae: gift.getSpecialResistAction(),
+    effect: gift.getEffect(),
+    cost: gift.getCost(),
+    duration: gift.getDuration(),
+  }));
 
 export const getAfinitiesData = (character: Character): any[] => character.getGodAfinities().map(
   godAfinity =>({

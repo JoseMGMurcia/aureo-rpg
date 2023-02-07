@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-toolbar class="toolbar">
     <ion-buttons slot="start">
@@ -25,8 +24,7 @@
         <ion-col size="5" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.POLIS" | translate }} </p><p class="detail-value">{{ character.getPolis() }}</p></ion-col>
         <ion-col size="3" class="detail-col">
           <p>{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p>
-          <ion-icon *ngIf="character.getSex() === 'M'" class="miniButton" name="male-outline"></ion-icon>
-          <ion-icon *ngIf="character.getSex() === 'F'" class="miniButton" name="female-outline"></ion-icon>
+          <ion-icon class="miniButton blue" [name]="getSexIcons()"></ion-icon>
         </ion-col>
 
       </ion-row>
@@ -104,12 +102,37 @@
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.XP" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.XP)"></ion-icon>
       </ion-card-header>
-        <app-table
-          [dataConfiguration]="xpDataConfiguration"
-          [data]="xpData">
-        </app-table>
+        <ion-card>
+          <ion-grid class="xp-table">
+            <ion-row class="xp-header">
+              <ion-col size="4" class="detail-col"><p class="pxLabel">{{ "DETAIL_PAGE.GENERAL_SEC.SAVED_XP" | translate }}</p></ion-col>
+              <ion-col size="4" class="detail-col"><p class="pxLabel">{{ "DETAIL_PAGE.GENERAL_SEC.ACUMULATED_XP" | translate }}</p></ion-col>
+              <ion-col size="4" class="detail-col"><p class="pxLabel">{{ "DETAIL_PAGE.GENERAL_SEC.AUREO_XP" | translate }}</p></ion-col>
+            </ion-row>
+            <ion-row class="xp-data">
+              <ion-col size="4" class="xp-table-cell">
+                <ion-icon class="miniButton" name="remove-outline" (click)="removeSavedXp()"></ion-icon>
+                <p class="xp-table-cell-value">{{ character.getSavedXP() }}</p>
+                <ion-icon class="miniButton" name="add-outline" (click)="addSavedXp()"></ion-icon>
+              </ion-col>
+              <ion-col size="4" class="xp-table-cell">
+                <ion-icon class="miniButton" name="remove-outline" (click)="removeAccumulatedXp()"></ion-icon>
+                <p class="xp-table-cell-value">{{ character.getAccumulatedXP() }}</p>
+                <ion-icon class="miniButton" name="add-outline" (click)="addAccumulatedXp()"></ion-icon>
+              </ion-col>
+              <ion-col size="4" class="xp-table-cell">
+                <ion-icon class="miniButton" name="remove-outline" (click)="removeAureoXp()"></ion-icon>
+                <p class="xp-table-cell-value">{{ character.getAureoXP() }}</p>
+                <ion-icon class="miniButton" name="add-outline" (click)="addAureoXp()"></ion-icon>
+              </ion-col>
+
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+
+
     </ion-card>
 
   </ng-container>
@@ -307,13 +330,20 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.HISTORY" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.HISTORY)"></ion-icon>
+        <ion-icon class="editIcon" [name]="historyIcon" color="primary" (click)="editHistory()"></ion-icon>
       </ion-card-header>
       <ion-card-content>
-        <ion-text><p>{{ character.getHistory() }}</p></ion-text>
+         <ion-textarea
+          [readonly]="swNotEditingHistory"
+          [value]="character.getHistory()"
+          rows="10"
+          cols="50"
+          [ngClass]="getHistoryClass()"
+          [(ngModel)]="history"
+          [autoGrow]="true">
+        </ion-textarea>
         </ion-card-content>
     </ion-card>
-
   </ng-container>
 
 </ion-content>

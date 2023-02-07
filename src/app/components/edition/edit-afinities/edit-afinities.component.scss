@@ -14,7 +14,7 @@ h4 {
   width: 100%;
 }
 
-.skill-row {
+.afinity-row {
   display: flex;
   justify-content: flex-start;
   margin-top: 1em;
@@ -31,8 +31,10 @@ h4 {
     padding-left: 0.2em;
   }
 
-  .skill-name {
-    color: colors.$title-text;
+  .label {
+    padding-right: 0.5em;
+    text-align: right;
+    width: 50%;
   }
 }
 
@@ -46,13 +48,6 @@ h4 {
   .saveButton {
     margin-left: 0.5em;
   }
-}
-
-.skill-editor {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 0.5em;
-  padding-bottom: 0.75em;
 }
 
 .butonRow-edit {
@@ -79,4 +74,23 @@ ion-label {
 .mod-input {
   color: colors.$cellText;
   font-size: 0.8em;
+}
+
+.afinity-name {
+  color: colors.$header-color;
+  font-size: 1.2em;
+  font-weight: 525;
+  text-align: center;
+  width: 100%;
+}
+
+.afinity-detail {
+  padding-bottom: 1em;
+}
+
+.afinity-editor {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0.5em;
+  padding-bottom: 0.75em;
 }

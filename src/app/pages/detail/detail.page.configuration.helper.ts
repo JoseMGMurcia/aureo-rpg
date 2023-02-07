@@ -1,5 +1,6 @@
 import { TranslateService } from '@ngx-translate/core';
 import { TableDataConfiguration } from 'src/app/components/table/table.component';
+import { GiftData } from 'src/app/model/giftData';
 
 export const getAfinitiesDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.GENERAL_SEC');
@@ -45,9 +46,10 @@ export const getAtributesDataConfiguration = (translate: TranslateService): Tabl
   };
 };
 
-export const getGiftsDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
+export const getGiftsDataConfiguration = (translate: TranslateService, handleClickRow:(row: any)=> void): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.POWERS_SEC');
   return {
+    onClickRow: (row: any)=> handleClickRow(row) ,
     columns: [
       {
         id: 'name',
@@ -69,18 +71,6 @@ export const getPowersDataConfiguration = (translate: TranslateService): TableDa
         id: 'name',
         name: transLations.NAME
       },
-      // {
-      //   id: 'af',
-      //   name: transLations.AF
-      // },
-      // {
-      //   id: 'am',
-      //   name: transLations.AM
-      // },
-      // {
-      //   id: 'ae',
-      //   name: transLations.AE
-      // },
       {
         id: 'effect',
         name: transLations.EFFECT
@@ -117,36 +107,29 @@ export const getSkillsDataConfiguration = (translate: TranslateService): TableDa
   };
 };
 
-export const getListConfiguration = (): TableDataConfiguration =>({
-  swHideHeader: true,
-  columns: [{
-    id: 'name',
-    name: ''
-  }]});
-
-  export const getCombatEquipDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
-    const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
-    return {
-      columns: [
-        {
-          id: 'name',
-          name: transLations.NAME
-        },
-        {
-          id: 'initialDamage',
-          name: transLations.INITIAL_DMG
-        },
-        {
-          id: 'activeDefence',
-          name: transLations.ACTIVE_DEFENCE
-        },
-        {
-          id: 'armor',
-          name: transLations.ARMOR
-        }
-      ]
-    };
+export const getCombatEquipDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
+  const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
+  return {
+    columns: [
+      {
+        id: 'name',
+        name: transLations.NAME
+      },
+      {
+        id: 'initialDamage',
+        name: transLations.INITIAL_DMG
+      },
+      {
+        id: 'activeDefence',
+        name: transLations.ACTIVE_DEFENCE
+      },
+      {
+        id: 'armor',
+        name: transLations.ARMOR
+      }
+    ]
   };
+};
 
   export const getFollowersDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
     const transLations = translate.instant('DETAIL_PAGE.BACKGROUND_SEC');
@@ -179,27 +162,6 @@ export const getListConfiguration = (): TableDataConfiguration =>({
         {
           id: 'cult',
           name: transLations.ACTIVE_DEFENCE
-        }
-      ]
-    };
-  };
-
-
-  export const getXPDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
-    const transLations = translate.instant('DETAIL_PAGE.GENERAL_SEC');
-    return {
-      columns: [
-        {
-          id: 'savedXP',
-          name: transLations.SAVED_XP
-        },
-        {
-          id: 'accumulatedXP',
-          name: transLations.ACUMULATED_XP
-        },
-        {
-          id: 'aureoXP',
-          name: transLations.AUREO_XP
         }
       ]
     };

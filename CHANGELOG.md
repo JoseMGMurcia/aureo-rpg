@@ -1,4 +1,29 @@
 # Aureo_App
+## V1.0.5
+- Edit History directly in detail.
+
+## V1.0.4
+- Edit Afinities.
+- Edit Experience directly from detail page.
+- Random gender for random characters.
+- Json file resuming all gifts.
+- Json service added.
+- Gifts presented in wiki page.
+- Character gifts mapped from Json.
+- Fixxed modal dimiss error.
+- Gifts (Commons, Curses an Divines) edition.
+- Loading spinner added.
+- Gift Detail alert added.
+
+## V1.0.3
+- Edit Social features.
+- Edit Glory.
+- Edit Infamy.
+- Edit Titles.
+- Edit Other Equip.
+- Edit Notes.
+- Undefined sex allowed.
+
 ## V1.0.2
 - Criticals and Fumbles management in dices page.
 - Randon Polis name generator.

@@ -39,6 +39,7 @@ $custom-prymary-light: #3989d9;
 ion-alert {
   .alert-wrapper {
     background-color: $custom-light !important;
+    width: 90% !important;
 
     .alert-head {
       display: flex;
@@ -124,6 +125,10 @@ ion-button {
   padding-left: 0.5em;
   padding-right: 0.5em;
   width: 16px;
+}
+
+.blue {
+  color: $custom-prymary;
 }
 
 :root {

@@ -38,11 +38,10 @@
       </ion-row>
       <ion-row class="detail-row">
         <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.SEX" | translate }} </p>
-        <ion-input
-          class="detail-value"
-          placeholder="{{ 'EDIT.MAIN_INFO.SEX' | translate }}"
-          [formControlName]="id.SEX">
-        </ion-input>
+        <ion-icon class="actual-sex" [name]="getSexIcons()"></ion-icon>
+        <ion-icon class="miniButton" name="male-outline" (click)="character.setSex('M')"></ion-icon>
+        <ion-icon class="miniButton" name="female-outline" (click)="character.setSex('F')"></ion-icon>
+        <ion-icon class="miniButton" name="male-female-outline" (click)="character.setSex('U')"></ion-icon>
       </ion-row>
       <ion-row class="detail-row">
         <p class="detail-label">{{ "DETAIL_PAGE.GENERAL_SEC.ARQUETYPE" | translate }} </p>

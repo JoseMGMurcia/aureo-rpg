@@ -22,6 +22,7 @@ export class TableComponent{
 export class TableDataConfiguration {
   public columns: TableColumn[] = [];
   public swHideHeader?: boolean = true;
+  public onClickRow?: (row: any) => void;
 }
 
 export class TableColumn {
@@ -29,4 +30,11 @@ export class TableColumn {
   public id = '';
   public templatedId? : boolean = false;
 }
+
+export const getListConfiguration = (): TableDataConfiguration =>({
+  swHideHeader: true,
+  columns: [{
+    id: 'name',
+    name: ''
+  }]});
 

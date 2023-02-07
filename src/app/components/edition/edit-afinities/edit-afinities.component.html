@@ -1,0 +1,53 @@
+<ion-card>
+  <h5>{{ "DETAIL_PAGE.GENERAL_SEC.AFINITIES" | translate }}</h5>
+  <ion-select
+    class="detail-value"
+    interface="popover"
+    placeholder="{{ 'DETAIL_PAGE.GENERAL_SEC.AFINITIES' | translate }}"
+    (ionChange)="handleChange($event)">
+      <ion-select-option *ngFor="let afinity of godAfinities" [value]="afinity.getGod()">{{ afinity.getGod() }}</ion-select-option>
+  </ion-select>
+
+  <div class="afinity-editor">
+    <ion-button size="small" (click)="removeGodAfinity()" class="mediumButton">
+      <ion-icon name="trash-outline"></ion-icon> {{ "EDIT.REMOVE_AFINITY" | translate }}
+    </ion-button>
+    <ion-button size="small" (click)="addGodAfinity()" class="mediumButton">
+      <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD_AFINITY" | translate }}
+    </ion-button>
+  </div>
+
+
+  <ion-card *ngIf="selectedAfinity.getGod().length" class="afinity-detail">
+    <p class="afinity-name">{{ selectedAfinity.getGod() }}</p>
+    <div class="afinity-row">
+      <p class="label">{{ "DETAIL_PAGE.GENERAL_SEC.AFINITY" | translate }}: </p>
+      <ion-icon class="miniButton" name="remove-outline" (click)="removeAfinity()"></ion-icon>
+      <p class="value">{{ selectedAfinity.getAffinity() }} </p>
+      <ion-icon class="miniButton" name="add-outline" (click)="addAfinity()"></ion-icon>
+    </div>
+
+    <div class="afinity-row">
+      <p class="label">{{ "DETAIL_PAGE.GENERAL_SEC.ARETES" | translate }}: </p>
+      <ion-icon class="miniButton" name="remove-outline" (click)="removeAretes()"></ion-icon>
+      <p class="value">{{ selectedAfinity.getAretes() }} </p>
+      <ion-icon class="miniButton" name="add-outline" (click)="addAretes()"></ion-icon>
+    </div>
+
+    <div class="afinity-row">
+      <p class="label">{{ "DETAIL_PAGE.GENERAL_SEC.HAMARTIAS" | translate }}: </p>
+      <ion-icon class="miniButton" name="remove-outline" (click)="removeHamartias()"></ion-icon>
+      <p class="value">{{ selectedAfinity.getHamartias() }} </p>
+      <ion-icon class="miniButton" name="add-outline" (click)="addHamartias()"></ion-icon>
+    </div>
+  </ion-card>
+
+  <div class="butonRow">
+    <ion-button size="small" (click)="handleExit()" class="lightButton">
+      <ion-icon name="exit-outline"></ion-icon> {{ "EDIT.EXIT" | translate }}
+    </ion-button>
+    <ion-button size="small" (click)="handleSave()" class="saveButton">
+      <ion-icon name="server-outline"></ion-icon> {{ "EDIT.SAVE" | translate }}
+    </ion-button>
+  </div>
+</ion-card>

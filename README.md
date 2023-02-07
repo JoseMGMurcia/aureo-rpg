@@ -4,7 +4,7 @@
 This aplication is built in **Ionic 6, capacitor-Angular-15** using internal *ionic Storage*, and have been testing in Android  & iOS platforms.
 The goal is to be used by Aureo game players as an alternative to a paper and dices.
 
-Current versión 1.0.2
+Current version 1.0.5
 
 ### The first goal, main funcionality (In progress):
 - Users can create a complete set of characters, storage and manage it.
@@ -31,24 +31,26 @@ Current versión 1.0.2
   - [x] Character mapping from JSON.
   - [ ] Editing character in tab.
     - [ ] Character validation first method.
+      - [x] No repeated skills.
+      - [x] No empty named skills.
       - [x] No special characters in strings.
     - [ ] Character Edit rework.
       - [x] Base Editing Modal.
         - [x] Edit Main info component.
           - [x] Temporal Aureo edit from detail.
           - [x] Random Polis.
-        - [x] Edit Atributes/Skills component.
+        - [x] Edit Atributes/Skills/social ranks component.
           - [x] Delete an existing skill.
           - [ ] Modificator validation.
-        - [ ] Edit Afinities component.
+        - [x] Edit Afinities component.
         - [ ] Edit Powers component.
-        - [ ] Edit Gifts component.
-        - [ ] Edit List component.
-          - [ ] Glory / Infamy variation.
-        - [ ] XP edit from detail.
+        - [x] Edit Gifts component.
+        - [x] Edit List component.
+          - [x] Glory / Infamy variation.
+        - [x] XP edit from detail.
         - [ ] Edit Combat equip component.
         - [ ] Edit Followers component.
-        - [ ] Edit History component.
+        - [x] Edit History component.
   - [x] Segment buttons to Icons.
 
  
@@ -62,8 +64,8 @@ Current versión 1.0.2
   - [ ] App Icon.
   - [x] Colour palette.
   - [x] Dices page redesign.
-  - [ ] Doc Page first design.
-  - [ ] Doc Page first texts.
+  - [x] Doc Page first design.
+  - [x] Doc Page first texts.
 
 - [x] Angular 15 Migration.
 - [x] Ionic 6 Migration.
