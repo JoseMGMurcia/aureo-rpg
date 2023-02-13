@@ -118,13 +118,31 @@ export const getFollowersData =  (character: Character, translate: TranslateServ
 
 export const getSymbol = (value: number): string => value >= 0 ? '+' : '';
 
-export const getCombatEquipData =  (character: Character): any[] => character.getCombatEquipment().map(
-  equip =>({
+export const getCombatEquipData =  (character: Character, translate: TranslateService): any[] => character.getCombatEquipment().map(
+  equip =>{
+    const texts = translate.instant('WIKI_PAGE.COMBAT_EQUIP_DETAIL');
+    return{
     name: equip.getName(),
     initialDamage: getTotalDamage(equip, character),
     activeDefence: equip.getActiveDefence(),
     armor: equip.getArmor(),
-  }));
+    hands: equip.getHands(),
+    precision: equip.getPrecision(),
+    price: equip.getPrice(),
+    atlethism: equip.getAtletism(),
+    sense: equip.getSense(),
+    texts: {
+      initialDamage: texts.DAMAGE,
+      activeDefence: texts.DEFENCE,
+      armor: texts.ARMOR,
+      hands: texts.HANDS,
+      precision: texts.PRECISION,
+      price: texts.PRICE,
+      atlethism: texts.ATLETHISM,
+      sense: texts.SENSE,
+      acept: translate.instant('SHARED.OK')
+    }
+  }});
 
   export const getListData =  ( data: string[]): any[] => data.map(
     dataBit=> ({name: dataBit}));

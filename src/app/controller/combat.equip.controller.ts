@@ -1,7 +1,9 @@
+import { AlertOptions } from "@ionic/angular";
 import { COMBAT_EQUIP_CATALOG } from "../constants/equip.constants";
 import { MAGIC_NUMBERS } from "../constants/number.constants";
 import { Character } from "../model/character";
 import { CombatEquip, CombatEquipEnum } from "../model/combatEquip";
+import { openAlert } from "../utils/alert.utils";
 import { getAtributePlusModsValue } from "./atribute.controller";
 
 export const  combatEquipFactory = (equip: CombatEquip, name: string): CombatEquip  => {
@@ -43,3 +45,36 @@ export const getCombatEquipArray = (): CombatEquip[] =>
     return combatEquipFactory(COMBAT_EQUIP_CATALOG[key], COMBAT_EQUIP_CATALOG[key].getName()); //non translated  TODO translate
   });
 
+  export const cloneCombatEquip = (equip: CombatEquip[]): CombatEquip[] => {
+    return equip.map((equip) => {
+      return combatEquipFactory(equip, equip.getName());
+    });
+  };
+
+  export const openEquipDetail = (row: any) => {
+
+    const alertParams: AlertOptions = {
+      header: row.name,
+      message: `<div class="alert-row">
+                  <p class="alert-row-cell"><b>${row.texts.initialDamage}</b> ${row.initialDamage}</p>
+                  <p class="alert-row-cell"><b>${row.texts.activeDefence}</b> ${row.activeDefence}</p>
+                </div>
+                <div class="alert-row">
+                  <p class="alert-row-cell"><b>${row.texts.armor}</b> ${row.armor}</p>
+                  <p class="alert-row-cell"><b>${row.texts.hands}</b> ${row.hands}</p>
+                </div>
+                <div class="alert-row">
+                  <p class="alert-row-cell"><b>${row.texts.precision}</b> ${row.precision}</p>
+                  <p class="alert-row-cell"><b>${row.texts.atlethism}</b> ${row.atlethism}</p>
+                </div>
+                <div class="alert-row">
+                  <p class="alert-row-cell"><b>${row.texts.price}</b> ${row.price}</p>
+                  <p class="alert-row-cell"><b>${row.texts.sense}</b> ${row.sense}</p>
+                </div>`,
+      buttons: [{
+        text: row.texts.acept,
+        cssClass: 'alert-secondaryButton',
+      }]
+    }
+    openAlert(alertParams);
+  };

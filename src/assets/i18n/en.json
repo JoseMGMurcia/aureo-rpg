@@ -220,6 +220,7 @@
   "ADD_SKILL_TITLE": "Nueva habilidad",
   "ADD_RANK_TITLE": "Nuevo rasgo",
   "REMOVE_SKILL_TITLE": "Eliminar habilidad",
+  "REMOVE_COMBAT_EQUIP_TITLE": "Eliminar equipo de combate",
   "REMOVE_RANK_TITLE": "Eliminar rasgo",
   "REMOVE": "Eliminar",
   "SELECT_MOD": "Seleccione modificador a eliminar",

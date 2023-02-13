@@ -1,6 +1,5 @@
 import { TranslateService } from '@ngx-translate/core';
 import { TableDataConfiguration } from 'src/app/components/table/table.component';
-import { GiftData } from 'src/app/model/giftData';
 
 export const getAfinitiesDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.GENERAL_SEC');
@@ -107,9 +106,10 @@ export const getSkillsDataConfiguration = (translate: TranslateService): TableDa
   };
 };
 
-export const getCombatEquipDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
+export const getCombatEquipDataConfiguration = (translate: TranslateService, handleClickRow:(row: any)=> void): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
   return {
+    onClickRow: (row: any)=> handleClickRow(row) ,
     columns: [
       {
         id: 'name',

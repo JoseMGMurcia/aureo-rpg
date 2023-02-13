@@ -48,7 +48,7 @@ Current version 1.0.5
         - [x] Edit List component.
           - [x] Glory / Infamy variation.
         - [x] XP edit from detail.
-        - [ ] Edit Combat equip component.
+        - [x] Edit Combat equip component.
         - [ ] Edit Followers component.
         - [ ] Edit companions.
         - [x] Edit History component.

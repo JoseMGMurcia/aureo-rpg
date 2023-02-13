@@ -41,6 +41,7 @@ import { getSexIcon } from 'src/app/utils/custom.utils';
 import { GiftData } from 'src/app/model/giftData';
 import { openGiftDetail } from 'src/app/controller/gift.controller';
 import { IconTypes } from 'src/app/constants/icon.constants';
+import { openEquipDetail } from 'src/app/controller/combat.equip.controller';
 
 @Component({
   selector: 'app-detail',
@@ -78,7 +79,7 @@ export class DetailPage implements OnInit, OnDestroy{
   public titlesData: any[] =[];
   public gloryData: any[] =[];
   public infamyData: any[] =[];
-  public combatEquipDataConfiguration: TableDataConfiguration = getCombatEquipDataConfiguration(this.translate);
+  public combatEquipDataConfiguration: TableDataConfiguration = getCombatEquipDataConfiguration(this.translate, this.showCombatEquipDetail);
   public combatEquipData: any[] =[];
   public followersDataConfiguration: TableDataConfiguration = getFollowersDataConfiguration(this.translate);
   public followersData: any[] =[];
@@ -235,7 +236,7 @@ export class DetailPage implements OnInit, OnDestroy{
     this.gloryData = getListData(this.character.getGloryLines());
     this.infamyData = getListData(this.character.getInfamyLines());
     this.otherNotesData = getListData(this.character.getOtherNotes());
-    this.combatEquipData = getCombatEquipData(this.character);
+    this.combatEquipData = getCombatEquipData(this.character, this.translate);
     this.followersData = getFollowersData(this.character, this.translate);
     this.companionsData = getCompanionsData(this.character);
     this.calculatedSkillData = getCalculatedSkillData(this.character, this.translate);
@@ -267,6 +268,10 @@ export class DetailPage implements OnInit, OnDestroy{
 
   private showGiftDetail(row: any){
     openGiftDetail(row);
+  }
+
+  private showCombatEquipDetail(row: any){
+    openEquipDetail(row);
   }
 
 }

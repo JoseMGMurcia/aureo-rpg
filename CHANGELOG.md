@@ -5,6 +5,8 @@
 - Combat equip types added.
 - Damage calculated from weapon types.
 - Combat equipment added to wiki page.
+- Combat equipment detail alert added.
+- Combat equipment edition.
 
 ## V1.0.4
 - Edit Afinities.
