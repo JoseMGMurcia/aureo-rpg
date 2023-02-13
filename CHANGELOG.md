@@ -7,6 +7,7 @@
 - Combat equipment added to wiki page.
 - Combat equipment detail alert added.
 - Combat equipment edition.
+- Some Normalization.
 
 ## V1.0.4
 - Edit Afinities.
