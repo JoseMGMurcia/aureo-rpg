@@ -74,7 +74,7 @@ export class AppComponent implements OnInit{
   }
 
   private loadGiftData(){
-    this.jsonService.getJsonData(FILES.GIFTS)
+    this.jsonService.getGiftsDataFromJson(FILES.GIFTS)
     .subscribe(data => {
       this.characterService.setGiftData(data);
     });

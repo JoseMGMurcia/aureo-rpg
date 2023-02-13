@@ -5,8 +5,8 @@ export enum IconTypes {
   DELETE = 'trash-outline',
   ADD = 'add-outline',
   SEARCH = 'search-outline',
-  SAVE = 'save-outline'
-
-
-
+  SAVE = 'save-outline',
+  MALE = 'male-outline',
+  FEMALE = 'female-outline',
+  MALE_FEMALE = 'male-female-outline'
 }

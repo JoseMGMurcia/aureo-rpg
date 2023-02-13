@@ -15,15 +15,15 @@ export class DicesPage {
   public data: {attribute: number, skill: number, modif: number} = {
     attribute: MAGIC_NUMBERS.N_3,
     skill: MAGIC_NUMBERS.N_2,
-    modif: 0
+    modif: MAGIC_NUMBERS.N_0,
   };
 
   constructor(private translate: TranslateService) {}
 
   public rollDice(diceData: any){
     const texts = this.translate.instant('DICES_PAGE.ALERT');
-    const result = Math.floor(Math.random() * 10) + 1;
-    const secondResult = Math.floor(Math.random() * 10) + 1;
+    const result = Math.floor(Math.random() * MAGIC_NUMBERS.N_10) + MAGIC_NUMBERS.N_1;
+    const secondResult = Math.floor(Math.random() * MAGIC_NUMBERS.N_10) + MAGIC_NUMBERS.N_1;
     const rndInt = result + diceData.attribute + diceData.skill + diceData.modif;
     const criticMsg = result === MAGIC_NUMBERS.N_10 ? `<p class="center bold">${texts.CRITICAL}</p><p class="dice-result center">${secondResult} </p>` : '';
     const fumbleMsm = result === MAGIC_NUMBERS.N_1 ? `<p class="center bold">${texts.FUMBLE} </p><p class="dice-result center">${secondResult} </p>` : '';

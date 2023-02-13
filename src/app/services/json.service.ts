@@ -10,14 +10,11 @@ export class JsonService {
 
   constructor(private http: HttpClient) { }
 
-  public getJsonData(jsonFile: string) {
+  public getGiftsDataFromJson(jsonFile: string) {
     return this.http.get(jsonFile).pipe(
       map(data => {
         return data as GiftData;
       })
     );
   }
-
-
 }
-
