@@ -1,3 +1,5 @@
+import { COMBAT_EQUIP_CATALOG } from '../constants/equip.constants';
+import { combatEquipFactory } from '../controller/combat.equip.controller';
 import { Atribute } from '../model/atributes';
 import { Character } from '../model/character';
 import { CombatEquip } from '../model/combatEquip';
@@ -66,10 +68,10 @@ export const getMockCharacter = (): Character=>   {
   pj.getSecondarySkills().push(new Skill('Seducir', 1));
 
   // TODO Complete prays
-  pj.getPowers().push(new Power('Maestro del regateo'));
-  pj.getPowers().push(new Power('Servidor del pueblo'));
-  pj.getPowers().push(new Power('Aura heroica'));
-  pj.getPowers().push(new Power('Susurros y rumores'));
+  pj.getPowers().push(new Power('HRM12'));
+  pj.getPowers().push(new Power('HRM17'));
+  pj.getPowers().push(new Power('ZEUS01'));
+  pj.getPowers().push(new Power('HRM20'));
 
   pj.getSocialFeatures().push(new Skill('Estatus', 1));
   pj.getSocialFeatures().push(new Skill('Equipo', 2));
@@ -78,17 +80,14 @@ export const getMockCharacter = (): Character=>   {
 
   pj.setOtherEquip(['Botas de Cuero', 'Pieles para dormir', 'Ropajes decentes']);
 
-  const combatEquip = new CombatEquip('Daga');
-  combatEquip.setInitialDamage(4);
-  pj.getCombatEquipment().push(combatEquip);
+  const dagger = combatEquipFactory(COMBAT_EQUIP_CATALOG.WEAPON_CC_SHORT, 'Daga');
+  pj.getCombatEquipment().push(dagger);
 
-  const combatEquip2 = new CombatEquip('Arco Medio');
-  combatEquip2.setInitialDamage(4);
-  pj.getCombatEquipment().push(combatEquip2);
+  const mediumBow = combatEquipFactory(COMBAT_EQUIP_CATALOG.WEAPON_D_MEDIUM, 'Arco Medio');
+  pj.getCombatEquipment().push(mediumBow);
 
-  const combatEquip3 = new CombatEquip('Armadura ligera');
-  combatEquip3.setArmor(2);
-  pj.getCombatEquipment().push(combatEquip3);
+  const lightArmor = combatEquipFactory(COMBAT_EQUIP_CATALOG.ARMOR_LIGHT, 'Armadura ligera');
+  pj.getCombatEquipment().push(lightArmor);
 
   const follower: Follower = new Follower('Barquímedes');
   follower.setArquetype('Marinero');
@@ -132,7 +131,7 @@ export const getMockCharacter = (): Character=>   {
   y mi barco... Apareció un hombre alto y recio que me buscaba, era mi ex-marinero me pedia pasar una temporada viajando y aprendiendo de la mar, como hizo su padre antes que el. Pasaron los años y
   la historia se repitió muchas veces,  más a veces no eran uno, si no doso tres, finalmente los lazos de la familia se perpetuaron de alguna forma conmigo y me convertí en el maestro de muchos de
   ellos...Aun en día un familiar lejado de dicha familia viaja junto a mi barco, ocupanto el puesto de mi primero de abordo y siendo alguien importante parami. Los años me han convertido en un gran
-  comerciante y embaucador, yme han dado conocimientos en muchas areas, si bien quizá me vence en ciertos momentos el peso del oro...`;
+  comerciante y embaucador, y me han dado conocimientos en muchas areas, si bien quizá me vence en ciertos momentos el peso del oro...`;
 
   pj.setHistory(history);
 

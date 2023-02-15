@@ -52,20 +52,48 @@
       }
   },
   "WIKI_PAGE": {
-      "TITLE": "Documentación",
-      "COMMON_GIFTS": "Dones comunes",
-      "DIVINE_GIFTS": "Dones divinos",
-      "CURSES": "Maldiciones",
-      "GIFTS_TYPES": {
-        "PHYSICAL": "Físicos",
-        "MENTAL": "Mentales",
-        "SUPERNATURAL": "Sobrenaturales",
-        "SOCIAL": "Sociales"
-      },
-      "COST": "Coste: ",
-      "DESC": "Descripción: ",
-      "RULES": "Reglas: ",
-      "CONDITIONS": "Condiciones: "
+    "COMBAT": "Combate",
+    "COMBAT_EQUIPMENT": "Equipo de combate",
+    "COMBAT_EQUIP_DETAIL": {
+      "DAMAGE": "Daño: ",
+      "DEFENCE": "Defensa: ",
+      "ARMOR": "Armadura: ",
+      "HANDS": "Manos: ",
+      "PRECISION": "Precisión: ",
+      "PRICE": "Precio: ",
+      "ATLETHISM": "Atletismo: ",
+      "SENSE": "Sentir: "
+    },
+    "GIFTS": "Dones",
+    "TITLE": "Documentación",
+    "COMMON_GIFTS": "Dones comunes",
+    "DIVINE_GIFTS": "Dones divinos",
+    "CURSES": "Maldiciones",
+    "GIFTS_TYPES": {
+      "PHYSICAL": "Físicos",
+      "MENTAL": "Mentales",
+      "SUPERNATURAL": "Sobrenaturales",
+      "SOCIAL": "Sociales"
+    },
+    "COST": "Coste: ",
+    "DESC": "Descripción: ",
+    "RULES": "Reglas: ",
+    "CONDITIONS": "Condiciones: ",
+    "PRAYS": "Rezos",
+    "CULTS": {
+      "AFRODITA": "Afrodita",
+      "APOLLO": "Apolo",
+      "ARES": "Ares",
+      "ARTEMISA": "Artemisa",
+      "ATENEA": "Atenea",
+      "DIONISIO": "Dionisio",
+      "HADES": "Hades",
+      "HEFESTO": "Hefesto",
+      "HERA": "Hera",
+      "HERMES": "Hermes",
+      "POSEIDON": "Poseidón",
+      "ZEUS": "Zeus"
+    }
   },
   "DICES_PAGE": {
     "TITLE": "Lanzar Dados",
@@ -132,12 +160,16 @@
       "CURSES": "Maldiciones",
       "NAME": "Nombre",
       "COST": "Coste",
+      "AFINITY": "Afinidad",
+      "DESC": "Descripción",
+      "RULES": "Reglas",
+      "CONDITIONS": "Condiciones",
       "POWERS": "Rezos y poderes",
       "AF": "AF",
       "AM": "AM",
       "AE": "AE",
       "EFFECT": "Efecto",
-      "DURATION": "Dur."
+      "DURATION": "Duración"
     },
     "SKILLS_SEC":{
       "PRIMARY_SKILLS": "Habilidades primarias",
@@ -207,7 +239,9 @@
   "ADD_SKILL_TITLE": "Nueva Habilidad",
   "ADD_RANK_TITLE": "Nuevo rasgo",
   "REMOVE_SKILL_TITLE": "Eliminar Habilidad",
+  "REMOVE_COMBAT_EQUIP_TITLE": "Eliminar equipo de combate",
   "REMOVE_RANK_TITLE": "Eliminar rasgo",
+  "REMOVE_POWER": "Eliminar poder o rezo",
   "REMOVE": "Eliminar",
   "SELECT_MOD": "Seleccione modificador a eliminar",
   "NEW_MOD": "Nuevo modificador",

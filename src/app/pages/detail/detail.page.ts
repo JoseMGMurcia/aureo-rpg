@@ -41,6 +41,9 @@ import { getSexIcon } from 'src/app/utils/custom.utils';
 import { GiftData } from 'src/app/model/giftData';
 import { openGiftDetail } from 'src/app/controller/gift.controller';
 import { IconTypes } from 'src/app/constants/icon.constants';
+import { openEquipDetail } from 'src/app/controller/combat.equip.controller';
+import { PowersData } from 'src/app/model/powerData';
+import { openPowerDetail } from 'src/app/controller/power.controller';
 
 @Component({
   selector: 'app-detail',
@@ -52,8 +55,9 @@ export class DetailPage implements OnInit, OnDestroy{
   public character: Character = new Character('Pepe');
   public characters: Character[] = [];
   public giftData: GiftData = new GiftData();
+  public powersJData: PowersData = new PowersData();
   public id = CARD_ID;
-  public loading = MAGIC_NUMBERS.N_3;
+  public loading = MAGIC_NUMBERS.N_4;
 
   public afinitiesDataConfiguration: TableDataConfiguration = getAfinitiesDataConfiguration(this.translate);
   public afinitiesData: any[] =[];
@@ -70,7 +74,7 @@ export class DetailPage implements OnInit, OnDestroy{
   public calculatedSkillDataConfiguration: TableDataConfiguration = getCalculatedSkillDataConfiguration();
   public calculatedSkillData: any[] =[];
   public combatRanksData: any[] =[];
-  public powersDataConfiguration: TableDataConfiguration = getPowersDataConfiguration(this.translate);
+  public powersDataConfiguration: TableDataConfiguration = getPowersDataConfiguration(this.translate, this.openPowerDetail);
   public powersData: any[] =[];
   public listDataConfiguration: TableDataConfiguration = getListConfiguration();
   public otherEquipData: any[] =[];
@@ -78,7 +82,7 @@ export class DetailPage implements OnInit, OnDestroy{
   public titlesData: any[] =[];
   public gloryData: any[] =[];
   public infamyData: any[] =[];
-  public combatEquipDataConfiguration: TableDataConfiguration = getCombatEquipDataConfiguration(this.translate);
+  public combatEquipDataConfiguration: TableDataConfiguration = getCombatEquipDataConfiguration(this.translate, this.showCombatEquipDetail);
   public combatEquipData: any[] =[];
   public followersDataConfiguration: TableDataConfiguration = getFollowersDataConfiguration(this.translate);
   public followersData: any[] =[];
@@ -129,6 +133,13 @@ export class DetailPage implements OnInit, OnDestroy{
         this.giftData = data;
         this.finishLoading(loading);
       });
+
+      this.characterService.powersData
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((data)=> {
+        this.powersJData = data;
+        this.finishLoading(loading);
+      });
   }
 
   ngOnDestroy(): void {
@@ -137,6 +148,11 @@ export class DetailPage implements OnInit, OnDestroy{
   }
 
   sectionChanged(event: any) {
+    if(event.detail.value === '5'){
+      this.swNotEditingHistory = true;
+      this.historyIcon = IconTypes.EDIT;
+      this.history = this.character.getHistory();
+    }
     this.section = event.detail.value;
   }
 
@@ -164,7 +180,7 @@ export class DetailPage implements OnInit, OnDestroy{
  }
 
   public getPolisText(): string {
-    return this.character.getPolis() ? this.translate.instant('SHARED.FROM').concat(' ', this.character.getPolis()) : '';
+    return this.character.getPolis() ? `${this.translate.instant('SHARED.FROM')} ${this.character.getPolis()}` : '';
   }
 
   public addSavedXp(){
@@ -221,7 +237,7 @@ export class DetailPage implements OnInit, OnDestroy{
     this.divineGiftsData = getGiftData( this.character.getDivineGifts(), this.giftData.DIVINE_GIFTS, this.translate);
     this.cursesData = getGiftData( this.character.getCurses(),
       [...this.giftData.CURSES.SOCIAL, ...this.giftData.CURSES.PHYSICAL, ...this.giftData.CURSES.MENTAL, ...this.giftData.CURSES.SUPERNATURALS], this.translate);
-    this.powersData = getPowersData(this.character);
+    this.powersData = getPowersData(this.character, this.powersJData, this.translate);
     this.primarySkillsData = getPrymarySkillsData(this.character);
     this.secondarySkillsData = getSecondarySkillsData(this.character);
     this.socialFeaturesData = getSocialFeaturesData(this.character);
@@ -230,7 +246,7 @@ export class DetailPage implements OnInit, OnDestroy{
     this.gloryData = getListData(this.character.getGloryLines());
     this.infamyData = getListData(this.character.getInfamyLines());
     this.otherNotesData = getListData(this.character.getOtherNotes());
-    this.combatEquipData = getCombatEquipData(this.character);
+    this.combatEquipData = getCombatEquipData(this.character, this.translate);
     this.followersData = getFollowersData(this.character, this.translate);
     this.companionsData = getCompanionsData(this.character);
     this.calculatedSkillData = getCalculatedSkillData(this.character, this.translate);
@@ -262,6 +278,14 @@ export class DetailPage implements OnInit, OnDestroy{
 
   private showGiftDetail(row: any){
     openGiftDetail(row);
+  }
+
+  private showCombatEquipDetail(row: any){
+    openEquipDetail(row);
+  }
+
+  private openPowerDetail(row: any){
+    openPowerDetail(row);
   }
 
 }

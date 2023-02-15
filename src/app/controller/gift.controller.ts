@@ -1,7 +1,6 @@
 import { AlertOptions } from "@ionic/angular";
 import { Gift } from "../model/gift";
 import { GiftData, TextGift } from "../model/giftData";
-import { TranslateService } from '@ngx-translate/core';
 import { openAlert } from "../utils/alert.utils";
 import { MAGIC_NUMBERS } from "../constants/number.constants";
 import { findMinMax } from "../utils/custom.utils";

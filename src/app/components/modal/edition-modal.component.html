@@ -104,5 +104,10 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-gifts>
+      <app-edit-combat
+        *ngSwitchCase="id.COMBAT_EQUIPMENT"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-combat>
     </container-element>
   </div>

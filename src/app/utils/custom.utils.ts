@@ -1,29 +1,18 @@
+import { IconTypes } from "../constants/icon.constants";
+
 export const cloneList = (list: string[]): string[] =>{
   return list.map(str => str);
 }
 
 export const getSexIcon = (sex: String): string => {
   if(sex === 'M'){
-    return 'male-outline'
+    return IconTypes.MALE;
   }else if(sex === 'F'){
-    return 'female-outline'
+    return IconTypes.FEMALE;
   }
-  return 'male-female-outline';
+  return IconTypes.MALE_FEMALE;
 }
 
 export const findMinMax = (numbers: number[]): { min: number, max: number } =>{
-  let min = Number.POSITIVE_INFINITY;
-  let max = Number.NEGATIVE_INFINITY;
-
-  numbers.forEach(num => {
-    if (num < min) {
-      min = num;
-    }
-
-    if (num > max) {
-      max = num;
-    }
-  });
-
-  return { min, max };
+  return { min: Math.min(...numbers), max: Math.max(...numbers) };
 }

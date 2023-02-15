@@ -13,4 +13,10 @@ describe('CharactersService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have a character', () => {
+    expect(service.character).toBeTruthy();
+  });
+
+
 });

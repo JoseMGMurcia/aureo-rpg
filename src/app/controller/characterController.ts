@@ -1,7 +1,7 @@
 import { Character } from 'src/app/model/character';
 import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Atributes } from '../model/atributes';
-import { CombatEquip } from '../model/combatEquip';
+import { CombatEquip, CombatEquipEnum } from '../model/combatEquip';
 import { Companion } from '../model/companion';
 import { Follower } from '../model/follower';
 import { Gift } from '../model/gift';
@@ -13,7 +13,7 @@ import { Skill } from '../model/skill';
 export class CharacterController{
 
   static generateId(name: string): string {
-      return name.concat('_', Date.now().toString());
+      return `${name}_${Date.now()}`;
   }
 
   static getCharacterValidation(character: Character): CharacterValidationResponse{
@@ -116,7 +116,8 @@ export class CharacterController{
 
   private static copyCombatEquip(combatEq: any[]): CombatEquip[]{
       return combatEq.map( equip => {
-        const combatEqui: CombatEquip = new CombatEquip(equip.name);
+        const combatEqui: CombatEquip = new CombatEquip(CombatEquipEnum.WEAPON_CC_SHORT, equip.name);
+        combatEqui.setEquipType(equip.equipType);
         combatEqui.setInitialDamage(equip.initialDamage);
         combatEqui.setActiveDefence(equip.activeDefence);
         combatEqui.setArmor(equip.armor);
@@ -154,17 +155,8 @@ export class CharacterController{
     return godAffinities.map( godAf => new GodAffinity( godAf.god, godAf.affinity, godAf.aretes, godAf.hamartias ));
   }
 
-  private static copyPowers(powers: any[]): Power[]{
-    return powers.map( power => {
-      const powerR = new Power(power.name);
-      powerR.setMinimumAfinity(power.minimumAfinity);
-      powerR.setAction(power.action);
-      powerR.setSpecialResistAction(power.specialResistAction);
-      powerR.setEffect(power.effect);
-      powerR.setCost(power.cost);
-      powerR.setDuration(power.duration);
-      return powerR;
-    });
+  private static copyPowers(powers: any[]): Power[] {
+    return powers.map( power => new Power(power.name));
   }
 
   private static copySkills(skills: any[]): Skill[]{

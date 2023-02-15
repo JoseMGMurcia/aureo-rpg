@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Character } from '../model/character';
 import { GiftData } from '../model/giftData';
+import { PowersData } from '../model/powerData';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,9 @@ export class CharactersService {
   public giftData: BehaviorSubject<any> = new BehaviorSubject(null);
   public giftData$ =this.giftData.asObservable();
 
+  public powersData: BehaviorSubject<any> = new BehaviorSubject(null);
+  public powersData$ =this.giftData.asObservable();
+
   public setGiftData(data: GiftData): void {
     this.giftData.next(data);
   }
@@ -28,4 +32,9 @@ export class CharactersService {
   public setCharacter(character: Character): void {
     this.character.next(character);
   }
+
+  public setPowersData(powers: PowersData): void {
+    this.powersData.next(powers);
+  }
+
 }

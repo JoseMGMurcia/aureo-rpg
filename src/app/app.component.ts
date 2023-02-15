@@ -53,6 +53,7 @@ export class AppComponent implements OnInit{
     this.setTranslations();
     this.loadCharacters();
     this.loadGiftData();
+    this.loadPowersData();
   }
 
   private setTranslations() {
@@ -74,9 +75,16 @@ export class AppComponent implements OnInit{
   }
 
   private loadGiftData(){
-    this.jsonService.getJsonData(FILES.GIFTS)
+    this.jsonService.getGiftsDataFromJson(FILES.GIFTS)
     .subscribe(data => {
       this.characterService.setGiftData(data);
+    });
+  }
+
+  private loadPowersData(){
+    this.jsonService.getPowersDataFromJson(FILES.POWERS)
+    .subscribe(data => {
+      this.characterService.setPowersData(data);
     });
   }
 }
