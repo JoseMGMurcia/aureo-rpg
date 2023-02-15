@@ -17,6 +17,8 @@ import { EditListComponent } from 'src/app/components/edition/edit-list/edit-lis
 import { EditAfinitiesComponent } from 'src/app/components/edition/edit-afinities/edit-afinities.component';
 import { EditGiftsComponent } from 'src/app/components/edition/edit-gifts/edit-gifts.component';
 import { EditCombatComponent } from 'src/app/components/edition/edit-combat/edit-combat.component';
+import { EditFollowersComponent } from 'src/app/components/edition/edit-followers/edit-followers.component';
+import { EditCompanionsComponent } from 'src/app/components/edition/edit-companions/edit-companions.component';
 
 export const createTranslateLoader = (http: HttpClient) =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,7 +31,9 @@ const editComnponents = [
   EditPowersComponent,
   EditAfinitiesComponent,
   EditGiftsComponent,
-  EditCombatComponent
+  EditCombatComponent,
+  EditFollowersComponent,
+  EditCompanionsComponent
 ];
 
 @NgModule({

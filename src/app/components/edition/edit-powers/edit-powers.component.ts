@@ -24,7 +24,7 @@ export class EditPowersComponent{
   @Output() exitModal: EventEmitter<any> = new EventEmitter<any>();
 
   public tabledata: any[] =[];
-  public tableConfiguration: TableDataConfiguration = getPowersDataConfiguration(this.translate, this.showCombatEquipDetail);
+  public tableConfiguration: TableDataConfiguration = getPowersDataConfiguration(this.translate, this.showPowersDetail);
   public character: Character = new Character('Pepe');
   public powersData: PowersData = new PowersData();
   public powers: Power[] = [];
@@ -160,7 +160,7 @@ export class EditPowersComponent{
     }
   }
 
-  private showCombatEquipDetail(row: any){
+  private showPowersDetail(row: any){
     openPowerDetail(row);
   }
 }

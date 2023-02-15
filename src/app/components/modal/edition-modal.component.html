@@ -109,5 +109,15 @@
         (exitModal)="cancel()"
         (saveCharacter)="confirm()">
       </app-edit-combat>
+      <app-edit-companions
+        *ngSwitchCase="id.COMPANIONS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-companions>
+      <app-edit-followers
+        *ngSwitchCase="id.FOLLOWERS"
+        (exitModal)="cancel()"
+        (saveCharacter)="confirm()">
+      </app-edit-followers>
     </container-element>
   </div>
