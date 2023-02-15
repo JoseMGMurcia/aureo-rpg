@@ -13,7 +13,7 @@ import { Skill } from '../model/skill';
 export class CharacterController{
 
   static generateId(name: string): string {
-      return name.concat('_', Date.now().toString());
+      return `${name}_${Date.now()}`;
   }
 
   static getCharacterValidation(character: Character): CharacterValidationResponse{
@@ -155,17 +155,8 @@ export class CharacterController{
     return godAffinities.map( godAf => new GodAffinity( godAf.god, godAf.affinity, godAf.aretes, godAf.hamartias ));
   }
 
-  private static copyPowers(powers: any[]): Power[]{
-    return powers.map( power => {
-      const powerR = new Power(power.name);
-      powerR.setMinimumAfinity(power.minimumAfinity);
-      powerR.setAction(power.action);
-      powerR.setSpecialResistAction(power.specialResistAction);
-      powerR.setEffect(power.effect);
-      powerR.setCost(power.cost);
-      powerR.setDuration(power.duration);
-      return powerR;
-    });
+  private static copyPowers(powers: any[]): Power[] {
+    return powers.map( power => new Power(power.name));
   }
 
   private static copySkills(skills: any[]): Skill[]{

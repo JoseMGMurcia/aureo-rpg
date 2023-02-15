@@ -62,25 +62,18 @@ export const getGiftsDataConfiguration = (translate: TranslateService, handleCli
   };
 };
 
-export const getPowersDataConfiguration = (translate: TranslateService): TableDataConfiguration =>{
+export const getPowersDataConfiguration = (translate: TranslateService, handleClickRow:(row: any)=> void): TableDataConfiguration =>{
   const transLations = translate.instant('DETAIL_PAGE.POWERS_SEC');
   return {
+    onClickRow: (row: any)=> handleClickRow(row) ,
     columns: [
       {
         id: 'name',
         name: transLations.NAME
       },
       {
-        id: 'effect',
-        name: transLations.EFFECT
-      },
-      {
-        id: 'cost',
-        name: transLations.COST
-      },
-      {
-        id: 'duration',
-        name: transLations.DURATION
+        id: 'am',
+        name: transLations.AM
       }
     ]
   };

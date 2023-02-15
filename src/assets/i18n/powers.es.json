@@ -2,7 +2,7 @@
   "POWERS": [
     {
       "ID": "AF1",
-      "NAME": "SENTIR AL AMANTE",
+      "NAME": "Sentir al amante",
       "COST": -1,
       "AM": "SEN +Intuir [Adivinación]",
       "AFINITY": "Afrodita nivel 3",
@@ -14,7 +14,7 @@
     },
     {
       "ID": "AF2",
-      "NAME": "SECRETOS DE SEDUCCIÓN",
+      "NAME": "Secretos de seducción",
       "COST": -2,
       "AM": "Automático",
       "AFINITY": "Afrodita nivel 3",
@@ -26,7 +26,7 @@
     },
     {
       "ID": "AF3",
-      "NAME": "LARGO BESO DE BUENAS NOCHES",
+      "NAME": "Largo beso de buenas noches",
       "COST": -3,
       "AM": "MEN +Medicina [Tratamiento]",
       "AFINITY": "Afrodita nivel 3",
@@ -38,7 +38,7 @@
     },
     {
       "ID": "AF4",
-      "NAME": "MAESTRA DE CONSEJOS",
+      "NAME": "Maestra de consejos",
       "COST": -4,
       "AM": "MEN +Politica [Administración]",
       "AFINITY": "Afrodita nivel 3",
@@ -50,7 +50,7 @@
     },
     {
       "ID": "AF5",
-      "NAME": "EXTENUAR",
+      "NAME": "Extenuar",
       "COST": -5,
       "AM": "APA +Seducir [Hombre/Mujer]",
       "AFINITY": "Afrodita nivel 3",
@@ -62,7 +62,7 @@
     },
     {
       "ID": "AF6",
-      "NAME": "CONFIANZA ENTRE AMANTES",
+      "NAME": "Confianza entre amantes",
       "COST": -6,
       "AM": "COM +Oratoria [Retórica]",
       "AE": "ALM +Templanza [Introspección]",
@@ -75,7 +75,7 @@
     },
     {
       "ID": "AF7",
-      "NAME": "INTENSIFICAR EMOCIÓN",
+      "NAME": "Intensificar emoción",
       "COST": -6,
       "AM": "APA +Seducir [Hombre/Mujer]",
       "AE": "ALM +Templanza [Introspección]",
@@ -124,7 +124,7 @@
     },
     {
       "ID": "AF11",
-      "NAME": "EL TOQUE DE EROS",
+      "NAME": "El toque de Eros",
       "COST": -10,
       "AM": "APA +Seducir [Hombre/Mujer] + áureo permanente -5.",
       "AFINITY": "Afrodita nivel 4.",
@@ -136,7 +136,7 @@
     },
     {
       "ID": "AP1",
-      "NAME": "HERIR DE LEJOS",
+      "NAME": "Herir de lejos",
       "COST": -1,
       "AM": "Automático.",
       "AFINITY": "Apolo nivel 3.",
@@ -148,7 +148,7 @@
     },
     {
       "ID": "AP2",
-      "NAME": "LA VIRTUD DE SER COMEDIDO",
+      "NAME": "La virtud de ser comedido",
       "COST": -2,
       "AM": "Automático.",
       "AFINITY": "Apolo nivel 3.",
@@ -220,7 +220,7 @@
     },
     {
       "ID": "AP08",
-      "NAME": "COMBATE ACROBÁTICO",
+      "NAME": "Combate acrobático",
       "COST": -7,
       "AM": "AGI +Atletismo [Acrobacias]",
       "AFINITY": "Apolo nivel 4",
@@ -317,7 +317,7 @@
     },
     {
       "ID": "ARE05",
-      "NAME": "ENCONTRAR ARMA",
+      "NAME": "Encontrar arma",
       "COST": -4,
       "AM": "SEN +Batalla [Terreno]",
       "AFINITY": "Ares nivel 3",
@@ -329,7 +329,7 @@
     },
     {
       "ID": "ARE06",
-      "NAME": "GOLPEA DONDE DUELE",
+      "NAME": "Golpea donde duele",
       "COST": -4,
       "AM": "MEN +Medicina [Tortura]",
       "AFINITY": "Ares nivel 3",
@@ -341,7 +341,7 @@
     },
     {
       "ID": "ARE07",
-      "NAME": "¡NO HAY DOLOR!",
+      "NAME": "¡No hay dolor!",
       "COST": -5,
       "AM": "RES +Dureza [Inmunidad]",
       "AFINITY": "Ares nivel 3",
@@ -401,7 +401,7 @@
     },
     {
       "ID": "ARE12",
-      "NAME": "EL TÁRTARO NO ME QUIERE",
+      "NAME": "El tártaro no me quiere",
       "COST": 1,
       "AM": "Automático",
       "AFINITY": "Ares nivel 4",
@@ -425,7 +425,7 @@
     },
     {
       "ID": "ART01",
-      "NAME": "SUSURRO DE LAS NINFAS",
+      "NAME": "Susurro de las ninfas",
       "COST": -1,
       "AM": "SEN +Intuir [Adivinación]",
       "AFINITY": "Artemisa nivel 3",
@@ -436,56 +436,8 @@
       "CONDITIONS": "Este rezo funciona en cualquier lugar excepto en las polis, ya que allí no habitan las ninfas."
     },
     {
-      "ID": "ART02",
-      "NAME": "SEÑORA DE LAS BESTIAS",
-      "COST": -2,
-      "AM": "Automático",
-      "AFINITY": "Artemisa nivel 3",
-      "DURATION": "1 Escena",
-      "AFFECT": "a uno mismo",
-      "DESCRIPTION": "Artemisa es la señora de todas las criaturas que viven en el bosque, y sus seguidoras pueden hacer valer su legado.",
-      "RULES": "+2 a Zoología. +1 al Daño Base cuando pelees contra una criatura.",
-      "CONDITIONS": ""
-    },
-    {
-      "ID": "ART03",
-      "NAME": "CONTRA EL VIENTO",
-      "COST": -3,
-      "AM": "Automático",
-      "AFINITY": "Artemisa nivel 3",
-      "DURATION": "1 Escena",
-      "AFFECT": "a uno mismo",
-      "DESCRIPTION": "En muchas ocasiones el éxito de la caza es determinado por la habilidad del cazador de no ser detectado por su presa hasta el último segundo.",
-      "RULES": "+2 a Sigilo.",
-      "CONDITIONS": "no funciona dentro de una polis."
-    },
-    {
-      "ID": "ART04",
-      "NAME": "RASTREAR LA PRESA",
-      "COST": -4,
-      "AM": "SEN +Supervivencia [Rastrear]",
-      "AFINITY": "Artemisa nivel 3",
-      "DURATION": "1 Escena",
-      "AFFECT": "vincula a uno mismo con un objetivo",
-      "DESCRIPTION": "Una vez que las presas son heridas, rara vez consiguen escapar de los cazadores expertos.",
-      "RULES": "La seguidora de Artemisa puede saber aproximadamente a cuánta distancia y la dirección en la que se encuentra cualquier persona con la que haya luchado y/o haya herido durante esa Escena.",
-      "CONDITIONS": ""
-    },
-    {
-      "ID": "ART05",
-      "NAME": "FRENESÍ DE LA CAZA",
-      "COST": -5,
-      "AM": "Automático",
-      "AFINITY": "Artemisa nivel 3",
-      "DURATION": "1 Escena",
-      "AFFECT": "a uno mismo",
-      "DESCRIPTION": "La emoción de la caza hace que algunos movimientos rutinarios, como cargar el arco, se hagan a una velocidad vertiginosa.",
-      "RULES": "+2 a Armas D.",
-      "CONDITIONS": ""
-    },
-    {
       "ID": "ART06",
-      "NAME": "SEÑORA DE LAS BESTIAS",
+      "NAME": "Señora de las bestias",
       "COST": -2,
       "AM": "Automático",
       "AFINITY": "Artemisa nivel 3",
@@ -497,7 +449,7 @@
     },
     {
       "ID": "ART07",
-      "NAME": "CONTRA EL VIENTO",
+      "NAME": "Contra el viento",
       "COST": -3,
       "AM": "Automático",
       "AFINITY": "Artemisa nivel 3",
@@ -509,7 +461,7 @@
     },
     {
       "ID": "ART08",
-      "NAME": "RASTREAR LA PRESA",
+      "NAME": "Rastrear la presa",
       "COST": -4,
       "AM": "SEN +Supervivencia [Rastrear]",
       "AFINITY": "Artemisa nivel 3",
@@ -521,7 +473,7 @@
     },
     {
       "ID": "ART09",
-      "NAME": "FRENESÍ DE LA CAZA",
+      "NAME": "Frenesí de la caza",
       "COST": -5,
       "AM": "Automático",
       "AFINITY": "Artemisa nivel 3",
@@ -545,7 +497,7 @@
     },
     {
       "ID": "ART11",
-      "NAME": "CURACIÓN LUNAR",
+      "NAME": "Curación lunar",
       "COST": -7,
       "AM": "MEN +Medicina [Tratamiento]",
       "AFINITY": "Artemisa nivel 3",
@@ -557,7 +509,7 @@
     },
     {
       "ID": "ART12",
-      "NAME": "PROTECCIÓN DE HÉCATE",
+      "NAME": "Protección de hécate",
       "COST": -7,
       "AM": "ALM +Teología [Arcanos]",
       "AFINITY": "Artemisa nivel 3",
@@ -569,7 +521,7 @@
     },
     {
       "ID": "ART13",
-      "NAME": "DESTREZA DE LA CAZADORA",
+      "NAME": "Destreza de la cazadora",
       "COST": -8,
       "AM": "Automático",
       "AFINITY": "Artemisa nivel 4",
@@ -581,7 +533,7 @@
     },
     {
       "ID": "ART14",
-      "NAME": "INVOCAR LA JAURÍA",
+      "NAME": "Invocar la jauría",
       "COST": -9,
       "AM": "COM +Zoología [Trato] + áureo permanente -5",
       "AFINITY": "Artemisa nivel 4",
@@ -593,7 +545,7 @@
     },
     {
       "ID": "ART15",
-      "NAME": "VESTIR LA PIEL DE LA BESTIA",
+      "NAME": "Vestir la piel de la bestia",
       "COST": -10,
       "AM": "ALM +Zoología [Trato] + áureo permanente -5.",
       "AFINITY": "Artemisa nivel 4",
@@ -604,19 +556,8 @@
       "CONDITIONS": "El personaje deberá haber cazado personalmente la criatura de la que vista las pieles a lo largo de sus aventuras. Esta criatura debe tener áureo. En caso de que sea un personaje inicial, podrá gastar 1 PX durante la creación del personaje para empezar con la piel de una criatura que le permita utilizar este rezo. *El coste de este rezo es variable: el personaje tendrá que invertir 1 punto de áureo por cada 10 PX que cueste el don divino (redondeando hacia arriba)."
     },
     {
-      "ID": "ART16",
-      "NAME": "VESTIR LA PIEL DE LA BESTIA",
-      "COST": -10,
-      "AM": "ALM + Zoología [Trato] + áureo permanente",
-      "AFINITY": "Artemisa nivel 4.",
-      "DURATION": "1 Escena.",
-      "AFFECT": "a uno mismo.",
-      "DESCRIPTION": "Las cazadoras suelen lucir en sus vestimentas las pieles de las criaturas legendarias a las que han dado caza. Algunas de ellas han obtenido el secreto de Artemisa de poder obtener la fuerza sobrenatural de esas criaturas a través de sus pieles.",
-      "RULES": "El personaje obtiene un don divino relacionado con el trozo de piel de la criatura mítica que mató: un animal con una piel gruesa podría otorgar Megarresistencia o Armadura de piel; una criatura voladora podría otorgar Alas, o una muy astuta Megamente.",
-      "CONDITIONS": "El personaje deberá haber cazado personalmente la criatura de la que vista las pieles a lo largo de sus aventuras. Esta criatura debe tener áureo. En caso de que sea un personaje inicial, podrá gastar 1 PX durante la creación del personaje para empezar con la piel de una criatura que le permita utilizar este rezo. El coste de este rezo es variable: el personaje tendrá que invertir 1 punto de áureo por cada 10 PX que cueste el don divino (redondeando hacia arriba)."
-    },
-    {
-      "NAME": "CONOCER LA LEY",
+      "ID": "ATE01",
+      "NAME": "Conocer la ley",
       "COST": -1,
       "AM": "Automático",
       "AFINITY": "Atenea nivel 3",
@@ -627,7 +568,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "CIUDADANO DE TODAS LAS POLIS",
+      "ID": "ATE02",
+      "NAME": "Ciudadano de todas las polis",
       "COST": -2,
       "AM": "MEN +Política [Ciudades]",
       "AFINITY": "Atenea nivel 3",
@@ -638,7 +580,8 @@
       "CONDITIONS": "solo puede ser utilizado en polis."
     },
     {
-      "NAME": "GRITO DE GUERRA “E-LE-LEU”",
+      "ID": "ATE03",
+      "NAME": "Grito de guerra “E-LE-LEU”",
       "COST": -3,
       "AM": "COM +Oratoria [Inspirar]",
       "AFINITY": "Atenea nivel 3",
@@ -649,7 +592,8 @@
       "CONDITIONS": "los personajes deben gritar «E-le-leu» repetidas veces antes y durante el combate, por lo que ningún adversario podrá ser pillado por sorpresa. Los efectos de este rezo se disipan automáticamente si se reza a cualquier otro dios que no sea Atenea."
     },
     {
-      "NAME": "OJOS DE AVE NOCTURNA",
+      "ID": "ATE04",
+      "NAME": "Ojos de ave nocturna",
       "COST": -4,
       "AM": "Automático",
       "AFINITY": "Atenea nivel 3",
@@ -660,6 +604,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "ATE05",
       "NAME": "Punto Débil",
       "COST": -5,
       "AM": "SEN +(habilidad propia igual a la habilidad que se quiera examinar del oponente)",
@@ -671,7 +616,8 @@
       "CONDITIONS": "Hay que observar al adversario al menos durante un Turno utilizando la habilidad en cuestión (observar es una Acción Pasiva). No se puede hacer contra habilidades que estén a nivel 5 o más, o en las que el personaje haya alcanzado una maestría"
       },
       {
-      "NAME": "Sabiduría Protectora",
+        "ID": "ATE06",
+        "NAME": "Sabiduría Protectora",
       "COST": -5,
       "AM": "MEN +Filosofía [Ética]",
       "AFINITY": "Atenea nivel 4",
@@ -682,6 +628,7 @@
       "CONDITIONS": "Este rezo dejará de estar activado en el momento en el que el personaje cometa un pecado contra Atenea"
     },
     {
+      "ID": "ATE07",
       "NAME": "Atraer al enemigo a tu terreno",
       "COST": -6,
       "AM": "MEN + Batalla [Terreno]",
@@ -693,6 +640,7 @@
       "CONDITIONS": "Solo se puede activar una vez por Escena y después de realizar Defensa Total contra el objetivo en el turno anterior"
     },
     {
+      "ID": "ATE08",
       "NAME": "Las matemáticas del universo",
       "COST": -7,
       "AM": "MEN +Filosofía [Matemáticas]",
@@ -704,6 +652,7 @@
       "CONDITIONS": "Debes pasar un turno completo concentrado en silencio sin hacer nada más que una operación matemática en la cabeza"
     },
     {
+      "ID": "ATE09",
       "NAME": "La mente del dios",
       "COST": -8,
       "AM": "Automático",
@@ -715,6 +664,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "ATE10",
       "NAME": "Superioridad Intelectual",
       "COST": -8,
       "AM": "Automático",
@@ -726,6 +676,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "ATE11",
       "NAME": "Venerable Maestro",
       "COST": -9,
       "AM": "COM +Oratoria [Pedagogía] + áureo permanente -5",
@@ -737,8 +688,9 @@
       "CONDITIONS": "Solo puede hacerse una vez en la vida con cada personaje."
     },
     {
-      "NAME": "LA MIRADA DE MEDUSA",
-      "COST": 1,
+      "ID": "ATE12",
+      "NAME": "La mirada de medusa",
+      "COST": 10,
       "AM": "REF +Evitar [Escudo] + áureo permanente -5.",
       "AE": "REF +Evitar [Escudo] + áureo permanente -5.",
       "AFINITY": "Atenea nivel 4.",
@@ -749,6 +701,7 @@
       "CONDITIONS": "hace falta llevar un escudo en la mano, de la clase que sea. Este rezo solo se puede activar una vez por Escena."
     },
     {
+      "ID": "DIO01",
       "NAME": "Libre como Dioniso",
       "COST": -1,
       "AM": "Automático",
@@ -760,6 +713,7 @@
       "CONDITIONS": "Este rezo solo sirve para deshacer nudos/romper nudos/abrir cerraduras si tienen inmovilizado a un personaje (puede ser el personaje que reza u otro), no para otros contextos, como abrir el cofre del tesoro o el cerrojo de una celda."
     },
     {
+      "ID": "DIO02",
       "NAME": "Reponer Seguidor",
       "COST": -2,
       "AM": "COM +Liderar [Todos]",
@@ -771,6 +725,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "DIO03",
       "NAME": "El Alma de la Fiesta",
       "COST": -3,
       "AM": "Automático",
@@ -782,6 +737,7 @@
       "CONDITIONS": "Debe hacerse en una fiesta."
     },
     {
+      "ID": "DIO04",
       "NAME": "Resistente a los Venenos",
       "COST": -4,
       "AM": "Automático",
@@ -793,6 +749,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "DIO05",
       "NAME": "Tocando la fibra sensible",
       "COST": -4,
       "AM": "COM +Oratoria [Retórica]",
@@ -805,6 +762,7 @@
       "CONDITIONS": "el objetivo debe poder escuchar tu insulto y ser capaz de entenderlo (las criaturas no inteligentes, los extranjeros que no hablen heleno o los sordos son inmunes a este rezo)"
     },
     {
+      "ID": "DIO06",
       "NAME": "Sacrificar Seguidor",
       "COST": -5,
       "AM": "COM + Liderar [Militar]",
@@ -816,7 +774,8 @@
       "CONDITIONS": "El seguidor que se sacrifique debe ser seguidor del rezante: no se puede sacrificar a seguidores de otros personajes. Este rezo solo se puede hacer una vez por Escena."
     },
     {
-      "NAME": "INVOCAR VIDES",
+      "ID": "DIO07",
+      "NAME": "Invocar vides",
       "COST": -6,
       "AM": "ALM +Herbolaria [Agricultura]",
       "AFINITY": "Dioniso nivel 4",
@@ -827,7 +786,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "EL ESPÍRITU DEL ALCOHOL",
+      "ID": "DIO08",
+      "NAME": "El espíritu del alcohol",
       "COST": -7,
       "AM": "ALM +Dureza [Inmunidad]",
       "AFINITY": "Dioniso nivel 3",
@@ -838,7 +798,8 @@
       "CONDITIONS": "El rezante debe haber consumido grandes cantidades de vino, espuma de cebada u otra bebida alcohólica en la última hora. El rezante debe estar a un paso del objetivo del rezo. Este rezo ocupa un Turno completo. Este rezo solo se puede hacer una vez por Escena."
     },
     {
-      "NAME": "COMUNICADOR NATO",
+      "ID": "DIO09",
+      "NAME": "Comunicador nato",
       "COST": -8,
       "AM": "Automático",
       "AFINITY": "Dioniso nivel 4",
@@ -849,7 +810,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "LOS CAMINOS DE LA LOCURA",
+      "ID": "DIO10",
+      "NAME": "Los caminos de la locura",
       "COST": -9,
       "AM": "COM +Empatía [Sentimientos] + áureo permanente -5",
       "AFINITY": "Dioniso nivel 4",
@@ -860,7 +822,8 @@
       "CONDITIONS": "El rezante debe mantener una conversación con el objetivo del rezo"
     },
     {
-      "NAME": "EL TOQUE DE MIDAS",
+      "ID": "DIO11",
+      "NAME": "El toque de midas",
       "COST": -10,
       "AM": "ALM +Oratoria [Comercio] + áureo permanente -5",
       "AFINITY": "Dioniso nivel 4",
@@ -871,7 +834,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "EN EL NOMBRE DE LA MUERTE",
+      "ID": "HAD01",
+      "NAME": "En el nombre de la muerte",
       "COST": -1,
       "AM": "MEN +Tanatología [Cadáver]",
       "AFINITY": "Hades nivel 3",
@@ -882,7 +846,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "IDENTIFICAR A AGENTES DEL HADES",
+      "ID": "HAD02",
+      "NAME": "Identificar a agentes del hades",
       "COST": -2,
       "AM": "SEN +Intuir [Adivinación]",
       "AE": "COM +Oratoria [Retórica]",
@@ -894,6 +859,7 @@
       "CONDITIONS": "Los objetivos deben de estar a la vista del rezante"
     },
     {
+      "ID": "HAD03",
       "NAME": "Sabiduría de las Parcas",
       "COST": -3,
       "AM": "MEN +Tanatología [Inframundo]",
@@ -905,6 +871,7 @@
       "CONDITIONS": "Tienes que saber el nombre completo de la persona o tener un objeto suyo muy personal."
     },
     {
+      "ID": "HAD04",
       "NAME": "Máscara de Miedo",
       "COST": -4,
       "AM": "Automático",
@@ -916,6 +883,7 @@
       "CONDITIONS": "Todos los personajes con los que utilices tus habilidades aumentadas por este rezo te temerán y rechazarán cuando puedan evitarlo: puede que tengan que hacer lo que tú quieras por miedo, pero no puedes obligarles a que les caigas bien ni que te quieran (de hecho, lo normal es que te odien)."
     },
     {
+      "ID": "HAD05",
       "NAME": "Voz del Inframundo",
       "COST": -5,
       "AM": "COM +Intimidar [Amenazar]",
@@ -928,6 +896,7 @@
       "CONDITIONS": "No se puede hacer durante el combate (pero sí en el Turno antes de que empiece uno)."
     },
     {
+      "ID": "HAD06",
       "NAME": "Juegos de Melínoe",
       "COST": -6,
       "AM": "APA +Intimidar [Solitario]",
@@ -940,7 +909,8 @@
       "CONDITIONS": "Aquellos que tengan Afinidad 4 o más con Hades serán inmunes a este rezo."
     },
     {
-      "NAME": "ATRAER LA LLAMA DE LA MUERTE",
+      "ID": "HAD07",
+      "name": "atraer la llama de la muerte",
       "COST": -7,
       "AM": "ALM +Tanatología [Cadáver]",
       "AFINITY": "Hades nivel 4",
@@ -951,7 +921,8 @@
       "CONDITIONS": "debe de haber un fuego. El rezante debe encontrarse a menos de 50 pasos del fuego. Tanto el que causa la pérdida de Puntos de Vida como el que los recibe deben estar en el área de acción del rezo. Solo puede activarse una vez por Escena."
     },
     {
-      "NAME": "CONOCIMIENTO ANATÓMICO DE LA MUERTE",
+      "ID": "HAD08",
+      "NAME": "Conocimiento anatómico de la muerte",
       "COST": -7,
       "AM": "MEN +Medicina [Tortura]",
       "AFINITY": "Hades nivel 4",
@@ -962,7 +933,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "AMPLIAR EL ESPÍRITU",
+      "ID": "HAD09",
+      "NAME": "Ampliar el espíritu",
       "COST": -8,
       "AM": "Automático",
       "AFINITY": "Hades nivel 4",
@@ -973,6 +945,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "HAD10",
       "NAME": "Robar partes del alma",
       "COST": -9,
       "AM": "ALM +Robar [Prestidigitación]",
@@ -984,8 +957,9 @@
       "CONDITIONS": "El seguidor de Hades tiene que matar o colaborar en la muerte de la persona con la que quiera intercambiar la característica. El seguidor de Hades tendrá que respirar el último aliento de su víctima, por lo que tendrá que estar máximo a 2 pasos (1 metro) de distancia cuando este muera."
     },
     {
+      "ID": "HAD11",
       "NAME": "Portar el Yelmo de Hades",
-      "COST": 1,
+      "COST": 10,
       "AM": "ALM +Tanatología [Inframundo] + áureo",
       "AFINITY": "Hades nivel 4",
       "DURATION": "1 Escena",
@@ -995,6 +969,7 @@
       "CONDITIONS": "no afecta a aquellos que tengan SEN 6 o que sean ciegos"
     },
     {
+      "ID": "HEF01",
       "NAME": "Trabajar sin descanso",
       "COST": -1,
       "AM": "RES +Dureza [Fondo]",
@@ -1006,6 +981,7 @@
       "CONDITIONS": "solo se aplica en trabajos como artesanos, herreros, comerciantes, investigadores... No sirve para profesiones relacionadas con el combate, como soldado, mercenario, asesino..."
     },
     {
+      "ID": "HEF02",
       "NAME": "Encontrar el fallo de la técnica",
       "COST": -2,
       "AM": "SEN + Metalurgia [Todos] o Arte [Arquitectura]",
@@ -1017,7 +993,8 @@
       "CONDITIONS": "no se puede utilizar con armas, armaduras, yelmos o escudos: solo objetos que requieran un mecanismo complejo. Debes golpear el objeto con algo, aunque sea con las manos desnudas, una piedra o un objeto arrojadizo (no hace falta que este ataque cause ningún daño; solo que to que el objeto en cuestión). No se puede utilizar con tecnología avanzada (a menos que se comprenda) o divina. No se puede utilizar con objetos mágicos."
     },
     {
-      "NAME": "PÚGIL MAESTRO",
+      "ID": "HEF03",
+      "NAME": "Púgil maestro",
       "COST": -3,
       "AM": "Automático",
       "AFINITY": "Hefesto nivel 3",
@@ -1028,6 +1005,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "HEF04",
       "NAME": "Trabajar con armas divinas",
       "COST": -4,
       "AM": "FUE + Metalurgia [Todas] o SEN + Metalurgia [Todas]",
@@ -1039,7 +1017,8 @@
       "CONDITIONS": "solo sirve para armas (objetos diseñados para causar daño) metálicas. No sirve con otros objetos (como adornos, instrumentos musicales...) ni con armaduras."
     },
     {
-    "NAME": "Trabajar con armaduras divinas",
+      "ID": "HEF05",
+      "NAME": "Trabajar con armaduras divinas",
       "COST": -4,
       "AM": "FUE + Metalurgia [Todas] (si son armaduras o escudos metálicos) o ALM +Arte [Artesanado] (si son armaduras de cuero o capas) o SEN + Metalurgia [Todas] o Arte [Artesanado]",
       "AFINITY": "Hefesto nivel 3",
@@ -1050,6 +1029,7 @@
       "CONDITIONS": "solo sirve para armaduras: objetos diseñados para atenuar el  daño de golpes. No sirve con armas ni con ningún otro tipo de objetos"
     },
     {
+      "ID": "HEF06",
       "NAME": "Trabajar con objetos divinos",
       "COST": -4,
       "AM": "ALM +Arte [Artesanado] o SEN + Arte [Artesanado]",
@@ -1061,6 +1041,7 @@
       "CONDITIONS": "Este rezo solo sirve para objetos que no sean ni armas ni armaduras."
     },
     {
+      "ID": "HEF07",
       "NAME": "Ignorar el cansancio",
       "COST": -5,
       "AM": "RES +Dureza [Fondo]",
@@ -1072,7 +1053,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "INVENTIVA PRODIGIOSA",
+      "ID": "HEF08",
+      "NAME": "Inventiva prodigiosa",
       "COST": -6,
       "AM": "Automático",
       "AFINITY": "Hefesto nivel 4",
@@ -1083,7 +1065,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "BENDECIR EQUIPO",
+      "ID": "HEF09",
+      "NAME": "Bendecir equipo",
       "COST": -7,
       "AM": "ALM +Metalurgia [Todas] o Arte [Artesanado]",
       "AFINITY": "Hefesto nivel 4",
@@ -1094,7 +1077,8 @@
       "CONDITIONS": "solo sirve para armaduras: objetos diseñados para atenuar el daño de golpes. No sirve con armas ni con ningún otro tipo de objetos"
     },
     {
-      "NAME": "RESISTENCIA COMO EL BRONCE",
+      "ID": "HEF10",
+      "NAME": "Resistencia como el bronce",
       "COST": -8,
       "AM": "Automático",
       "AFINITY": "Hefesto nivel 4",
@@ -1105,7 +1089,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "FORJA INTERIOR",
+      "ID": "HEF11",
+      "NAME": "Forja interior",
       "COST": -9,
       "AM": "ALM +Metalurgia [Todas] + áureo permanente",
       "AFINITY": "Hefesto nivel 4",
@@ -1116,7 +1101,8 @@
       "CONDITIONS": "solo funciona con objetos metálicos o mayormente metálicos"
     },
     {
-      "NAME": "DOTAR CON LA ESENCIA DEL OLIMPO",
+      "ID": "HEF12",
+      "NAME": "Dotar con la esencia del olimpo",
       "COST": -10,
       "AM": "ALM +Metalurgia [Todos] (objetos de metal) + áureo permanente -5 o Arte [Artesanado, Arquitec- tura] (objetos no metálicos) + áureo permanente -5  Coste: 1 punto de áureo por cada punto de mejora sobrenatural.",
       "AFINITY": "Hefesto nivel 4",
@@ -1127,7 +1113,8 @@
       "CONDITIONS": "Si quieres  dar una mejora sobrenatural a un arma, necesitas el rezo Trabajar con armas divinas. Si quieres dárselos a una armadura, necesitas el rezo Trabajar con armaduras divinas, o si quieres dárselos a  un objeto, necesitas el rezo Trabajar con objetos divinos. A diferencia de los objetos hechos por los dioses, los que realizan sus seguidores solo pueden tener una mejora sobrenatural. Un objeto que ya ha sido mejorado no puede volver a mejorarse. Un seguidor de Hefesto no puede introducir mejoras sobrenaturales  en un objeto que tengan un coste mayor en PX que su áureo permanente. El personaje solo podrá introducir rezos en el objeto que conozca por sí mismo."
     },
     {
-      "NAME": "CONCIENCIA CONYUGAL",
+      "ID": "HER01",
+      "NAME": "Conciencia conyugal",
       "COST": -1,
       "AM": "Automático.",
       "AFINITY": "Hera nivel 3",
@@ -1138,7 +1125,8 @@
       "CONDITIONS": "hay que estar casado para usar este rezo. Que la persona que trate de seducirte no sea tu marido/mujer."
     },
     {
-      "NAME": "CUIDADOS CASEROS",
+      "ID": "HER02",
+      "NAME": "Cuidados caseros",
       "COST": -2,
       "AM": "ALM +Medicina [Tratamiento].",
       "AFINITY": "Hera nivel 3",
@@ -1149,7 +1137,8 @@
       "CONDITIONS": "El rezante no puede alejarse más de 100 pasos (50 metros) del enfermo, y debe hacerle frecuentes visitas a la cama y darle distintos cuidados, como sopas, paños con agua limpia..."
     },
     {
-      "NAME": "SENTIR LAS ENTRAÑAS",
+      "ID": "HER03",
+      "NAME": "Sentir las entrañas",
       "COST": -3,
       "AM": "SEN +Intuir [Adivinación].",
       "AFINITY": "Hera nivel 3",
@@ -1160,7 +1149,8 @@
       "CONDITIONS": "el objetivo del rezo debe estar a la vista del rezante."
     },
     {
-      "NAME": " LA AYUDA DE ILITIA",
+      "ID": "HER04",
+      "NAME": " La ayuda de ilitia",
       "COST": -4,
       "AM": "Automático.",
       "AFINITY": "Hera nivel 3",
@@ -1171,7 +1161,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": " VELAR POR EL FAMILIAR",
+      "ID": "HER05",
+      "NAME": " Velar por el familiar",
       "COST": -5,
       "AM": "ALM +Hogar [Intendencia].",
       "AFINITY": "Hera nivel 3",
@@ -1182,7 +1173,8 @@
       "CONDITIONS": "el rezo no puede hacerse a uno mismo; solo al personaje que sea un familiar directo. El beneficiario del rezo debe de tener una Afinidad con Hera de 3 o más. Solo se puede activar una vez al día."
     },
     {
-      "NAME": " LA VENGANZA DEL NÉMESIS",
+      "ID": "HER06",
+      "NAME": " La venganza del némesis",
       "COST": -6,
       "AM": "ALM +Política [Leyes].",
       "AFINITY": "Hera nivel 3",
@@ -1193,7 +1185,8 @@
       "CONDITIONS": "para que el rezo haga efecto, primero el rezante o aquel a quien represente debe haber sido agraviado (tienen que haber cometido un delito o una ofensa contra él). A partir de ahí, el bonus del rezo solo se aplica en acciones que vayan directamente enfoca das a lograr la venganza. Además, la venganza debe ser justa y a la medida de la ofensa (Némesis no te ayudará  a matar a alguien que haya insultado a tu hijo, pero sí  a destapar un escándalo que avergüence a su familia  tanto como las calumnias que hayan vertido contra tu familia)."
     },
     {
-      "NAME": " LA BENDICIÓN DE HESTIA",
+      "ID": "HER07",
+      "NAME": " La bendición de hestia",
       "COST": -7,
       "AM": "ALM +Hogar [Todas].",
       "AFINITY": "Hera nivel 3",
@@ -1204,7 +1197,8 @@
       "CONDITIONS": "solo funciona dentro de la casa de la persona que reza."
     },
     {
-      "NAME": " PEQUEÑOS ALIADOS",
+      "ID": "HER08",
+      "NAME": " Pequeños aliados",
       "COST": -7,
       "AM": "COM +Zoología [Trato].",
       "AFINITY": "Hera nivel 3",
@@ -1215,7 +1209,8 @@
       "CONDITIONS": "tener a la vista al objetivo del rezo. Solo se puede activar una vez por Escena."
     },
     {
-      "NAME": "LOS OJOS DE ARGOS",
+      "ID": "HER09",
+      "NAME": "Los ojos de argos",
       "COST": -8,
       "AM": "SEN +Intuir [Adivinación].",
       "AE": "AGI +Sigilo [Desapercibido].",
@@ -1227,7 +1222,8 @@
       "CONDITIONS": "solo se puede hacer con personas a las que hayas visto personalmente antes. No se puede hacer con personas que estén bajo efectos de rezos o dones que produzcan invisibilidad o aumenten el sigilo. Debido al pasado entre Argos y Hermes, no funciona si el objetivo del rezo está en un templo consagrado a Hermes ni en terreno sagrado de Hermes. Solo se puede activar una vez por Escena."
     },
     {
-      "NAME": "SENTIR EL LADO OSCURO",
+      "ID": "HER10",
+      "NAME": "Sentir el lado oscuro",
       "COST": -9,
       "AM": "SEN +Empatía [Mentiras] + áureo permanente -5. Coste: 1 punto de áureo.",
       "AE": "COM +Oratoria [Retórica] + áureo permanente -5",
@@ -1239,7 +1235,8 @@
       "CONDITIONS": "inmediatamente antes del rezo se debe de preguntar «¿pasa algo?», o «¿qué tal?», o «¿cómo estás?»."
     },
     {
-      "NAME": "SEMBRAR UNA IDEA",
+      "ID": "HER11",
+      "NAME": "Sembrar una idea",
       "COST": -10,
       "AM": "COM +Oratoria [Retórica] + áureo permanente -5 Coste: 1 punto de áureo.",
       "AE": "MEN +Templanza [Introspección] + áureo permanente -5",
@@ -1251,7 +1248,8 @@
       "CONDITIONS": "la idea que el rezante puede inculcar en el objetivo del rezo tiene que ser algo acorde con la naturaleza, valores y código moral del objetivo."
     },
     {
-      "NAME": " MAESTRO DEL REGATEO",
+      "ID": "HRM12",
+      "NAME": " Maestro del regateo",
       "COST": -1,
       "AM": "Automático",
       "AFINITY": "Hermes nivel 3",
@@ -1261,7 +1259,8 @@
       "RULES": "+3 a Oratoria [Comercio]."
     },
     {
-      "NAME": "OCULTARSE ENTRE LAS SOMBRAS",
+      "ID": "HRM13",
+      "NAME": "Ocultarse entre las sombras",
       "COST": -2,
       "AM": "Automático",
       "AFINITY": "Hermes nivel 3",
@@ -1272,7 +1271,8 @@
       "CONDITIONS": "solo funciona en lugares donde no da el sol directamente, por lo que habrá que buscar un callejón, un recoveco, meterse debajo de una caja..."
     },
     {
-      "NAME": "PORTAR EL CADUCEO",
+      "ID": "HRM14",
+      "NAME": "Portar el caduceo",
       "COST": -3,
       "AM": "COM +Zoología [Pastoreo] - áureo permanente de la criatura",
       "AFINITY": "Hermes nivel 3",
@@ -1283,7 +1283,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "PÚGIL VETERANO",
+      "ID": "HRM15",
+      "NAME": "Púgil veterano",
       "COST": -3,
       "AM": "Automático",
       "AFINITY": "Hermes nivel 3",
@@ -1293,7 +1294,8 @@
       "RULES": "+1 a Pelea [Boxeo]. +1 a Evitar cuando estés defendiéndote de golpes de boxeo o para esquivar o parar cualquier tipo de ataque cuando estés peleando y utilizando solo golpes de boxeo."
     },
     {
-      "NAME": "SECRETOS DE LA HERMANDAD",
+      "ID": "HRM16",
+      "NAME": "Secretos de la hermandad",
       "COST": -4,
       "AM": "Automático",
       "AFINITY": "Hermes nivel 3",
@@ -1304,7 +1306,8 @@
       "CONDITIONS": "si no se ha utilizado este rezo específicamente para robar algo, se debe robar algo de valor (Precio: 2 o más) en el plazo de 24 horas, no devolverlo voluntariamente y conservarlo en tu poder 24 horas, o tendrás un -1 malus general durante 24 horas."
     },
     {
-      "NAME": "SERVIDOR DEL PUEBLO",
+      "ID": "HRM17",
+      "NAME": "Servidor del pueblo",
       "COST": -4,
       "AM": "Automático",
       "AFINITY": "Hermes nivel 3",
@@ -1315,7 +1318,8 @@
       "CONDITIONS": "mientras se esté bajo la influencia de este rezo el personaje no podrá mentir totalmente en todo lo que diga, sino que tendrá que ir alternando partes que sean ciertas con algunas mentiras. Además, sus mentiras deberán ir enfocadas a obtener un bien superior que beneficiará a un buen número de personas o a los dioses, no solo a uno mismo."
     },
     {
-      "NAME": "VIAJERO CONSUMADO",
+      "ID": "HRM18",
+      "NAME": "Viajero consumado",
       "COST": -5,
       "AM": "RES +Supervivencia [Orientación].",
       "AFINITY": "Hermes nivel 3",
@@ -1326,7 +1330,8 @@
       "CONDITIONS": "solo cuando se está de viaje: el personaje tiene que haber iniciado un desplazamiento que le lleve a que la próxima noche duerma en una aldea, ciudad o lugar distinto al que descansó la noche anterior, como mínimo a 20 estadios de distancia (unos 5 km)."
     },
     {
-      "NAME": "SOPESAR CON OJOS EXPERTOS",
+      "ID": "HRM19",
+      "NAME": "Sopesar con ojos expertos",
       "COST": -6,
       "AM": "SEN +Intuir [Dioses].",
       "AFINITY": "Hermes nivel 3",
@@ -1337,7 +1342,8 @@
       "CONDITIONS": "El rezante debe ver los objetos a menos de dos pasos dedistancia (1 metro)."
     },
     {
-      "NAME": "SUSURROS Y RUMORES",
+      "ID": "HRM20",
+      "NAME": "Susurros y rumores",
       "COST": -7,
       "AM": "SEN +Percibir [Investigación].",
       "AFINITY": "Hermes nivel 3",
@@ -1348,7 +1354,8 @@
       "CONDITIONS": "solo puede ser utilizado en las polis. Solo se puede activar una vez al día."
     },
     {
-      "NAME": "HABLAR CON LAS HERMAS",
+      "ID": "HRM21",
+      "NAME": "Hablar con las hermas",
       "COST": -8,
       "AM": "COM +Oratoria [Retórica].",
       "AFINITY": "Hermes nivel 3",
@@ -1359,7 +1366,8 @@
       "CONDITIONS": "solo se puede hacer una vez al día."
     },
     {
-      "NAME": "EL ORÁCULO DE LOS SECRETOS",
+      "ID": "HRM22",
+      "NAME": "El oráculo de los secretos",
       "COST": -9,
       "AM": "COM +Oratoria [Comercio]. + áureo permanente -5.  Coste: 1 punto de áureo.",
       "AFINITY": "Hermes nivel 4",
@@ -1370,6 +1378,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "HRM23",
       "NAME": "El precio del alma",
       "COST": -10,
       "AM": "SEN +Empatía [Deseos] + áureo permanente -5.  Coste: 1 punto de áureo.",
@@ -1381,7 +1390,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "SENTIR AGUA",
+      "ID": "POS01",
+      "NAME": "Sentir agua",
       "COST": -1,
       "AM": "SEN +Oceanología [Todas].",
       "AFINITY": "Poseidón nivel 3",
@@ -1392,6 +1402,7 @@
       "CONDITIONS": ""
     },
     {
+      "ID": "POS02",
       "NAME": "Alimentarse de agua",
       "COST": -2,
       "AM": "ALM +Oceanología [Criaturas].",
@@ -1403,6 +1414,7 @@
       "CONDITIONS": "el agua debe ser potable y no estar mezclada con nada (vino, veneno...)."
     },
     {
+      "ID": "POS03",
       "NAME": "Capear el temporal",
       "COST": -2,
       "AM": "Automático.",
@@ -1414,7 +1426,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "HIDROTERAPIA",
+      "ID": "POS04",
+      "NAME": "Hidroterapia",
       "COST": -3,
       "AM": " MEN +Medicina [Tratamiento].",
       "AFINITY": "Poseidón nivel 3",
@@ -1425,7 +1438,8 @@
       "CONDITIONS": "la cantidad de agua para sumergirse debe ser suficientemente grande como para albergar todo su cuerpo (puede ser agua dulce o salada, por lo que vale una terma, un río, un lago o el propio mar para hacer el rezo). Este rezo solo puede activarse una vez cada 24 horas."
     },
     {
-      "NAME": "RESPIRAR AGUA",
+      "ID": "POS05",
+      "NAME": "Respirar agua",
       "COST": -4,
       "AM": "RES +Atletismo [Nadar].",
       "AFINITY": "Poseidón nivel 3",
@@ -1436,7 +1450,8 @@
       "CONDITIONS": "debe ser agua donde puedan nadar los peces: no podrá hacerlo en agua estancada, ponzoñosa, envenenada... Solo se puede activar una vez cada 24 horas."
     },
     {
-      "NAME": "CONTROLAR LAS CORRIENTES MARINAS",
+      "ID": "POS06",
+      "NAME": "Controlar las corrientes marinas",
       "COST": -5,
       "AM": " MEN +Oceanología [Navegación].",
       "AFINITY": "Poseidón nivel 3",
@@ -1447,7 +1462,8 @@
       "CONDITIONS": "El objetivo debe de estar a la vista"
     },
     {
-      "NAME": " SEÑOR DE LOS CABALLOS",
+      "ID": "POS07",
+      "NAME": " Señor de los caballos",
       "COST": -5,
       "AM": "Automático.",
       "AFINITY": "Poseidón nivel 3",
@@ -1458,7 +1474,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "INVOCAR CRIATURA MARINA",
+      "ID": "POS08",
+      "NAME": "Invocar criatura marina",
       "COST": -6,
       "AM": "ALM +Zoología [Trato] - áureo permanente de la criatura.",
       "AFINITY": "Poseidón nivel 3",
@@ -1469,7 +1486,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": " ORDENAR A CRIATURA MARINA",
+      "ID": "POS09",
+      "NAME": " Ordenar a criatura marina",
       "COST": -7,
       "AM": "COM +Zoología [Trato] - áureo permanente de la criatura.",
       "AFINITY": "Poseidón nivel 4",
@@ -1480,7 +1498,8 @@
       "CONDITIONS": "disponer de una criatura marina a la que dar órdenes: si no ha aparecido por su propia voluntad, habrá que invocarla previamente con el rezo Invocar criatura marina."
     },
     {
-      "NAME": "LLAMAR A LA NIEBLA",
+      "ID": "POS10",
+      "NAME": "Llamar a la niebla",
       "COST": -8,
       "AM": "ALM +Cosmología [Climatología].",
       "AFINITY": "Poseidón nivel 4",
@@ -1491,7 +1510,8 @@
       "CONDITIONS": "Encontrarse a una distancia máxima de 100 pasos (50 metros) del agua. Solo se puede activar una vez cada 24 horas."
     },
     {
-      "NAME": "LA TORMENTA PERFECTA",
+      "ID": "POS11",
+      "NAME": "La tormenta perfecta",
       "COST": -9,
       "AM": "ALM +Cosmología [Climatología] + áureo permanente. Coste: 1 punto de áureo.",
       "AFINITY": "Poseidón nivel 4",
@@ -1502,7 +1522,8 @@
       "CONDITIONS": "tener a la vista el lugar donde quieres invocar la tormenta. Estar en el mar."
     },
     {
-      "NAME": "VISITA DE LOS DIOSCUROS",
+      "ID": "POS12",
+      "NAME": "Visita de los dioscuros",
       "COST": -10,
       "AM": "ALM +Oceanología [Combate] + áureo permanente -5. Coste: 1 punto de áureo. ",
       "AFINITY": "Poseidón nivel 4",
@@ -1513,7 +1534,8 @@
       "CONDITIONS": "debe de realizarse en alta mar (donde no se vea la costa). El objeto imbuido con el fuego azul debe ser metálico. Realizar este rezo requiere un Turno completo."
     },
     {
-      "NAME": "AURA HERÓICA",
+      "ID": "ZEUS01",
+      "NAME": "Aura heróica",
       "COST": -1,
       "AM": "Automático.",
       "AFINITY": "Zeus nivel 4",
@@ -1524,7 +1546,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "MIRARSE EN EL ESPEJO DEL OLIMPO",
+      "ID": "ZEUS02",
+      "NAME": "Mirarse en el espejo del olimpo",
       "COST": -2,
       "AM": "SEN +Intuir [Héroes].",
       "AFINITY": "Zeus nivel 4",
@@ -1535,7 +1558,8 @@
       "CONDITIONS": "tiene que estar a la vista o escuchar su voz. Solo se puede hacer una vez por Escena."
     },
     {
-      "NAME": "JUZGAR CON LOS OJOS DE LOS DIOSES",
+      "ID": "ZEUS03",
+      "NAME": "Juzgar con los ojos de los dioses",
       "COST": -3,
       "AM": "SEN +Intuir [Héroes].",
       "AFINITY": "Zeus nivel 3",
@@ -1546,7 +1570,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "CORAZÓN DE HÉROE",
+      "ID": "ZEUS04",
+      "NAME": "Corazón de héroe",
       "COST": -4,
       "AM": "Automático.",
       "AFINITY": "Zeus nivel 4",
@@ -1557,7 +1582,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "PADRE PROTECTOR",
+      "ID": "ZEUS05",
+      "NAME": "Padre protector",
       "COST": -5,
       "AM": "ALM +Teología [Olímpicos].",
       "AFINITY": "Zeus nivel 4",
@@ -1568,7 +1594,8 @@
       "CONDITIONS": "solo se puede activar una vez por Escena."
     },
     {
-      "NAME": "BENDICIÓN DE LOS DIOSES",
+      "ID": "ZEUS06",
+      "NAME": "Bendición de los dioses",
       "COST": -6,
       "AM": "ALM +Teología [Olímpicos].",
       "AFINITY": "Zeus nivel 4",
@@ -1579,7 +1606,8 @@
       "CONDITIONS": "solo se puede hacer como recompensa a una acción que el dios vería con buenos ojos, como forma de agradecer un gran favor personal o como ayuda para alguien que inicia una misión sagrada."
     },
     {
-      "NAME": "VISTA DE ÁGUILA",
+      "ID": "ZEUS07",
+      "NAME": "VIsta de águila",
       "COST": -7,
       "AM": "SEN +Percibir [Sentidos 1º].",
       "AFINITY": "Zeus nivel 4",
@@ -1590,7 +1618,8 @@
       "CONDITIONS": "solo funciona durante el día. Solo se puede activar una vez por Escena."
     },
     {
-      "NAME": "SEÑOR DEL TRUENO",
+      "ID": "ZEUS08",
+      "NAME": "Señor del trueno",
       "COST": -8,
       "AM": "Automático.",
       "AFINITY": "Zeus nivel 4",
@@ -1601,7 +1630,8 @@
       "CONDITIONS": "solo funciona en lugares donde se pueda ver el cielo. Solo se puede hacer una vez al día."
     },
     {
-      "NAME": "EL QUE TRAE LA LLUVIA",
+      "ID": "ZEUS09",
+      "NAME": "El que trae la lluvia",
       "COST": -9,
       "AM": "ALM +Cosmología [Climatología] + áureo permanente -5. Coste: 1 punto de áureo.",
       "AFINITY": "Zeus nivel 4",
@@ -1612,7 +1642,8 @@
       "CONDITIONS": ""
     },
     {
-      "NAME": "EL RAYO DESTRUCTOR DE ZEUS",
+      "ID": "ZEUS10",
+      "NAME": "El rayo destructor de Zeus",
       "COST": -10,
       "AM": "FUE +Cosmología [Climatología] + áureo permanente -10. Coste: 1 punto de áureo.",
       "AE": "REF +Evitar [Esquivar] + áureo permanente -10.",

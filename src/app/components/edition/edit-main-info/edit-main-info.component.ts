@@ -60,7 +60,7 @@ export class EditMainInfoComponent implements OnInit{
     Object.keys(this.id).forEach( field => {
       if(!validatedControls.includes(field)){
         swSomeInvalids = true;
-        text = text.concat(translations[field], ' ,');
+        text = `${text}${translations[field]}, `;
       }
     });
     text = text.slice(0, -1);

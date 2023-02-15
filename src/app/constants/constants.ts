@@ -67,7 +67,8 @@ export const LIST_TYPES = {
 }
 
 export const FILES = {
-  GIFTS: '../assets/i18n/gifts.es.json'
+  GIFTS: '../assets/i18n/gifts.es.json',
+  POWERS: '../assets/i18n/powers.es.json'
 }
 
 export enum GiftTypesEnum  {

@@ -41,9 +41,8 @@ Current version 1.0.5
           - [x] Random Polis.
         - [x] Edit Atributes/Skills/social ranks component.
           - [x] Delete an existing skill.
-          - [ ] Modificator validation.
         - [x] Edit Afinities component.
-        - [ ] Edit Powers component.
+        - [x] Edit Powers component.
         - [x] Edit Gifts component.
         - [x] Edit List component.
           - [x] Glory / Infamy variation.

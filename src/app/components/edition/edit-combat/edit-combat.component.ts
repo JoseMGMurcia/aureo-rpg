@@ -145,7 +145,7 @@ export class EditCombatComponent implements OnInit, OnDestroy{
   }
 
   private saveEquip(equip : CombatEquip[]){
-      this.character.setCombatEquipment(equip);
+    this.character.setCombatEquipment(equip);
   }
 
   private fetch(){

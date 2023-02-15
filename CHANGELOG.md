@@ -8,6 +8,11 @@
 - Combat equipment detail alert added.
 - Combat equipment edition.
 - Some Normalization.
+- Json file resuming all powers.
+- Powers added to wiki page.
+- Powers detail alert added.
+- String no concat.
+- Powers edition.
 
 ## V1.0.4
 - Edit Afinities.

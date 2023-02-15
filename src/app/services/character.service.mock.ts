@@ -68,10 +68,10 @@ export const getMockCharacter = (): Character=>   {
   pj.getSecondarySkills().push(new Skill('Seducir', 1));
 
   // TODO Complete prays
-  pj.getPowers().push(new Power('Maestro del regateo'));
-  pj.getPowers().push(new Power('Servidor del pueblo'));
-  pj.getPowers().push(new Power('Aura heroica'));
-  pj.getPowers().push(new Power('Susurros y rumores'));
+  pj.getPowers().push(new Power('HRM12'));
+  pj.getPowers().push(new Power('HRM17'));
+  pj.getPowers().push(new Power('ZEUS01'));
+  pj.getPowers().push(new Power('HRM20'));
 
   pj.getSocialFeatures().push(new Skill('Estatus', 1));
   pj.getSocialFeatures().push(new Skill('Equipo', 2));

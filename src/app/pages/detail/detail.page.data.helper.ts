@@ -3,10 +3,12 @@ import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { getAtributePlusModsValue } from 'src/app/controller/atribute.controller';
 import { getTotalDamage } from 'src/app/controller/combat.equip.controller';
 import { ModificatorController } from 'src/app/controller/modificatorController';
+import { getPower } from 'src/app/controller/power.controller';
 import { getSkillAndModsValue } from 'src/app/controller/skillController';
 import { Character } from 'src/app/model/character';
 import { Gift } from 'src/app/model/gift';
 import { TextGift } from 'src/app/model/giftData';
+import { PowersData } from 'src/app/model/powerData';
 
 export const getDefenceData = (character: Character, translate: TranslateService): any[] => {
   const transLations = translate.instant('DETAIL_PAGE.COMBAT_SEC');
@@ -19,8 +21,8 @@ export const getDefenceData = (character: Character, translate: TranslateService
   },
   {
     type: transLations.PASIVE,
-    pjs: (refexes + evade +5).toString().concat(' + ', transLations.SHIELD),
-    pnjs: (refexes + evade).toString().concat(' + ', transLations.SHIELD)
+    pjs: `${refexes + evade  + 5} + ${transLations.SHIELD}`,
+    pnjs: `${refexes + evade} + ${transLations.SHIELD}`
   }];
 };
 
@@ -37,12 +39,12 @@ export const getAtacksData = (character: Character, translate: TranslateService)
   return [{
     type: transLations.BODY_COMBAT,
     roll: agility + bodyCombat,
-    dmg: strength.toString().concat(' + ', transLations.WEAPON)
+    dmg: `${strength} + ${transLations.WEAPON}`
   },
   {
     type: transLations.DISTANCE_COMBAT,
     roll: agility + rankedCombat,
-    dmg: sense.toString().concat(' + ', transLations.WEAPON)
+    dmg: `${sense} + ${transLations.WEAPON}`
   },
   {
     type: transLations.BRAWL,
@@ -103,18 +105,16 @@ export const getFollowersData =  (character: Character, translate: TranslateServ
   follower =>{
     const transLations = translate.instant('DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS');
     let mods = '';
-    mods = follower.getCombat() ? mods.concat(transLations.COMBAT, getSymbol(follower.getCombat()), follower.getCombat().toString(), ', ') : mods;
-    mods = follower.getPhysical() ? mods.concat(transLations.PHYSICAL, getSymbol(follower.getPhysical()), follower.getPhysical().toString(), ', ') : mods;
-    mods = follower.getSpiritual() ? mods.concat(transLations.SPIRITUAL, getSymbol(follower.getSpiritual()), follower.getSpiritual().toString(), ', ') : mods;
-    mods = follower.getMental() ? mods.concat(transLations.MENTAL, getSymbol(follower.getMental()), follower.getMental().toString(), ', ') : mods;
-    mods = follower.getSocial() ? mods.concat(transLations.SOCIAL, getSymbol(follower.getSocial()), follower.getSocial().toString()) : mods;
-    let name = follower.getName();
-    name = follower.getArquetype() ? name.concat('(', follower.getArquetype(), ')') : name;
+    mods = follower.getCombat() ? `${mods}${transLations.COMBAT}${getSymbol(follower.getCombat())}${follower.getCombat()}, ` : mods;
+    mods = follower.getPhysical() ?  `${mods}${transLations.PHYSICAL}${getSymbol(follower.getPhysical())}${follower.getPhysical()}, ` : mods;
+    mods = follower.getSpiritual() ? `${mods}${transLations.SPIRITUAL}${getSymbol(follower.getSpiritual())}${follower.getSpiritual()}, ` : mods;
+    mods = follower.getMental() ?   `${mods}${transLations.MENTAL}${getSymbol(follower.getMental())}${follower.getMental()}, ` : mods;
+    mods = follower.getSocial() ?   `${mods}${transLations.SOCIAL}${getSymbol(follower.getSocial())}${follower.getSocial()}, ` : mods;
     return {
-      name,
+      name: `${follower.getName()} (${follower.getArquetype()})`,
       mods,
     };
-});
+  });
 
 export const getSymbol = (value: number): string => value >= 0 ? '+' : '';
 
@@ -182,16 +182,36 @@ export const getGiftData = (gitfs: Gift[], giftData: TextGift[], translate: Tran
   }
 )
 
-export const getPowersData =  (character: Character): any[] => character.getPowers().map(
-  gift =>({
-    name: gift.getName(),
-    af: gift.getMinimumAfinity(),
-    am: gift.getAction(),
-    ae: gift.getSpecialResistAction(),
-    effect: gift.getEffect(),
-    cost: gift.getCost(),
-    duration: gift.getDuration(),
-  }));
+export const getPowersData =  (character: Character, powersData: PowersData, translate: TranslateService): any[] => character.getPowers().map(
+  power => {
+    const texts = translate.instant('DETAIL_PAGE.POWERS_SEC');
+    const pray = getPower(powersData, power.getName());
+    return {
+      name: pray.NAME,
+      af: pray.AFFECT,
+      am: pray.AM,
+      ae: pray.AE ? pray.AE : '',
+      cost: pray.COST,
+      afinity: pray.AFINITY,
+      duration: pray.DURATION,
+      desc: pray.DESCRIPTION,
+      rules: pray.RULES,
+      conditions: pray.CONDITIONS ? pray.CONDITIONS : '',
+      texts: {
+        cost: texts.COST,
+        desc: texts.DESC,
+        af: texts.AF,
+        am: texts.AM,
+        ae: texts.AE,
+        afinity: texts.AFINITY,
+        duration: texts.DURATION,
+        rules: texts.RULES,
+        cond: texts.CONDITIONS,
+        acept: translate.instant('SHARED.OK'),
+        XP: translate.instant('SHARED.XP')
+      }
+    };
+});
 
 export const getAfinitiesData = (character: Character): any[] => character.getGodAfinities().map(
   godAfinity =>({

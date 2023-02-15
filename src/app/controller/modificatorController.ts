@@ -8,8 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
         mods.forEach((mod)=> {
             let modString = '';
             if (mod.getValue() !== MAGIC_NUMBERS.N_0 ){
-                modString = mod.getValue()> MAGIC_NUMBERS.N_0 ? '+'.concat(mod.getValue().toString()) : mod.getValue().toString();
-                modsString = modsString.concat(' ', modString);
+                modString = mod.getValue()> MAGIC_NUMBERS.N_0 ? `+${mod.getValue()}` : `${mod.getValue()}`;
+                modsString = `${modsString} ${modString}`;
             }
         });
         return modsString ? modsString : '-';
@@ -18,8 +18,4 @@ import { TranslateService } from '@ngx-translate/core';
       const partial = mod.isPartial() ? translate.instant('SHARED.PARCIAL') : '';
       return `${mod.getName()}, ${mod.getValue()}, ${partial}`
     }
-
-
    }
-
-

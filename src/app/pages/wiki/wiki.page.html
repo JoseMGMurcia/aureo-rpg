@@ -9,7 +9,7 @@
 
 
 <ion-content>
-  <div *ngIf="swShowgifts" >
+  <div *ngIf="swShowgifts && swPowerData" >
     <ion-card>
       <ion-card-header>
         <ion-card-title class="type-label">{{ "WIKI_PAGE.GIFTS" | translate }}</ion-card-title>
@@ -205,22 +205,53 @@
               <ion-card-header>
                 <ion-card-title>{{ item.getName() }}</ion-card-title>
               </ion-card-header>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.DAMAGE" | translate }}</b> {{item.getInitialDamage() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.DEFENCE" | translate }}</b> {{ item.getActiveDefence() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.ARMOR" | translate }}</b> {{ item.getArmor() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.HANDS" | translate }}</b> {{ item.getHands() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.PRECISION" | translate }}</b> {{ item.getPrecision() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.PRICE" | translate }}</b> {{ item.getPrice() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.ATLETHISM" | translate }}</b> {{ item.getAtletism() }}</p>
-              <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.SENSE" | translate }}</b> {{ item.getSense() }}</p>
+              <ion-row>
+                <ion-col>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.DAMAGE" | translate }}</b> {{item.getInitialDamage() }}</p>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.ARMOR" | translate }}</b> {{ item.getArmor() }}</p>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.PRECISION" | translate }}</b> {{ item.getPrecision() }}</p>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.ATLETHISM" | translate }}</b> {{ item.getAtletism() }}</p>
+                </ion-col>
+                <ion-col>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.DEFENCE" | translate }}</b> {{ item.getActiveDefence() }}</p>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.HANDS" | translate }}</b> {{ item.getHands() }}</p>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.PRICE" | translate }}</b> {{ item.getPrice() }}</p>
+                  <p><b>{{ "WIKI_PAGE.COMBAT_EQUIP_DETAIL.SENSE" | translate }}</b> {{ item.getSense() }}</p>
+                </ion-col>
+              </ion-row>
             </ion-card>
           </div>
         </ion-card>
       </div>
     </ion-card>
 
-
-
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="type-label">{{ "WIKI_PAGE.PRAYS" | translate }}</ion-card-title>
+        <ion-icon class="miniButton" [name]="getIcon(swPrays)" (click)="swPrays = !swPrays"></ion-icon>
+      </ion-card-header>
+      <div *ngIf="swPrays">
+        <ion-card *ngFor="let cult of cults.cults">
+          <ion-card-header>
+            <ion-card-title class="type-label">{{ cult.cultName }}</ion-card-title>
+            <ion-icon class="miniButton" [name]="getIcon(cult.show)" (click)="cult.show = !cult.show"></ion-icon>
+          </ion-card-header>
+          <div *ngIf="cult.show">
+            <ion-card *ngFor="let power of cult.powers">
+              <ion-card-header>
+                <ion-card-title>{{ power.NAME }} ({{ power.COST }} {{ "SHARED.XP" | translate }})</ion-card-title>
+              </ion-card-header>
+              <p><b>{{ "DETAIL_PAGE.POWERS_SEC.AM" | translate }}:</b> {{ power.AM }}</p>
+              <p *ngIf="power.AE"><b>{{ "DETAIL_PAGE.POWERS_SEC.AE" | translate }}:</b> {{ power.AE }}</p>
+              <p><b>{{ "DETAIL_PAGE.POWERS_SEC.AF" | translate }}:</b> {{ power.AFFECT }}</p>
+              <p><b>{{ "DETAIL_PAGE.POWERS_SEC.DESC" | translate }}:</b> {{ power.DESCRIPTION }}</p>
+              <p><b>{{ "DETAIL_PAGE.POWERS_SEC.RULES" | translate }}:</b> {{ power.RULES }}</p>
+              <p><b>{{ "DETAIL_PAGE.POWERS_SEC.CONDITIONS" | translate }}:</b> {{ power.CONDITIONS }}</p>
+            </ion-card>
+          </div>
+        </ion-card>
+      </div>
+    </ion-card>
 
   </div>
 
