@@ -1,17 +1,17 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
+import { FormControl, UntypedFormBuilder } from '@angular/forms';
 import { AlertInput, AlertOptions, LoadingController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject, takeUntil } from 'rxjs';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
-import { clonePowers, getCultsPowers, getPower, openPowerDetail } from 'src/app/controller/power.controller';
+import { CharacterController } from 'src/app/controller/characterController';
+import { noSpecialCharactersValidator } from 'src/app/controller/custom.validator';
+import { cloneFollowers  } from 'src/app/controller/follower-companion.controller';
 import { Character } from 'src/app/model/character';
-import { Power } from 'src/app/model/power';
-import { CultPowers, PowerData, PowersData } from 'src/app/model/powerData';
-import { getPowersDataConfiguration } from 'src/app/pages/detail/detail.page.configuration.helper';
-import { getPowersData } from 'src/app/pages/detail/detail.page.data.helper';
+import { Follower } from 'src/app/model/follower';
+
 import { CharactersService } from 'src/app/services/characters.service';
 import { easyConfirmAlert, openAlert } from 'src/app/utils/alert.utils';
-import { TableDataConfiguration } from '../../table/table.component';
 
 @Component({
   selector: 'app-edit-followers',
@@ -23,13 +23,12 @@ export class EditFollowersComponent{
   @Output() saveCharacter: EventEmitter<any> = new EventEmitter<any>();
   @Output() exitModal: EventEmitter<any> = new EventEmitter<any>();
 
-  // public tabledata: any[] =[];
-  // public tableConfiguration: TableDataConfiguration = getPowersDataConfiguration(this.translate, this.showCombatEquipDetail);
+
   public character: Character = new Character('Pepe');
-  public powersData: PowersData = new PowersData();
-  public powers: Power[] = [];
-  public initialPowers: Power[] = [];
-  public loading = MAGIC_NUMBERS.N_2;
+  public followers: Follower[] = [];
+  public selectedFollower: Follower = new Follower('');
+  public initialFollowers: Follower[] = [];
+  public loading = MAGIC_NUMBERS.N_1;
 
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
@@ -37,30 +36,22 @@ export class EditFollowersComponent{
     private translate: TranslateService,
     private charactersService: CharactersService,
     private loadingController: LoadingController,
+    private formBuilder: UntypedFormBuilder,
   ) { }
 
-
-
   async ngOnInit() {
-    // const loading: HTMLIonLoadingElement = await this.loadingController.create({
-    //   message: this.translate.instant('SHARED.LOADING')
-    // });
-    // await loading.present();
+    const loading: HTMLIonLoadingElement = await this.loadingController.create({
+      message: this.translate.instant('SHARED.LOADING')
+    });
+    await loading.present();
 
-    // this.charactersService.character
-    //   .pipe(
-    //     takeUntil(this.ngUnsubscribe))
-    //   .subscribe((character)=> {
-    //   this.character = character;
-    //   this.finishLoading(loading);
-    // });
-
-    // this.charactersService.powersData
-    //   .pipe(takeUntil(this.ngUnsubscribe))
-    //   .subscribe((data)=> {
-    //   this.powersData = data;
-    //   this.finishLoading(loading);
-    // });
+    this.charactersService.character
+      .pipe(
+        takeUntil(this.ngUnsubscribe))
+      .subscribe((character)=> {
+      this.character = character;
+      this.finishLoading(loading);
+    });
   }
 
   ngOnDestroy(): void {
@@ -68,99 +59,174 @@ export class EditFollowersComponent{
     this.ngUnsubscribe.complete();
   }
 
+  public handleChange(event: any){
+    this.selectedFollower = this.followers.find(follower => follower.getName() === event.detail.value) || this.selectedFollower;
+   }
+
   public removeItem(){
-//     const alertParams: AlertOptions = {
-//       header: this.translate.instant('EDIT.REMOVE_POWER'),
-//       inputs : this.powers.map((power): AlertInput =>{
-//         const powerJ = getPower(this.powersData, power.getName());
-//         return {
-//         type: 'radio',
-//         label: powerJ.NAME,
-//         value: powerJ.ID
-//       }}),
-//       buttons: [
-//         { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
-//         {
-//           text:  this.translate.instant('SHARED.DELETE'),
-//           cssClass: 'alert-primaryButton',
-//           handler:  (data: any) => {
-//             this.powers = this.powers.filter(pow => pow.getName() !== data);
-//             this.character.setPowers(this.powers);
-//             this.tabledata = getPowersData(this.character, this.powersData, this.translate);
-//     }}]};
-//     openAlert(alertParams);
+    const alertParams: AlertOptions = {
+      header: this.translate.instant('EDIT.REMOVE_POWER'),
+      inputs : this.followers.map((followe): AlertInput => ({
+        type: 'radio',
+        label: followe.getName(),
+        value: followe.getName()
+      })),
+      buttons: [
+        { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
+        {
+          text:  this.translate.instant('SHARED.DELETE'),
+          cssClass: 'alert-primaryButton',
+          handler:  (data: any) => {
+            this.followers = this.followers.filter(follo => follo.getName() !== data);
+            this.character.setFollowers(this.followers);
+            if(this.selectedFollower.getName() === data){
+              this.selectedFollower.setName('');
+            }
+    }}]};
+    openAlert(alertParams);
   }
 
   public addItem(){
-//     // Add Power 1ST step: Choose cult
-//     const inputs: AlertInput[] = getCultsPowers(this.powersData, this.translate).cults.map((cult: CultPowers) => (
-//      {type: 'radio', label: cult.cultName, value: cult.cultName }
-//     ));
-//    const alertParams: AlertOptions = {
-//      header: this.translate.instant('EDIT.ADD'),
-//      inputs : inputs,
-//      buttons: [
-//        { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
-//        {
-//          text:  this.translate.instant('SHARED.OK'),
-//          cssClass: 'alert-primaryButton',
-//          handler:  (cultName: string) => {
-//            this.addStep2(cultName);
-//        }}]};
-//        openAlert(alertParams);
- }
+    // Add Power 1ST step: Choose cult
+    const inputs: AlertInput[] = [{
+      type: 'text',
+      name: 'name',
+      label: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.NAME'),
+      placeholder: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.NAME'),
+    },
+    {
+      type: 'text',
+      name: 'arquetype',
+      label: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.ARQUETYPE'),
+      placeholder: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.ARQUETYPE'),
+    }
+  ];
 
-//  public addStep2(cultName: string){
-//   // Add Power 2ND step: Choose power
-//   const cult = getCultsPowers(this.powersData, this.translate).cults.find(cult => cult.cultName === cultName);
-//   const inputs: AlertInput[] = cult?.powers.map((power: PowerData) => (
-//     {type: 'radio', label: power.NAME, value: power.ID }
-//     )) || [];
-//   const alertParams: AlertOptions = {
-//     header: this.translate.instant('EDIT.ADD'),
-//     inputs : inputs,
-//     buttons: [
-//       { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
-//       {
-//         text:  this.translate.instant('SHARED.OK'),
-//         cssClass: 'alert-primaryButton',
-//         handler:  (powerId: string) => {
-//         this.character.getPowers().push(new Power(powerId));
-//         this.powers = this.character.getPowers();
-//         this.tabledata = getPowersData(this.character, this.powersData, this.translate);
-//       }}]};
-//    openAlert(alertParams);
-//  }
+   const alertParams: AlertOptions = {
+     header: this.translate.instant('EDIT.ADD'),
+     inputs : inputs,
+     buttons: [
+      { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
+      {
+        text:  this.translate.instant('SHARED.OK'),
+        cssClass: 'alert-primaryButton',
+        handler:  (data: any) => {
+          if(this.followers.some(follo => follo.getName() === data.name) || !CharacterController.isNameValid(data.name)){
+            easyConfirmAlert(this.translate.instant('CHAR_PAGE.ADD_ALERT.NO_VALID_NAME'), () => { return; }, this.translate);
+            return;
+          }
+          const folloMan = new Follower(data.name);
+          folloMan.setArquetype(data.arquetype);
+          this.followers.push(folloMan);
+       }}]};
+       openAlert(alertParams);
+ }
 
   public handleSave(){
     this.saveCharacter.emit();
   }
 
   public handleExit(){
-//     easyConfirmAlert(
-//       this.translate.instant('EDIT.MAIN_INFO.CHANGES_LOST'),
-//       () => {
-//         this.character.setPowers(this.initialPowers);
-//         this.fetch();
-//         this.exitModal.emit();
-//       },
-//       this.translate);
+    easyConfirmAlert(
+      this.translate.instant('EDIT.MAIN_INFO.CHANGES_LOST'),
+      () => {
+        this.character.setFollowers(this.initialFollowers);
+        this.fetch();
+        this.exitModal.emit();
+      },
+      this.translate);
   }
 
-//   private fetch(){
-//     this.powers = this.character.getPowers();
-//     this.tabledata = getPowersData(this.character, this.powersData, this.translate);
-//     this.initialPowers= clonePowers(this.powers);
-// }
+  public removeCombat(){
+    const target = this.selectedFollower.getCombat() - MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setCombat(target > -MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getCombat());
+  }
 
-//   private finishLoading(loading: HTMLIonLoadingElement) {
-//     if(--this.loading === MAGIC_NUMBERS.N_0){
-//       this.fetch();
-//       loading.dismiss();
-//     }
-//   }
+  public addCombat(){
+    const target = this.selectedFollower.getCombat() + MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setCombat(target < MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getCombat());
+  }
 
-//   private showCombatEquipDetail(row: any){
-//     openPowerDetail(row);
-//   }
+  public removePhysical(){
+    const target = this.selectedFollower.getPhysical() - MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setPhysical(target > -MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getPhysical());
+  }
+
+  public addPhysical(){
+    const target = this.selectedFollower.getPhysical() + MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setPhysical(target < MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getPhysical());
+  }
+
+  public removeSpiritual(){
+    const target = this.selectedFollower.getSpiritual() - MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setEspiritual(target > -MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getSpiritual());
+  }
+
+  public addSpiritual(){
+    const target = this.selectedFollower.getSpiritual() + MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setEspiritual(target < MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getSpiritual());
+  }
+
+  public removeMental(){
+    const target = this.selectedFollower.getMental() - MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setMental(target > -MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getMental());
+  }
+
+  public addMental(){
+    const target = this.selectedFollower.getMental() + MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setMental(target < MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getMental());
+  }
+
+  public removeSocial(){
+    const target = this.selectedFollower.getSocial() - MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setSocial(target > -MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getSocial());
+  }
+
+  public addSocial(){
+    const target = this.selectedFollower.getSocial() + MAGIC_NUMBERS.N_1;
+    this.selectedFollower.setSocial(target < MAGIC_NUMBERS.N_11 ? target : this.selectedFollower.getSocial());
+  }
+
+  public editFollowerTexts(){
+    const inputs: AlertInput[] = [{
+      type: 'text',
+      name: 'name',
+      label: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.NAME'),
+      placeholder: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.NAME'),
+      value: this.selectedFollower.getName(),
+    },
+    {
+      type: 'text',
+      name: 'arquetype',
+      label: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.ARQUETYPE'),
+      placeholder: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.ARQUETYPE'),
+      value: this.selectedFollower.getArquetype(),
+    }
+  ];
+    const alertParams: AlertOptions = {
+      header: this.translate.instant('DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.EDIT'),
+      inputs : inputs,
+      buttons: [
+        { text:  this.translate.instant('SHARED.CANCEL'), cssClass: 'alert-secondaryButton' },
+        {
+          text:  this.translate.instant('SHARED.OK'),
+          cssClass: 'alert-primaryButton',
+          handler:  (data: any) => {
+            this.selectedFollower.setArquetype(data.arquetype);
+            this.selectedFollower.setName(data.name);
+          }}]};
+    openAlert(alertParams);
+  }
+
+  private fetch(){
+    this.followers = this.character.getFollowers();
+    this.initialFollowers= cloneFollowers(this.character.getFollowers());
+}
+
+  private finishLoading(loading: HTMLIonLoadingElement) {
+    if(--this.loading === MAGIC_NUMBERS.N_0){
+      this.fetch();
+      loading.dismiss();
+    }
+  }
 }

@@ -13,7 +13,7 @@
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.MAIN_INFO" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.MAIN_INFO)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.MAIN_INFO)"></ion-icon>
       </ion-card-header>
       <ion-row class="detail-row">
         <ion-col size="6" class="detail-col"><p>{{ "DETAIL_PAGE.GENERAL_SEC.NAME" | translate }} </p><p class="detail-value">{{ character.getName() }}</p></ion-col>
@@ -47,7 +47,7 @@
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.ATRIBUTES" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.ATRIBUTES)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.ATRIBUTES)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="atributesDataConfiguration"
@@ -58,7 +58,7 @@
      <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.TITLES" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.TITLES)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.TITLES)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="listDataConfiguration"
@@ -69,7 +69,7 @@
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.GLORY" | translate }} : {{ character.getGlory() }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.GLORY)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.GLORY)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="listDataConfiguration"
@@ -80,7 +80,7 @@
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.INFAMY" | translate }} : {{ character.getInfamy() }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.INFAMY)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.INFAMY)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="listDataConfiguration"
@@ -91,7 +91,7 @@
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.GENERAL_SEC.AFINITIES" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.AFINITIES)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.AFINITIES)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="afinitiesDataConfiguration"
@@ -173,7 +173,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.COMBAT_SEC.COMBAT_EQUIPMENT" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.COMBAT_EQUIPMENT)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.COMBAT_EQUIPMENT)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="combatEquipDataConfiguration"
@@ -189,7 +189,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.POWERS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.POWERS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.POWERS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="powersDataConfiguration"
@@ -200,7 +200,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.COMMON_GIFTS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.COMMON_GIFTS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.COMMON_GIFTS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="giftsDataConfiguration"
@@ -211,7 +211,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.DIVINE_GIFTS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.DIVINE_GIFTS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.DIVINE_GIFTS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="giftsDataConfiguration"
@@ -222,7 +222,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.POWERS_SEC.CURSES" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.CURSES)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.CURSES)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="giftsDataConfiguration"
@@ -248,7 +248,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.SKILLS_SEC.PRIMARY_SKILLS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.PRIMARY_SKILLS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.PRIMARY_SKILLS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="skillsDataConfiguration"
@@ -259,7 +259,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.SKILLS_SEC.SECONDARY_SKILLS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.SECONDARY_SKILLS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.SECONDARY_SKILLS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="skillsDataConfiguration"
@@ -275,7 +275,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.SOCIAL_FEATS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.SOCIAL_FEATS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.SOCIAL_FEATS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="skillsDataConfiguration"
@@ -286,7 +286,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.OTHER_EQIUP" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.OTHER_EQIUP)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.OTHER_EQIUP)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="listDataConfiguration"
@@ -297,7 +297,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.FOLLOWERS.FOLLOWERS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.FOLLOWERS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.FOLLOWERS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="followersDataConfiguration"
@@ -308,7 +308,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.COMPANIONS" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.COMPANIONS)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.COMPANIONS)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="companionsDataConfiguration"
@@ -319,7 +319,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.OTHERS_NOTES" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" name="create-outline" color="primary" (click)="edit(id.OTHERS_NOTES)"></ion-icon>
+        <ion-icon class="editIcon" name="create-outline" (click)="edit(id.OTHERS_NOTES)"></ion-icon>
       </ion-card-header>
         <app-table
           [dataConfiguration]="listDataConfiguration"
@@ -330,7 +330,7 @@
     <ion-card>
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.BACKGROUND_SEC.HISTORY" | translate }}</ion-card-title>
-        <ion-icon class="editIcon" [name]="historyIcon" color="primary" (click)="editHistory()"></ion-icon>
+        <ion-icon class="editIcon" [name]="historyIcon" (click)="editHistory()"></ion-icon>
       </ion-card-header>
       <ion-card-content>
          <ion-textarea

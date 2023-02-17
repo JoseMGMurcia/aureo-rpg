@@ -107,7 +107,8 @@ export class DetailPage implements OnInit, OnDestroy{
 
   async ngOnInit() {
     const loading: HTMLIonLoadingElement = await this.loadingController.create({
-      message: this.translate.instant('SHARED.LOADING')
+      message: this.translate.instant('SHARED.LOADING'),
+      duration: MAGIC_NUMBERS.N_3000
     });
     await loading.present();
 

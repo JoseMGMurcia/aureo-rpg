@@ -3,6 +3,7 @@ import { combatEquipFactory } from '../controller/combat.equip.controller';
 import { Atribute } from '../model/atributes';
 import { Character } from '../model/character';
 import { CombatEquip } from '../model/combatEquip';
+import { Companion } from '../model/companion';
 import { Follower } from '../model/follower';
 import { Gift } from '../model/gift';
 import { GodAffinity } from '../model/godAffinity';
@@ -109,6 +110,12 @@ export const getMockCharacter = (): Character=>   {
     new GodAffinity('Poseidon'),
     new GodAffinity('Zeus')
 ]);
+
+  pj.setCompanions([
+    new Companion('Vengatrix', 'Sr. Morado', 'Hera'),
+    new Companion('Noblius', 'Sr. Azul', 'Hefesto'),
+    new Companion('Mortis', 'Sr. Rojo', 'Ares')
+  ]);
 
   pj.setGloryLines(['Megalópolis +1']);
   pj.setTitles(['Regateador (10)', 'Temido (7)', 'Intuitivo (6)', 'Orador (7)']);

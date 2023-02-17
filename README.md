@@ -4,7 +4,7 @@
 This aplication is built in **Ionic 6, capacitor-Angular-15** using internal *ionic Storage*, and have been testing in Android  & iOS platforms.
 The goal is to be used by Aureo game players as an alternative to a paper and dices.
 
-Current version 1.0.5
+Current version 1.1.0
 
 ### The first goal, main funcionality (In progress):
 - Users can create a complete set of characters, storage and manage it.
@@ -29,7 +29,7 @@ Current version 1.0.5
       - [x] Social Ranks.
     - [x] Represent Calculated ranks.
   - [x] Character mapping from JSON.
-  - [ ] Editing character in tab.
+  - [x] Editing character in tab.
     - [x] Character validation first method.
       - [x] No repeated skills.
       - [x] No empty named skills.
@@ -48,8 +48,8 @@ Current version 1.0.5
           - [x] Glory / Infamy variation.
         - [x] XP edit from detail.
         - [x] Edit Combat equip component.
-        - [ ] Edit Followers component.
-        - [ ] Edit companions.
+        - [x] Edit Followers component.
+        - [x] Edit companions.
         - [x] Edit History component.
   - [x] Segment buttons to Icons.
 
@@ -72,7 +72,13 @@ Current version 1.0.5
 
 ### The second goal exporting:
 - Characters import / export between devices and export to PDF.
-	- [ ] As a encrypted file.
+	- [ ] Export as a encrypted file.
+  - [ ] Import encripted file.
+  - [ ] Export to PDF
+    - [ ] Load CharacterSheet.
+    - [ ] Compose values in charactersheet.
+    - [ ] Save changes to a ne file.
+    - [ ] Share the edited file.
 
 ### The third goal, bot phase:
 - Many game mechanics are automated.

@@ -190,13 +190,17 @@
         "COMPANIONS": "Compañeros de aventuras",
         "OTHERS_NOTES": "Otras notas",
         "HISTORY" : "Historia",
+        "PLAYER": "Jugador",
+        "CULT": "Culto",
         "FOLLOWERS": {
+          "EDIT": "Editar",
           "FOLLOWERS": "Seguidores",
           "COMBAT": "Combate: ",
           "PHYSICAL": "Físico",
           "SPIRITUAL": "Espiritual",
           "MENTAL": "Mental: ",
-          "SOCIAL": "Social: "
+          "SOCIAL": "Social: ",
+          "ARQUETYPE": "Arquetipo: "
         }
       },
       "COMBAT_SEC":{
@@ -242,11 +246,13 @@
   "REMOVE_COMBAT_EQUIP_TITLE": "Eliminar equipo de combate",
   "REMOVE_RANK_TITLE": "Eliminar rasgo",
   "REMOVE_POWER": "Eliminar poder o rezo",
+  "REMOVE_FOLLOWER": "Eliminar seguidor",
   "REMOVE": "Eliminar",
   "SELECT_MOD": "Seleccione modificador a eliminar",
   "NEW_MOD": "Nuevo modificador",
   "ADD_MOD_TEXT": "Introduce los nuevos valores y selecciona el check si se trata de un modificador parcial.",
   "INVALID_NAME": "Nombre no válido",
+  "INVALID_FIELDS": "Hay campos no válidos",
   "MAIN_INFO": {
     "NAME": "Nombre",
     "PLAYER": "Jugador",

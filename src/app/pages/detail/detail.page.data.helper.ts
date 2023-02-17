@@ -97,7 +97,7 @@ export const getCalculatedSkillData = (character: Character, translate: Translat
 export const getCompanionsData =  (character: Character): any[] => character.getCompanions().map(
   companion =>({
     name: companion.getName(),
-    player: companion.getName(),
+    player: companion.getPlayer(),
     cult: companion.getCult()
   }));
 
@@ -190,6 +190,7 @@ export const getPowersData =  (character: Character, powersData: PowersData, tra
       name: pray.NAME,
       af: pray.AFFECT,
       am: pray.AM,
+      am_short: pray.AM.length > MAGIC_NUMBERS.N_25 ? `${pray.AM.substring(0, MAGIC_NUMBERS.N_25)}...` : pray.AM,
       ae: pray.AE ? pray.AE : '',
       cost: pray.COST,
       afinity: pray.AFINITY,

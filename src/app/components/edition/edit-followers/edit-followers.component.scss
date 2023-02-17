@@ -26,3 +26,18 @@ h5 {
   margin-right: 0.5em;
   margin-top: 0.25em;
 }
+
+.detail-value {
+  border: colors.$row-odd-color 1.25px solid;
+  border-radius: style.$border-radius;
+  color: colors.$cellText;
+  max-height: 1.75em;
+}
+
+ion-card {
+  padding: 1em;
+}
+
+p {
+  margin: 0;
+}
