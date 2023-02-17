@@ -9,6 +9,7 @@
 - Fixxed complanion table data.
 - Followers edition.
 - Companions edition.
+- Added Icon and splash images.
 
 ## V1.0.5
 - Edit History directly in detail.

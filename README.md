@@ -61,7 +61,7 @@ Current version 1.1.0
     - [x] Redirecting button
   - [x] Detail Page / general, Info redesign.
   - [x] Change app name for Android users.
-  - [ ] App Icon.
+  - [x] App Icon.
   - [x] Colour palette.
   - [x] Dices page redesign.
   - [x] Doc Page first design.
