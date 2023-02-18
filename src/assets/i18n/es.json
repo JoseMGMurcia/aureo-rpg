@@ -35,6 +35,7 @@
       "TITLE": "Personajes",
       "EXISTING": "Personajes actuales",
       "ADD": "Crear Personaje",
+      "ALREADY_EXIST": "Ya existe un personaje con el mismo nombre ({{name}}), borra o renombra el personaje antes de volver a pregenerarlo",
       "DELETE_ALERT": {
           "HEADER": "Eliminar Personaje",
           "TEXT": "Si aceptas {{character}} será borrado y no se podrá recuperar",
@@ -48,7 +49,8 @@
           "AGREE": "Aceptar",
           "CANCEL": "Cancelar",
           "NO_VALID_NAME": "Mombre no válido",
-          "RANDOM": "Aleatorio"
+          "RANDOM": "Aleatorio",
+          "PREGENERATED": "Pre-generado"
       }
   },
   "WIKI_PAGE": {

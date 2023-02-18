@@ -8,8 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <!-- General section -->
-  <ng-container *ngIf="section === '1'">
+  <ng-container *ngIf="section === SECTIONS.GENERAL_SECTION">
     <ion-card >
       <ion-card-header class="generalInfoHeader">
         <ion-card-title class="generalInfoHeader">{{ "DETAIL_PAGE.MAIN_INFO" | translate }}</ion-card-title>
@@ -137,8 +136,7 @@
 
   </ng-container>
 
-  <!-- Combat section -->
-  <ng-container *ngIf="section === '2'">
+  <ng-container *ngIf="section === SECTIONS.COMBAT_SECTION">
 
     <ion-card>
       <ion-card-header class="generalInfoHeader">
@@ -183,8 +181,7 @@
 
   </ng-container>
 
-  <!-- powers section -->
-  <ng-container *ngIf="section === '3'">
+  <ng-container *ngIf="section === SECTIONS.GIFTS_SECTION">
 
     <ion-card>
       <ion-card-header class="generalInfoHeader">
@@ -232,8 +229,7 @@
 
   </ng-container>
 
-   <!-- skills section -->
-   <ng-container *ngIf="section === '4'">
+   <ng-container *ngIf="section === SECTIONS.SKILLS_SECTION">
 
     <ion-card>
       <ion-card-header class="generalInfoHeader">
@@ -269,8 +265,7 @@
 
   </ng-container>
 
-   <!-- background section -->
-   <ng-container *ngIf="section === '5'">
+   <ng-container *ngIf="section === SECTIONS.BACKGROUND_SECTION">
 
     <ion-card>
       <ion-card-header class="generalInfoHeader">
@@ -350,11 +345,11 @@
 <ion-footer>
   <ion-toolbar>
     <ion-segment [(ngModel)]="section" value="1" (ionChange)="sectionChanged($event)" scrollable >
-      <ion-segment-button value="1" class="segmentButton"> <ion-icon name="newspaper-outline"></ion-icon> </ion-segment-button>
-      <ion-segment-button value="2" class="segmentButton"> <ion-icon name="skull-outline"></ion-icon> </ion-segment-button>
-      <ion-segment-button value="3" class="segmentButton"> <ion-icon name="sparkles-outline"></ion-icon> </ion-segment-button>
-      <ion-segment-button value="4" class="segmentButton"> <ion-icon name="barbell-outline"></ion-icon> </ion-segment-button>
-      <ion-segment-button value="5" class="segmentButton"> <ion-icon name="earth-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button [value]="SECTIONS.GENERAL_SECTION" class="segmentButton"> <ion-icon name="newspaper-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button [value]="SECTIONS.SKILLS_SECTION" class="segmentButton"> <ion-icon name="barbell-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button [value]="SECTIONS.COMBAT_SECTION" class="segmentButton"> <ion-icon name="skull-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button [value]="SECTIONS.GIFTS_SECTION" class="segmentButton"> <ion-icon name="sparkles-outline"></ion-icon> </ion-segment-button>
+      <ion-segment-button [value]="SECTIONS.BACKGROUND_SECTION" class="segmentButton"> <ion-icon name="earth-outline"></ion-icon> </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-footer>

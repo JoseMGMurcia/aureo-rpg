@@ -1,4 +1,11 @@
 # Aureo_App
+## V1.1.1
+- Initial remaining Aureo set to 3.
+- Skills section tab moved to 2nd place in character detail page.
+- Fixxed power detail alert, no xp literal displays in the parenthesis.
+- Fixxed double gift record.
+- Pregenerated character example added to character creation alert.
+
 ## V1.1.0
 - Fixxed AM lenght in powers table taking too much wide.
 - Table detail click extended from icon to full row.

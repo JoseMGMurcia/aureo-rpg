@@ -45,13 +45,23 @@ import { openEquipDetail } from 'src/app/controller/combat.equip.controller';
 import { PowersData } from 'src/app/model/powerData';
 import { openPowerDetail } from 'src/app/controller/power.controller';
 
+enum SECTIONS {
+  GENERAL_SECTION = 'GENERAL_SECTION',
+  SKILLS_SECTION = 'SKILLS_SECTION',
+  COMBAT_SECTION = 'COMBAT_SECTION',
+  GIFTS_SECTION = 'GIFTS_SECTION',
+  BACKGROUND_SECTION = 'BACKGROUND_SECTION',
+}
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.page.html',
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit, OnDestroy{
-  public section = '1';
+
+  public SECTIONS = SECTIONS;
+  public section = SECTIONS.GENERAL_SECTION;
   public character: Character = new Character('Pepe');
   public characters: Character[] = [];
   public giftData: GiftData = new GiftData();
@@ -266,7 +276,7 @@ export class DetailPage implements OnInit, OnDestroy{
 
   private switchCaracter(character: Character){
     this.character = character;
-    this.section = '1';
+    this.section = SECTIONS.GENERAL_SECTION;
   }
 
   private saveCharacter(){
