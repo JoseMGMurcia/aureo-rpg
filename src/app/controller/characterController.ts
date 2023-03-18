@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import { Character } from 'src/app/model/character';
 import { MAGIC_NUMBERS } from '../constants/number.constants';
 import { Atributes } from '../model/atributes';
@@ -9,6 +10,7 @@ import { GodAffinity } from '../model/godAffinity';
 import { Modificator } from '../model/modificator';
 import { Power } from '../model/power';
 import { Skill } from '../model/skill';
+import { noSpecialCharactersValidator } from './custom.validator';
 
 export class CharacterController{
 
@@ -28,8 +30,11 @@ export class CharacterController{
   }
 
   static isNameValid(name: string): boolean {
+      const control = new FormControl();
+      control.setValue(name);
+      const valid = !noSpecialCharactersValidator(control)?.specialCharacters;
       const MINUMUM_NAME_LENGTH = MAGIC_NUMBERS.N_3;
-      return name.length >= MINUMUM_NAME_LENGTH && Number.isNaN( Number(name) ) ? true : false;
+      return (name.length >= MINUMUM_NAME_LENGTH && Number.isNaN( Number(name) ) ? true : false) && valid;
   }
 
   static converToCharacters(unformatedChars: any[]): Character[]{

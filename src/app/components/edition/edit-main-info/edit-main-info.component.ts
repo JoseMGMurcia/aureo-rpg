@@ -1,12 +1,17 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators, } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { Subject, takeUntil } from 'rxjs';
 import { MAIN_INFO_FIELDS } from 'src/app/constants/constants';
 import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
 import { NAMES, POLIS } from 'src/app/controller/character.constants';
+import { getRandomCult } from 'src/app/controller/character.randomize.utils';
 import { CharacterController } from 'src/app/controller/characterController';
 import { noSpecialCharactersValidator } from 'src/app/controller/custom.validator';
+import { getCultsPowers } from 'src/app/controller/power.controller';
 import { Character } from 'src/app/model/character';
+import { PowersData } from 'src/app/model/powerData';
+import { CharactersService } from 'src/app/services/characters.service';
 import { easyConfirmAlert } from 'src/app/utils/alert.utils';
 import { getSexIcon } from 'src/app/utils/custom.utils';
 
@@ -15,7 +20,7 @@ import { getSexIcon } from 'src/app/utils/custom.utils';
   templateUrl: './edit-main-info.component.html',
   styleUrls: ['./edit-main-info.component.scss'],
 })
-export class EditMainInfoComponent implements OnInit{
+export class EditMainInfoComponent implements OnDestroy, OnInit{
 
   @Input() character: Character = new Character('Pepe');
   @Output() saveCharacter: EventEmitter<any> = new EventEmitter<any>();
@@ -26,11 +31,21 @@ export class EditMainInfoComponent implements OnInit{
   public enterAureo = 0;
   public enterHibris = 0;
   public enterSex = '';
+  public powersJData: PowersData = new PowersData();
+  private ngUnsubscribe: Subject<void> = new Subject<void>();
+
 
   constructor(
     private formBuilder: UntypedFormBuilder,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private charactersService: CharactersService
     ){}
+
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -45,6 +60,13 @@ export class EditMainInfoComponent implements OnInit{
     this.enterAureo = this.character.getAureo();
     this.enterHibris = this.character.getHibris();
     this.enterSex = this.character.getSex();
+
+    this.charactersService.powersData
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((data)=> {
+        this.powersJData = data;
+      });
+
   }
 
   public getSexIcons(){
@@ -117,6 +139,11 @@ export class EditMainInfoComponent implements OnInit{
 
   public getPolis(){
     this.form.controls[this.id.POLIS].setValue(CharacterController.getRandomName(POLIS));
+  }
+
+  public getRNDCult(){
+    const cults = getCultsPowers(this.powersJData, this.translate);
+    this.form.controls[this.id.CULT].setValue(getRandomCult(cults));
   }
 }
 

@@ -11,9 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EditAtributesComponent } from './components/edition/edit-atributes/edit-atributes.component';
-import { EditMainInfoComponent } from './components/edition/edit-main-info/edit-main-info.component';
-import { EditPowersComponent } from './components/edition/edit-powers/edit-powers.component';
 import { CharacterFactory } from './controller/character.factory';
 
 export const createTranslateLoader = (http: HttpClient) =>

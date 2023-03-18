@@ -79,7 +79,7 @@ export const openPowerDetail = (row: any) => {
   const ae = row.ae ? `<p><b>${row.texts.ae}</b> ${row.ae}</p>` : '';
   const conditions = row.conditions ? `<p><b>${row.texts.cond}:</b> ${row.conditions}</p>` : '';
   const alertParams: AlertOptions = {
-    header: `${row.name} (${row.cost})${row.texts.XP}`,
+    header: `${row.name} (${row.cost}${row.texts.XP})`,
     message: `<p><b>${row.texts.am}:</b> ${row.am}</p>${ae}
               <p><b>${row.texts.af}:</b> ${row.af}</p>
               <p><b>${row.texts.afinity}:</b> ${row.afinity}</p>

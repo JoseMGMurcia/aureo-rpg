@@ -72,7 +72,7 @@ export const getPowersDataConfiguration = (translate: TranslateService, handleCl
         name: transLations.NAME
       },
       {
-        id: 'am',
+        id: 'am_short',
         name: transLations.AM
       }
     ]
@@ -150,11 +150,11 @@ export const getCombatEquipDataConfiguration = (translate: TranslateService, han
         },
         {
           id: 'player',
-          name: transLations.INITIAL_DMG
+          name: transLations.PLAYER
         },
         {
           id: 'cult',
-          name: transLations.ACTIVE_DEFENCE
+          name: transLations.CULT
         }
       ]
     };

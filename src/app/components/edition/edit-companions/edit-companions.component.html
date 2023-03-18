@@ -1,0 +1,29 @@
+<div>
+  <ion-card>
+    <h5>{{ "DETAIL_PAGE.BACKGROUND_SEC.COMPANIONS" | translate }}</h5>
+
+    <app-table
+      [data]="tabledata"
+      [dataConfiguration]="tableConfiguration">
+    </app-table>
+
+    <div class="butonRow-edit">
+      <ion-button size="small" (click)="removeItem()" class="mediumButton">
+        <ion-icon name="remove-outline"></ion-icon> {{ "EDIT.REMOVE" | translate }}
+      </ion-button>
+      <ion-button size="small" (click)="addItem()"  class="mediumButton">
+        <ion-icon name="add-outline"></ion-icon> {{ "EDIT.ADD" | translate }}
+      </ion-button>
+    </div>
+
+    <div class="butonRow">
+      <ion-button size="small" (click)="handleExit()" class="lightButton">
+        <ion-icon name="exit-outline"></ion-icon> {{ "EDIT.EXIT" | translate }}
+      </ion-button>
+      <ion-button size="small" (click)="handleSave()" class="saveButton">
+        <ion-icon name="server-outline"></ion-icon> {{ "EDIT.SAVE" | translate }}
+      </ion-button>
+    </div>
+
+  </ion-card>
+</div>

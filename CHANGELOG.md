@@ -1,4 +1,23 @@
 # Aureo_App
+## V1.1.1
+- Initial remaining Aureo set to 3.
+- Skills section tab moved to 2nd place in character detail page.
+- Fixxed power detail alert, no xp literal displays in the parenthesis.
+- Fixxed double gift record.
+- Pregenerated character example added to character creation alert.
+
+## V1.1.0
+- Fixxed AM lenght in powers table taking too much wide.
+- Table detail click extended from icon to full row.
+- All clickable icons nos are now displayed in secundary color (red).
+- Fix: prevent persisting loading in detail page.
+- Random cult for random characters added.
+- Random cult button added in edit main info page.
+- Fixxed complanion table data.
+- Followers edition.
+- Companions edition.
+- Added Icon and splash images.
+
 ## V1.0.5
 - Edit History directly in detail.
 - Combat equip catalog added.
@@ -68,7 +87,7 @@
 - Temporal Aureo buttons management.
 - Character inicialicers.
 - Table data format.
-- Best banner
+- Best banner.
 
 ## V0.1.1
 - develop branch.

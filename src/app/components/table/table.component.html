@@ -32,7 +32,8 @@
           <ion-row
             class="cell"
             *ngFor="let row of data"
-            [ngClass]="getClass(row)">
+            [ngClass]="getClass(row)"
+            (click)="dataConfiguration.onClickRow ? dataConfiguration.onClickRow(row) : null">
               <ion-text class="table-text">
                 <p>{{ getFormatedData(row[column.id]) }}</p>
               </ion-text>

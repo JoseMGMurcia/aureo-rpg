@@ -10,23 +10,32 @@ import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { DATABASE_NAME } from 'src/app/constants/constants';
 import { NAMES, POLIS } from 'src/app/controller/character.constants';
-import { openAlert } from 'src/app/utils/alert.utils';
+import { easyConfirmAlert, openAlert } from 'src/app/utils/alert.utils';
 import { CharacterFactory } from 'src/app/controller/character.factory';
-import { getRandomGender } from 'src/app/controller/character.randomize.utils';
+import { getRandomCult, getRandomGender } from 'src/app/controller/character.randomize.utils';
+import { LoadingController } from '@ionic/angular';
+import { MAGIC_NUMBERS } from 'src/app/constants/number.constants';
+import { PowersData } from 'src/app/model/powerData';
+import { getCultsPowers } from 'src/app/controller/power.controller';
+import { getMockCharacter } from 'src/app/services/character.service.mock';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.page.html',
   styleUrls: ['./characters.page.scss'],
 })
-export class CharactersPage implements OnDestroy{
+export class CharactersPage implements OnDestroy {
   public characs: Character[] = [];
+  public powersJData: PowersData = new PowersData();
+  public loading = MAGIC_NUMBERS.N_2;
+
   private ngUnsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
     private router: Router,
     private ts: TranslateService,
     private charactersService: CharactersService,
+    private loadingController: LoadingController,
     private storageService: StorageService,
     private characterFactory: CharacterFactory
   ) {}
@@ -36,12 +45,25 @@ export class CharactersPage implements OnDestroy{
     this.ngUnsubscribe.complete();
   }
 
-  ionViewWillEnter(){
+  async ionViewWillEnter(){
+    const loading: HTMLIonLoadingElement = await this.loadingController.create({
+      message: this.ts.instant('SHARED.LOADING'),
+      duration: MAGIC_NUMBERS.N_3000
+    });
+    await loading.present();
     this.charactersService.characters
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((characters)=> {
         this.characs = characters;
+        this.finishLoading(loading);
       });
+
+      this.charactersService.powersData
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((data)=> {
+        this.powersJData = data;
+        this.finishLoading(loading);
+      });;
   }
 
   handleNavigation(character: Character){
@@ -59,7 +81,8 @@ export class CharactersPage implements OnDestroy{
         name: 'name1',
         placeholder: texts.NAME
       }],
-      buttons: [{
+      buttons: [
+        {
         text: texts.AGREE,
         cssClass: 'secondary',
         handler: (data: any) => {
@@ -81,11 +104,13 @@ export class CharactersPage implements OnDestroy{
       {
         text: texts.RANDOM,
         handler: () => {
-          const character = this.characterFactory.getCharacter(CharacterController.getRandomName(NAMES));
-          character.setPolis(CharacterController.getRandomName(POLIS));
-          character.setSex(getRandomGender());
-          this.characs.push(character);
-          this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
+          this.generateRandomCharacter();
+        }
+      },
+      {
+        text: texts.PREGENERATED,
+        handler: () => {
+          this.generateExampleCharacter();
         }
       },
       texts.CANCEL
@@ -94,6 +119,28 @@ export class CharactersPage implements OnDestroy{
     alertController.create(alerParams).then(alert => {
       alert.present();
     });
+  }
+
+  generateRandomCharacter(){
+    const character = this.characterFactory.getCharacter(CharacterController.getRandomName(NAMES));
+    character.setPolis(CharacterController.getRandomName(POLIS));
+    character.setSex(getRandomGender());
+    const cultPowers = getCultsPowers(this.powersJData, this.ts);
+    character.setCult(getRandomCult(cultPowers));
+    this.characs.push(character);
+    this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
+  }
+
+  public generateExampleCharacter(){
+    const character = getMockCharacter();
+    if (this.characs.some((char) => char.getName() === character.getName())) {
+      easyConfirmAlert(
+        this.ts.instant('CHAR_PAGE.ALREADY_EXIST', {name: character.getName()}), () => { return; }, this.ts
+      )
+      return;
+    }
+    this.characs.push(character);
+    this.storageService.set(DATABASE_NAME, JSON.stringify(this.characs));
   }
 
   deleteCharacter(character: Character){
@@ -115,5 +162,11 @@ export class CharactersPage implements OnDestroy{
     ]
     };
     openAlert(alerParams);
+  }
+
+  private finishLoading(loading: HTMLIonLoadingElement) {
+    if(--this.loading === MAGIC_NUMBERS.N_0 ){
+      loading.dismiss();
+    }
   }
 }

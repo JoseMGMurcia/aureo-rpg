@@ -130,14 +130,6 @@
         "CONDITIONS": "No tener la maldición física Canijo."
       },
       {
-        "ID": "CGPH17",
-        "NAME": "Acostumbrado a no dormir",
-        "COST": [-2],
-        "DESCRIPTION": "Desde que naciste, necesitas pasar por el reino de Morfeo menos que el del resto de los mortales.",
-        "RULES": "Solo necesitas dormir 4 horas al día, la mitad que un personaje normal. Si pasas una noche sin dormir, tendrás un -1 malus general (los personajes sin este don tendrían un -2 malus general). Durmiendo 4 horas al día y descansando otras 4, recuperarás Puntos de Vida como si hubieras dormido normalmente.",
-        "CONDITIONS": "No tener el don divino Desterrado del reino de Morfeo."
-      },
-      {
         "ID": "CGPH21",
         "NAME": "Puños de bronce",
         "COST": [-3],

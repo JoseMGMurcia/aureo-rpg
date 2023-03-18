@@ -22,7 +22,7 @@ export class Character {
   private age = MAGIC_NUMBERS.N_0;
   private player = '';
   private aureo: number = MAGIC_NUMBERS.N_3;
-  private aureoRemaining: number = MAGIC_NUMBERS.N_0;
+  private aureoRemaining: number = MAGIC_NUMBERS.N_3;
   private hibris: number = MAGIC_NUMBERS.N_0;
 
   private lifePoints = MAGIC_NUMBERS.N_0;// Not yet in detail.

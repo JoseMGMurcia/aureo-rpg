@@ -69,9 +69,6 @@ export class AppComponent implements OnInit{
     const protoCharacters = JSON.parse( await this.storageService.get(DATABASE_NAME) );
     this.characters = CharacterController.converToCharacters(protoCharacters);
     this.characterService.setCharacters(this.characters);
-    if(this.characters.length === MAGIC_NUMBERS.N_0){
-      this.characters.push(getMockCharacter());
-    }
   }
 
   private loadGiftData(){
